@@ -6,12 +6,13 @@ until the build finishes, then the full slate (cached ~20 minutes).
 import threading
 import time
 import traceback
+import unicodedata
 from concurrent.futures import ThreadPoolExecutor
 
 import facts
 import nhl
 
-TTL = 20 * 60
+TTL = 10 * 60      # lineups firm up near puck drop, so rebuild often
 _slates = {}      # date -> {"status", "progress", "data", "at"}
 _lock = threading.Lock()
 
@@ -122,20 +123,21 @@ def build(date, state):
             items.extend(res or [])
     news = facts.news_facts(items, players)
 
+    state.update(progress=0.88, step="Checking who's actually dressing")
+    lineups = _lineups(games, players)
+
     state.update(progress=0.92, step="Brewing chaos")
     slate_f = facts.slate_facts(players, day)
     out_players = []
     for p in players:
         ctx = {"date": day, "season": season, "homeAbbr": p["homeAbbr"], "teamName": team_name,
                "revenge": ctx_rev, "news": news, "slateFacts": slate_f}
-        fs = facts.player_facts(p, ctx)
-        if not fs:
-            continue
+        fs = facts.player_facts(p, ctx)   # may be empty: favourites still need him
         fs.sort(key=lambda f: -f["chaos"])
         out_players.append({
             "id": p["id"], "name": p["name"], "team": p["team"], "opp": p["opp"], "home": p["home"],
             "gameId": p["gameId"], "pos": p["pos"], "num": p["num"], "headshot": p["headshot"],
-            "prob": facts.goal_prob(p["ld"], season), "facts": fs,
+            "prob": facts.goal_prob(p["ld"], season), "facts": fs, "lineup": lineups[p["id"]],
             "chaos": sum(f["chaos"] for f in fs[:3]),
         })
     out_players.sort(key=lambda p: -p["chaos"])
@@ -190,3 +192,67 @@ def _revenge(p, team_name, season):
     return facts._fact("revenge", "😤", f"Revenge game vs {opp}",
                        f"Former {opp} player ({g} G in {gp} GP for them, last on {last_date}). "
                        f"Seen them {facts._plural(since, 'time')} since leaving.", 7)
+
+
+# ---------------------------------------------------------------------------
+# lineup status: confirmed (NHL official) > projected (Daily Faceoff) > gtd / out
+# ---------------------------------------------------------------------------
+LINE_LABEL = {"f1": "1st line", "f2": "2nd line", "f3": "3rd line", "f4": "4th line",
+              "d1": "1st pair", "d2": "2nd pair", "d3": "3rd pair"}
+OUT_STATUSES = {"out", "injured reserve", "suspension"}
+
+
+def _norm(name):
+    s = unicodedata.normalize("NFKD", name or "")
+    return "".join(c for c in s if c.isalpha()).lower()
+
+
+def _lineups(games, players):
+    """{player id: {"status": confirmed|projected|gtd|out|unknown, "label", "detail"}}"""
+    safe_dressed, safe_scr = _safe(nhl.dressed), _safe(nhl.scratches)
+    teams = sorted({p["team"] for p in players})
+    with ThreadPoolExecutor(8) as ex:
+        official = dict(zip([g["id"] for g in games], ex.map(lambda g: safe_dressed(g["id"]) or {}, games)))
+        scr = dict(zip([g["id"] for g in games], ex.map(lambda g: safe_scr(g["id"]) or set(), games)))
+        dfo = dict(zip(teams, ex.map(_safe(nhl.dfo_lineup), teams)))
+    inj = {_norm(n): st.lower() for n, st in (_safe(nhl.espn_injuries)() or [])}
+
+    out = {}
+    for p in players:
+        off = official.get(p["gameId"], {}).get(p["team"])
+        if off:
+            out[p["id"]] = ({"status": "confirmed", "label": "In tonight's lineup", "detail": "Official NHL lineup"}
+                            if p["id"] in off else
+                            {"status": "out", "label": "Not dressing", "detail": "Not in the official NHL lineup"})
+            continue
+        if p["id"] in scr.get(p["gameId"], ()):
+            out[p["id"]] = {"status": "out", "label": "Scratched", "detail": "Listed as a scratch by the NHL"}
+            continue
+        lu = dfo.get(p["team"])
+        if not lu:
+            out[p["id"]] = {"status": "unknown", "label": "Lineup unknown", "detail": "No projected lineup found"}
+            continue
+        full, last = _norm(p["name"]), _norm(p["last"])
+        mine = [x for x in lu["players"] if _norm(x["name"]) == full
+                or (x["num"] == p["num"] and _norm(x["name"]).endswith(last))]
+        ev = next((x for x in mine if x["cat"] == "ev" and x["group"] in LINE_LABEL), None)
+        pp = next((x for x in mine if x["group"] in ("pp1", "pp2")), None)
+        hurt = next((x for x in mine if x["cat"] == "oi" or x["injury"]), None)
+        espn = inj.get(full, "")
+        if hurt and (hurt.get("injury") or "").lower() == "dtd" and ev:
+            hurt = None            # day-to-day but still slotted in the lineup: a game-time call
+            espn = espn or "day-to-day"
+        if hurt or espn in OUT_STATUSES:
+            why = (hurt or {}).get("injury") or espn
+            out[p["id"]] = {"status": "out", "label": "Injured / out", "detail": f"Listed as {why.upper() if len(why) <= 3 else why}"}
+        elif not ev:
+            out[p["id"]] = {"status": "out", "label": "Not in projected lineup",
+                            "detail": "Not in Daily Faceoff's projected 18 skaters"}
+        elif ev["gtd"] or espn == "day-to-day":
+            out[p["id"]] = {"status": "gtd", "label": "Game-time decision",
+                            "detail": "Day-to-day" if espn == "day-to-day" else "Flagged as a game-time decision"}
+        else:
+            label = LINE_LABEL[ev["group"]] + (f" · PP{pp['group'][-1]}" if pp else "")
+            out[p["id"]] = {"status": "projected", "label": label,
+                            "detail": "Projected lineup (Daily Faceoff), not yet confirmed by the NHL"}
+    return out

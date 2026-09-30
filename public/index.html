@@ -4,22 +4,25 @@
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <title>Chayka's Evil Parlays</title>
-  <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>😈</text></svg>">
+  <link rel="icon" type="image/png" href="/favicon.png">
+  <link rel="apple-touch-icon" href="/logo.png">
   <link rel="stylesheet" href="/style.css">
 </head>
 <body>
-  <header class="top">
-    <div class="brand">
-      <span class="logo" aria-hidden="true">😈</span>
-      <div>
-        <h1>Chayka's Evil Parlays</h1>
-        <p class="tag">NHL goal parlays built on birthdays, grudges, gossip and pure chaos.</p>
+  <header class="hero">
+    <div class="hero-inner">
+      <div class="brand">
+        <img class="logo" src="/logo.png" alt="Chayka's Evil Parlays logo" width="84" height="84">
+        <div>
+          <h1>Chayka's Evil Parlays</h1>
+          <p class="tag">NHL goal parlays built on birthdays, grudges, gossip and pure chaos.</p>
+        </div>
       </div>
+      <label class="date">
+        <span>Slate</span>
+        <input type="date" id="date">
+      </label>
     </div>
-    <label class="date">
-      <span>Slate</span>
-      <input type="date" id="date">
-    </label>
   </header>
 
   <main>
@@ -29,7 +32,7 @@
       <div class="summon-row">
         <div>
           <h2>Summon an evil parlay</h2>
-          <p class="muted">Picks random skaters, one per game, weighted toward the wildest storylines on tonight's slate.</p>
+          <p class="muted">One skater per game, only from tonight's lineups. Chaos vibes lean into the wildest storylines; Statistical Favourites takes the likeliest goalscorers.</p>
         </div>
         <div class="controls">
           <label>Legs
@@ -43,6 +46,7 @@
               <option value="gossip">Gossip only</option>
               <option value="grudge">Grudges &amp; homecomings</option>
               <option value="any">Anything goes</option>
+              <option value="favourites">Statistical Favourites</option>
             </select>
           </label>
           <button id="summonBtn" class="btn-evil">🔮 Summon</button>
@@ -63,11 +67,16 @@
       </div>
     </section>
 
-    <nav id="gameChips" class="chips" aria-label="Filter by game"></nav>
+    <div class="filters">
+      <nav id="gameChips" class="chips" aria-label="Filter by game"></nav>
+      <label class="toggle"><input type="checkbox" id="lineupOnly" checked> Only players in tonight's lineup</label>
+    </div>
     <section id="players" class="grid"></section>
 
     <p class="foot">
-      Every fact comes from NHL.com data or a real, linked news headline, and nothing is made up.
+      Lineups come from the official NHL lineup once it's posted (around warm-ups), and from
+      Daily Faceoff's projected lines before that. Every fact comes from NHL.com data or a real,
+      linked news headline, and nothing is made up.
       The goal % is a rough number based on recent goals per game. Pick legs for fun, not because
       the facts predict anything. 😈
     </p>

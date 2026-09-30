@@ -87,3 +87,81 @@ def headlines(query, days=10, limit=8):
         return items[:limit]
 
     return _get(url, NEWS_UA, 3 * 3600, parse)
+
+
+# ---------------------------------------------------------------------------
+# Lineups: who is actually dressing tonight
+# ---------------------------------------------------------------------------
+DFO = "https://www.dailyfaceoff.com/teams"
+BROWSER_UA = ("Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 "
+              "(KHTML, like Gecko) Chrome/126 Safari/537.36")
+DFO_ABBR = {"LA": "LAK", "NJ": "NJD", "SJ": "SJS", "TB": "TBL", "UTAH": "UTA", "MON": "MTL", "VEG": "VGK",
+            "NAS": "NSH", "WAS": "WSH"}
+_NEXT_RX = None
+
+
+def _next_data(raw):
+    global _NEXT_RX
+    import re
+    if _NEXT_RX is None:
+        _NEXT_RX = re.compile(rb'<script id="__NEXT_DATA__"[^>]*>(.*?)</script>', re.S)
+    m = _NEXT_RX.search(raw)
+    return json.loads(m.group(1))["props"]["pageProps"] if m else {}
+
+
+def _dfo_page(slug):
+    return _get(f"{DFO}/{slug}/line-combinations", BROWSER_UA, 15 * 60, _next_data)
+
+
+def dfo_slugs():
+    """{NHL abbr: Daily Faceoff team slug}, read from any team page's team list."""
+    teams = _dfo_page("toronto-maple-leafs").get("sortedTeams") or []
+    return {DFO_ABBR.get(t["shortName"], t["shortName"]): t["slug"] for t in teams if t.get("slug")}
+
+
+def dfo_lineup(abbr):
+    """Daily Faceoff line combinations for a team:
+    {updatedAt, players: [{name, num, cat, group, gtd, injury}]} or None."""
+    slug = dfo_slugs().get(abbr)
+    if not slug:
+        return None
+    c = _dfo_page(slug).get("combinations") or {}
+    if not c.get("players"):
+        return None
+    ps = [{"name": p.get("name") or "", "num": p.get("jerseyNumber"), "cat": p.get("categoryIdentifier"),
+           "group": p.get("groupIdentifier"), "gtd": bool(p.get("gameTimeDecision")),
+           "injury": p.get("injuryStatus")} for p in c["players"]]
+    return {"updatedAt": c.get("updatedAt"), "players": ps}
+
+
+def dressed(game_id):
+    """Official game lineup {abbr: set(player ids)} once the NHL posts it, else {}."""
+    b = _json(f"/gamecenter/{game_id}/boxscore", ttl=300)
+    pbg = b.get("playerByGameStats") or {}
+    out = {}
+    for key in ("awayTeam", "homeTeam"):
+        side = pbg.get(key) or {}
+        ids = {p["playerId"] for grp in ("forwards", "defense") for p in side.get(grp) or []}
+        if ids:
+            out[(b.get(key) or {}).get("abbrev")] = ids
+    return out
+
+
+def scratches(game_id):
+    """Healthy scratches the NHL has posted for tonight: set of player ids."""
+    r = _json(f"/gamecenter/{game_id}/right-rail", ttl=600)
+    info = r.get("gameInfo") or {}
+    return {s.get("id") for k in ("awayTeam", "homeTeam") for s in (info.get(k) or {}).get("scratches") or []}
+
+
+ESPN_INJ = "https://site.api.espn.com/apis/site/v2/sports/hockey/nhl/injuries"
+
+
+def espn_injuries():
+    """[(full name, status)] league-wide: 'Out', 'Injured Reserve', 'Day-To-Day'…"""
+    d = _get(ESPN_INJ, NHL_UA, 30 * 60, json.loads)
+    out = []
+    for team in d.get("injuries") or []:
+        for i in team.get("injuries") or []:
+            out.append(((i.get("athlete") or {}).get("displayName") or "", i.get("status") or ""))
+    return out
