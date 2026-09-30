@@ -1,0 +1,77 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Chayka's Evil Parlays</title>
+  <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>😈</text></svg>">
+  <link rel="stylesheet" href="/style.css">
+</head>
+<body>
+  <header class="top">
+    <div class="brand">
+      <span class="logo" aria-hidden="true">😈</span>
+      <div>
+        <h1>Chayka's Evil Parlays</h1>
+        <p class="tag">NHL goal parlays built on birthdays, grudges, gossip and pure chaos.</p>
+      </div>
+    </div>
+    <label class="date">
+      <span>Slate</span>
+      <input type="date" id="date">
+    </label>
+  </header>
+
+  <main>
+    <section id="status" class="status" aria-live="polite"></section>
+
+    <section class="summon card" id="summon" hidden>
+      <div class="summon-row">
+        <div>
+          <h2>Summon an evil parlay</h2>
+          <p class="muted">Picks random skaters, weighted toward the wildest storylines on tonight's slate.</p>
+        </div>
+        <div class="controls">
+          <label>Legs
+            <select id="legs">
+              <option>2</option><option selected>3</option><option>4</option><option>5</option><option>6</option>
+            </select>
+          </label>
+          <label>Vibe
+            <select id="vibe">
+              <option value="chaos" selected>Maximum chaos</option>
+              <option value="gossip">Gossip only</option>
+              <option value="grudge">Grudges &amp; homecomings</option>
+              <option value="any">Anything goes</option>
+            </select>
+          </label>
+          <button id="summonBtn" class="btn-evil">🔮 Summon</button>
+        </div>
+      </div>
+    </section>
+
+    <section class="slip card" id="slip" hidden>
+      <div class="slip-head">
+        <h2>Your evil slip</h2>
+        <button id="clearSlip" class="btn-ghost">Clear</button>
+      </div>
+      <ol id="slipLegs" class="slip-legs"></ol>
+      <div class="slip-foot">
+        <div><span class="muted">Vibe odds</span> <strong id="slipOdds">—</strong></div>
+        <div><span class="muted">Chance it all hits</span> <strong id="slipProb">—</strong></div>
+      </div>
+    </section>
+
+    <nav id="gameChips" class="chips" aria-label="Filter by game"></nav>
+    <section id="players" class="grid"></section>
+
+    <p class="foot">
+      Every fact comes from NHL.com data or a real, linked news headline, and nothing is made up.
+      The goal % is a rough number based on recent goals per game. Pick legs for fun, not because
+      the facts predict anything. 😈
+    </p>
+  </main>
+
+  <script src="/app.js"></script>
+</body>
+</html>
