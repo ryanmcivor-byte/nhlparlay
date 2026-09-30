@@ -126,3 +126,4 @@ button { font: inherit; cursor: pointer; }
   h1 { font-size: 21px; }
   .grid { grid-template-columns: 1fr; }
 }
+.slip-note { margin: 10px 0 0; font-size: 13px; color: var(--gold); }

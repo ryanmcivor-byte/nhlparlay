@@ -130,6 +130,8 @@
         <button class="x" data-add="${p.id}" aria-label="Remove ${esc(p.name)}">✕</button>
       </li>`;
     }).join("");
+    $("#slipNote").textContent = state.note || "";
+    $("#slipNote").hidden = !state.note;
     const prob = legs.reduce((a, p) => a * p.prob, 1);
     $("#slipProb").textContent = pct(prob);
     $("#slipOdds").textContent = american(prob);
@@ -141,8 +143,8 @@
     const n = +$("#legs").value;
     const vibe = $("#vibe").value;
     const keep = VIBES[vibe];
+    // one leg per game, so draw from every game (the chips only filter the cards below)
     let pool = d.players
-      .filter((p) => state.game === "all" || p.gameId == state.game)
       .map((p) => {
         const fs = p.facts.filter(keep);
         return fs.length ? { p, f: fs[Math.floor(Math.random() * fs.length)], w: fs.reduce((a, f) => a + f.chaos, 0) } : null;
@@ -156,11 +158,17 @@
       const total = pool.reduce((a, x) => a + x.w, 0);
       let r = Math.random() * total, i = 0;
       while (r > pool[i].w && i < pool.length - 1) r -= pool[i++].w;
-      picked.push(pool[i]);
-      pool.splice(i, 1);
+      const pick = pool[i];
+      picked.push(pick);
+      pool = pool.filter((x) => x.p.gameId !== pick.p.gameId);
     }
     picked.forEach((x) => (x.p.pickedFact = x.f.title));
     state.slip = picked.map((x) => x.p.id);
+    const legs = `${picked.length} leg${picked.length > 1 ? "s" : ""}`;
+    state.note = picked.length >= n ? ""
+      : picked.length === d.games.length
+        ? `There ${d.games.length > 1 ? "are" : "is"} only ${d.games.length} game${d.games.length > 1 ? "s" : ""} on this slate, so this parlay has ${legs} (one per game).`
+        : `Only ${picked.length} games have a skater matching that vibe, so this parlay has ${legs} (one per game).`;
     renderPlayers();
     renderSlip();
     $("#slip").scrollIntoView({ behavior: "smooth", block: "nearest" });
@@ -168,8 +176,18 @@
 
   function toggleLeg(id) {
     const i = state.slip.indexOf(id);
+    state.note = "";
     if (i >= 0) state.slip.splice(i, 1);
-    else state.slip.push(id);
+    else {
+      // one leg per game: adding a skater swaps out any leg from the same game
+      const p = state.data.players.find((x) => x.id === id);
+      const clash = state.data.players.find((x) => x.gameId === p.gameId && x.id !== id && state.slip.includes(x.id));
+      if (clash) {
+        state.slip = state.slip.filter((x) => x !== clash.id);
+        state.note = `Swapped out ${clash.name}: one leg per game.`;
+      }
+      state.slip.push(id);
+    }
     renderPlayers();
     renderSlip();
   }
@@ -190,7 +208,7 @@
     }
   });
   $("#summonBtn").addEventListener("click", summon);
-  $("#clearSlip").addEventListener("click", () => { state.slip = []; renderPlayers(); renderSlip(); });
+  $("#clearSlip").addEventListener("click", () => { state.slip = []; state.note = ""; renderPlayers(); renderSlip(); });
   $("#date").addEventListener("change", (e) => {
     state.game = "all";
     showStatus("Loading…");
