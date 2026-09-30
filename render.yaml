@@ -1,0 +1,12 @@
+# Render.com blueprint: deploys this as a free web service.
+# On Render: New + -> "Blueprint" -> connect the repo -> it reads this file.
+services:
+  - type: web
+    name: chaykas-evil-parlays
+    runtime: python
+    plan: free
+    buildCommand: pip install -r requirements.txt
+    startCommand: python3 server.py
+    envVars:
+      - key: PYTHON_VERSION
+        value: "3.12.4"
