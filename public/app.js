@@ -135,13 +135,19 @@
     save("why:" + state.data.date, why);
     if (!legs.length) return;
     $("#slipLegs").innerHTML = legs.map((p) => {
-      const f = (p.pickedFact === "stat" && { emoji: "📈", title: `Statistical favourite · ${(p.lineup || {}).label || ""}` })
-        || (p.pickedFact && p.facts.find((x) => x.title === p.pickedFact)) || p.facts[0]
-        || { emoji: "📈", title: `${pct(p.prob)} goal chance` };
+      const stat = { emoji: "📈", title: `Statistical favourite · ${(p.lineup || {}).label || ""}`,
+        text: `${pct(p.prob)} goal chance tonight` + (p.statLine ? `. ${p.statLine}.` : ".") };
+      const f = (p.pickedFact === "stat" && stat)
+        || (p.pickedFact && p.facts.find((x) => x.title === p.pickedFact)) || p.facts[0] || stat;
+      // the story behind the pick: headline (linked) or the fact's explanation
+      const story = f.link
+        ? `<a href="${esc(f.link)}" target="_blank" rel="noopener noreferrer">${esc(f.text)}</a> <span class="read">Read story ↗</span>`
+        : esc(f.text || "");
       return `<li class="leg">
         <img src="${esc(p.headshot || "")}" alt="">
         <div><b>${esc(p.name)}</b> <span class="muted">to score · ${esc(p.team)} ${p.home ? "vs" : "@"} ${esc(p.opp)} · ${pct(p.prob)}</span>
-          <div class="why">${f.emoji} ${esc(f.title)}</div></div>
+          <div class="why">${f.emoji} <b>${esc(f.title)}</b></div>
+          ${story ? `<p class="story">${story}</p>` : ""}</div>
         <button class="x" data-add="${p.id}" aria-label="Remove ${esc(p.name)}">✕</button>
       </li>`;
     }).join("");

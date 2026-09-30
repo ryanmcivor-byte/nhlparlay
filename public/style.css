@@ -155,3 +155,9 @@ body::before {
 .lineup.out, .lineup.unknown { color: #ff8b99; border-color: rgba(224, 38, 63, 0.4); background: rgba(224, 38, 63, 0.08); }
 .player.benched { opacity: 0.6; }
 .nodirt { font-size: 13px; color: var(--muted); margin: 0; }
+.leg { align-items: start; }
+.leg .why b { color: var(--text); font-weight: 600; }
+.leg .story { margin: 3px 0 0; font-size: 13px; line-height: 1.4; color: #d9bfc6; }
+.leg .story a { color: #ff9aa8; text-decoration: none; }
+.leg .story a:hover { text-decoration: underline; }
+.leg .story .read { color: var(--muted); font-size: 12px; white-space: nowrap; }

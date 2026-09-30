@@ -44,10 +44,11 @@ NEWS_BUCKETS = [
      r"arrest\w*|apolog\w*|benched|healthy scratch)\b"),
     ("move", "🧳", "On the move", 7,
      r"\b(trade[ds]?|traded|acquire[ds]?|waivers?|claimed|recalled|called up|sent down|"
-     r"reassigned|signs?|signed|extension|contract)\b"),
+     r"reassigned|signed|signs (with|a|an|one|two|three|four|five|six|seven|eight|\d)|extension|contract)\b"),
     ("hurt", "🩹", "Health watch", 6,
-     r"\b(injur\w*|day-to-day|week-to-week|surgery|returns?|return from|IR|LTIR|illness|"
-     r"out (tonight|indefinitely))\b"),
+     r"\b(injur\w*|day-to-day|week-to-week|surgery|illness|LTIR|IR|"
+     r"(returns?|back) (to|from) (practice|the lineup|lineup|injury|IR|LTIR|skating)|"
+     r"out (tonight|indefinitely|\d+ (days?|weeks?|months?)))\b"),
     ("milestone", "🏆", "Milestone chatter", 6,
      r"\b(milestone|record|career[- ]high|hat trick|100th|200th|300th|400th|500th|1,000th)\b"),
 ]
@@ -328,3 +329,16 @@ def news_facts(items, players):
             fs.append(f)
         out[pid] = fs
     return out
+
+
+def stat_line(ld, season):
+    """'1 G in 1 GP this season · 27 G in 76 GP in 2025-26' (regular season, NHL only)."""
+    rows = {r["season"]: r for r in nhl_seasons(ld)}
+    parts = []
+    cur, prev = rows.get(season), rows.get(season - 10001)
+    if cur and cur.get("gamesPlayed"):
+        parts.append(f"{cur.get('goals') or 0} G in {cur['gamesPlayed']} GP this season")
+    if prev and prev.get("gamesPlayed"):
+        lbl = f"{str(season - 10001)[:4]}-{str(season)[2:4]}"
+        parts.append(f"{prev.get('goals') or 0} G in {prev['gamesPlayed']} GP in {lbl}")
+    return " · ".join(parts)

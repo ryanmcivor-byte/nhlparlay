@@ -138,6 +138,7 @@ def build(date, state):
             "id": p["id"], "name": p["name"], "team": p["team"], "opp": p["opp"], "home": p["home"],
             "gameId": p["gameId"], "pos": p["pos"], "num": p["num"], "headshot": p["headshot"],
             "prob": facts.goal_prob(p["ld"], season), "facts": fs, "lineup": lineups[p["id"]],
+            "statLine": facts.stat_line(p["ld"], season),
             "chaos": sum(f["chaos"] for f in fs[:3]),
         })
     out_players.sort(key=lambda p: -p["chaos"])
