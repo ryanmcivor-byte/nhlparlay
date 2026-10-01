@@ -11,6 +11,7 @@ from concurrent.futures import ThreadPoolExecutor
 
 import facts
 import nhl
+import picks
 
 TTL = 10 * 60      # lineups firm up near puck drop, so rebuild often
 _slates = {}      # date -> {"status", "progress", "data", "at"}
@@ -26,7 +27,8 @@ def get_slate(date):
             _slates[date] = s
             threading.Thread(target=_build, args=(date, s), daemon=True).start()
     if s["status"] == "ready":
-        return s["data"]
+        data = s["data"]
+        return dict(data, picks=picks.get_picks(data)) if data.get("players") else data
     if s["status"] == "error":
         return {"status": "error", "error": s.get("error", "build failed")}
     return {"status": "building", "progress": round(s["progress"], 2), "step": s["step"]}
@@ -116,7 +118,9 @@ def build(date, state):
     for abbr, full in team_name.items():
         queries.append(f'"{full}"')
         queries.append(f'"{full}" (wife OR wedding OR engaged OR baby OR divorce OR girlfriend '
-                       f'OR suspended OR traded OR birthday)')
+                       f'OR suspended OR fined OR controversy)')
+        queries.append(f'"{full}" ("passed away" OR died OR funeral OR grandfather OR grandmother '
+                       f'OR tribute OR mourning)')
     items = []
     with ThreadPoolExecutor(6) as ex:
         for res in ex.map(lambda q: _safe(nhl.headlines)(q, 10, 100), queries):

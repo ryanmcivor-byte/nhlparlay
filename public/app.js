@@ -6,12 +6,8 @@
   const state = { data: null, game: "all", slip: [], expanded: new Set(), lineupOnly: true };
   const PLAYING = new Set(["confirmed", "projected"]);     // certain (or projected) to dress
   const playing = (p) => PLAYING.has((p.lineup || {}).status);
-  const VIBES = {
-    chaos: () => true,
-    gossip: (f) => f.kind.startsWith("news-"),
-    grudge: (f) => ["revenge", "hometown", "draft", "newteam", "names", "twins"].includes(f.kind),
-    any: () => true,
-  };
+  const VIBE_LABEL = { chaos: "Maximum chaos", gossip: "Gossip only", grudge: "Grudges & homecomings",
+    any: "Anything goes", favourites: "Statistical Favourites" };
   const LINEUP_ICON = { confirmed: "✅", projected: "📋", gtd: "⚠️", out: "🚫", unknown: "❔" };
 
   const esc = (s) => String(s == null ? "" : s).replace(/[&<>"']/g, (c) =>
@@ -51,8 +47,6 @@
     if (res.status === "error") return showStatus("The goblins tripped: " + esc(res.error));
     state.data = res;
     state.slip = load("slip:" + date, []).filter((id) => res.players.some((p) => p.id === id));
-    const why = load("why:" + date, {});       // the reason each leg was summoned
-    res.players.forEach((p) => { if (why[p.id]) p.pickedFact = why[p.id]; });
     render();
   }
 
@@ -78,6 +72,7 @@
     renderChips();
     renderPlayers();
     renderSlip();
+    if (state.revealed) renderDaily();
   }
 
   function renderChips() {
@@ -126,98 +121,58 @@
     }).join("");
   }
 
+  function legHtml(p, f, removable) {
+    // the story behind the pick: headline (linked) or the fact's explanation
+    const story = f.link
+      ? `<a href="${esc(f.link)}" target="_blank" rel="noopener noreferrer">${esc(f.text)}</a> <span class="read">Read story ↗</span>`
+      : esc(f.text || "");
+    const lu = p.lineup || {};
+    const warn = lu.status && !PLAYING.has(lu.status)
+      ? `<p class="leg-warn">${LINEUP_ICON[lu.status] || ""} ${esc(lu.label)}: ${esc(lu.detail || "check the lineup before betting")}</p>` : "";
+    return `<li class="leg">
+      <img src="${esc(p.headshot || "")}" alt="">
+      <div><b>${esc(p.name)}</b> <span class="muted">to score · ${esc(p.team)} ${p.home ? "vs" : "@"} ${esc(p.opp)} · ${pct(p.prob)}</span>
+        <div class="why">${f.emoji} <b>${esc(f.title)}</b></div>
+        ${story ? `<p class="story">${story}</p>` : ""}${warn}</div>
+      ${removable ? `<button class="x" data-add="${p.id}" aria-label="Remove ${esc(p.name)}">✕</button>` : "<span></span>"}
+    </li>`;
+  }
+
+  function oddsHtml(legs) {
+    const prob = legs.reduce((a, p) => a * p.prob, 1);
+    return `<div><span class="muted">Vibe odds</span> <strong>${american(prob)}</strong></div>
+      <div><span class="muted">Chance it all hits</span> <strong>${pct(prob)}</strong></div>`;
+  }
+
+  // today's locked parlay for the chosen vibe: same 3 legs for everyone, all day
+  function renderDaily() {
+    const vibe = $("#vibe").value;
+    const legs = (state.data.picks || {})[vibe] || [];
+    $("#daily").hidden = false;
+    $("#dailyTitle").textContent = `Today's ${VIBE_LABEL[vibe]} parlay`;
+    if (!legs.length) {
+      $("#dailyLegs").innerHTML = "";
+      $("#dailyFoot").innerHTML = "";
+      $("#dailyNote").textContent = "No skaters in tonight's lineups fit this vibe yet. Check back closer to puck drop.";
+      return;
+    }
+    $("#dailyLegs").innerHTML = legs.map((l) => legHtml(l, l.fact, false)).join("");
+    $("#dailyFoot").innerHTML = oddsHtml(legs);
+    const fewer = legs.length < 3
+      ? ` Only ${legs.length} game${legs.length > 1 ? "s" : ""} qualify, so it has ${legs.length} leg${legs.length > 1 ? "s" : ""} (one per game).` : "";
+    $("#dailyNote").textContent = `🔒 Locked for ${state.data.date}. Everyone gets these same picks; new ones tomorrow.${fewer}`;
+  }
+
   function renderSlip() {
     const legs = state.slip.map((id) => state.data.players.find((p) => p.id === id)).filter(Boolean);
     $("#slip").hidden = !legs.length;
     save("slip:" + state.data.date, state.slip);
-    const why = {};
-    state.data.players.forEach((p) => { if (p.pickedFact && state.slip.includes(p.id)) why[p.id] = p.pickedFact; });
-    save("why:" + state.data.date, why);
     if (!legs.length) return;
-    $("#slipLegs").innerHTML = legs.map((p) => {
-      const stat = { emoji: "📈", title: `Statistical favourite · ${(p.lineup || {}).label || ""}`,
-        text: `${pct(p.prob)} goal chance tonight` + (p.statLine ? `. ${p.statLine}.` : ".") };
-      const f = (p.pickedFact === "stat" && stat)
-        || (p.pickedFact && p.facts.find((x) => x.title === p.pickedFact)) || p.facts[0] || stat;
-      // the story behind the pick: headline (linked) or the fact's explanation
-      const story = f.link
-        ? `<a href="${esc(f.link)}" target="_blank" rel="noopener noreferrer">${esc(f.text)}</a> <span class="read">Read story ↗</span>`
-        : esc(f.text || "");
-      return `<li class="leg">
-        <img src="${esc(p.headshot || "")}" alt="">
-        <div><b>${esc(p.name)}</b> <span class="muted">to score · ${esc(p.team)} ${p.home ? "vs" : "@"} ${esc(p.opp)} · ${pct(p.prob)}</span>
-          <div class="why">${f.emoji} <b>${esc(f.title)}</b></div>
-          ${story ? `<p class="story">${story}</p>` : ""}</div>
-        <button class="x" data-add="${p.id}" aria-label="Remove ${esc(p.name)}">✕</button>
-      </li>`;
-    }).join("");
+    $("#slipLegs").innerHTML = legs.map((p) => legHtml(p, p.facts[0] || {
+      emoji: "📈", title: "Just the numbers", text: `${pct(p.prob)} goal chance tonight` + (p.statLine ? `. ${p.statLine}.` : ".") }, true)).join("");
     $("#slipNote").textContent = state.note || "";
     $("#slipNote").hidden = !state.note;
-    const prob = legs.reduce((a, p) => a * p.prob, 1);
-    $("#slipProb").textContent = pct(prob);
-    $("#slipOdds").textContent = american(prob);
-  }
-
-  // ------------------------------------------------------------- summon
-  function summon() {
-    const d = state.data;
-    const n = +$("#legs").value;
-    const vibe = $("#vibe").value;
-    const keep = VIBES[vibe];
-    if (vibe === "favourites") return summonFavourites(n);
-    // one leg per game, so draw from every game (the chips only filter the cards below)
-    let pool = d.players
-      .filter(playing)
-      .map((p) => {
-        const fs = p.facts.filter(keep);
-        return fs.length ? { p, f: fs[Math.floor(Math.random() * fs.length)], w: fs.reduce((a, f) => a + f.chaos, 0) } : null;
-      })
-      .filter(Boolean);
-    if (vibe === "chaos") pool.forEach((x) => (x.w = x.w * x.w));      // lean hard into the wild ones
-    if (vibe === "any") pool.forEach((x) => (x.w = 1));
-    if (!pool.length) return showStatus("No skaters in tonight's lineups match that vibe. Try another one.");
-    const picked = [];
-    while (picked.length < n && pool.length) {
-      const total = pool.reduce((a, x) => a + x.w, 0);
-      let r = Math.random() * total, i = 0;
-      while (r > pool[i].w && i < pool.length - 1) r -= pool[i++].w;
-      const pick = pool[i];
-      picked.push(pick);
-      pool = pool.filter((x) => x.p.gameId !== pick.p.gameId);
-    }
-    picked.forEach((x) => (x.p.pickedFact = x.f.title));
-    finishSummon(picked.map((x) => x.p), n, "a skater matching that vibe");
-  }
-
-  // Statistical Favourites: in each game, one of its 3 likeliest scorers (leaning hard
-  // toward #1), then the games whose pick is likeliest to score.
-  function summonFavourites(n) {
-    const byGame = {};
-    state.data.players.filter(playing).forEach((p) => (byGame[p.gameId] = byGame[p.gameId] || []).push(p));
-    const picks = Object.values(byGame).map((ps) => {
-      const top = ps.sort((a, b) => b.prob - a.prob).slice(0, 3);
-      const w = top.map((p) => Math.pow(p.prob, 6));
-      let r = Math.random() * w.reduce((a, b) => a + b, 0), i = 0;
-      while (r > w[i] && i < top.length - 1) r -= w[i++];
-      return top[i];
-    }).sort((a, b) => b.prob - a.prob).slice(0, n);
-    if (!picks.length) return showStatus("No lineups are posted or projected for this slate yet. Check back closer to puck drop.");
-    picks.forEach((p) => (p.pickedFact = "stat"));
-    finishSummon(picks, n, "a skater in its lineup");
-  }
-
-  function finishSummon(players, n, what) {
-    const d = state.data;
-    const picked = players;
-    state.slip = picked.map((p) => p.id);
-    const legs = `${picked.length} leg${picked.length > 1 ? "s" : ""}`;
-    state.note = picked.length >= n ? ""
-      : picked.length === d.games.length
-        ? `There ${d.games.length > 1 ? "are" : "is"} only ${d.games.length} game${d.games.length > 1 ? "s" : ""} on this slate, so this parlay has ${legs} (one per game).`
-        : `Only ${picked.length} games have ${what}, so this parlay has ${legs} (one per game).`;
-    renderPlayers();
-    renderSlip();
-    $("#slip").scrollIntoView({ behavior: "smooth", block: "nearest" });
+    $("#slipFoot").innerHTML = oddsHtml(legs);
   }
 
   function toggleLeg(id) {
@@ -253,7 +208,12 @@
       renderPlayers();
     }
   });
-  $("#summonBtn").addEventListener("click", summon);
+  $("#summonBtn").addEventListener("click", () => {
+    state.revealed = true;
+    renderDaily();
+    $("#daily").scrollIntoView({ behavior: "smooth", block: "nearest" });
+  });
+  $("#vibe").addEventListener("change", () => { if (state.revealed) renderDaily(); });
   $("#lineupOnly").addEventListener("change", (e) => { state.lineupOnly = e.target.checked; renderPlayers(); });
   $("#clearSlip").addEventListener("click", () => { state.slip = []; state.note = ""; renderPlayers(); renderSlip(); });
   $("#date").addEventListener("change", (e) => {

@@ -31,15 +31,11 @@
     <section class="summon card" id="summon" hidden>
       <div class="summon-row">
         <div>
-          <h2>Summon an evil parlay</h2>
-          <p class="muted">One skater per game, only from tonight's lineups. Chaos vibes lean into the wildest storylines; Statistical Favourites takes the likeliest goalscorers.</p>
+          <h2>Summon today's evil parlay</h2>
+          <p class="muted">Three legs per vibe, one per game, only from tonight's lineups. Picks are locked
+            for the day: everyone gets the same ones, and new ones arrive tomorrow.</p>
         </div>
         <div class="controls">
-          <label>Legs
-            <select id="legs">
-              <option>2</option><option selected>3</option><option>4</option><option>5</option><option>6</option>
-            </select>
-          </label>
           <label>Vibe
             <select id="vibe">
               <option value="chaos" selected>Maximum chaos</option>
@@ -49,22 +45,25 @@
               <option value="favourites">Statistical Favourites</option>
             </select>
           </label>
-          <button id="summonBtn" class="btn-evil">🔮 Summon</button>
+          <button id="summonBtn" class="btn-evil">🔮 Reveal</button>
         </div>
+      </div>
+      <div id="daily" class="daily" hidden>
+        <h3 id="dailyTitle"></h3>
+        <ol id="dailyLegs" class="slip-legs"></ol>
+        <p id="dailyNote" class="slip-note"></p>
+        <div id="dailyFoot" class="slip-foot"></div>
       </div>
     </section>
 
     <section class="slip card" id="slip" hidden>
       <div class="slip-head">
-        <h2>Your evil slip</h2>
+        <h2>Your own slip</h2>
         <button id="clearSlip" class="btn-ghost">Clear</button>
       </div>
       <ol id="slipLegs" class="slip-legs"></ol>
       <p id="slipNote" class="slip-note" hidden></p>
-      <div class="slip-foot">
-        <div><span class="muted">Vibe odds</span> <strong id="slipOdds">—</strong></div>
-        <div><span class="muted">Chance it all hits</span> <strong id="slipProb">—</strong></div>
-      </div>
+      <div id="slipFoot" class="slip-foot"></div>
     </section>
 
     <div class="filters">

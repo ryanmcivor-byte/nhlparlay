@@ -161,3 +161,6 @@ body::before {
 .leg .story a { color: #ff9aa8; text-decoration: none; }
 .leg .story a:hover { text-decoration: underline; }
 .leg .story .read { color: var(--muted); font-size: 12px; white-space: nowrap; }
+.daily { margin-top: 14px; padding-top: 14px; border-top: 1px solid var(--line); }
+.daily h3 { margin: 0 0 10px; font-size: 16px; color: #ff8b99; }
+.leg-warn { margin: 4px 0 0; font-size: 12.5px; color: var(--gold); }

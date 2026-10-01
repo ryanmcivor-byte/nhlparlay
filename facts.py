@@ -7,7 +7,7 @@ Nothing is invented. Each fact is a dict:
 import math
 import re
 from collections import Counter
-from datetime import date as Date
+from datetime import date as Date, timedelta
 
 # city / state-or-province for each club's home arena (hometown-game facts)
 TEAM_CITY = {
@@ -25,32 +25,21 @@ TEAM_CITY = {
 }
 CITY_ALIASES = {"Montréal": "Montreal", "St Louis": "St. Louis", "Saint Louis": "St. Louis",
                 "Québec": "Quebec"}
-COUNTRY = {"CAN": "Canadian", "USA": "American", "SWE": "Swedish", "FIN": "Finnish",
-           "RUS": "Russian", "CZE": "Czech", "SVK": "Slovak", "CHE": "Swiss", "DEU": "German",
-           "LVA": "Latvian", "DNK": "Danish", "NOR": "Norwegian", "AUT": "Austrian",
-           "FRA": "French", "SVN": "Slovenian", "BLR": "Belarusian", "KAZ": "Kazakh",
-           "GBR": "British", "UKR": "Ukrainian", "AUS": "Australian", "NLD": "Dutch",
-           "POL": "Polish", "ITA": "Italian", "JPN": "Japanese", "KOR": "Korean"}
 
 # news keyword buckets: (kind, emoji, label, chaos, regex)
 NEWS_BUCKETS = [
+    ("family", "🕯️", "Playing with a heavy heart", 10,
+     r"\b(passed away|passes away|died|dies|death of|funeral|in memory of|in honou?r of|mourn\w*|"
+     r"tribute to|bereavement|late (father|mother|dad|mom|grandfather|grandmother|brother|sister)|"
+     r"grandfather|grandmother|grandpa|grandma|cancer|diagnos\w*|hospitali[sz]ed|illness)\b"),
     ("love", "💔", "Love life in the news", 9,
      r"\b(divorc\w*|split(s)? from|breakup|broke up|wedding|married|marries|engaged|engagement|"
      r"fianc\w*|girlfriend|wife|honeymoon)\b"),
     ("baby", "🍼", "New dad energy", 9,
      r"\b(baby|newborn|birth of|becomes? a (dad|father)|fatherhood|paternity|expecting)\b"),
     ("drama", "🔥", "Drama alert", 8,
-     r"\b(suspend\w*|fined|hearing|ejected|controvers\w*|feud|trash[- ]talk|chirp\w*|"
-     r"arrest\w*|apolog\w*|benched|healthy scratch)\b"),
-    ("move", "🧳", "On the move", 7,
-     r"\b(trade[ds]?|traded|acquire[ds]?|waivers?|claimed|recalled|called up|sent down|"
-     r"reassigned|signed|signs (with|a|an|one|two|three|four|five|six|seven|eight|\d)|extension|contract)\b"),
-    ("hurt", "🩹", "Health watch", 6,
-     r"\b(injur\w*|day-to-day|week-to-week|surgery|illness|LTIR|IR|"
-     r"(returns?|back) (to|from) (practice|the lineup|lineup|injury|IR|LTIR|skating)|"
-     r"out (tonight|indefinitely|\d+ (days?|weeks?|months?)))\b"),
-    ("milestone", "🏆", "Milestone chatter", 6,
-     r"\b(milestone|record|career[- ]high|hat trick|100th|200th|300th|400th|500th|1,000th)\b"),
+     r"\b(suspend\w*|fined|(disciplinary|player safety) hearing|hearing (with|for) (the )?(nhl|player safety)|ejected|controvers\w*|feud|trash[- ]talk|chirp\w*|"
+     r"arrest\w*|apolog\w*)\b"),
 ]
 _NEWS_RX = [(k, e, lbl, c, re.compile(rx, re.I)) for k, e, lbl, c, rx in NEWS_BUCKETS]
 
@@ -127,18 +116,9 @@ def player_facts(p, ctx):
     # --- birthdays --------------------------------------------------------
     if bd:
         age_today = _age_on(bd, today)
-        this_year = bd.replace(year=today.year) if not (bd.month == 2 and bd.day == 29) else None
         if (bd.month, bd.day) == (today.month, today.day):
             out.append(_fact("birthday", "🎂", "It's his birthday",
                              f"Turns {age_today} today. Birthday goals are basically tradition.", 10))
-        elif this_year:
-            delta = (this_year - today).days
-            if 0 < delta <= 3:
-                out.append(_fact("birthday", "🎈", "Birthday is days away",
-                                 f"Turns {age_today + 1} in {_plural(delta, 'day')} — an early present?", 5))
-            elif -3 <= delta < 0:
-                out.append(_fact("birthday", "🎁", "Still in birthday week",
-                                 f"Turned {age_today} {_plural(-delta, 'day')} ago. The hangover goal.", 5))
         if num and num == age_today:
             out.append(_fact("numerology", "🔢", "Number matches his age",
                              f"Wears #{num} and is {age_today} years old. The universe is winking.", 6))
@@ -152,10 +132,13 @@ def player_facts(p, ctx):
     city = CITY_ALIASES.get(_d(ld.get("birthCity")), _d(ld.get("birthCity")))
     prov = _d(ld.get("birthStateProvince"))
     arena_city, arena_prov = TEAM_CITY.get(ctx["homeAbbr"], ("", ""))
-    if city and arena_city and city.lower() == arena_city.lower():
+    own_city, own_prov = TEAM_CITY.get(p["team"], ("", ""))
+    if p["home"] or (city and city.lower() == own_city.lower()):
+        pass  # he plays home games there all season: not a homecoming
+    elif city and arena_city and city.lower() == arena_city.lower():
         out.append(_fact("hometown", "🏠", "Hometown game",
                          f"Born in {city}, playing in {arena_city} tonight. Mom's in the stands.", 9))
-    elif prov and arena_prov and prov == arena_prov and not p["home"]:
+    elif prov and arena_prov and prov == arena_prov and prov != own_prov:
         out.append(_fact("hometown", "🗺️", "Home-state/province trip",
                          f"Born in {city}, {prov} — tonight's road game is in his home "
                          f"state/province.", 5))
@@ -189,7 +172,15 @@ def player_facts(p, ctx):
     for m in (50, 100, 150, 200, 250, 300, 350, 400, 450, 500, 600, 700, 800, 900):
         if goals == m - 1:
             out.append(_fact("milestone", "💯", f"One away from goal #{m}",
-                             f"Sitting on {goals} career goals. Number {m} has to happen sometime.", 8))
+                             f"Sitting on {goals} career goals. Number {m} has to happen sometime.", 9))
+    pts, ast = career.get("points") or 0, career.get("assists") or 0
+    for m in (100, 200, 300, 400, 500, 600, 700, 800, 900, 1000, 1100, 1200, 1300, 1400, 1500):
+        if pts == m - 1:
+            out.append(_fact("milestone", "🎯", f"One point from #{m}",
+                             f"Sitting on {pts} career points. A goal gets him to {m}.", 8))
+        if ast == m - 1:
+            out.append(_fact("milestone", "🤝", f"One assist from #{m}",
+                             f"Sitting on {ast} career assists — but a goal is way funnier.", 5))
     if gp and (gp + 1) % 100 == 0:
         out.append(_fact("milestone", "🎖️", f"Career game #{gp + 1}",
                          f"Tonight would be his {_ordinal(gp + 1)} NHL game. Celebrate with a goal?", 6))
@@ -198,7 +189,9 @@ def player_facts(p, ctx):
                          f"0 goals in {_plural(gp, 'NHL game')}. The dam has to break eventually.", 7))
 
     # --- recent form (last 5) --------------------------------------------
-    l5 = [g for g in (ld.get("last5Games") or []) if g.get("gameTypeId") == 2]
+    # recent form: only games from the last 30 days count as "recent"
+    l5 = [g for g in (ld.get("last5Games") or []) if g.get("gameTypeId") == 2
+          and (_date(g.get("gameDate")) or today) >= today - timedelta(days=30)]
     if l5:
         streak = 0
         for g in l5:
@@ -234,14 +227,6 @@ def slate_facts(players, date):
 
     with_bd = [(p, _date(p["ld"].get("birthDate"))) for p in players]
     with_bd = [(p, b) for p, b in with_bd if b]
-    if with_bd:
-        oldest = min(with_bd, key=lambda x: x[1])
-        youngest = max(with_bd, key=lambda x: x[1])
-        add(oldest[0]["id"], _fact("age", "👴", "Oldest skater on tonight's slate",
-                                   f"At {_age_on(oldest[1], date)}, nobody playing tonight is older. "
-                                   f"Veteran revenge on Father Time.", 5))
-        add(youngest[0]["id"], _fact("age", "👶", "Youngest skater on tonight's slate",
-                                     f"Just {_age_on(youngest[1], date)} — the baby of the whole slate.", 5))
 
     # birthday twins on opposite teams in the same game
     games = {}
@@ -254,7 +239,7 @@ def slate_facts(players, date):
                     for a, bb in ((p1, p2), (p2, p1)):
                         add(a["id"], _fact("twins", "👯", f"Birthday twin with {bb['name']}",
                                            f"Shares a birthday ({b1.strftime('%b %-d')}) with {bb['name']} "
-                                           f"of {bb['team']}. Only one twin can score first.", 6))
+                                           f"of {bb['team']}. Only one twin can score first.", 4))
         # same last name on opposite sides (brothers or pure coincidence)
         by_last = {}
         for p, _ in plist:
@@ -267,23 +252,6 @@ def slate_facts(players, date):
                                        f"Faces {others} tonight. Family feud or wild coincidence — "
                                        f"either way, chaos.", 7))
 
-    # tallest / shortest
-    h = [p for p in players if p["ld"].get("heightInInches")]
-    if h:
-        tall = max(h, key=lambda p: p["ld"]["heightInInches"])
-        short = min(h, key=lambda p: p["ld"]["heightInInches"])
-        for p, word, em in ((tall, "Tallest", "🦒"), (short, "Shortest", "🐭")):
-            inch = p["ld"]["heightInInches"]
-            add(p["id"], _fact("size", em, f"{word} skater tonight",
-                               f"{inch // 12}'{inch % 12}\" — the {word.lower()} skater on the slate.", 4))
-
-    # lone countryman
-    cnt = Counter(p["ld"].get("birthCountry") for p in players)
-    for p in players:
-        c = p["ld"].get("birthCountry")
-        if c and cnt[c] == 1 and c in COUNTRY:
-            add(p["id"], _fact("country", "🌍", f"Only {COUNTRY[c]} player tonight",
-                               f"The lone {COUNTRY[c]}-born skater on the whole slate. Flying the flag.", 6))
     return by
 
 
