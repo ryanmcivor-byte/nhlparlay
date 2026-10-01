@@ -32,22 +32,17 @@
       <div class="summon-row">
         <div>
           <h2>Summon today's evil parlay</h2>
-          <p class="muted">Three legs per vibe, one per game, only from tonight's lineups. Picks are locked
-            for the day: everyone gets the same ones, and new ones arrive tomorrow.</p>
-        </div>
-        <div class="controls">
-          <label>Vibe
-            <select id="vibe">
-              <option value="chaos" selected>Maximum chaos</option>
-              <option value="gossip">Gossip only</option>
-              <option value="grudge">Grudges &amp; homecomings</option>
-              <option value="any">Anything goes</option>
-              <option value="favourites">Statistical Favourites</option>
-            </select>
-          </label>
-          <button id="summonBtn" class="btn-evil">🔮 Reveal</button>
+          <p class="muted">Pick a vibe. Each one has its own 3-leg parlay (one per game, only from tonight's
+            lineups, no player in two vibes). Picks are locked for the day; new ones arrive tomorrow.</p>
         </div>
       </div>
+      <nav class="vibes" id="vibes" aria-label="Choose a vibe">
+        <button class="vibe" data-vibe="chaos">😈 Maximum chaos</button>
+        <button class="vibe" data-vibe="gossip">💔 Gossip only</button>
+        <button class="vibe" data-vibe="grudge">😤 Grudges &amp; homecomings</button>
+        <button class="vibe" data-vibe="any">🎲 Anything goes</button>
+        <button class="vibe" data-vibe="favourites">📈 Statistical Favourites</button>
+      </nav>
       <div id="daily" class="daily" hidden>
         <h3 id="dailyTitle"></h3>
         <ol id="dailyLegs" class="slip-legs"></ol>

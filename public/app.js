@@ -146,7 +146,8 @@
 
   // today's locked parlay for the chosen vibe: same 3 legs for everyone, all day
   function renderDaily() {
-    const vibe = $("#vibe").value;
+    const vibe = state.vibe;
+    document.querySelectorAll(".vibe").forEach((b) => b.classList.toggle("on", b.dataset.vibe === vibe));
     const legs = (state.data.picks || {})[vibe] || [];
     $("#daily").hidden = false;
     $("#dailyTitle").textContent = `Today's ${VIBE_LABEL[vibe]} parlay`;
@@ -208,12 +209,13 @@
       renderPlayers();
     }
   });
-  $("#summonBtn").addEventListener("click", () => {
+  $("#vibes").addEventListener("click", (e) => {
+    const b = e.target.closest("[data-vibe]");
+    if (!b || !state.data) return;
+    state.vibe = b.dataset.vibe;
     state.revealed = true;
     renderDaily();
-    $("#daily").scrollIntoView({ behavior: "smooth", block: "nearest" });
   });
-  $("#vibe").addEventListener("change", () => { if (state.revealed) renderDaily(); });
   $("#lineupOnly").addEventListener("change", (e) => { state.lineupOnly = e.target.checked; renderPlayers(); });
   $("#clearSlip").addEventListener("click", () => { state.slip = []; state.note = ""; renderPlayers(); renderSlip(); });
   $("#date").addEventListener("change", (e) => {

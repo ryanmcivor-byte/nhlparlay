@@ -15,6 +15,9 @@ LEGS = 3
 PLAYING = ("confirmed", "projected")
 GRUDGE = {"revenge", "hometown", "draft", "newteam", "names", "twins"}
 VIBES = ("chaos", "gossip", "grudge", "any", "favourites")
+# pick order: the pickiest vibes go first so each gets its best legs; no player
+# appears in two vibes' parlays on the same day
+ORDER = ("gossip", "grudge", "favourites", "chaos", "any")
 DIR = os.path.join(os.path.dirname(os.path.abspath(__file__)), ".picks")
 
 _locks = {}
@@ -41,12 +44,12 @@ def _stat_fact(p):
     return {"kind": "stat", "emoji": "📈", "title": f"Statistical favourite · {lu}".rstrip(" ·"), "text": text}
 
 
-def choose(slate, vibe):
-    """Pick up to LEGS legs, one per game, for `vibe`."""
+def choose(slate, vibe, taken=()):
+    """Pick up to LEGS legs, one per game, for `vibe`, skipping players in `taken`."""
     date = slate["date"]
     best = {}  # gameId -> (key, player, fact)
     for p in slate["players"]:
-        if (p.get("lineup") or {}).get("status") not in PLAYING:
+        if (p.get("lineup") or {}).get("status") not in PLAYING or p["id"] in taken:
             continue
         if vibe == "favourites":
             key, fact = p["prob"], _stat_fact(p)
@@ -98,9 +101,11 @@ def get_picks(slate):
         if day is None:
             day = _locks[date] = _load(date)
         changed = False
-        for vibe in VIBES:
+        taken = {leg["id"] for legs in day.values() for leg in legs}
+        for vibe in ORDER:
             if not day.get(vibe):
-                legs = choose(slate, vibe)
+                legs = choose(slate, vibe, taken)
+                taken |= {leg["id"] for leg in legs}
                 if legs:              # nothing to lock before any lineup is known
                     day[vibe] = legs
                     changed = True
