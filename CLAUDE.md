@@ -9,6 +9,9 @@ Python standard library only (no Node): `python3 server.py` → http://localhost
   `main` without asking. Pushing to GitHub (`ryanmcivor-byte/nhlparlay`) makes Render redeploy
   the live site.
 - Only push work that's complete and tested. Ask first before force-pushing or rewriting history.
+- When `public/app.js` or `public/style.css` changes, bump the `?v=` number on both in
+  `public/index.html`, so browsers never pair a cached old script with the new page (that
+  crashes the page and nothing loads).
 
 ## Rules the site must keep
 

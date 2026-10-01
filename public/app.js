@@ -3,6 +3,8 @@
   "use strict";
 
   const $ = (s) => document.querySelector(s);
+  // bind only if the element exists, so a missing control can't stop the page loading
+  const on = (sel, ev, fn) => { const el = $(sel); if (el) el.addEventListener(ev, fn); };
   const state = { data: null, game: "all", slip: [], expanded: new Set(), lineupOnly: true };
   const PLAYING = new Set(["confirmed", "projected"]);     // certain (or projected) to dress
   const playing = (p) => PLAYING.has((p.lineup || {}).status);
@@ -209,16 +211,16 @@
       renderPlayers();
     }
   });
-  $("#vibes").addEventListener("click", (e) => {
+  on("#vibes", "click", (e) => {
     const b = e.target.closest("[data-vibe]");
     if (!b || !state.data) return;
     state.vibe = b.dataset.vibe;
     state.revealed = true;
     renderDaily();
   });
-  $("#lineupOnly").addEventListener("change", (e) => { state.lineupOnly = e.target.checked; renderPlayers(); });
-  $("#clearSlip").addEventListener("click", () => { state.slip = []; state.note = ""; renderPlayers(); renderSlip(); });
-  $("#date").addEventListener("change", (e) => {
+  on("#lineupOnly", "change", (e) => { state.lineupOnly = e.target.checked; renderPlayers(); });
+  on("#clearSlip", "click", () => { state.slip = []; state.note = ""; renderPlayers(); renderSlip(); });
+  on("#date", "change", (e) => {
     state.game = "all";
     showStatus("Loading…");
     fetchSlate(e.target.value);

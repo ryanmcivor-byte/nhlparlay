@@ -22,6 +22,13 @@ class Handler(SimpleHTTPRequestHandler):
     def __init__(self, *a, **kw):
         super().__init__(*a, directory=ROOT, **kw)
 
+    def end_headers(self):
+        # page code must never be served stale: an old app.js against a new
+        # index.html crashes and nothing loads. Images can cache normally.
+        if not self.path.startswith("/api/") and not self.path.split("?")[0].endswith((".jpg", ".png")):
+            self.send_header("Cache-Control", "no-cache")
+        super().end_headers()
+
     def log_message(self, fmt, *args):
         if "/api/" in (self.path or ""):
             super().log_message(fmt, *args)

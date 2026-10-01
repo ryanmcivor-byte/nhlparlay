@@ -1,7 +1,9 @@
 """Build a day's slate of chaos facts in the background.
 
-get_slate(date) never blocks: it returns {"status": "building", "progress": …}
-until the build finishes, then the full slate (cached ~20 minutes).
+get_slate(date) never blocks. The first build of a day answers
+{"status": "building", "progress": …} until it finishes; after that the last
+good slate is always served, and refreshes (every TTL) run in the background
+so visitors never wait on a rebuild.
 """
 import threading
 import time
@@ -13,39 +15,42 @@ import facts
 import nhl
 import picks
 
-TTL = 10 * 60      # lineups firm up near puck drop, so rebuild often
-_slates = {}      # date -> {"status", "progress", "data", "at"}
+TTL = 10 * 60      # lineups firm up near puck drop, so refresh often
+_slates = {}      # date -> {"data": last good slate or None, "at": built time, "build": running build or None}
 _lock = threading.Lock()
 
 
 def get_slate(date):
     with _lock:
-        s = _slates.get(date)
-        fresh = s and (s["status"] == "building" or time.time() - s["at"] < TTL)
-        if not fresh:
-            s = {"status": "building", "progress": 0.0, "step": "Waking the goblins", "at": time.time()}
-            _slates[date] = s
-            threading.Thread(target=_build, args=(date, s), daemon=True).start()
-    if s["status"] == "ready":
-        data = s["data"]
+        e = _slates.setdefault(date, {"data": None, "at": 0, "build": None, "error": None})
+        stale = time.time() - e["at"] >= TTL
+        if stale and e["build"] is None:
+            e["build"] = {"progress": 0.0, "step": "Waking the goblins"}
+            threading.Thread(target=_build, args=(date, e), daemon=True).start()
+        data, build, error = e["data"], e["build"], e["error"]
+    if data is not None:
         return dict(data, picks=picks.get_picks(data)) if data.get("players") else data
-    if s["status"] == "error":
-        return {"status": "error", "error": s.get("error", "build failed")}
-    return {"status": "building", "progress": round(s["progress"], 2), "step": s["step"]}
+    if build is None and error:
+        return {"status": "error", "error": error}
+    return {"status": "building", "progress": round(build["progress"], 2), "step": build["step"]}
 
 
 def _name(first, last):
     return f"{facts._d(first)} {facts._d(last)}".strip()
 
 
-def _build(date, state):
+def _build(date, entry):
     try:
-        state["data"] = build(date, state)
-        state["status"] = "ready"
-    except Exception as e:  # keep the server alive; the page shows the error
+        data = build(date, entry["build"])
+        with _lock:
+            entry["data"], entry["error"] = data, None
+    except Exception as e:  # keep the server alive; keep serving the last good slate
         traceback.print_exc()
-        state["status"], state["error"] = "error", str(e)
-    state["at"] = time.time()
+        with _lock:
+            entry["error"] = str(e)
+    with _lock:
+        entry["at"] = time.time()   # a failed build waits a TTL too, so we don't hammer the APIs
+        entry["build"] = None
 
 
 def build(date, state):
