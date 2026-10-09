@@ -6,7 +6,7 @@
   <title>Chayka's Evil Parlays</title>
   <link rel="icon" type="image/png" href="/favicon.png">
   <link rel="apple-touch-icon" href="/logo.png">
-  <link rel="stylesheet" href="/style.css?v=8">
+  <link rel="stylesheet" href="/style.css?v=9">
 </head>
 <body>
   <header class="hero">
@@ -51,7 +51,8 @@
         <div>
           <h2>Summon today's evil parlay</h2>
           <p class="muted">Pick a vibe. Each one has its own 3-leg parlay (one per game, only from tonight's
-            lineups, no player in two vibes). Picks are locked for the day; new ones arrive tomorrow.</p>
+            lineups, no player in two vibes), and Theo picks one player on pure feeling. Picks are locked
+            for the day; new ones arrive tomorrow.</p>
         </div>
       </div>
       <nav class="vibes" id="vibes" aria-label="Choose a vibe">
@@ -60,6 +61,7 @@
         <button class="vibe" data-vibe="grudge">😤 Grudges &amp; homecomings</button>
         <button class="vibe" data-vibe="any">🎲 Anything goes</button>
         <button class="vibe" data-vibe="favourites">📈 Statistical Favourites</button>
+        <button class="vibe vibe-theo" data-vibe="theo">🔮 Theo's Evil Daily Pick</button>
       </nav>
       <div id="daily" class="daily" hidden>
         <h3 id="dailyTitle"></h3>
@@ -94,6 +96,17 @@
     </p>
   </main>
 
-  <script src="/app.js?v=8"></script>
+  <div id="theoModal" class="theo-modal" hidden role="dialog" aria-modal="true" aria-labelledby="theoTitle">
+    <figure class="theo-card">
+      <button id="theoClose" class="theo-close" aria-label="Close">✕</button>
+      <img src="/theo.jpg" alt="Theo in his evil costume" width="502" height="1100">
+      <figcaption>
+        <b id="theoTitle">Theo has a feeling…</b>
+        <span id="theoPick"></span>
+      </figcaption>
+    </figure>
+  </div>
+
+  <script src="/app.js?v=9"></script>
 </body>
 </html>

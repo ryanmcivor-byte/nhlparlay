@@ -18,10 +18,13 @@ from facts import HOT_KINDS
 LEGS = 3
 PLAYING = ("confirmed", "projected")
 GRUDGE = {"revenge", "hometown", "draft", "newteam", "names", "twins"}
-VIBES = ("chaos", "hot", "grudge", "any", "favourites")
+VIBES = ("chaos", "hot", "grudge", "any", "favourites", "theo")
 # pick order: the pickiest vibes go first so each gets its best legs; no player
 # appears in two vibes' parlays on the same day
-ORDER = ("hot", "grudge", "favourites", "chaos", "any")
+ORDER = ("hot", "grudge", "favourites", "chaos", "any", "theo")
+LEGS_FOR = {"theo": 1}    # Theo's Evil Daily Pick is a single gut-feeling leg
+THEO_FACT = {"kind": "theo", "emoji": "🔮", "title": "Theo's gut feeling",
+             "text": "No stats. No storyline. No streak. Theo just has a feeling about this one."}
 DIR = os.path.join(os.path.dirname(os.path.abspath(__file__)), "data", "picks")
 DROP_TIME = "9 AM ET"     # when the daily job runs (see .github/workflows/daily.yml)
 FALLBACK_HOUR = 11        # ET hour after which the server locks today's picks itself
@@ -59,6 +62,8 @@ def choose(slate, vibe, taken=()):
             continue
         if vibe == "favourites":
             key, fact = p["prob"], _stat_fact(p)
+        elif vibe == "theo":
+            key, fact = _u(date, "theo", p["id"]), THEO_FACT   # pure feeling: any dressed skater
         else:
             fs = [f for f in p["facts"] if _keep(vibe, f)]
             if not fs:
@@ -69,7 +74,7 @@ def choose(slate, vibe, taken=()):
             fact = max(fs, key=lambda f: (f["chaos"], _u(date, vibe, p["id"], f["title"])))
         if p["gameId"] not in best or key > best[p["gameId"]][0]:
             best[p["gameId"]] = (key, p, fact)
-    legs = sorted(best.values(), key=lambda x: -x[0])[:LEGS]
+    legs = sorted(best.values(), key=lambda x: -x[0])[:LEGS_FOR.get(vibe, LEGS)]
     return [{"id": p["id"], "name": p["name"], "team": p["team"], "opp": p["opp"], "home": p["home"],
              "gameId": p["gameId"], "headshot": p.get("headshot"), "prob": p["prob"], "fact": fact}
             for _, p, fact in legs]

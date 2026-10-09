@@ -9,9 +9,10 @@
   const PLAYING = new Set(["confirmed", "projected"]);     // certain (or projected) to dress
   const playing = (p) => PLAYING.has((p.lineup || {}).status);
   const VIBE_LABEL = { chaos: "Maximum chaos", hot: "Hot Streaks", grudge: "Grudges & homecomings",
-    any: "Anything goes", favourites: "Statistical Favourites", gossip: "Gossip only (retired)" };
-  const VIBE_ICON = { chaos: "😈", hot: "🔥", grudge: "😤", any: "🎲", favourites: "📈", gossip: "💔" };
-  const VIBE_ORDER = ["chaos", "hot", "grudge", "any", "favourites", "gossip"];   // gossip: retired, history only
+    any: "Anything goes", favourites: "Statistical Favourites", theo: "Theo's Evil Daily Pick",
+    gossip: "Gossip only (retired)" };
+  const VIBE_ICON = { chaos: "😈", hot: "🔥", grudge: "😤", any: "🎲", favourites: "📈", theo: "🔮", gossip: "💔" };
+  const VIBE_ORDER = ["chaos", "hot", "grudge", "any", "favourites", "theo", "gossip"];   // gossip: retired, history only
   const LINEUP_ICON = { confirmed: "✅", projected: "📋", gtd: "⚠️", out: "🚫", unknown: "❔" };
 
   const esc = (s) => String(s == null ? "" : s).replace(/[&<>"']/g, (c) =>
@@ -187,7 +188,7 @@
     document.querySelectorAll(".vibe").forEach((b) => b.classList.toggle("on", b.dataset.vibe === vibe));
     const legs = (state.data.picks || {})[vibe] || [];
     $("#daily").hidden = false;
-    $("#dailyTitle").textContent = `Today's ${VIBE_LABEL[vibe]} parlay`;
+    $("#dailyTitle").textContent = vibe === "theo" ? "Theo's Evil Daily Pick" : `Today's ${VIBE_LABEL[vibe]} parlay`;
     if (!legs.length) {
       $("#dailyLegs").innerHTML = "";
       $("#dailyFoot").innerHTML = "";
@@ -196,7 +197,7 @@
     }
     $("#dailyLegs").innerHTML = legs.map((l) => legHtml(l, l.fact, false)).join("");
     $("#dailyFoot").innerHTML = oddsHtml(legs);
-    const fewer = legs.length < 3
+    const fewer = vibe !== "theo" && legs.length < 3
       ? ` Only ${legs.length} game${legs.length > 1 ? "s" : ""} qualify, so it has ${legs.length} leg${legs.length > 1 ? "s" : ""} (one per game).` : "";
     $("#dailyNote").textContent = `🔒 Locked for ${state.data.date}. Everyone gets these same picks; new ones tomorrow.${fewer}`;
   }
@@ -252,7 +253,28 @@
     state.vibe = b.dataset.vibe;
     state.revealed = true;
     renderDaily();
+    if (state.vibe === "theo") openTheo();
   });
+
+  // Theo's photo pops up whenever his section is opened
+  let theoReturn = null;
+  function openTheo() {
+    const leg = ((state.data.picks || {}).theo || [])[0];
+    $("#theoPick").textContent = leg ? `${leg.name} (${leg.team} ${leg.home ? "vs" : "@"} ${leg.opp}) to score tonight.`
+      : (state.data.picksNote || "No pick yet today.");
+    theoReturn = document.activeElement;
+    $("#theoModal").hidden = false;
+    document.body.classList.add("modal-open");
+    $("#theoClose").focus();
+  }
+  function closeTheo() {
+    $("#theoModal").hidden = true;
+    document.body.classList.remove("modal-open");
+    if (theoReturn) theoReturn.focus();
+  }
+  on("#theoClose", "click", closeTheo);
+  on("#theoModal", "click", (e) => { if (e.target.id === "theoModal") closeTheo(); });
+  document.addEventListener("keydown", (e) => { if (e.key === "Escape" && !$("#theoModal").hidden) closeTheo(); });
   on("#lineupOnly", "change", (e) => { state.lineupOnly = e.target.checked; renderPlayers(); });
   on("#clearSlip", "click", () => { state.slip = []; state.note = ""; renderPlayers(); renderSlip(); });
   on("#date", "change", (e) => {
