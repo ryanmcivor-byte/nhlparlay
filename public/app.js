@@ -10,6 +10,8 @@
   const playing = (p) => PLAYING.has((p.lineup || {}).status);
   const VIBE_LABEL = { chaos: "Maximum chaos", gossip: "Gossip only", grudge: "Grudges & homecomings",
     any: "Anything goes", favourites: "Statistical Favourites" };
+  const VIBE_ICON = { chaos: "😈", gossip: "💔", grudge: "😤", any: "🎲", favourites: "📈" };
+  const VIBE_ORDER = ["chaos", "gossip", "grudge", "any", "favourites"];
   const LINEUP_ICON = { confirmed: "✅", projected: "📋", gtd: "⚠️", out: "🚫", unknown: "❔" };
 
   const esc = (s) => String(s == null ? "" : s).replace(/[&<>"']/g, (c) =>
@@ -28,6 +30,39 @@
   }
   function save(key, v) {
     try { localStorage.setItem(key, JSON.stringify(v)); } catch (e) { /* private mode */ }
+  }
+
+  // -------------------------------------------------------------- record
+  const fmtDay = (d) => new Date(d + "T12:00:00").toLocaleDateString([], { weekday: "short", month: "short", day: "numeric" });
+  const LEG_ICON = { win: "✅", loss: "❌", void: "➖", pending: "⏳" };
+
+  async function fetchRecord() {
+    let r;
+    try { r = await (await fetch("/api/record")).json(); } catch (e) { return; }
+    if (!r || !r.days || !r.days.length) return;
+    const t = r.total, n = t.W + t.L;
+    $("#recTotal").textContent = `${t.W}-${t.L}` + (t.P ? `-${t.P}` : "");
+    $("#recSub").textContent = `${n ? Math.round((t.W / n) * 100) : 0}% of parlays hit · since ${fmtDay(r.start)}`;
+    $("#recVibes").innerHTML = VIBE_ORDER.filter((v) => r.byVibe[v]).map((v) => {
+      const b = r.byVibe[v];
+      return `<span class="rec-chip" title="${esc(VIBE_LABEL[v])}">${VIBE_ICON[v]} ${esc(VIBE_LABEL[v])} <b>${b.W}-${b.L}</b></span>`;
+    }).join("");
+    $("#recDays").innerHTML = r.days.map((d) => `
+      <div class="rec-day">
+        <div class="rec-date">${fmtDay(d.date)}${d.rebuilt ? '<span class="rebuilt" title="Rebuilt: see note below">*</span>' : ""}</div>
+        <div class="rec-parlays">${VIBE_ORDER.filter((v) => d.vibes[v]).map((v) => {
+          const p = d.vibes[v];
+          const cls = p.result === "W" ? "win" : p.result === "L" ? "loss" : "other";
+          const legs = p.legs.map((l) => `<span class="rec-leg" title="${esc(l.fact || "")}">${LEG_ICON[l.result] || ""} ${esc(l.name)}${l.goals ? ` (${l.goals}G)` : ""}</span>`).join("");
+          return `<div class="rec-parlay ${cls}"><span class="rec-res">${p.result === "pending" ? "…" : p.result}</span>
+            <span class="rec-vibe">${VIBE_ICON[v]} ${esc(VIBE_LABEL[v])}</span><span class="rec-legs">${legs}</span></div>`;
+        }).join("")}</div>
+      </div>`).join("");
+    const rebuilt = r.days.filter((d) => d.rebuilt).length;
+    $("#recRebuilt").textContent = rebuilt
+      ? `* Before the site started saving its picks, ${rebuilt} days' picks were rebuilt from the players who dressed and the news published before that day.`
+      : "";
+    $("#record").hidden = false;
   }
 
   // ---------------------------------------------------------------- data
@@ -156,7 +191,7 @@
     if (!legs.length) {
       $("#dailyLegs").innerHTML = "";
       $("#dailyFoot").innerHTML = "";
-      $("#dailyNote").textContent = "No skaters in tonight's lineups fit this vibe yet. Check back closer to puck drop.";
+      $("#dailyNote").textContent = state.data.picksNote || "No skaters in tonight's lineups fit this vibe yet. Check back closer to puck drop.";
       return;
     }
     $("#dailyLegs").innerHTML = legs.map((l) => legHtml(l, l.fact, false)).join("");
@@ -226,6 +261,7 @@
     fetchSlate(e.target.value);
   });
 
+  fetchRecord();
   $("#date").value = todayET();
   showStatus("Waking the goblins…");
   fetchSlate($("#date").value);

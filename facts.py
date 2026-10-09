@@ -31,7 +31,9 @@ NEWS_BUCKETS = [
     ("family", "🕯️", "Playing with a heavy heart", 10,
      r"\b(passed away|passes away|died|dies|death of|funeral|in memory of|in honou?r of|mourn\w*|"
      r"tribute to|bereavement|late (father|mother|dad|mom|grandfather|grandmother|brother|sister)|"
-     r"grandfather|grandmother|grandpa|grandma|cancer|diagnos\w*|hospitali[sz]ed|illness)\b"),
+     r"grandfather|grandmother|grandpa|grandma|"
+     r"(wife|mother|father|dad|mom|son|daughter|brother|sister|family|fianc\w*)('s)? (\w+ ){0,2}"
+     r"(cancer|diagnos\w*|illness|hospitali[sz]ed))\b"),
     ("love", "💔", "Love life in the news", 9,
      r"\b(divorc\w*|split(s)? from|breakup|broke up|wedding|married|marries|engaged|engagement|"
      r"fianc\w*|girlfriend|wife|honeymoon)\b"),
@@ -272,6 +274,7 @@ def news_facts(items, players):
             last = p["last"].lower()
             hit = full in low or (len(last) >= 5 and lasts[last] == 1
                                   and re.search(r"\b" + re.escape(last) + r"\b", low)
+                                  and not re.search(r"\b" + re.escape(p["last"]) + r"\s+[A-Z]", title)
                                   and p["teamWords"] & set(re.findall(r"[a-z]+", low)))
             if not hit or (p["id"], title) in seen:
                 continue

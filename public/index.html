@@ -6,7 +6,7 @@
   <title>Chayka's Evil Parlays</title>
   <link rel="icon" type="image/png" href="/favicon.png">
   <link rel="apple-touch-icon" href="/logo.png">
-  <link rel="stylesheet" href="/style.css?v=6">
+  <link rel="stylesheet" href="/style.css?v=7">
 </head>
 <body>
   <header class="hero">
@@ -26,6 +26,24 @@
   </header>
 
   <main>
+    <section class="record card" id="record" hidden>
+      <div class="rec-top">
+        <div class="rec-main">
+          <span class="rec-label">Evil record</span>
+          <b id="recTotal">0-0</b>
+          <span id="recSub" class="muted"></span>
+        </div>
+        <div id="recVibes" class="rec-vibes"></div>
+      </div>
+      <details class="rec-history">
+        <summary>Day by day</summary>
+        <div id="recDays"></div>
+        <p class="rec-note">A parlay wins only if every leg scores. A player who doesn't dress is a void
+          leg, like at a sportsbook. The record updates every morning with the night before.
+          <span id="recRebuilt"></span></p>
+      </details>
+    </section>
+
     <section id="status" class="status" aria-live="polite"></section>
 
     <section class="summon card" id="summon" hidden>
@@ -76,6 +94,6 @@
     </p>
   </main>
 
-  <script src="/app.js?v=6"></script>
+  <script src="/app.js?v=7"></script>
 </body>
 </html>

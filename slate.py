@@ -5,6 +5,7 @@ get_slate(date) never blocks. The first build of a day answers
 good slate is always served, and refreshes (every TTL) run in the background
 so visitors never wait on a rebuild.
 """
+import copy
 import threading
 import time
 import traceback
@@ -29,7 +30,10 @@ def get_slate(date):
             threading.Thread(target=_build, args=(date, e), daemon=True).start()
         data, build, error = e["data"], e["build"], e["error"]
     if data is not None:
-        return dict(data, picks=picks.get_picks(data)) if data.get("players") else data
+        if not data.get("players"):
+            return data
+        day, note = picks.get_picks(data)
+        return dict(data, picks=day, picksNote=note)
     if build is None and error:
         return {"status": "error", "error": error}
     return {"status": "building", "progress": round(build["progress"], 2), "step": build["step"]}
@@ -53,7 +57,10 @@ def _build(date, entry):
         entry["build"] = None
 
 
-def build(date, state):
+def build(date, state, as_of=False):
+    """The day's slate. With as_of=True (a past day) it is rebuilt as it stood that
+    morning: the players who actually dressed, career numbers rolled back to before
+    the date, and only news published before it."""
     from datetime import date as Date
     day = Date.fromisoformat(date)
     games_raw = [g for g in nhl.schedule(date) if g.get("gameType") in (1, 2, 3)]
@@ -75,45 +82,18 @@ def build(date, state):
                       "start": g.get("startTimeUTC"), "venue": facts._d(g.get("venue")),
                       "state": g.get("gameState"), "type": g.get("gameType")})
 
-    # rosters
-    state.update(progress=0.05, step="Stealing rosters")
-    entries = []
-    with ThreadPoolExecutor(8) as ex:
-        rosters = dict(zip(team_name, ex.map(_safe(nhl.roster), team_name)))
-    for g in games:
-        for side, opp, home in (("away", "home", False), ("home", "away", True)):
-            a, o = g[side], g[opp]
-            for r in rosters.get(a) or []:
-                entries.append({"id": r["id"], "name": _name(r.get("firstName"), r.get("lastName")),
-                                "last": facts._d(r.get("lastName")), "team": a, "opp": o, "home": home,
-                                "gameId": g["id"], "homeAbbr": g["home"], "teamWords": team_words[a],
-                                "headshot": r.get("headshot"), "pos": r.get("positionCode"),
-                                "num": r.get("sweaterNumber")})
-
-    # player landing pages (bio, career, last 5)
-    state.update(progress=0.1, step="Reading everyone's diaries")
-    done = [0]
-
-    def load(e):
-        ld = _safe(nhl.landing)(e["id"])
-        done[0] += 1
-        state["progress"] = 0.1 + 0.6 * done[0] / max(1, len(entries))
-        return ld
-
-    with ThreadPoolExecutor(16) as ex:
-        lds = list(ex.map(load, entries))
-    players = []
-    for e, ld in zip(entries, lds):
-        if ld:
-            e["ld"] = ld
-            players.append(e)
+    if as_of:
+        players = _dressed_players(games, team_words, date, season, state)
+    else:
+        players = _roster_players(games, team_name, team_words, state)
 
     # revenge games: opponent is a former NHL team → count meetings since he left
     state.update(progress=0.72, step="Digging up old grudges")
     ctx_rev = {}
     cands = [p for p in players if _played_for(p, team_name.get(p["opp"]))]
     with ThreadPoolExecutor(8) as ex:
-        for p, f in zip(cands, ex.map(lambda p: _safe(_revenge)(p, team_name, season), cands)):
+        for p, f in zip(cands, ex.map(lambda p: _safe(_revenge)(p, team_name, season, date if as_of else None),
+                                      cands)):
             if f:
                 ctx_rev[p["id"]] = f
 
@@ -128,12 +108,13 @@ def build(date, state):
                        f'OR tribute OR mourning)')
     items = []
     with ThreadPoolExecutor(6) as ex:
-        for res in ex.map(lambda q: _safe(nhl.headlines)(q, 10, 100), queries):
+        for res in ex.map(lambda q: _safe(nhl.headlines)(q, 10, 100, day if as_of else None), queries):
             items.extend(res or [])
     news = facts.news_facts(items, players)
 
     state.update(progress=0.88, step="Checking who's actually dressing")
-    lineups = _lineups(games, players)
+    lineups = ({p["id"]: {"status": "confirmed", "label": "Dressed", "detail": "Official NHL box score"}
+                for p in players} if as_of else _lineups(games, players))
 
     state.update(progress=0.92, step="Brewing chaos")
     slate_f = facts.slate_facts(players, day)
@@ -155,6 +136,102 @@ def build(date, state):
             "newsCount": sum(len(v) for v in news.values()), "builtAt": int(time.time())}
 
 
+def _roster_players(games, team_name, team_words, state):
+    """Today's skaters: each team's current roster, with landing pages."""
+    state.update(progress=0.05, step="Stealing rosters")
+    entries = []
+    with ThreadPoolExecutor(8) as ex:
+        rosters = dict(zip(team_name, ex.map(_safe(nhl.roster), team_name)))
+    for g in games:
+        for side, opp, home in (("away", "home", False), ("home", "away", True)):
+            a, o = g[side], g[opp]
+            for r in rosters.get(a) or []:
+                entries.append({"id": r["id"], "name": _name(r.get("firstName"), r.get("lastName")),
+                                "last": facts._d(r.get("lastName")), "team": a, "opp": o, "home": home,
+                                "gameId": g["id"], "homeAbbr": g["home"], "teamWords": team_words[a],
+                                "headshot": r.get("headshot"), "pos": r.get("positionCode"),
+                                "num": r.get("sweaterNumber")})
+    state.update(progress=0.1, step="Reading everyone's diaries")
+    return _with_landings(entries, state)
+
+
+def _dressed_players(games, team_words, date, season, state):
+    """A past day's skaters: whoever dressed (box score), with landing pages rolled
+    back to that morning."""
+    state.update(progress=0.05, step="Reading the box scores")
+    with ThreadPoolExecutor(8) as ex:
+        boxes = dict(zip([g["id"] for g in games], ex.map(_safe(nhl.boxscore), [g["id"] for g in games])))
+    entries = []
+    for g in games:
+        pbg = (boxes.get(g["id"]) or {}).get("playerByGameStats") or {}
+        for key, side, opp, home in (("awayTeam", "away", "home", False), ("homeTeam", "home", "away", True)):
+            a = g[side]
+            for grp in ("forwards", "defense"):
+                for r in (pbg.get(key) or {}).get(grp) or []:
+                    entries.append({"id": r["playerId"], "team": a, "opp": g[opp], "home": home,
+                                    "gameId": g["id"], "homeAbbr": g["home"], "teamWords": team_words[a],
+                                    "pos": r.get("position"), "num": r.get("sweaterNumber")})
+    state.update(progress=0.1, step="Reading everyone's diaries")
+    players = _with_landings(entries, state)
+    with ThreadPoolExecutor(16) as ex:
+        lds = list(ex.map(lambda p: _safe(_rewind)(p["ld"], p["id"], date, season), players))
+    out = []
+    for p, ld in zip(players, lds):
+        if ld:
+            p.update(ld=ld, name=_name(ld.get("firstName"), ld.get("lastName")),
+                     last=facts._d(ld.get("lastName")), headshot=ld.get("headshot"))
+            out.append(p)
+    return out
+
+
+def _with_landings(entries, state):
+    done = [0]
+
+    def load(e):
+        ld = _safe(nhl.landing)(e["id"])
+        done[0] += 1
+        state["progress"] = 0.1 + 0.6 * done[0] / max(1, len(entries))
+        return ld
+
+    with ThreadPoolExecutor(16) as ex:
+        lds = list(ex.map(load, entries))
+    players = []
+    for e, ld in zip(entries, lds):
+        if ld:
+            e["ld"] = ld
+            players.append(e)
+    return players
+
+
+def _rewind(ld, pid, date, season):
+    """A copy of a landing page as it stood on the morning of `date`: this season's
+    games on or after the date removed from career totals, the season row and
+    last5Games."""
+    ld = copy.deepcopy(ld)
+    log = nhl.game_log(pid, season)
+    after = [g for g in log if g["gameDate"] >= date]
+    rs = (ld.get("careerTotals") or {}).get("regularSeason")
+    if rs and after:
+        rs["gamesPlayed"] = (rs.get("gamesPlayed") or 0) - len(after)
+        for k in ("goals", "assists", "points"):
+            rs[k] = (rs.get(k) or 0) - sum(g.get(k) or 0 for g in after)
+    rows = [s for s in ld.get("seasonTotals") or [] if s.get("leagueAbbrev") == "NHL"
+            and s.get("gameTypeId") == 2 and s.get("season") == season]
+    if rows and after:
+        row = rows[-1]
+        row["gamesPlayed"] = (row.get("gamesPlayed") or 0) - len(after)
+        for k in ("goals", "assists", "points"):
+            row[k] = (row.get(k) or 0) - sum(g.get(k) or 0 for g in after)
+        if row["gamesPlayed"] <= 0:
+            ld["seasonTotals"] = [s for s in ld["seasonTotals"] if s is not row]
+    before = [g for g in log + nhl.game_log(pid, season - 10001) if g["gameDate"] < date]
+    before.sort(key=lambda g: g["gameDate"], reverse=True)
+    ld["last5Games"] = [{"gameDate": g["gameDate"], "goals": g.get("goals"), "gameTypeId": 2,
+                         "opponentAbbrev": g.get("opponentAbbrev"), "teamAbbrev": g.get("teamAbbrev")}
+                        for g in before[:5]]
+    return ld
+
+
 def _safe(fn):
     def run(*a):
         try:
@@ -168,7 +245,7 @@ def _played_for(p, full):
     return bool(full) and any(facts._d(s.get("teamName")) == full and s["season"] for s in facts.nhl_seasons(p["ld"]))
 
 
-def _revenge(p, team_name, season):
+def _revenge(p, team_name, season, before=None):
     opp, full = p["opp"], team_name[p["opp"]]
     rows = facts.nhl_seasons(p["ld"])
     with_opp = [s for s in rows if facts._d(s.get("teamName")) == full]
@@ -185,6 +262,8 @@ def _revenge(p, team_name, season):
     s = last_season
     while s <= season:
         for gm in nhl.game_log(p["id"], s):
+            if before and gm["gameDate"] >= before:
+                continue
             if gm.get("teamAbbrev") == opp and (last_date is None or gm["gameDate"] > last_date):
                 last_date = gm["gameDate"]
         s += 10001
@@ -193,7 +272,8 @@ def _revenge(p, team_name, season):
     s = last_season
     while s <= season:
         since += sum(1 for gm in nhl.game_log(p["id"], s)
-                     if gm.get("opponentAbbrev") == opp and gm["gameDate"] > last_date)
+                     if gm.get("opponentAbbrev") == opp and gm["gameDate"] > last_date
+                     and not (before and gm["gameDate"] >= before))
         s += 10001
     if since == 0:
         return facts._fact("revenge", "😈", "FIRST game vs his old team",

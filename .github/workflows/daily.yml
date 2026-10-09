@@ -1,0 +1,38 @@
+# Every morning: grade last night's parlays into the W-L record and lock today's
+# picks (daily.py), then commit data/ so the live site redeploys with them.
+name: Daily picks and record
+
+on:
+  schedule:
+    - cron: "0 13 * * *"     # 13:00 UTC = 9 AM EDT / 8 AM EST
+  workflow_dispatch: {}      # "Run workflow" button for a manual run
+
+permissions:
+  contents: write
+
+concurrency:
+  group: daily
+  cancel-in-progress: false
+
+jobs:
+  daily:
+    runs-on: ubuntu-latest
+    timeout-minutes: 30
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+      - name: Grade yesterday, lock today
+        run: python3 daily.py
+      - name: Commit the results
+        run: |
+          git config user.name "evil-parlays-bot"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git add data
+          if git diff --cached --quiet; then
+            echo "nothing new"
+          else
+            git commit -m "Daily picks and record: $(TZ=America/New_York date +%F)"
+            git push
+          fi

@@ -1,0 +1,1592 @@
+{
+ "2026-09-30": {
+  "rebuilt": true,
+  "vibes": {
+   "any": {
+    "legs": [
+     {
+      "fact": "First game with the Flyers",
+      "goals": 0,
+      "home": true,
+      "id": 8481122,
+      "name": "Simon Benoit",
+      "opp": "PIT",
+      "result": "loss",
+      "team": "PHI"
+     },
+     {
+      "fact": "Still chasing goal #1",
+      "goals": 0,
+      "home": false,
+      "id": 8485388,
+      "name": "Victor Eklund",
+      "opp": "TOR",
+      "result": "loss",
+      "team": "NYI"
+     },
+     {
+      "fact": "First game with the Avalanche",
+      "goals": 0,
+      "home": true,
+      "id": 8475768,
+      "name": "Jaden Schwartz",
+      "opp": "LAK",
+      "result": "loss",
+      "team": "COL"
+     }
+    ],
+    "result": "L"
+   },
+   "chaos": {
+    "legs": [
+     {
+      "fact": "Birthday twin with Artemi Panarin",
+      "goals": 0,
+      "home": true,
+      "id": 8480069,
+      "name": "Cale Makar",
+      "opp": "LAK",
+      "result": "loss",
+      "team": "COL"
+     },
+     {
+      "fact": "Still chasing goal #1",
+      "goals": 0,
+      "home": true,
+      "id": 8486067,
+      "name": "Gavin McKenna",
+      "opp": "NYI",
+      "result": "loss",
+      "team": "TOR"
+     },
+     {
+      "fact": "First game with the Penguins",
+      "goals": 1,
+      "home": false,
+      "id": 8482148,
+      "name": "Hendrix Lapierre",
+      "opp": "PHI",
+      "result": "win",
+      "team": "PIT"
+     }
+    ],
+    "result": "L"
+   },
+   "favourites": {
+    "legs": [
+     {
+      "fact": "Statistical favourite \u00b7 Dressed",
+      "goals": 0,
+      "home": true,
+      "id": 8477939,
+      "name": "William Nylander",
+      "opp": "NYI",
+      "result": "loss",
+      "team": "TOR"
+     },
+     {
+      "fact": "Statistical favourite \u00b7 Dressed",
+      "goals": 0,
+      "home": false,
+      "id": 8477960,
+      "name": "Adrian Kempe",
+      "opp": "COL",
+      "result": "loss",
+      "team": "LAK"
+     },
+     {
+      "fact": "Statistical favourite \u00b7 Dressed",
+      "goals": 0,
+      "home": false,
+      "id": 8471675,
+      "name": "Sidney Crosby",
+      "opp": "PHI",
+      "result": "loss",
+      "team": "PIT"
+     }
+    ],
+    "result": "L"
+   },
+   "gossip": {
+    "legs": [
+     {
+      "fact": "New dad energy",
+      "goals": 0,
+      "home": true,
+      "id": 8475172,
+      "name": "Nazem Kadri",
+      "opp": "LAK",
+      "result": "loss",
+      "team": "COL"
+     },
+     {
+      "fact": "Drama alert",
+      "goals": 0,
+      "home": true,
+      "id": 8476853,
+      "name": "Morgan Rielly",
+      "opp": "NYI",
+      "result": "loss",
+      "team": "TOR"
+     },
+     {
+      "fact": "Drama alert",
+      "goals": 0,
+      "home": true,
+      "id": 8481533,
+      "name": "Trevor Zegras",
+      "opp": "PIT",
+      "result": "loss",
+      "team": "PHI"
+     }
+    ],
+    "result": "L"
+   },
+   "grudge": {
+    "legs": [
+     {
+      "fact": "First game with the Penguins",
+      "goals": 0,
+      "home": false,
+      "id": 8477845,
+      "name": "Trevor van Riemsdyk",
+      "opp": "PHI",
+      "result": "loss",
+      "team": "PIT"
+     },
+     {
+      "fact": "FIRST game vs his old team",
+      "goals": 0,
+      "home": false,
+      "id": 8481711,
+      "name": "Matias Maccelli",
+      "opp": "TOR",
+      "result": "loss",
+      "team": "NYI"
+     },
+     {
+      "fact": "Birthday twin with Mats Zuccarello",
+      "goals": 2,
+      "home": true,
+      "id": 8477492,
+      "name": "Nathan MacKinnon",
+      "opp": "LAK",
+      "result": "win",
+      "team": "COL"
+     }
+    ],
+    "result": "L"
+   }
+  }
+ },
+ "2026-10-01": {
+  "rebuilt": false,
+  "vibes": {
+   "any": {
+    "legs": [
+     {
+      "fact": "First game with the Devils",
+      "goals": 0,
+      "home": true,
+      "id": 8482146,
+      "name": "Luke Evangelista",
+      "opp": "PHI",
+      "result": "loss",
+      "team": "NJD"
+     },
+     {
+      "fact": "First game with the Blue Jackets",
+      "goals": 0,
+      "home": true,
+      "id": 8482126,
+      "name": "Emil Andrae",
+      "opp": "BUF",
+      "result": "loss",
+      "team": "CBJ"
+     },
+     {
+      "fact": "Career game #100",
+      "goals": 0,
+      "home": true,
+      "id": 8483678,
+      "name": "Elias Pettersson",
+      "opp": "EDM",
+      "result": "loss",
+      "team": "VAN"
+     }
+    ],
+    "result": "L"
+   },
+   "chaos": {
+    "legs": [
+     {
+      "fact": "Revenge game vs NSH",
+      "goals": 0,
+      "home": false,
+      "id": 8478508,
+      "name": "Yakov Trenin",
+      "opp": "NSH",
+      "result": "loss",
+      "team": "MIN"
+     },
+     {
+      "fact": "Birthday twin with Olen Zellweger",
+      "goals": 0,
+      "home": true,
+      "id": 8481716,
+      "name": "Dmitri Voronkov",
+      "opp": "BUF",
+      "result": "loss",
+      "team": "CBJ"
+     },
+     {
+      "fact": "FIRST game vs his old team",
+      "goals": 0,
+      "home": true,
+      "id": 8477416,
+      "name": "Oliver Bjorkstrand",
+      "opp": "TBL",
+      "result": "loss",
+      "team": "NYR"
+     }
+    ],
+    "result": "L"
+   },
+   "favourites": {
+    "legs": [
+     {
+      "fact": "Statistical favourite \u00b7 2nd line \u00b7 PP1",
+      "goals": 2,
+      "home": false,
+      "id": 8477934,
+      "name": "Leon Draisaitl",
+      "opp": "VAN",
+      "result": "win",
+      "team": "EDM"
+     },
+     {
+      "fact": "Statistical favourite \u00b7 2nd line \u00b7 PP1",
+      "goals": 1,
+      "home": false,
+      "id": 8478864,
+      "name": "Kirill Kaprizov",
+      "opp": "NSH",
+      "result": "win",
+      "team": "MIN"
+     },
+     {
+      "fact": "Statistical favourite \u00b7 1st line \u00b7 PP1",
+      "goals": 1,
+      "home": false,
+      "id": 8476453,
+      "name": "Nikita Kucherov",
+      "opp": "NYR",
+      "result": "win",
+      "team": "TBL"
+     }
+    ],
+    "result": "W"
+   },
+   "gossip": {
+    "legs": [
+     {
+      "fact": "Drama alert",
+      "goals": 0,
+      "home": false,
+      "id": 8481533,
+      "name": "Trevor Zegras",
+      "opp": "NJD",
+      "result": "loss",
+      "team": "PHI"
+     },
+     {
+      "fact": "Love life in the news",
+      "goals": 1,
+      "home": false,
+      "id": 8478402,
+      "name": "Connor McDavid",
+      "opp": "VAN",
+      "result": "win",
+      "team": "EDM"
+     },
+     {
+      "fact": "Playing with a heavy heart",
+      "goals": 0,
+      "home": true,
+      "id": 8479980,
+      "name": "Nicolas Hague",
+      "opp": "MIN",
+      "result": "loss",
+      "team": "NSH"
+     }
+    ],
+    "result": "L"
+   },
+   "grudge": {
+    "legs": [
+     {
+      "fact": "First game with the Lightning",
+      "goals": 0,
+      "home": false,
+      "id": 8478424,
+      "name": "Jansen Harkins",
+      "opp": "NYR",
+      "result": "loss",
+      "team": "TBL"
+     },
+     {
+      "fact": "Old team: NSH",
+      "goals": 0,
+      "home": false,
+      "id": 8477451,
+      "name": "Ryan Hartman",
+      "opp": "NSH",
+      "result": "loss",
+      "team": "MIN"
+     },
+     {
+      "fact": "Birthday twin with Sam Rinzel",
+      "goals": 0,
+      "home": true,
+      "id": 8479410,
+      "name": "Mikhail Sergachev",
+      "opp": "CHI",
+      "result": "loss",
+      "team": "UTA"
+     }
+    ],
+    "result": "L"
+   }
+  }
+ },
+ "2026-10-02": {
+  "rebuilt": true,
+  "vibes": {
+   "any": {
+    "legs": [
+     {
+      "fact": "First game with the Capitals",
+      "goals": 2,
+      "home": false,
+      "id": 8477949,
+      "name": "Alex Tuch",
+      "opp": "CAR",
+      "result": "win",
+      "team": "WSH"
+     },
+     {
+      "fact": "Number matches his age",
+      "goals": 0,
+      "home": true,
+      "id": 8484938,
+      "name": "Arttu Hyry",
+      "opp": "STL",
+      "result": "loss",
+      "team": "DAL"
+     },
+     {
+      "fact": "Revenge game vs DET",
+      "goals": 0,
+      "home": false,
+      "id": 8480813,
+      "name": "Joseph Veleno",
+      "opp": "DET",
+      "result": "loss",
+      "team": "NYR"
+     }
+    ],
+    "result": "L"
+   },
+   "chaos": {
+    "legs": [
+     {
+      "fact": "One away from goal #350",
+      "goals": 0,
+      "home": false,
+      "id": 8476459,
+      "name": "Mika Zibanejad",
+      "opp": "DET",
+      "result": "loss",
+      "team": "NYR"
+     },
+     {
+      "fact": "First game with the Ducks",
+      "goals": 0,
+      "home": false,
+      "id": 8478421,
+      "name": "A.J. Greer",
+      "opp": "VGK",
+      "result": "loss",
+      "team": "ANA"
+     },
+     {
+      "fact": "First game with the Blues",
+      "goals": 1,
+      "home": false,
+      "id": 8482745,
+      "name": "Mason McTavish",
+      "opp": "DAL",
+      "result": "win",
+      "team": "STL"
+     }
+    ],
+    "result": "L"
+   },
+   "favourites": {
+    "legs": [
+     {
+      "fact": "Statistical favourite \u00b7 Dressed",
+      "goals": 0,
+      "home": true,
+      "id": 8480027,
+      "name": "Jason Robertson",
+      "opp": "STL",
+      "result": "loss",
+      "team": "DAL"
+     },
+     {
+      "fact": "Statistical favourite \u00b7 Dressed",
+      "goals": 0,
+      "home": true,
+      "id": 8479337,
+      "name": "Alex DeBrincat",
+      "opp": "NYR",
+      "result": "loss",
+      "team": "DET"
+     },
+     {
+      "fact": "Statistical favourite \u00b7 Dressed",
+      "goals": 1,
+      "home": true,
+      "id": 8478398,
+      "name": "Kyle Connor",
+      "opp": "BOS",
+      "result": "win",
+      "team": "WPG"
+     }
+    ],
+    "result": "L"
+   },
+   "gossip": {
+    "legs": [
+     {
+      "fact": "Drama alert",
+      "goals": 0,
+      "home": false,
+      "id": 8477507,
+      "name": "Nikita Zadorov",
+      "opp": "WPG",
+      "result": "loss",
+      "team": "BOS"
+     },
+     {
+      "fact": "Love life in the news",
+      "goals": 0,
+      "home": true,
+      "id": 8476448,
+      "name": "William Karlsson",
+      "opp": "ANA",
+      "result": "loss",
+      "team": "VGK"
+     }
+    ],
+    "result": "L"
+   },
+   "grudge": {
+    "legs": [
+     {
+      "fact": "First game with the Red Wings",
+      "goals": 0,
+      "home": true,
+      "id": 8478434,
+      "name": "Keegan Kolesar",
+      "opp": "NYR",
+      "result": "loss",
+      "team": "DET"
+     },
+     {
+      "fact": "First game with the Blues",
+      "goals": 0,
+      "home": false,
+      "id": 8477527,
+      "name": "Ross Johnston",
+      "opp": "DAL",
+      "result": "loss",
+      "team": "STL"
+     },
+     {
+      "fact": "First game with the Capitals",
+      "goals": 0,
+      "home": false,
+      "id": 8479576,
+      "name": "Vincent Desharnais",
+      "opp": "CAR",
+      "result": "loss",
+      "team": "WSH"
+     }
+    ],
+    "result": "L"
+   }
+  }
+ },
+ "2026-10-03": {
+  "rebuilt": true,
+  "vibes": {
+   "any": {
+    "legs": [
+     {
+      "fact": "One point from #100",
+      "goals": 0,
+      "home": true,
+      "id": 8481553,
+      "name": "Bobby Brink",
+      "opp": "BOS",
+      "result": "loss",
+      "team": "MIN"
+     },
+     {
+      "fact": "Birthday twin with Kiefer Sherwood",
+      "goals": 0,
+      "home": false,
+      "id": 8479675,
+      "name": "Trevor Moore",
+      "opp": "SJS",
+      "result": "loss",
+      "team": "LAK"
+     },
+     {
+      "fact": "Career game #100",
+      "goals": 1,
+      "home": true,
+      "id": 8483499,
+      "name": "Liam Ohgren",
+      "opp": "CGY",
+      "result": "win",
+      "team": "VAN"
+     }
+    ],
+    "result": "L"
+   },
+   "chaos": {
+    "legs": [
+     {
+      "fact": "First game with the Senators",
+      "goals": 0,
+      "home": false,
+      "id": 8482667,
+      "name": "William Eklund",
+      "opp": "TOR",
+      "result": "loss",
+      "team": "OTT"
+     },
+     {
+      "fact": "Drama alert",
+      "goals": 0,
+      "home": false,
+      "id": 8476875,
+      "name": "Mike Matheson",
+      "opp": "PIT",
+      "result": "loss",
+      "team": "MTL"
+     },
+     {
+      "fact": "One away from goal #200",
+      "goals": 0,
+      "home": false,
+      "id": 8480002,
+      "name": "Nico Hischier",
+      "opp": "NYI",
+      "result": "loss",
+      "team": "NJD"
+     }
+    ],
+    "result": "L"
+   },
+   "favourites": {
+    "legs": [
+     {
+      "fact": "Statistical favourite \u00b7 Dressed",
+      "goals": 1,
+      "home": true,
+      "id": 8477934,
+      "name": "Leon Draisaitl",
+      "opp": "SEA",
+      "result": "win",
+      "team": "EDM"
+     },
+     {
+      "fact": "Statistical favourite \u00b7 Dressed",
+      "goals": 0,
+      "home": true,
+      "id": 8477492,
+      "name": "Nathan MacKinnon",
+      "opp": "STL",
+      "result": "loss",
+      "team": "COL"
+     },
+     {
+      "fact": "Statistical favourite \u00b7 Dressed",
+      "goals": 2,
+      "home": true,
+      "id": 8478864,
+      "name": "Kirill Kaprizov",
+      "opp": "BOS",
+      "result": "win",
+      "team": "MIN"
+     }
+    ],
+    "result": "L"
+   },
+   "gossip": {
+    "legs": [
+     {
+      "fact": "Love life in the news",
+      "goals": 1,
+      "home": true,
+      "id": 8478402,
+      "name": "Connor McDavid",
+      "opp": "SEA",
+      "result": "win",
+      "team": "EDM"
+     },
+     {
+      "fact": "Drama alert",
+      "goals": 0,
+      "home": true,
+      "id": 8481533,
+      "name": "Trevor Zegras",
+      "opp": "CAR",
+      "result": "loss",
+      "team": "PHI"
+     },
+     {
+      "fact": "Playing with a heavy heart",
+      "goals": 0,
+      "home": true,
+      "id": 8479980,
+      "name": "Nicolas Hague",
+      "opp": "DAL",
+      "result": "loss",
+      "team": "NSH"
+     }
+    ],
+    "result": "L"
+   },
+   "grudge": {
+    "legs": [
+     {
+      "fact": "Old team: EDM",
+      "goals": 0,
+      "home": false,
+      "id": 8474586,
+      "name": "Jordan Eberle",
+      "opp": "EDM",
+      "result": "loss",
+      "team": "SEA"
+     },
+     {
+      "fact": "FIRST game vs his old team",
+      "goals": 0,
+      "home": true,
+      "id": 8481806,
+      "name": "Louis Crevier",
+      "opp": "CHI",
+      "result": "loss",
+      "team": "BUF"
+     },
+     {
+      "fact": "Birthday twin with Alex Turcotte",
+      "goals": 0,
+      "home": true,
+      "id": 8476885,
+      "name": "Jacob Trouba",
+      "opp": "LAK",
+      "result": "loss",
+      "team": "SJS"
+     }
+    ],
+    "result": "L"
+   }
+  }
+ },
+ "2026-10-04": {
+  "rebuilt": true,
+  "vibes": {
+   "any": {
+    "legs": [
+     {
+      "fact": "Number matches his age",
+      "goals": 0,
+      "home": true,
+      "id": 8479992,
+      "name": "Michael Rasmussen",
+      "opp": "WPG",
+      "result": "loss",
+      "team": "DET"
+     },
+     {
+      "fact": "FIRST game vs his old team",
+      "goals": 0,
+      "home": true,
+      "id": 8478421,
+      "name": "A.J. Greer",
+      "opp": "FLA",
+      "result": "loss",
+      "team": "ANA"
+     },
+     {
+      "fact": "One away from goal #350",
+      "goals": 0,
+      "home": true,
+      "id": 8476459,
+      "name": "Mika Zibanejad",
+      "opp": "UTA",
+      "result": "loss",
+      "team": "NYR"
+     }
+    ],
+    "result": "L"
+   },
+   "chaos": {
+    "legs": [
+     {
+      "fact": "Just scored on CGY",
+      "goals": 0,
+      "home": true,
+      "id": 8477919,
+      "name": "Frederick Gaudreau",
+      "opp": "CGY",
+      "result": "loss",
+      "team": "SEA"
+     },
+     {
+      "fact": "Jersey number = today's date",
+      "goals": 0,
+      "home": true,
+      "id": 8482073,
+      "name": "Braden Schneider",
+      "opp": "UTA",
+      "result": "loss",
+      "team": "NYR"
+     },
+     {
+      "fact": "Old team: VAN",
+      "goals": 0,
+      "home": false,
+      "id": 8475343,
+      "name": "Nic Dowd",
+      "opp": "VAN",
+      "result": "loss",
+      "team": "VGK"
+     }
+    ],
+    "result": "L"
+   },
+   "favourites": {
+    "legs": [
+     {
+      "fact": "Statistical favourite \u00b7 Dressed",
+      "goals": 0,
+      "home": false,
+      "id": 8482699,
+      "name": "Dylan Guenther",
+      "opp": "NYR",
+      "result": "loss",
+      "team": "UTA"
+     },
+     {
+      "fact": "Statistical favourite \u00b7 Dressed",
+      "goals": 2,
+      "home": false,
+      "id": 8478398,
+      "name": "Kyle Connor",
+      "opp": "DET",
+      "result": "win",
+      "team": "WPG"
+     },
+     {
+      "fact": "Statistical favourite \u00b7 Dressed",
+      "goals": 0,
+      "home": false,
+      "id": 8477933,
+      "name": "Sam Reinhart",
+      "opp": "ANA",
+      "result": "loss",
+      "team": "FLA"
+     }
+    ],
+    "result": "L"
+   },
+   "gossip": {
+    "legs": [
+     {
+      "fact": "Love life in the news",
+      "goals": 0,
+      "home": false,
+      "id": 8476448,
+      "name": "William Karlsson",
+      "opp": "VAN",
+      "result": "loss",
+      "team": "VGK"
+     },
+     {
+      "fact": "Drama alert",
+      "goals": 0,
+      "home": true,
+      "id": 8482866,
+      "name": "Ville Ottavainen",
+      "opp": "CGY",
+      "result": "loss",
+      "team": "SEA"
+     }
+    ],
+    "result": "L"
+   },
+   "grudge": {
+    "legs": [
+     {
+      "fact": "Old team: ANA",
+      "goals": 0,
+      "home": false,
+      "id": 8475179,
+      "name": "Dmitry Kulikov",
+      "opp": "ANA",
+      "result": "loss",
+      "team": "FLA"
+     },
+     {
+      "fact": "Birthday twin with Adam Larsson",
+      "goals": 0,
+      "home": false,
+      "id": 8484180,
+      "name": "Samuel Honzek",
+      "opp": "SEA",
+      "result": "loss",
+      "team": "CGY"
+     },
+     {
+      "fact": "Birthday twin with Lucas Raymond",
+      "goals": 0,
+      "home": false,
+      "id": 8477504,
+      "name": "Josh Morrissey",
+      "opp": "DET",
+      "result": "loss",
+      "team": "WPG"
+     }
+    ],
+    "result": "L"
+   }
+  }
+ },
+ "2026-10-05": {
+  "rebuilt": true,
+  "vibes": {
+   "any": {
+    "legs": [
+     {
+      "fact": "Number matches his age",
+      "goals": 0,
+      "home": true,
+      "id": 8484938,
+      "name": "Arttu Hyry",
+      "opp": "SJS",
+      "result": "loss",
+      "team": "DAL"
+     },
+     {
+      "fact": "One away from goal #150",
+      "goals": 2,
+      "home": false,
+      "id": 8482116,
+      "name": "Tim St\u00fctzle",
+      "opp": "BOS",
+      "result": "win",
+      "team": "OTT"
+     },
+     {
+      "fact": "Goals in 2 straight",
+      "goals": 0,
+      "home": true,
+      "id": 8471215,
+      "name": "Evgeni Malkin",
+      "opp": "WPG",
+      "result": "loss",
+      "team": "PIT"
+     }
+    ],
+    "result": "L"
+   },
+   "chaos": {
+    "legs": [
+     {
+      "fact": "Revenge game vs DAL",
+      "goals": 0,
+      "home": false,
+      "id": 8478975,
+      "name": "Mason Marchment",
+      "opp": "DAL",
+      "result": "loss",
+      "team": "SJS"
+     },
+     {
+      "fact": "One away from goal #150",
+      "goals": 1,
+      "home": false,
+      "id": 8480208,
+      "name": "Drake Batherson",
+      "opp": "BOS",
+      "result": "win",
+      "team": "OTT"
+     },
+     {
+      "fact": "Still chasing goal #1",
+      "goals": 0,
+      "home": false,
+      "id": 8486025,
+      "name": "Viggo Bj\u00f6rck",
+      "opp": "PIT",
+      "result": "loss",
+      "team": "WPG"
+     }
+    ],
+    "result": "L"
+   },
+   "favourites": {
+    "legs": [
+     {
+      "fact": "Statistical favourite \u00b7 Dressed",
+      "goals": 0,
+      "home": true,
+      "id": 8476453,
+      "name": "Nikita Kucherov",
+      "opp": "PHI",
+      "result": "loss",
+      "team": "TBL"
+     },
+     {
+      "fact": "Statistical favourite \u00b7 Dressed",
+      "goals": 0,
+      "home": false,
+      "id": 8478398,
+      "name": "Kyle Connor",
+      "opp": "PIT",
+      "result": "loss",
+      "team": "WPG"
+     },
+     {
+      "fact": "Statistical favourite \u00b7 Dressed",
+      "goals": 1,
+      "home": true,
+      "id": 8480027,
+      "name": "Jason Robertson",
+      "opp": "SJS",
+      "result": "win",
+      "team": "DAL"
+     }
+    ],
+    "result": "L"
+   },
+   "gossip": {
+    "legs": [
+     {
+      "fact": "Drama alert",
+      "goals": 0,
+      "home": true,
+      "id": 8478449,
+      "name": "Roope Hintz",
+      "opp": "SJS",
+      "result": "loss",
+      "team": "DAL"
+     },
+     {
+      "fact": "Drama alert",
+      "goals": 1,
+      "home": true,
+      "id": 8479542,
+      "name": "Brandon Hagel",
+      "opp": "PHI",
+      "result": "win",
+      "team": "TBL"
+     },
+     {
+      "fact": "Playing with a heavy heart",
+      "goals": 0,
+      "home": true,
+      "id": 8483808,
+      "name": "Andrei Kuzmenko",
+      "opp": "WPG",
+      "result": "loss",
+      "team": "PIT"
+     }
+    ],
+    "result": "L"
+   },
+   "grudge": {
+    "legs": [
+     {
+      "fact": "FIRST game vs his old team",
+      "goals": 0,
+      "home": false,
+      "id": 8481030,
+      "name": "Jack St. Ivany",
+      "opp": "PIT",
+      "result": "loss",
+      "team": "WPG"
+     },
+     {
+      "fact": "Revenge game vs DAL",
+      "goals": 0,
+      "home": false,
+      "id": 8480848,
+      "name": "Ty Dellandrea",
+      "opp": "DAL",
+      "result": "loss",
+      "team": "SJS"
+     },
+     {
+      "fact": "Birthday twin with Cam York",
+      "goals": 0,
+      "home": true,
+      "id": 8476878,
+      "name": "Zemgus Girgensons",
+      "opp": "PHI",
+      "result": "loss",
+      "team": "TBL"
+     }
+    ],
+    "result": "L"
+   }
+  }
+ },
+ "2026-10-06": {
+  "rebuilt": true,
+  "vibes": {
+   "any": {
+    "legs": [
+     {
+      "fact": "Love life in the news",
+      "goals": 0,
+      "home": false,
+      "id": 8476448,
+      "name": "William Karlsson",
+      "opp": "SEA",
+      "result": "loss",
+      "team": "VGK"
+     },
+     {
+      "fact": "Still chasing goal #1",
+      "goals": 0,
+      "home": false,
+      "id": 8484790,
+      "name": "Adam Jiricek",
+      "opp": "CHI",
+      "result": "loss",
+      "team": "STL"
+     },
+     {
+      "fact": "Birthday twin with Gavin McKenna",
+      "goals": 2,
+      "home": false,
+      "id": 8481535,
+      "name": "Nils Hoglander",
+      "opp": "TOR",
+      "result": "win",
+      "team": "NSH"
+     }
+    ],
+    "result": "L"
+   },
+   "chaos": {
+    "legs": [
+     {
+      "fact": "Career game #400",
+      "goals": 0,
+      "home": false,
+      "id": 8478859,
+      "name": "Niko Mikkola",
+      "opp": "LAK",
+      "result": "loss",
+      "team": "FLA"
+     },
+     {
+      "fact": "One point from #200",
+      "goals": 0,
+      "home": false,
+      "id": 8475343,
+      "name": "Nic Dowd",
+      "opp": "SEA",
+      "result": "loss",
+      "team": "VGK"
+     },
+     {
+      "fact": "One away from goal #200",
+      "goals": 0,
+      "home": true,
+      "id": 8480002,
+      "name": "Nico Hischier",
+      "opp": "UTA",
+      "result": "loss",
+      "team": "NJD"
+     }
+    ],
+    "result": "L"
+   },
+   "favourites": {
+    "legs": [
+     {
+      "fact": "Statistical favourite \u00b7 Dressed",
+      "goals": 0,
+      "home": false,
+      "id": 8478864,
+      "name": "Kirill Kaprizov",
+      "opp": "BUF",
+      "result": "loss",
+      "team": "MIN"
+     },
+     {
+      "fact": "Statistical favourite \u00b7 Dressed",
+      "goals": 0,
+      "home": true,
+      "id": 8481540,
+      "name": "Cole Caufield",
+      "opp": "CAR",
+      "result": "loss",
+      "team": "MTL"
+     },
+     {
+      "fact": "Statistical favourite \u00b7 Dressed",
+      "goals": 1,
+      "home": true,
+      "id": 8477939,
+      "name": "William Nylander",
+      "opp": "NSH",
+      "result": "win",
+      "team": "TOR"
+     }
+    ],
+    "result": "L"
+   },
+   "gossip": {
+    "legs": [
+     {
+      "fact": "Drama alert",
+      "goals": 0,
+      "home": false,
+      "id": 8473419,
+      "name": "Brad Marchand",
+      "opp": "LAK",
+      "result": "loss",
+      "team": "FLA"
+     },
+     {
+      "fact": "Drama alert",
+      "goals": 0,
+      "home": true,
+      "id": 8476875,
+      "name": "Mike Matheson",
+      "opp": "CAR",
+      "result": "loss",
+      "team": "MTL"
+     },
+     {
+      "fact": "Drama alert",
+      "goals": 0,
+      "home": false,
+      "id": 8482092,
+      "name": "Ridly Greig",
+      "opp": "DET",
+      "result": "loss",
+      "team": "OTT"
+     }
+    ],
+    "result": "L"
+   },
+   "grudge": {
+    "legs": [
+     {
+      "fact": "Birthday twin with Adam Larsson",
+      "goals": 2,
+      "home": false,
+      "id": 8476881,
+      "name": "Tomas Hertl",
+      "opp": "SEA",
+      "result": "win",
+      "team": "VGK"
+     },
+     {
+      "fact": "Hometown game",
+      "goals": 0,
+      "home": false,
+      "id": 8473422,
+      "name": "Nick Foligno",
+      "opp": "BUF",
+      "result": "loss",
+      "team": "MIN"
+     },
+     {
+      "fact": "Old team: TOR",
+      "goals": 0,
+      "home": false,
+      "id": 8475158,
+      "name": "Ryan O'Reilly",
+      "opp": "TOR",
+      "result": "loss",
+      "team": "NSH"
+     }
+    ],
+    "result": "L"
+   }
+  }
+ },
+ "2026-10-07": {
+  "rebuilt": true,
+  "vibes": {
+   "any": {
+    "legs": [
+     {
+      "fact": "Still chasing goal #1",
+      "goals": 0,
+      "home": true,
+      "id": 8486025,
+      "name": "Viggo Bj\u00f6rck",
+      "opp": "COL",
+      "result": "loss",
+      "team": "WPG"
+     },
+     {
+      "fact": "Still chasing goal #1",
+      "goals": 0,
+      "home": true,
+      "id": 8481538,
+      "name": "Judd Caulfield",
+      "opp": "EDM",
+      "result": "loss",
+      "team": "ANA"
+     },
+     {
+      "fact": "Number matches his age",
+      "goals": 0,
+      "home": true,
+      "id": 8480043,
+      "name": "Timothy Liljegren",
+      "opp": "PIT",
+      "result": "loss",
+      "team": "WSH"
+     }
+    ],
+    "result": "L"
+   },
+   "chaos": {
+    "legs": [
+     {
+      "fact": "Goals in 2 straight",
+      "goals": 0,
+      "home": false,
+      "id": 8477476,
+      "name": "Artturi Lehkonen",
+      "opp": "WPG",
+      "result": "loss",
+      "team": "COL"
+     },
+     {
+      "fact": "One away from goal #100",
+      "goals": 1,
+      "home": false,
+      "id": 8477953,
+      "name": "Kasperi Kapanen",
+      "opp": "ANA",
+      "result": "win",
+      "team": "EDM"
+     },
+     {
+      "fact": "FIRST game vs his old team",
+      "goals": 0,
+      "home": false,
+      "id": 8482148,
+      "name": "Hendrix Lapierre",
+      "opp": "WSH",
+      "result": "loss",
+      "team": "PIT"
+     }
+    ],
+    "result": "L"
+   },
+   "favourites": {
+    "legs": [
+     {
+      "fact": "Statistical favourite \u00b7 Dressed",
+      "goals": 0,
+      "home": false,
+      "id": 8477934,
+      "name": "Leon Draisaitl",
+      "opp": "ANA",
+      "result": "loss",
+      "team": "EDM"
+     },
+     {
+      "fact": "Statistical favourite \u00b7 Dressed",
+      "goals": 0,
+      "home": false,
+      "id": 8477492,
+      "name": "Nathan MacKinnon",
+      "opp": "WPG",
+      "result": "loss",
+      "team": "COL"
+     },
+     {
+      "fact": "Statistical favourite \u00b7 Dressed",
+      "goals": 1,
+      "home": true,
+      "id": 8477949,
+      "name": "Alex Tuch",
+      "opp": "PIT",
+      "result": "win",
+      "team": "WSH"
+     }
+    ],
+    "result": "L"
+   },
+   "gossip": {
+    "legs": [
+     {
+      "fact": "Love life in the news",
+      "goals": 0,
+      "home": true,
+      "id": 8471214,
+      "name": "Alex Ovechkin",
+      "opp": "PIT",
+      "result": "loss",
+      "team": "WSH"
+     },
+     {
+      "fact": "Love life in the news",
+      "goals": 1,
+      "home": false,
+      "id": 8478402,
+      "name": "Connor McDavid",
+      "opp": "ANA",
+      "result": "win",
+      "team": "EDM"
+     }
+    ],
+    "result": "L"
+   },
+   "grudge": {
+    "legs": [
+     {
+      "fact": "Revenge game vs PIT",
+      "goals": 0,
+      "home": true,
+      "id": 8479576,
+      "name": "Vincent Desharnais",
+      "opp": "PIT",
+      "result": "loss",
+      "team": "WSH"
+     },
+     {
+      "fact": "First game with the Avalanche",
+      "goals": 0,
+      "home": false,
+      "id": 8482742,
+      "name": "Zachary L'Heureux",
+      "opp": "WPG",
+      "result": "loss",
+      "team": "COL"
+     },
+     {
+      "fact": "Revenge game vs ANA",
+      "goals": 0,
+      "home": false,
+      "id": 8479368,
+      "name": "Max Jones",
+      "opp": "ANA",
+      "result": "loss",
+      "team": "EDM"
+     }
+    ],
+    "result": "L"
+   }
+  }
+ },
+ "2026-10-08": {
+  "rebuilt": true,
+  "vibes": {
+   "any": {
+    "legs": [
+     {
+      "fact": "Drama alert",
+      "goals": 0,
+      "home": true,
+      "id": 8477365,
+      "name": "Connor Clifton",
+      "opp": "UTA",
+      "result": "loss",
+      "team": "BOS"
+     },
+     {
+      "fact": "Goals in 2 straight",
+      "goals": 0,
+      "home": true,
+      "id": 8479420,
+      "name": "Tage Thompson",
+      "opp": "DAL",
+      "result": "loss",
+      "team": "BUF"
+     },
+     {
+      "fact": "Revenge game vs TOR",
+      "goals": 0,
+      "home": true,
+      "id": 8478483,
+      "name": "Mitch Marner",
+      "opp": "TOR",
+      "result": "loss",
+      "team": "VGK"
+     }
+    ],
+    "result": "L"
+   },
+   "chaos": {
+    "legs": [
+     {
+      "fact": "Still chasing goal #1",
+      "goals": 0,
+      "home": false,
+      "id": 8486103,
+      "name": "Ivar Stenberg",
+      "opp": "STL",
+      "result": "loss",
+      "team": "SJS"
+     },
+     {
+      "fact": "FIRST game vs his old team",
+      "goals": 0,
+      "home": true,
+      "id": 8482175,
+      "name": "JJ Peterka",
+      "opp": "UTA",
+      "result": "loss",
+      "team": "BOS"
+     },
+     {
+      "fact": "One point from #200",
+      "goals": 0,
+      "home": true,
+      "id": 8475343,
+      "name": "Nic Dowd",
+      "opp": "TOR",
+      "result": "loss",
+      "team": "VGK"
+     }
+    ],
+    "result": "L"
+   },
+   "favourites": {
+    "legs": [
+     {
+      "fact": "Statistical favourite \u00b7 Dressed",
+      "goals": 0,
+      "home": false,
+      "id": 8478864,
+      "name": "Kirill Kaprizov",
+      "opp": "TBL",
+      "result": "loss",
+      "team": "MIN"
+     },
+     {
+      "fact": "Statistical favourite \u00b7 Dressed",
+      "goals": 1,
+      "home": false,
+      "id": 8477492,
+      "name": "Nathan MacKinnon",
+      "opp": "CGY",
+      "result": "win",
+      "team": "COL"
+     },
+     {
+      "fact": "Statistical favourite \u00b7 Dressed",
+      "goals": 0,
+      "home": true,
+      "id": 8481540,
+      "name": "Cole Caufield",
+      "opp": "NSH",
+      "result": "loss",
+      "team": "MTL"
+     }
+    ],
+    "result": "L"
+   },
+   "gossip": {
+    "legs": [
+     {
+      "fact": "Drama alert",
+      "goals": 0,
+      "home": false,
+      "id": 8481533,
+      "name": "Trevor Zegras",
+      "opp": "OTT",
+      "result": "loss",
+      "team": "PHI"
+     },
+     {
+      "fact": "Drama alert",
+      "goals": 0,
+      "home": true,
+      "id": 8477507,
+      "name": "Nikita Zadorov",
+      "opp": "UTA",
+      "result": "loss",
+      "team": "BOS"
+     },
+     {
+      "fact": "Love life in the news",
+      "goals": 0,
+      "home": true,
+      "id": 8476448,
+      "name": "William Karlsson",
+      "opp": "TOR",
+      "result": "loss",
+      "team": "VGK"
+     }
+    ],
+    "result": "L"
+   },
+   "grudge": {
+    "legs": [
+     {
+      "fact": "FIRST game vs his old team",
+      "goals": 0,
+      "home": false,
+      "id": 8476925,
+      "name": "Colton Sissons",
+      "opp": "VGK",
+      "result": "loss",
+      "team": "TOR"
+     },
+     {
+      "fact": "Old team: PHI",
+      "goals": 1,
+      "home": true,
+      "id": 8476393,
+      "name": "Nick Cousins",
+      "opp": "PHI",
+      "result": "win",
+      "team": "OTT"
+     },
+     {
+      "fact": "Revenge game vs NSH",
+      "goals": 0,
+      "home": true,
+      "id": 8478851,
+      "name": "Alexandre Carrier",
+      "opp": "NSH",
+      "result": "loss",
+      "team": "MTL"
+     }
+    ],
+    "result": "L"
+   }
+  }
+ }
+}

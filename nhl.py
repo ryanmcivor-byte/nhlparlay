@@ -40,9 +40,17 @@ def _json(path, ttl=600):
     return _get(WEB + path, NHL_UA, ttl, json.loads)
 
 
+def now_et():
+    """Current time in US Eastern (NHL game dates are Eastern)."""
+    try:
+        from zoneinfo import ZoneInfo
+        return datetime.now(ZoneInfo("America/New_York"))
+    except Exception:  # no tz database: UTC-4 is close enough
+        return datetime.now(timezone.utc) - timedelta(hours=4)
+
+
 def today_et():
-    """NHL game dates are Eastern; approximate ET as UTC-4 (close enough for a date)."""
-    return (datetime.now(timezone.utc) - timedelta(hours=4)).date()
+    return now_et().date()
 
 
 def schedule(date):
@@ -70,9 +78,15 @@ def game_log(pid, season, gtype=2):
     return (_json(f"/player/{pid}/game-log/{season}/{gtype}", ttl=3600).get("gameLog") or [])
 
 
-def headlines(query, days=10, limit=8):
-    """Recent Google News headlines for `query`: [{title, source, link, date}]."""
-    q = urllib.parse.quote(f"{query} when:{days}d")
+def headlines(query, days=10, limit=8, before=None):
+    """Recent Google News headlines for `query`: [{title, source, link, date}].
+    With `before` (a date), only stories from the `days` days before it, for
+    rebuilding what a past day's slate would have seen."""
+    if before is not None:
+        window = f"after:{before - timedelta(days=days)} before:{before - timedelta(days=1)}"
+    else:
+        window = f"when:{days}d"
+    q = urllib.parse.quote(f"{query} {window}")
     url = f"{NEWS}?q={q}&hl=en-US&gl=US&ceid=US:en"
 
     def parse(raw):
@@ -134,9 +148,13 @@ def dfo_lineup(abbr):
     return {"updatedAt": c.get("updatedAt"), "players": ps}
 
 
+def boxscore(game_id):
+    return _json(f"/gamecenter/{game_id}/boxscore", ttl=300)
+
+
 def dressed(game_id):
     """Official game lineup {abbr: set(player ids)} once the NHL posts it, else {}."""
-    b = _json(f"/gamecenter/{game_id}/boxscore", ttl=300)
+    b = boxscore(game_id)
     pbg = b.get("playerByGameStats") or {}
     out = {}
     for key in ("awayTeam", "homeTeam"):
