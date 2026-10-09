@@ -226,7 +226,8 @@ def _rewind(ld, pid, date, season):
             ld["seasonTotals"] = [s for s in ld["seasonTotals"] if s is not row]
     before = [g for g in log + nhl.game_log(pid, season - 10001) if g["gameDate"] < date]
     before.sort(key=lambda g: g["gameDate"], reverse=True)
-    ld["last5Games"] = [{"gameDate": g["gameDate"], "goals": g.get("goals"), "gameTypeId": 2,
+    ld["last5Games"] = [{"gameDate": g["gameDate"], "goals": g.get("goals"), "assists": g.get("assists"),
+                         "points": g.get("points"), "shots": g.get("shots"), "gameTypeId": 2,
                          "opponentAbbrev": g.get("opponentAbbrev"), "teamAbbrev": g.get("teamAbbrev")}
                         for g in before[:5]]
     return ld

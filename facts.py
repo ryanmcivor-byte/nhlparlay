@@ -39,7 +39,7 @@ NEWS_BUCKETS = [
      r"fianc\w*|girlfriend|wife|honeymoon)\b"),
     ("baby", "🍼", "New dad energy", 9,
      r"\b(baby|newborn|birth of|becomes? a (dad|father)|fatherhood|paternity|expecting)\b"),
-    ("drama", "🔥", "Drama alert", 8,
+    ("drama", "🎭", "Drama alert", 8,
      r"\b(suspend\w*|fined|(disciplinary|player safety) hearing|hearing (with|for) (the )?(nhl|player safety)|ejected|controvers\w*|feud|trash[- ]talk|chirp\w*|"
      r"arrest\w*|apolog\w*)\b"),
 ]
@@ -190,24 +190,11 @@ def player_facts(p, ctx):
         out.append(_fact("firstgoal", "🥚", "Still chasing goal #1",
                          f"0 goals in {_plural(gp, 'NHL game')}. The dam has to break eventually.", 7))
 
-    # --- recent form (last 5) --------------------------------------------
-    # recent form: only games from the last 30 days count as "recent"
+    # --- recent form: hot streaks (only games from the last 30 days count) ---
     l5 = [g for g in (ld.get("last5Games") or []) if g.get("gameTypeId") == 2
           and (_date(g.get("gameDate")) or today) >= today - timedelta(days=30)]
-    if l5:
-        streak = 0
-        for g in l5:
-            if (g.get("goals") or 0) > 0:
-                streak += 1
-            else:
-                break
-        if streak >= 2:
-            out.append(_fact("hot", "🔥", f"Goals in {streak} straight",
-                             f"Scored in each of his last {streak} games. Ride the heater.", 7))
-        vs_opp = [g for g in l5 if g.get("opponentAbbrev") == p["opp"] and (g.get("goals") or 0) > 0]
-        if vs_opp:
-            out.append(_fact("lastmeet", "🔁", f"Just scored on {p['opp']}",
-                             f"Scored vs {p['opp']} on {vs_opp[0]['gameDate']}. Twice in a row?", 6))
+    l5.sort(key=lambda g: g.get("gameDate") or "", reverse=True)     # newest first
+    out.extend(_hot_facts(l5, p["opp"]))
 
     # --- news headlines ---------------------------------------------------
     for f in ctx.get("news", {}).get(p["id"], []):
@@ -215,6 +202,62 @@ def player_facts(p, ctx):
 
     # --- slate-wide oddities (tallest, only-countryman, birthday twins…) -
     out.extend(ctx.get("slateFacts", {}).get(p["id"], []))
+    return out
+
+
+# ---------------------------------------------------------------------------
+# hot streaks: recent form from his last few games (newest first)
+# ---------------------------------------------------------------------------
+HOT_KINDS = {"goalstreak", "multigoal", "goalsrecent", "pointstreak", "shots", "lastmeet"}
+
+
+def _run(games, key):
+    n = 0
+    for g in games:
+        if (g.get(key) or 0) > 0:
+            n += 1
+        else:
+            break
+    return n
+
+
+def _hot_facts(l5, opp):
+    out = []
+    if not l5:
+        return out
+    last, n = l5[0], len(l5)
+    goals = [g.get("goals") or 0 for g in l5]
+    streak = _run(l5, "goals")
+    if streak >= 2:
+        out.append(_fact("goalstreak", "🔥", f"Goals in {streak} straight",
+                         f"Scored in each of his last {streak} games ({sum(goals[:streak])} goals). "
+                         f"Ride the heater.", min(10, 6 + streak)))
+    if goals[0] >= 3:
+        out.append(_fact("multigoal", "🎩", "Hat trick last game",
+                         f"Scored {goals[0]} on {last.get('gameDate')} vs {last.get('opponentAbbrev')}. "
+                         f"Still warm.", 9))
+    elif goals[0] == 2:
+        out.append(_fact("multigoal", "✌️", "Two goals last game",
+                         f"Scored twice on {last.get('gameDate')} vs {last.get('opponentAbbrev')}.", 8))
+    total = sum(goals)
+    if n >= 3 and total >= 3 and streak < n:
+        out.append(_fact("goalsrecent", "🌡️", f"{total} goals in his last {n}",
+                         f"Goals in {sum(1 for g in goals if g)} of his last {n} games, {total} in all.",
+                         min(9, 5 + total)))
+    pts = _run(l5, "points")
+    if pts >= 3 and pts > streak:
+        out.append(_fact("pointstreak", "⚡", f"{pts}-game point streak",
+                         f"A point in each of his last {pts} games "
+                         f"({sum(g.get('points') or 0 for g in l5[:pts])} points).", 6))
+    shots3 = [g.get("shots") for g in l5[:3]]
+    if len(shots3) == 3 and all(x is not None for x in shots3) and sum(shots3) >= 12:
+        out.append(_fact("shots", "🎯", f"{sum(shots3)} shots in his last 3",
+                         f"Peppering the net: {' / '.join(str(x) for x in shots3)} shots in his last 3 games. "
+                         f"One's going in.", 5))
+    vs_opp = [g for g in l5 if g.get("opponentAbbrev") == opp and (g.get("goals") or 0) > 0]
+    if vs_opp:
+        out.append(_fact("lastmeet", "🔁", f"Just scored on {opp}",
+                         f"Scored vs {opp} on {vs_opp[0]['gameDate']}. Twice in a row?", 6))
     return out
 
 

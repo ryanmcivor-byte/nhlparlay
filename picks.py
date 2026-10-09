@@ -13,14 +13,15 @@ import os
 import threading
 
 import nhl
+from facts import HOT_KINDS
 
 LEGS = 3
 PLAYING = ("confirmed", "projected")
 GRUDGE = {"revenge", "hometown", "draft", "newteam", "names", "twins"}
-VIBES = ("chaos", "gossip", "grudge", "any", "favourites")
+VIBES = ("chaos", "hot", "grudge", "any", "favourites")
 # pick order: the pickiest vibes go first so each gets its best legs; no player
 # appears in two vibes' parlays on the same day
-ORDER = ("gossip", "grudge", "favourites", "chaos", "any")
+ORDER = ("hot", "grudge", "favourites", "chaos", "any")
 DIR = os.path.join(os.path.dirname(os.path.abspath(__file__)), "data", "picks")
 DROP_TIME = "9 AM ET"     # when the daily job runs (see .github/workflows/daily.yml)
 FALLBACK_HOUR = 11        # ET hour after which the server locks today's picks itself
@@ -30,8 +31,8 @@ _lock = threading.Lock()
 
 
 def _keep(vibe, f):
-    if vibe == "gossip":
-        return f["kind"].startswith("news-")
+    if vibe == "hot":
+        return f["kind"] in HOT_KINDS
     if vibe == "grudge":
         return f["kind"] in GRUDGE
     return True
@@ -63,7 +64,7 @@ def choose(slate, vibe, taken=()):
             if not fs:
                 continue
             w = sum(f["chaos"] for f in fs)
-            w = 1 if vibe == "any" else (w * w if vibe == "chaos" else w)
+            w = 1 if vibe == "any" else (w * w if vibe in ("chaos", "hot") else w)
             key = _u(date, vibe, p["id"]) ** (1.0 / w)   # weighted draw, but repeatable
             fact = max(fs, key=lambda f: (f["chaos"], _u(date, vibe, p["id"], f["title"])))
         if p["gameId"] not in best or key > best[p["gameId"]][0]:

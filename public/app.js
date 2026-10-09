@@ -8,10 +8,10 @@
   const state = { data: null, game: "all", slip: [], expanded: new Set(), lineupOnly: true };
   const PLAYING = new Set(["confirmed", "projected"]);     // certain (or projected) to dress
   const playing = (p) => PLAYING.has((p.lineup || {}).status);
-  const VIBE_LABEL = { chaos: "Maximum chaos", gossip: "Gossip only", grudge: "Grudges & homecomings",
-    any: "Anything goes", favourites: "Statistical Favourites" };
-  const VIBE_ICON = { chaos: "😈", gossip: "💔", grudge: "😤", any: "🎲", favourites: "📈" };
-  const VIBE_ORDER = ["chaos", "gossip", "grudge", "any", "favourites"];
+  const VIBE_LABEL = { chaos: "Maximum chaos", hot: "Hot Streaks", grudge: "Grudges & homecomings",
+    any: "Anything goes", favourites: "Statistical Favourites", gossip: "Gossip only (retired)" };
+  const VIBE_ICON = { chaos: "😈", hot: "🔥", grudge: "😤", any: "🎲", favourites: "📈", gossip: "💔" };
+  const VIBE_ORDER = ["chaos", "hot", "grudge", "any", "favourites", "gossip"];   // gossip: retired, history only
   const LINEUP_ICON = { confirmed: "✅", projected: "📋", gtd: "⚠️", out: "🚫", unknown: "❔" };
 
   const esc = (s) => String(s == null ? "" : s).replace(/[&<>"']/g, (c) =>
@@ -43,7 +43,7 @@
     const t = r.total, n = t.W + t.L;
     $("#recTotal").textContent = `${t.W}-${t.L}` + (t.P ? `-${t.P}` : "");
     $("#recSub").textContent = `${n ? Math.round((t.W / n) * 100) : 0}% of parlays hit · since ${fmtDay(r.start)}`;
-    $("#recVibes").innerHTML = VIBE_ORDER.filter((v) => r.byVibe[v]).map((v) => {
+    $("#recVibes").innerHTML = VIBE_ORDER.filter((v) => r.byVibe[v] && (v !== "gossip" || r.byVibe[v].W + r.byVibe[v].L)).map((v) => {
       const b = r.byVibe[v];
       return `<span class="rec-chip" title="${esc(VIBE_LABEL[v])}">${VIBE_ICON[v]} ${esc(VIBE_LABEL[v])} <b>${b.W}-${b.L}</b></span>`;
     }).join("");
