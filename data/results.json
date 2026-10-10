@@ -1588,5 +1588,200 @@
     "result": "L"
    }
   }
+ },
+ "2026-10-09": {
+  "rebuilt": false,
+  "vibes": {
+   "any": {
+    "legs": [
+     {
+      "fact": "Goals in 3 straight",
+      "goals": 0,
+      "home": true,
+      "id": 8482149,
+      "name": "Cole Perfetti",
+      "opp": "ANA",
+      "result": "loss",
+      "team": "WPG"
+     },
+     {
+      "fact": "Number matches his age",
+      "goals": 0,
+      "home": true,
+      "id": 8479992,
+      "name": "Michael Rasmussen",
+      "opp": "SEA",
+      "result": "loss",
+      "team": "DET"
+     },
+     {
+      "fact": "Still chasing goal #1",
+      "goals": 0,
+      "home": false,
+      "id": 8484786,
+      "name": "Cole Beaudoin",
+      "opp": "WSH",
+      "result": "loss",
+      "team": "NYR"
+     }
+    ],
+    "result": "L"
+   },
+   "chaos": {
+    "legs": [
+     {
+      "fact": "Revenge game vs PIT",
+      "goals": 0,
+      "home": true,
+      "id": 8478046,
+      "name": "Danton Heinen",
+      "opp": "PIT",
+      "result": "loss",
+      "team": "CBJ"
+     },
+     {
+      "fact": "Still chasing goal #1",
+      "goals": 0,
+      "home": true,
+      "id": 8482802,
+      "name": "Carter Mazur",
+      "opp": "SEA",
+      "result": "loss",
+      "team": "DET"
+     },
+     {
+      "fact": "One away from goal #350",
+      "goals": 0,
+      "home": false,
+      "id": 8476459,
+      "name": "Mika Zibanejad",
+      "opp": "WSH",
+      "result": "loss",
+      "team": "NYR"
+     }
+    ],
+    "result": "L"
+   },
+   "favourites": {
+    "legs": [
+     {
+      "fact": "Statistical favourite \u00b7 1st line \u00b7 PP1",
+      "goals": 1,
+      "home": true,
+      "id": 8478398,
+      "name": "Kyle Connor",
+      "opp": "ANA",
+      "result": "win",
+      "team": "WPG"
+     },
+     {
+      "fact": "Statistical favourite \u00b7 2nd line \u00b7 PP1",
+      "goals": 0,
+      "home": true,
+      "id": 8479337,
+      "name": "Alex DeBrincat",
+      "opp": "SEA",
+      "result": "loss",
+      "team": "DET"
+     },
+     {
+      "fact": "Statistical favourite \u00b7 1st line \u00b7 PP2",
+      "goals": 0,
+      "home": true,
+      "id": 8477949,
+      "name": "Alex Tuch",
+      "opp": "NYR",
+      "result": "loss",
+      "team": "WSH"
+     }
+    ],
+    "result": "L"
+   },
+   "grudge": {
+    "legs": [
+     {
+      "fact": "Birthday twin with Tye Kartye",
+      "goals": 1,
+      "home": true,
+      "id": 8480043,
+      "name": "Timothy Liljegren",
+      "opp": "NYR",
+      "result": "win",
+      "team": "WSH"
+     },
+     {
+      "fact": "Birthday twin with Tyson Hinds",
+      "goals": 0,
+      "home": true,
+      "id": 8486025,
+      "name": "Viggo Bj\u00f6rck",
+      "opp": "ANA",
+      "result": "loss",
+      "team": "WPG"
+     },
+     {
+      "fact": "Old team: PIT",
+      "goals": 0,
+      "home": true,
+      "id": 8475790,
+      "name": "Erik Gudbranson",
+      "opp": "PIT",
+      "result": "loss",
+      "team": "CBJ"
+     }
+    ],
+    "result": "L"
+   },
+   "hot": {
+    "legs": [
+     {
+      "fact": "Goals in 2 straight",
+      "goals": 1,
+      "home": true,
+      "id": 8478042,
+      "name": "Viktor Arvidsson",
+      "opp": "SEA",
+      "result": "win",
+      "team": "DET"
+     },
+     {
+      "fact": "3 goals in his last 3",
+      "goals": 0,
+      "home": false,
+      "id": 8484762,
+      "name": "Beckett Sennecke",
+      "opp": "WPG",
+      "result": "loss",
+      "team": "ANA"
+     },
+     {
+      "fact": "Hat trick last game",
+      "goals": 1,
+      "home": false,
+      "id": 8482109,
+      "name": "Alexis Lafreni\u00e8re",
+      "opp": "WSH",
+      "result": "win",
+      "team": "NYR"
+     }
+    ],
+    "result": "L"
+   },
+   "theo": {
+    "legs": [
+     {
+      "fact": "Theo's gut feeling",
+      "goals": 0,
+      "home": false,
+      "id": 8483521,
+      "name": "Noah Warren",
+      "opp": "WPG",
+      "result": "loss",
+      "team": "ANA"
+     }
+    ],
+    "result": "L"
+   }
+  }
  }
 }
