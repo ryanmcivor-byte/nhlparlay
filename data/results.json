@@ -1783,5 +1783,201 @@
     "result": "L"
    }
   }
+ },
+ "2026-10-10": {
+  "rebuilt": false,
+  "vibes": {
+   "any": {
+    "legs": [
+     {
+      "fact": "5 goals in his last 5",
+      "goals": 1,
+      "home": false,
+      "id": 8477951,
+      "name": "Nick Schmaltz",
+      "opp": "BUF",
+      "result": "win",
+      "team": "UTA"
+     },
+     {
+      "fact": "3 goals in his last 4",
+      "goals": 0,
+      "home": false,
+      "id": 8484762,
+      "name": "Beckett Sennecke",
+      "opp": "CGY",
+      "result": "loss",
+      "team": "ANA"
+     },
+     {
+      "fact": "Still chasing goal #1",
+      "goals": 0,
+      "home": true,
+      "id": 8481534,
+      "name": "Raphael Lavoie",
+      "opp": "LAK",
+      "result": "loss",
+      "team": "VGK"
+     }
+    ],
+    "result": "L"
+   },
+   "chaos": {
+    "legs": [
+     {
+      "fact": "Hat trick last game",
+      "goals": 0,
+      "home": false,
+      "id": 8482702,
+      "name": "Logan Stankoven",
+      "opp": "CHI",
+      "result": "loss",
+      "team": "CAR"
+     },
+     {
+      "fact": "One point from #200",
+      "goals": 0,
+      "home": true,
+      "id": 8475343,
+      "name": "Nic Dowd",
+      "opp": "LAK",
+      "result": "loss",
+      "team": "VGK"
+     },
+     {
+      "fact": "Drama alert",
+      "goals": 3,
+      "home": false,
+      "id": 8479542,
+      "name": "Brandon Hagel",
+      "opp": "NYI",
+      "result": "win",
+      "team": "TBL"
+     }
+    ],
+    "result": "L"
+   },
+   "favourites": {
+    "legs": [
+     {
+      "fact": "Statistical favourite \u00b7 1st line \u00b7 PP1",
+      "goals": 0,
+      "home": false,
+      "id": 8477934,
+      "name": "Leon Draisaitl",
+      "opp": "SJS",
+      "result": "loss",
+      "team": "EDM"
+     },
+     {
+      "fact": "Statistical favourite \u00b7 1st line \u00b7 PP1",
+      "goals": 3,
+      "home": false,
+      "id": 8478864,
+      "name": "Kirill Kaprizov",
+      "opp": "FLA",
+      "result": "win",
+      "team": "MIN"
+     },
+     {
+      "fact": "Statistical favourite \u00b7 1st line \u00b7 PP1",
+      "goals": 2,
+      "home": true,
+      "id": 8477492,
+      "name": "Nathan MacKinnon",
+      "opp": "TOR",
+      "result": "win",
+      "team": "COL"
+     }
+    ],
+    "result": "L"
+   },
+   "grudge": {
+    "legs": [
+     {
+      "fact": "Revenge game vs SJS",
+      "goals": null,
+      "home": false,
+      "id": 8478013,
+      "name": "Jake Walman",
+      "opp": "SJS",
+      "result": "void",
+      "team": "EDM",
+      "why": "Didn't dress"
+     },
+     {
+      "fact": "Revenge game vs CHI",
+      "goals": 1,
+      "home": false,
+      "id": 8475791,
+      "name": "Taylor Hall",
+      "opp": "CHI",
+      "result": "win",
+      "team": "CAR"
+     },
+     {
+      "fact": "Old team: MIN",
+      "goals": 0,
+      "home": true,
+      "id": 8475179,
+      "name": "Dmitry Kulikov",
+      "opp": "MIN",
+      "result": "loss",
+      "team": "FLA"
+     }
+    ],
+    "result": "L"
+   },
+   "hot": {
+    "legs": [
+     {
+      "fact": "Goals in 2 straight",
+      "goals": 0,
+      "home": true,
+      "id": 8478403,
+      "name": "Jack Eichel",
+      "opp": "LAK",
+      "result": "loss",
+      "team": "VGK"
+     },
+     {
+      "fact": "Two goals last game",
+      "goals": 0,
+      "home": true,
+      "id": 8475768,
+      "name": "Jaden Schwartz",
+      "opp": "TOR",
+      "result": "loss",
+      "team": "COL"
+     },
+     {
+      "fact": "Goals in 2 straight",
+      "goals": 1,
+      "home": false,
+      "id": 8476873,
+      "name": "Mark Jankowski",
+      "opp": "CHI",
+      "result": "win",
+      "team": "CAR"
+     }
+    ],
+    "result": "L"
+   },
+   "theo": {
+    "legs": [
+     {
+      "fact": "Theo's gut feeling",
+      "goals": 0,
+      "home": true,
+      "id": 8483609,
+      "name": "Adam Klapka",
+      "opp": "ANA",
+      "result": "loss",
+      "team": "CGY"
+     }
+    ],
+    "result": "L"
+   }
+  }
  }
 }
