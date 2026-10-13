@@ -2174,5 +2174,190 @@
     "result": "L"
    }
   }
+ },
+ "2026-10-12": {
+  "rebuilt": false,
+  "vibes": {
+   "any": {
+    "legs": [
+     {
+      "fact": "Two goals last game",
+      "goals": 0,
+      "home": true,
+      "id": 8480002,
+      "name": "Nico Hischier",
+      "opp": "OTT",
+      "result": "loss",
+      "team": "NJD"
+     },
+     {
+      "fact": "5-game point streak",
+      "goals": 0,
+      "home": true,
+      "id": 8474716,
+      "name": "Jared Spurgeon",
+      "opp": "VGK",
+      "result": "loss",
+      "team": "MIN"
+     },
+     {
+      "fact": "Number matches his age",
+      "goals": 1,
+      "home": true,
+      "id": 8480839,
+      "name": "Rasmus Dahlin",
+      "opp": "FLA",
+      "result": "win",
+      "team": "BUF"
+     }
+    ],
+    "result": "L"
+   },
+   "chaos": {
+    "legs": [
+     {
+      "fact": "Old team: BUF",
+      "goals": 0,
+      "home": false,
+      "id": 8475179,
+      "name": "Dmitry Kulikov",
+      "opp": "BUF",
+      "result": "loss",
+      "team": "FLA"
+     },
+     {
+      "fact": "Still chasing goal #1",
+      "goals": 0,
+      "home": false,
+      "id": 8481534,
+      "name": "Raphael Lavoie",
+      "opp": "MIN",
+      "result": "loss",
+      "team": "VGK"
+     },
+     {
+      "fact": "4 goals in his last 5",
+      "goals": 1,
+      "home": false,
+      "id": 8482116,
+      "name": "Tim St\u00fctzle",
+      "opp": "NJD",
+      "result": "win",
+      "team": "OTT"
+     }
+    ],
+    "result": "L"
+   },
+   "favourites": {
+    "legs": [
+     {
+      "fact": "Statistical favourite \u00b7 1st line \u00b7 PP1",
+      "goals": 0,
+      "home": true,
+      "id": 8478864,
+      "name": "Kirill Kaprizov",
+      "opp": "VGK",
+      "result": "loss",
+      "team": "MIN"
+     },
+     {
+      "fact": "Statistical favourite \u00b7 1st line \u00b7 PP1",
+      "goals": 1,
+      "home": true,
+      "id": 8479420,
+      "name": "Tage Thompson",
+      "opp": "FLA",
+      "result": "win",
+      "team": "BUF"
+     },
+     {
+      "fact": "Statistical favourite \u00b7 1st line \u00b7 PP1",
+      "goals": 0,
+      "home": true,
+      "id": 8481559,
+      "name": "Jack Hughes",
+      "opp": "OTT",
+      "result": "loss",
+      "team": "NJD"
+     }
+    ],
+    "result": "L"
+   },
+   "grudge": {
+    "legs": [
+     {
+      "fact": "Revenge game vs BUF",
+      "goals": 0,
+      "home": false,
+      "id": 8478043,
+      "name": "Sam Lafferty",
+      "opp": "BUF",
+      "result": "loss",
+      "team": "FLA"
+     },
+     {
+      "fact": "Birthday twin with Warren Foegele",
+      "goals": 0,
+      "home": true,
+      "id": 8479996,
+      "name": "Cody Glass",
+      "opp": "OTT",
+      "result": "loss",
+      "team": "NJD"
+     }
+    ],
+    "result": "L"
+   },
+   "hot": {
+    "legs": [
+     {
+      "fact": "3 goals in his last 5",
+      "goals": 0,
+      "home": false,
+      "id": 8479314,
+      "name": "Matthew Tkachuk",
+      "opp": "BUF",
+      "result": "loss",
+      "team": "FLA"
+     },
+     {
+      "fact": "Goals in 2 straight",
+      "goals": 0,
+      "home": true,
+      "id": 8480003,
+      "name": "Jesper Boqvist",
+      "opp": "OTT",
+      "result": "loss",
+      "team": "NJD"
+     },
+     {
+      "fact": "12 shots in his last 3",
+      "goals": 0,
+      "home": false,
+      "id": 8478403,
+      "name": "Jack Eichel",
+      "opp": "MIN",
+      "result": "loss",
+      "team": "VGK"
+     }
+    ],
+    "result": "L"
+   },
+   "theo": {
+    "legs": [
+     {
+      "fact": "Theo's gut feeling",
+      "goals": 1,
+      "home": false,
+      "id": 8481596,
+      "name": "Shane Pinto",
+      "opp": "NJD",
+      "result": "win",
+      "team": "OTT"
+     }
+    ],
+    "result": "W"
+   }
+  }
  }
 }
