@@ -18,11 +18,14 @@ from facts import HOT_KINDS
 LEGS = 3
 PLAYING = ("confirmed", "projected")
 GRUDGE = {"revenge", "hometown", "draft", "newteam", "names", "twins"}
-VIBES = ("chaos", "hot", "grudge", "any", "favourites", "theo")
+VIBES = ("chaos", "hot", "grudge", "any", "favourites", "theo", "chris")
 # pick order: the pickiest vibes go first so each gets its best legs; no player
 # appears in two vibes' parlays on the same day
-ORDER = ("hot", "grudge", "favourites", "chaos", "any", "theo")
-LEGS_FOR = {"theo": 1}    # Theo's Evil Daily Pick is a single gut-feeling leg
+ORDER = ("hot", "grudge", "favourites", "chaos", "any", "theo", "chris")
+LEGS_FOR = {"theo": 1, "chris": 1}   # single-leg picks
+# Chris's Cozy Pick is the slate's single likeliest scorer, so it may repeat a
+# player another vibe already has (the safe pick shouldn't settle for #2)
+SHARES_PLAYERS = {"chris"}
 THEO_FACT = {"kind": "theo", "emoji": "🔮", "title": "Theo's gut feeling",
              "text": "No stats. No storyline. No streak. Theo just has a feeling about this one."}
 DIR = os.path.join(os.path.dirname(os.path.abspath(__file__)), "data", "picks")
@@ -53,6 +56,12 @@ def _stat_fact(p):
     return {"kind": "stat", "emoji": "📈", "title": f"Statistical favourite · {lu}".rstrip(" ·"), "text": text}
 
 
+def _cozy_fact(p):
+    text = (f"Our model's likeliest goalscorer on the whole slate: {round(p['prob'] * 100)}% goal chance tonight"
+            + (f". {p['statLine']}." if p.get("statLine") else "."))
+    return {"kind": "cozy", "emoji": "🛌", "title": "Chris's cozy pick", "text": text}
+
+
 def choose(slate, vibe, taken=()):
     """Pick up to LEGS legs, one per game, for `vibe`, skipping players in `taken`."""
     date = slate["date"]
@@ -64,6 +73,8 @@ def choose(slate, vibe, taken=()):
             key, fact = p["prob"], _stat_fact(p)
         elif vibe == "theo":
             key, fact = _u(date, "theo", p["id"]), THEO_FACT   # pure feeling: any dressed skater
+        elif vibe == "chris":
+            key, fact = p["prob"], _cozy_fact(p)
         else:
             fs = [f for f in p["facts"] if _keep(vibe, f)]
             if not fs:
@@ -106,9 +117,14 @@ def _save(date, picks):
 def make_all(slate, day=None):
     """Fill in every vibe missing from `day` ({vibe: legs}); returns the day dict."""
     day = dict(day or {})
-    taken = {leg["id"] for legs in day.values() for leg in legs}
+    taken = {leg["id"] for v, legs in day.items() if v not in SHARES_PLAYERS for leg in legs}
     for vibe in ORDER:
         if not day.get(vibe):
+            if vibe in SHARES_PLAYERS:
+                day_legs = choose(slate, vibe)
+                if day_legs:
+                    day[vibe] = day_legs
+                continue
             legs = choose(slate, vibe, taken)
             taken |= {leg["id"] for leg in legs}
             if legs:              # nothing to lock before any lineup is known

@@ -10,9 +10,16 @@
   const playing = (p) => PLAYING.has((p.lineup || {}).status);
   const VIBE_LABEL = { chaos: "Maximum chaos", hot: "Hot Streaks", grudge: "Grudges & homecomings",
     any: "Anything goes", favourites: "Statistical Favourites", theo: "Theo's Evil Daily Pick",
+    chris: "Chris's Cozy Pick of the Night",
     gossip: "Gossip only (retired)" };
-  const VIBE_ICON = { chaos: "😈", hot: "🔥", grudge: "😤", any: "🎲", favourites: "📈", theo: "🔮", gossip: "💔" };
-  const VIBE_ORDER = ["chaos", "hot", "grudge", "any", "favourites", "theo", "gossip"];   // gossip: retired, history only
+  const VIBE_ICON = { chaos: "😈", hot: "🔥", grudge: "😤", any: "🎲", favourites: "📈", theo: "🔮", chris: "🛌", gossip: "💔" };
+  const VIBE_ORDER = ["chaos", "hot", "grudge", "any", "favourites", "theo", "chris", "gossip"];
+  const SINGLE = new Set(["theo", "chris"]);     // one-player picks, not parlays
+  // sections that pop up a photo when opened
+  const POPUPS = {
+    theo: { img: "/theo.jpg", alt: "Theo in his evil costume", title: "Theo has a feeling…" },
+    chris: { img: "/chris.jpg", alt: "Chris tucked in under a blanket", title: "Chris is cozy about this one…" },
+  };   // gossip: retired, history only
   const LINEUP_ICON = { confirmed: "✅", projected: "📋", gtd: "⚠️", out: "🚫", unknown: "❔" };
 
   const esc = (s) => String(s == null ? "" : s).replace(/[&<>"']/g, (c) =>
@@ -179,7 +186,7 @@
   function oddsHtml(legs) {
     const prob = legs.reduce((a, p) => a * p.prob, 1);
     return `<div><span class="muted">Vibe odds</span> <strong>${american(prob)}</strong></div>
-      <div><span class="muted">Chance it all hits</span> <strong>${pct(prob)}</strong></div>`;
+      <div><span class="muted">${legs.length === 1 ? "Chance he scores" : "Chance it all hits"}</span> <strong>${pct(prob)}</strong></div>`;
   }
 
   // today's locked parlay for the chosen vibe: same 3 legs for everyone, all day
@@ -188,7 +195,7 @@
     document.querySelectorAll(".vibe").forEach((b) => b.classList.toggle("on", b.dataset.vibe === vibe));
     const legs = (state.data.picks || {})[vibe] || [];
     $("#daily").hidden = false;
-    $("#dailyTitle").textContent = vibe === "theo" ? "Theo's Evil Daily Pick" : `Today's ${VIBE_LABEL[vibe]} parlay`;
+    $("#dailyTitle").textContent = SINGLE.has(vibe) ? VIBE_LABEL[vibe] : `Today's ${VIBE_LABEL[vibe]} parlay`;
     if (!legs.length) {
       $("#dailyLegs").innerHTML = "";
       $("#dailyFoot").innerHTML = "";
@@ -197,7 +204,7 @@
     }
     $("#dailyLegs").innerHTML = legs.map((l) => legHtml(l, l.fact, false)).join("");
     $("#dailyFoot").innerHTML = oddsHtml(legs);
-    const fewer = vibe !== "theo" && legs.length < 3
+    const fewer = !SINGLE.has(vibe) && legs.length < 3
       ? ` Only ${legs.length} game${legs.length > 1 ? "s" : ""} qualify, so it has ${legs.length} leg${legs.length > 1 ? "s" : ""} (one per game).` : "";
     $("#dailyNote").textContent = `🔒 Locked for ${state.data.date}. Everyone gets these same picks; new ones tomorrow.${fewer}`;
   }
@@ -253,28 +260,32 @@
     state.vibe = b.dataset.vibe;
     state.revealed = true;
     renderDaily();
-    if (state.vibe === "theo") openTheo();
+    if (POPUPS[state.vibe]) openPopup(state.vibe);
   });
 
-  // Theo's photo pops up whenever his section is opened
-  let theoReturn = null;
-  function openTheo() {
-    const leg = ((state.data.picks || {}).theo || [])[0];
-    $("#theoPick").textContent = leg ? `${leg.name} (${leg.team} ${leg.home ? "vs" : "@"} ${leg.opp}) to score tonight.`
+  // Theo's and Chris's photos pop up whenever their section is opened
+  let popReturn = null;
+  function openPopup(vibe) {
+    const pop = POPUPS[vibe];
+    const leg = ((state.data.picks || {})[vibe] || [])[0];
+    $("#popImg").src = pop.img;
+    $("#popImg").alt = pop.alt;
+    $("#popTitle").textContent = pop.title;
+    $("#popPick").textContent = leg ? `${leg.name} (${leg.team} ${leg.home ? "vs" : "@"} ${leg.opp}) to score tonight.`
       : (state.data.picksNote || "No pick yet today.");
-    theoReturn = document.activeElement;
-    $("#theoModal").hidden = false;
+    popReturn = document.activeElement;
+    $("#popModal").hidden = false;
     document.body.classList.add("modal-open");
-    $("#theoClose").focus();
+    $("#popClose").focus();
   }
-  function closeTheo() {
-    $("#theoModal").hidden = true;
+  function closePopup() {
+    $("#popModal").hidden = true;
     document.body.classList.remove("modal-open");
-    if (theoReturn) theoReturn.focus();
+    if (popReturn) popReturn.focus();
   }
-  on("#theoClose", "click", closeTheo);
-  on("#theoModal", "click", (e) => { if (e.target.id === "theoModal") closeTheo(); });
-  document.addEventListener("keydown", (e) => { if (e.key === "Escape" && !$("#theoModal").hidden) closeTheo(); });
+  on("#popClose", "click", closePopup);
+  on("#popModal", "click", (e) => { if (e.target.id === "popModal") closePopup(); });
+  document.addEventListener("keydown", (e) => { if (e.key === "Escape" && !$("#popModal").hidden) closePopup(); });
   on("#lineupOnly", "change", (e) => { state.lineupOnly = e.target.checked; renderPlayers(); });
   on("#clearSlip", "click", () => { state.slip = []; state.note = ""; renderPlayers(); renderSlip(); });
   on("#date", "change", (e) => {

@@ -99,7 +99,7 @@ button { font: inherit; cursor: pointer; }
 .leg .x { background: none; border: 0; color: var(--muted); font-size: 18px; }
 .slip-foot { display: flex; flex-wrap: wrap; gap: 24px; margin-top: 12px; padding-top: 10px; border-top: 1px solid var(--line); }
 .slip-foot strong { font-size: 18px; color: var(--gold); margin-left: 6px; }
-@keyframes pop { from { transform: scale(.96); opacity: 0; } to { transform: none; opacity: 1; } }
+@keyframes pop { from { transform: scale(.96); } to { transform: none; } }   /* movement only, never opacity */
 
 .chips { display: flex; flex-wrap: wrap; gap: 8px; margin: 4px 0 14px; }
 .chip {
@@ -203,28 +203,30 @@ body::before {
   .rec-legs { grid-column: 2; }
 }
 
-/* Theo's Evil Daily Pick */
+/* Theo's and Chris's picks: buttons and the photo pop-up */
 .vibe-theo { border-color: rgba(255, 201, 77, 0.45); }
 .vibe-theo.on { background: linear-gradient(135deg, #b8860b, #7a1020); }
-.theo-modal {
+.pop-modal {
   position: fixed; inset: 0; z-index: 50; display: grid; place-items: center; padding: 16px;
-  background: rgba(5, 0, 2, 0.82); backdrop-filter: blur(6px); animation: fade .25s ease-out;
+  background: rgba(5, 0, 2, 0.82); backdrop-filter: blur(6px);
 }
-.theo-modal[hidden] { display: none; }
-.theo-card {
+.pop-modal[hidden] { display: none; }
+.pop-card {
   position: relative; margin: 0; max-width: min(420px, 100%); max-height: 100%; display: flex; flex-direction: column;
   background: var(--card); border: 1px solid rgba(255, 201, 77, 0.4); border-radius: var(--radius); overflow: hidden;
   box-shadow: 0 0 60px rgba(224, 38, 63, 0.55); animation: rise .35s cubic-bezier(.2, .9, .3, 1.2);
 }
-.theo-card img { display: block; width: 100%; height: auto; max-height: calc(100vh - 150px); object-fit: cover; object-position: top; }
-.theo-card figcaption { padding: 12px 16px 14px; display: grid; gap: 4px; text-align: center; }
-.theo-card figcaption b { font-size: 18px; color: var(--gold); }
-.theo-card figcaption span { color: var(--text); font-size: 14px; }
-.theo-close {
+.pop-card img { display: block; width: 100%; height: auto; max-height: calc(100vh - 150px); object-fit: cover; object-position: top; }
+.pop-card figcaption { padding: 12px 16px 14px; display: grid; gap: 4px; text-align: center; }
+.pop-card figcaption b { font-size: 18px; color: var(--gold); }
+.pop-card figcaption span { color: var(--text); font-size: 14px; }
+.pop-close {
   position: absolute; top: 8px; right: 8px; width: 36px; height: 36px; border-radius: 50%; border: 0;
   background: rgba(0, 0, 0, 0.6); color: #fff; font-size: 18px;
 }
 body.modal-open { overflow: hidden; }
-@keyframes fade { from { opacity: 0; } to { opacity: 1; } }
-@keyframes rise { from { transform: translateY(24px) scale(.96); opacity: 0; } to { transform: none; opacity: 1; } }
-@media (prefers-reduced-motion: reduce) { .theo-modal, .theo-card { animation: none; } }
+/* movement only, never opacity: if animations are paused the photo still shows */
+@keyframes rise { from { transform: translateY(24px) scale(.96); } to { transform: none; } }
+@media (prefers-reduced-motion: reduce) { .pop-modal, .pop-card { animation: none; } }
+.vibe-chris { border-color: rgba(255, 170, 150, 0.45); }
+.vibe-chris.on { background: linear-gradient(135deg, #d9826b, #7a1020); }
