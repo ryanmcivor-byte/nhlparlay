@@ -2359,5 +2359,201 @@
     "result": "W"
    }
   }
+ },
+ "2026-10-13": {
+  "rebuilt": false,
+  "vibes": {
+   "any": {
+    "legs": [
+     {
+      "fact": "Birthday twin with Evan Rodrigues",
+      "goals": null,
+      "home": true,
+      "id": 8482171,
+      "name": "William Wallinder",
+      "opp": "NJD",
+      "result": "void",
+      "team": "DET",
+      "why": "Didn't dress"
+     },
+     {
+      "fact": "Goals in 3 straight",
+      "goals": 2,
+      "home": true,
+      "id": 8482109,
+      "name": "Alexis Lafreni\u00e8re",
+      "opp": "TBL",
+      "result": "win",
+      "team": "NYR"
+     },
+     {
+      "fact": "4-game point streak",
+      "goals": 0,
+      "home": false,
+      "id": 8477955,
+      "name": "Jared McCann",
+      "opp": "PHI",
+      "result": "loss",
+      "team": "SEA"
+     }
+    ],
+    "result": "L"
+   },
+   "chaos": {
+    "legs": [
+     {
+      "fact": "3 goals in his last 5",
+      "goals": 0,
+      "home": false,
+      "id": 8482713,
+      "name": "Mackie Samoskevich",
+      "opp": "PHI",
+      "result": "loss",
+      "team": "SEA"
+     },
+     {
+      "fact": "Love life in the news",
+      "goals": 1,
+      "home": false,
+      "id": 8476448,
+      "name": "William Karlsson",
+      "opp": "NSH",
+      "result": "win",
+      "team": "VGK"
+     },
+     {
+      "fact": "5 goals in his last 5",
+      "goals": 0,
+      "home": true,
+      "id": 8482116,
+      "name": "Tim St\u00fctzle",
+      "opp": "STL",
+      "result": "loss",
+      "team": "OTT"
+     }
+    ],
+    "result": "L"
+   },
+   "favourites": {
+    "legs": [
+     {
+      "fact": "Statistical favourite \u00b7 1st line \u00b7 PP1",
+      "goals": 2,
+      "home": false,
+      "id": 8478864,
+      "name": "Kirill Kaprizov",
+      "opp": "WPG",
+      "result": "win",
+      "team": "MIN"
+     },
+     {
+      "fact": "Statistical favourite \u00b7 1st line \u00b7 PP1",
+      "goals": 0,
+      "home": false,
+      "id": 8477492,
+      "name": "Nathan MacKinnon",
+      "opp": "DAL",
+      "result": "loss",
+      "team": "COL"
+     },
+     {
+      "fact": "Statistical favourite \u00b7 1st line \u00b7 PP1",
+      "goals": 1,
+      "home": false,
+      "id": 8477934,
+      "name": "Leon Draisaitl",
+      "opp": "LAK",
+      "result": "win",
+      "team": "EDM"
+     }
+    ],
+    "result": "L"
+   },
+   "grudge": {
+    "legs": [
+     {
+      "fact": "Same name across the ice",
+      "goals": 0,
+      "home": false,
+      "id": 8474568,
+      "name": "Luke Schenn",
+      "opp": "NYI",
+      "result": "loss",
+      "team": "VAN"
+     },
+     {
+      "fact": "Old team: PIT",
+      "goals": 0,
+      "home": true,
+      "id": 8474013,
+      "name": "Ian Cole",
+      "opp": "PIT",
+      "result": "loss",
+      "team": "CHI"
+     },
+     {
+      "fact": "Birthday twin with Sam Malinski",
+      "goals": 0,
+      "home": true,
+      "id": 8480878,
+      "name": "Nils Lundkvist",
+      "opp": "COL",
+      "result": "loss",
+      "team": "DAL"
+     }
+    ],
+    "result": "L"
+   },
+   "hot": {
+    "legs": [
+     {
+      "fact": "4 goals in his last 5",
+      "goals": 0,
+      "home": false,
+      "id": 8479420,
+      "name": "Tage Thompson",
+      "opp": "MTL",
+      "result": "loss",
+      "team": "BUF"
+     },
+     {
+      "fact": "3 goals in his last 5",
+      "goals": 1,
+      "home": false,
+      "id": 8478402,
+      "name": "Connor McDavid",
+      "opp": "LAK",
+      "result": "win",
+      "team": "EDM"
+     },
+     {
+      "fact": "4 goals in his last 5",
+      "goals": 0,
+      "home": true,
+      "id": 8477500,
+      "name": "Bo Horvat",
+      "opp": "VAN",
+      "result": "loss",
+      "team": "NYI"
+     }
+    ],
+    "result": "L"
+   },
+   "theo": {
+    "legs": [
+     {
+      "fact": "Theo's gut feeling",
+      "goals": 2,
+      "home": true,
+      "id": 8475151,
+      "name": "Kyle Palmieri",
+      "opp": "VAN",
+      "result": "win",
+      "team": "NYI"
+     }
+    ],
+    "result": "W"
+   }
+  }
  }
 }
