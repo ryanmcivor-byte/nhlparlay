@@ -7,9 +7,9 @@ score by blending two signals:
 
 The book's price is the strongest signal (and carries the vig, which the
 intercept learns to strip out); our own rate can nudge it. A bet's value is
-its expected return per $1: p * decimal_odds - 1. Each night the 7 best values
-among players the model gives at least a MIN_CHANCE shot are picked (straight
-bets, not a parlay). Backtests showed longshot "value" is mostly model error.
+its expected return per $1: p * decimal_odds - 1. Each night the best values in
+each price range are picked (BANDS: 2 short, 3 mid, 2 long up to +1500), as 7
+straight bets, not a parlay.
 
 It improves every day: each morning's prices and model numbers are saved to
 data/odds/<date>.json; once the games are final, who scored is filled in, and
@@ -29,7 +29,11 @@ from datetime import date as Date, timedelta
 import nhl
 
 PICKS = 7
-MIN_CHANCE = 0.20   # only real scorers: books overcharge longshots most, and our rough rate overrates them
+# Best value in each price range, so every night mixes short prices with real longshots.
+# (Ranking everything by value alone filled the card with +3000 defensemen: that was model
+# error, not value. Capping at +1500 and giving each range its own slots fixed it.)
+BANDS = [("short", -100000, 200, 2), ("mid", 200, 500, 3), ("long", 500, 1500, 2)]
+MAX_PRICE = 1500
 ROOT = os.path.dirname(os.path.abspath(__file__))
 ODDS_DIR = os.path.join(ROOT, "data", "odds")
 MODEL = os.path.join(ROOT, "data", "scammer_model.json")
@@ -168,6 +172,21 @@ def attach_odds(players, games, date, opening=False):
 # ---------------------------------------------------------------------------
 # tonight's picks
 # ---------------------------------------------------------------------------
+def select(cands, n=PICKS):
+    """cands: [(ev, ...rest, american at index 2)] -> the n picks: the best value in each
+    price band, topped up with the best remaining value (up to MAX_PRICE) on small slates."""
+    ranked = sorted(cands, key=lambda c: -c[0])
+    picked = []
+    for _, lo, hi, k in BANDS:
+        picked += [c for c in ranked if lo < c[2] <= hi and c not in picked][:k]
+    picked += [c for c in ranked if c[2] <= MAX_PRICE and c not in picked][:max(0, n - len(picked))]
+    return sorted(picked[:n], key=lambda c: c[2])      # shortest price first
+
+
+def _tier(am):
+    return "short-price" if am <= 200 else "mid-price" if am <= 500 else "longshot"
+
+
 def choose(slate, n=PICKS):
     """The n best-value bets among priced skaters in tonight's lineup."""
     w = load_model()["weights"]
@@ -179,18 +198,15 @@ def choose(slate, n=PICKS):
         pf = predict(w, p["prob"], am)
         ev = pf * decimal(am) - 1
         cands.append((ev, pf, am, p))
-    cands.sort(key=lambda c: -c[0])
-    real = [c for c in cands if c[1] >= MIN_CHANCE]
-    picks = (real + [c for c in cands if c[1] < MIN_CHANCE])[:n]   # small slates: fill with the next best
     legs = []
-    for ev, pf, am, p in picks:
+    for ev, pf, am, p in select(cands, n):
         price = f"+{am}" if am > 0 else str(am)
         edge = "an edge" if ev > 0 else "no edge, best of the rest"
         legs.append({"id": p["id"], "name": p["name"], "team": p["team"], "opp": p["opp"], "home": p["home"],
                      "gameId": p["gameId"], "headshot": p.get("headshot"), "prob": round(pf, 4),
                      "american": am, "ev": round(ev, 4),
                      "fact": {"kind": "value", "emoji": "💸",
-                              "title": f"Value bet at {price}" if ev > 0 else f"Best price on the board: {price}",
+                              "title": f"Value bet at {price}" if ev > 0 else f"Best {_tier(am)} value: {price}",
                               "text": f"Model {pf:.0%} vs book {implied(am):.0%}: {ev:+.0%} expected return "
                                       f"per $1 ({edge})."}})
     return legs
@@ -279,10 +295,9 @@ def train():
     units = 0.0
     for i, (d, rows) in enumerate(days):
         w_i = fit([r for _, rs in days[:i] for r in rs])
-        scored = [(predict(w_i, pm, am) * decimal(am) - 1, predict(w_i, pm, am), am, y) for pm, am, y in rows]
-        scored.sort(key=lambda c: -c[0])
-        top = ([c for c in scored if c[1] >= MIN_CHANCE] + [c for c in scored if c[1] < MIN_CHANCE])[:PICKS]
-        for _, _, am, y in top:
+        scored = [(predict(w_i, pm, am) * decimal(am) - 1, predict(w_i, pm, am), am, y, k)
+                  for k, (pm, am, y) in enumerate(rows)]
+        for _, _, am, y, _ in select(scored):
             wins += y
             losses += 1 - y
             units += (decimal(am) - 1) if y else -1

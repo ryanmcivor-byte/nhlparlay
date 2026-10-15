@@ -9,10 +9,10 @@
  "trainedThrough": "2026-10-14",
  "scoringRate": 0.1518,
  "backtest": {
-  "wins": 27,
-  "losses": 78,
-  "units": -9.3,
-  "roi": -0.0886,
+  "wins": 17,
+  "losses": 88,
+  "units": -11.95,
+  "roi": -0.1138,
   "marketRoi": -0.1667
  },
  "walkForward": {
