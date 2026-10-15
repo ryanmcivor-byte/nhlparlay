@@ -10,15 +10,17 @@
   const playing = (p) => PLAYING.has((p.lineup || {}).status);
   const VIBE_LABEL = { chaos: "Maximum chaos", hot: "Hot Streaks", grudge: "Grudges & homecomings",
     any: "Anything goes", favourites: "Statistical Favourites", theo: "Theo's Evil Daily Pick",
-    chris: "Chris's Cozy Pick of the Night",
+    chris: "Chris's Cozy Pick of the Night", scammer: "The Scammer's Best Value Picks",
     gossip: "Gossip only (retired)" };
-  const VIBE_ICON = { chaos: "😈", hot: "🔥", grudge: "😤", any: "🎲", favourites: "📈", theo: "🔮", chris: "🛌", gossip: "💔" };
-  const VIBE_ORDER = ["chaos", "hot", "grudge", "any", "favourites", "theo", "chris", "gossip"];
-  const SINGLE = new Set(["theo", "chris"]);     // one-player picks, not parlays
+  const VIBE_ICON = { chaos: "😈", hot: "🔥", grudge: "😤", any: "🎲", favourites: "📈", theo: "🔮", chris: "🛌", scammer: "💸", gossip: "💔" };
+  const VIBE_ORDER = ["chaos", "hot", "grudge", "any", "favourites", "theo", "chris", "scammer", "gossip"];
+  const SINGLE = new Set(["theo", "chris", "scammer"]);   // not parlays (the Scammer's are 7 straight bets)
+  const fmtAm = (a) => (a > 0 ? "+" : "") + a;
   // sections that pop up a photo when opened
   const POPUPS = {
     theo: { img: "/theo.jpg", alt: "Theo in his evil costume", title: "Theo has a feeling…" },
     chris: { img: "/chris.jpg", alt: "Chris tucked in under a blanket", title: "Chris is cozy about this one…" },
+    scammer: { img: "/scammer.jpg", alt: "The Scammer in devil horns holding up a card", title: "The Scammer found some value…" },
   };   // gossip: retired, history only
   const LINEUP_ICON = { confirmed: "✅", projected: "📋", gtd: "⚠️", out: "🚫", unknown: "❔" };
 
@@ -48,18 +50,25 @@
     let r;
     try { r = await (await fetch("/api/record")).json(); } catch (e) { return; }
     if (!r || !r.days || !r.days.length) return;
+    state.record = r;
     const t = r.total, n = t.W + t.L;
     $("#recTotal").textContent = `${t.W}-${t.L}` + (t.P ? `-${t.P}` : "");
     $("#recSub").textContent = `${n ? Math.round((t.W / n) * 100) : 0}% of parlays hit · since ${fmtDay(r.start)}`;
     $("#recVibes").innerHTML = VIBE_ORDER.filter((v) => r.byVibe[v] && (v !== "gossip" || r.byVibe[v].W + r.byVibe[v].L)).map((v) => {
       const b = r.byVibe[v];
-      return `<span class="rec-chip" title="${esc(VIBE_LABEL[v])}">${VIBE_ICON[v]} ${esc(VIBE_LABEL[v])} <b>${b.W}-${b.L}</b></span>`;
+      const u = b.units !== undefined ? ` <b class="${b.units >= 0 ? "up" : "down"}">${b.units >= 0 ? "+" : ""}${b.units.toFixed(1)}u</b>` : "";
+      return `<span class="rec-chip" title="${esc(VIBE_LABEL[v])}">${VIBE_ICON[v]} ${esc(VIBE_LABEL[v])} <b>${b.W}-${b.L}</b>${u}</span>`;
     }).join("");
     $("#recDays").innerHTML = r.days.map((d) => `
       <div class="rec-day">
         <div class="rec-date">${fmtDay(d.date)}${d.rebuilt ? '<span class="rebuilt" title="Rebuilt: see note below">*</span>' : ""}</div>
         <div class="rec-parlays">${VIBE_ORDER.filter((v) => d.vibes[v]).map((v) => {
           const p = d.vibes[v];
+          if (p.result === "singles") {   // the Scammer: separate straight bets
+            const legs = p.legs.map((l) => `<span class="rec-leg">${LEG_ICON[l.result] || ""} ${esc(l.name)} ${l.american ? fmtAm(l.american) : ""}</span>`).join("");
+            return `<div class="rec-parlay ${p.units >= 0 ? "win" : "loss"}"><span class="rec-res">${p.W}-${p.L}</span>
+              <span class="rec-vibe">${VIBE_ICON[v]} ${esc(VIBE_LABEL[v])} (${p.units >= 0 ? "+" : ""}${p.units.toFixed(1)}u)</span><span class="rec-legs">${legs}</span></div>`;
+          }
           const cls = p.result === "W" ? "win" : p.result === "L" ? "loss" : "other";
           const legs = p.legs.map((l) => `<span class="rec-leg" title="${esc(l.fact || "")}">${LEG_ICON[l.result] || ""} ${esc(l.name)}${l.goals ? ` (${l.goals}G)` : ""}</span>`).join("");
           return `<div class="rec-parlay ${cls}"><span class="rec-res">${p.result === "pending" ? "…" : p.result}</span>
@@ -176,7 +185,7 @@
       ? `<p class="leg-warn">${LINEUP_ICON[lu.status] || ""} ${esc(lu.label)}: ${esc(lu.detail || "check the lineup before betting")}</p>` : "";
     return `<li class="leg">
       <img src="${esc(p.headshot || "")}" alt="">
-      <div><b>${esc(p.name)}</b> <span class="muted">to score · ${esc(p.team)} ${p.home ? "vs" : "@"} ${esc(p.opp)} · ${pct(p.prob)}</span>
+      <div><b>${esc(p.name)}</b> <span class="muted">to score · ${esc(p.team)} ${p.home ? "vs" : "@"} ${esc(p.opp)} · ${pct(p.prob)}${p.american ? ` · <b class="price">${fmtAm(p.american)}</b>` : ""}</span>
         <div class="why">${f.emoji} <b>${esc(f.title)}</b></div>
         ${story ? `<p class="story">${story}</p>` : ""}${warn}</div>
       ${removable ? `<button class="x" data-add="${p.id}" aria-label="Remove ${esc(p.name)}">✕</button>` : "<span></span>"}
@@ -203,10 +212,29 @@
       return;
     }
     $("#dailyLegs").innerHTML = legs.map((l) => legHtml(l, l.fact, false)).join("");
-    $("#dailyFoot").innerHTML = oddsHtml(legs);
+    $("#dailyFoot").innerHTML = vibe === "scammer" ? scammerFoot(legs) : oddsHtml(legs);
     const fewer = !SINGLE.has(vibe) && legs.length < 3
       ? ` Only ${legs.length} game${legs.length > 1 ? "s" : ""} qualify, so it has ${legs.length} leg${legs.length > 1 ? "s" : ""} (one per game).` : "";
-    $("#dailyNote").textContent = `🔒 Locked for ${state.data.date}. Everyone gets these same picks; new ones tomorrow.${fewer}`;
+    $("#dailyNote").textContent = `🔒 Locked for ${state.data.date}. Everyone gets these same picks; new ones tomorrow.${fewer}`
+      + (vibe === "scammer" ? " " + scammerModelNote() : "");
+  }
+
+  // the Scammer: 7 separate $1 bets, so show the total expected return, not a parlay price
+  function scammerFoot(legs) {
+    const ev = legs.reduce((a, l) => a + (l.ev || 0), 0);
+    const hits = legs.reduce((a, l) => a + l.prob, 0);
+    return `<div><span class="muted">7 straight $1 bets · expected return</span> <strong>${ev >= 0 ? "+" : "−"}$${Math.abs(ev).toFixed(2)}</strong></div>
+      <div><span class="muted">Expected hits</span> <strong>${hits.toFixed(1)} of ${legs.length}</strong></div>`;
+  }
+
+  function scammerModelNote() {
+    const m = (state.record || {}).scammerModel;
+    if (!m || !m.n) return "";
+    const b = m.backtest || {};
+    const roi = (x) => `${x >= 0 ? "+" : "−"}${Math.abs(Math.round(x * 100))}%`;
+    return `The model has learned from ${m.n.toLocaleString()} past goalscorer prices (through ${m.trainedThrough}) and retrains every morning.`
+      + (b.wins + b.losses ? ` Backtest of this exact pick rule: ${b.wins}-${b.losses}, ${roi(b.roi)} per $1, vs ${roi(b.marketRoi)} for betting every player.` : "")
+      + " Sportsbooks build in a margin, so a negative expected return is normal: these are the least-bad prices on the board.";
   }
 
   function renderSlip() {
@@ -271,7 +299,10 @@
     $("#popImg").src = pop.img;
     $("#popImg").alt = pop.alt;
     $("#popTitle").textContent = pop.title;
-    $("#popPick").textContent = leg ? `${leg.name} (${leg.team} ${leg.home ? "vs" : "@"} ${leg.opp}) to score tonight.`
+    const all = (state.data.picks || {})[vibe] || [];
+    $("#popPick").textContent = all.length > 1
+      ? `${all.length} value bets tonight: ${all.map((l) => `${l.name} ${fmtAm(l.american)}`).join(", ")}.`
+      : leg ? `${leg.name} (${leg.team} ${leg.home ? "vs" : "@"} ${leg.opp}) to score tonight.`
       : (state.data.picksNote || "No pick yet today.");
     popReturn = document.activeElement;
     $("#popModal").hidden = false;

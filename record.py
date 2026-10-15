@@ -12,6 +12,7 @@ from datetime import date as Date, timedelta
 
 import nhl
 import picks
+import scammer
 
 START = "2026-09-30"           # the day the site launched
 ROOT = os.path.dirname(os.path.abspath(__file__))
@@ -72,6 +73,26 @@ def grade_leg(leg, box):
     return {"result": "win" if g > 0 else "loss", "goals": g}
 
 
+def grade_singles(legs, boxes):
+    """The Scammer's picks: each leg is its own $1 straight bet at its locked price."""
+    graded = []
+    for leg in legs:
+        r = grade_leg(leg, boxes.get(leg["gameId"]))
+        am = leg.get("american")
+        units = 0.0
+        if r["result"] == "win" and am:
+            units = scammer.decimal(am) - 1
+        elif r["result"] == "loss":
+            units = -1.0
+        graded.append(dict(r, id=leg["id"], name=leg["name"], team=leg["team"], opp=leg["opp"],
+                           home=leg["home"], american=am, units=round(units, 2),
+                           fact=leg.get("fact", {}).get("title", "")))
+    res = [g["result"] for g in graded]
+    return {"result": "pending" if "pending" in res else "singles", "legs": graded,
+            "W": res.count("win"), "L": res.count("loss"), "P": res.count("void"),
+            "units": round(sum(g["units"] for g in graded), 2)}
+
+
 def grade_parlay(legs, boxes):
     graded = []
     for leg in legs:
@@ -119,7 +140,8 @@ def update(today=None):
                 except Exception:
                     boxes[gid] = None
             results[d] = {"rebuilt": d in rebuilt,
-                          "vibes": {v: grade_parlay(legs, boxes) for v, legs in day.items()}}
+                          "vibes": {v: (grade_singles if v in picks.SINGLES else grade_parlay)(legs, boxes)
+                                    for v, legs in day.items()}}
             changed = True
         if changed:
             _write(RESULTS, results)
@@ -132,14 +154,24 @@ def summary():
     total = {"W": 0, "L": 0, "P": 0}
     by_vibe = {v: {"W": 0, "L": 0, "P": 0} for v in picks.VIBES}
     days = []
+    singles = {"W": 0, "L": 0, "P": 0, "units": 0.0}
     for d in sorted(results, reverse=True):
         day = results[d]
         for v, r in day["vibes"].items():
+            if v in picks.SINGLES:
+                if r["result"] == "singles":
+                    for k in ("W", "L", "P"):
+                        singles[k] += r[k]
+                    singles["units"] = round(singles["units"] + r["units"], 2)
+                continue
             if r["result"] in total:
                 total[r["result"]] += 1
                 by_vibe.setdefault(v, {"W": 0, "L": 0, "P": 0})[r["result"]] += 1
         days.append({"date": d, "rebuilt": day.get("rebuilt", False), "vibes": day["vibes"]})
-    return {"start": START, "total": total, "byVibe": by_vibe, "days": days}
+    by_vibe["scammer"] = singles
+    model = scammer.load_model()
+    model.pop("history", None)
+    return {"start": START, "total": total, "byVibe": by_vibe, "days": days, "scammerModel": model}
 
 
 _refreshing = [False]

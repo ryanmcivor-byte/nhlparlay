@@ -15,6 +15,7 @@ from concurrent.futures import ThreadPoolExecutor
 import facts
 import nhl
 import picks
+import scammer
 
 TTL = 10 * 60      # lineups firm up near puck drop, so refresh often
 _slates = {}      # date -> {"data": last good slate or None, "at": built time, "build": running build or None}
@@ -116,6 +117,9 @@ def build(date, state, as_of=False):
     lineups = ({p["id"]: {"status": "confirmed", "label": "Dressed", "detail": "Official NHL box score"}
                 for p in players} if as_of else _lineups(games, players))
 
+    state.update(progress=0.9, step="Checking the sportsbook")
+    odds = _safe(scammer.attach_odds)(players, games, date, as_of) or {}
+
     state.update(progress=0.92, step="Brewing chaos")
     slate_f = facts.slate_facts(players, day)
     out_players = []
@@ -128,7 +132,7 @@ def build(date, state, as_of=False):
             "id": p["id"], "name": p["name"], "team": p["team"], "opp": p["opp"], "home": p["home"],
             "gameId": p["gameId"], "pos": p["pos"], "num": p["num"], "headshot": p["headshot"],
             "prob": facts.goal_prob(p["ld"], season), "facts": fs, "lineup": lineups[p["id"]],
-            "statLine": facts.stat_line(p["ld"], season),
+            "statLine": facts.stat_line(p["ld"], season), "odds": odds.get(p["id"]),
             "chaos": sum(f["chaos"] for f in fs[:3]),
         })
     out_players.sort(key=lambda p: -p["chaos"])

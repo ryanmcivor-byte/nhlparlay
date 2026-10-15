@@ -230,3 +230,8 @@ body.modal-open { overflow: hidden; }
 @media (prefers-reduced-motion: reduce) { .pop-modal, .pop-card { animation: none; } }
 .vibe-chris { border-color: rgba(255, 170, 150, 0.45); }
 .vibe-chris.on { background: linear-gradient(135deg, #d9826b, #7a1020); }
+.vibe-scammer { border-color: rgba(125, 255, 106, 0.4); }
+.vibe-scammer.on { background: linear-gradient(135deg, #2f7d2a, #7a1020); }
+.price { color: var(--gold); font-weight: 700; }
+.rec-chip b.up { color: var(--toxic); }
+.rec-chip b.down { color: #ff8b99; }

@@ -183,3 +183,72 @@ def espn_injuries():
         for i in team.get("injuries") or []:
             out.append(((i.get("athlete") or {}).get("displayName") or "", i.get("status") or ""))
     return out
+
+
+# ---------------------------------------------------------------------------
+# Sportsbook odds: DraftKings anytime-goalscorer prices via ESPN's free feeds
+# ---------------------------------------------------------------------------
+ESPN_SITE = "https://site.api.espn.com/apis/site/v2/sports/hockey/nhl"
+ESPN_CORE = "https://sports.core.api.espn.com/v2/sports/hockey/leagues/nhl"
+ESPN_ALIAS = {"LA": "LAK", "NJ": "NJD", "SJ": "SJS", "TB": "TBL", "UTAH": "UTA", "WAS": "WSH",
+              "VEG": "VGK", "MON": "MTL", "NAS": "NSH", "CLB": "CBJ", "CAL": "CGY", "WIN": "WPG"}
+
+
+def parse_american(v):
+    """'+200' / '-150' / 'EVEN' / 200 -> int, or None."""
+    if v is None:
+        return None
+    s = str(v).strip().upper()
+    if s in ("EVEN", "EV"):
+        return 100
+    try:
+        n = int(float(s.replace("+", "")))
+    except ValueError:
+        return None
+    return n if abs(n) >= 100 else None
+
+
+def espn_games(date):
+    """ESPN events on an ET date: [{id, home, away, homeId, awayId}] with NHL abbreviations."""
+    d = _get(f"{ESPN_SITE}/scoreboard?dates={date.replace('-', '')}", NHL_UA, 300, json.loads)
+    out = []
+    for e in d.get("events") or []:
+        g = {"id": str(e.get("id"))}
+        for c in ((e.get("competitions") or [{}])[0].get("competitors") or []):
+            t = c.get("team") or {}
+            side = c.get("homeAway")
+            if side in ("home", "away"):
+                ab = str(t.get("abbreviation") or "").upper()
+                g[side], g[side + "Id"] = ESPN_ALIAS.get(ab, ab), str(t.get("id"))
+        if g.get("home") and g.get("away"):
+            out.append(g)
+    return out
+
+
+def espn_props(event_id):
+    """Anytime-goalscorer prices for one event: {espnAthleteId: {"american": now, "open": opening}}."""
+    url = f"{ESPN_CORE}/events/{event_id}/competitions/{event_id}/odds/100/propBets?limit=1000"
+    d = _get(url, NHL_UA, 600, json.loads)
+    out = {}
+    import re
+    for it in d.get("items") or []:
+        t = it.get("type") or {}
+        if str(t.get("id")) != "230" and t.get("name") != "Anytime Goalscorer":
+            continue
+        m = re.search(r"/athletes/(\d+)", (it.get("athlete") or {}).get("$ref") or "")
+        am = (it.get("odds") or {}).get("american") or {}
+        now, opn = parse_american(am.get("value")), parse_american(am.get("open"))
+        if m and (now or opn):
+            out[m.group(1)] = {"american": now or opn, "open": opn or now}
+    return out
+
+
+def espn_roster(team_id):
+    """ESPN team roster (to match ESPN athlete ids to NHL players): [{espnId, name, dob}]."""
+    d = _get(f"{ESPN_SITE}/teams/{team_id}/roster", NHL_UA, 24 * 3600, json.loads)
+    out = []
+    for grp in d.get("athletes") or []:
+        for a in grp.get("items") or []:
+            out.append({"espnId": str(a.get("id")), "name": a.get("fullName") or "",
+                        "dob": (a.get("dateOfBirth") or "")[:10]})
+    return out

@@ -13,19 +13,22 @@ import os
 import threading
 
 import nhl
+import scammer
 from facts import HOT_KINDS
 
 LEGS = 3
 PLAYING = ("confirmed", "projected")
 GRUDGE = {"revenge", "hometown", "draft", "newteam", "names", "twins"}
-VIBES = ("chaos", "hot", "grudge", "any", "favourites", "theo", "chris")
+VIBES = ("chaos", "hot", "grudge", "any", "favourites", "theo", "chris", "scammer")
 # pick order: the pickiest vibes go first so each gets its best legs; no player
 # appears in two vibes' parlays on the same day
-ORDER = ("hot", "grudge", "favourites", "chaos", "any", "theo", "chris")
+ORDER = ("hot", "grudge", "favourites", "chaos", "any", "theo", "chris", "scammer")
 LEGS_FOR = {"theo": 1, "chris": 1}   # single-leg picks
 # Chris's Cozy Pick is the slate's single likeliest scorer, so it may repeat a
 # player another vibe already has (the safe pick shouldn't settle for #2)
-SHARES_PLAYERS = {"chris"}
+# The Scammer's 7 value bets come from the sportsbook model and may overlap too.
+SHARES_PLAYERS = {"chris", "scammer"}
+SINGLES = {"scammer"}     # graded as separate straight bets, not as one parlay
 THEO_FACT = {"kind": "theo", "emoji": "🔮", "title": "Theo's gut feeling",
              "text": "No stats. No storyline. No streak. Theo just has a feeling about this one."}
 DIR = os.path.join(os.path.dirname(os.path.abspath(__file__)), "data", "picks")
@@ -64,6 +67,8 @@ def _cozy_fact(p):
 
 def choose(slate, vibe, taken=()):
     """Pick up to LEGS legs, one per game, for `vibe`, skipping players in `taken`."""
+    if vibe == "scammer":
+        return scammer.choose(slate)
     date = slate["date"]
     best = {}  # gameId -> (key, player, fact)
     for p in slate["players"]:
@@ -129,6 +134,7 @@ def make_all(slate, day=None):
             taken |= {leg["id"] for leg in legs}
             if legs:              # nothing to lock before any lineup is known
                 day[vibe] = legs
+    scammer.snapshot(slate)   # the morning's prices + model numbers, for the value model to learn from
     return day
 
 

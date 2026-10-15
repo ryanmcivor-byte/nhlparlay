@@ -6,7 +6,7 @@
   <title>Chayka's Evil Parlays</title>
   <link rel="icon" type="image/png" href="/favicon.png">
   <link rel="apple-touch-icon" href="/logo.png">
-  <link rel="stylesheet" href="/style.css?v=12">
+  <link rel="stylesheet" href="/style.css?v=13">
 </head>
 <body>
   <header class="hero">
@@ -38,7 +38,8 @@
       <details class="rec-history">
         <summary>Day by day</summary>
         <div id="recDays"></div>
-        <p class="rec-note">A parlay wins only if every leg scores. A player who doesn't dress is a void
+        <p class="rec-note">A parlay wins only if every leg scores. The Scammer's 7 picks are separate $1 bets,
+          tracked in units won or lost. A player who doesn't dress is a void
           leg, like at a sportsbook. The record updates every morning with the night before.
           <span id="recRebuilt"></span></p>
       </details>
@@ -51,8 +52,9 @@
         <div>
           <h2>Summon today's evil parlay</h2>
           <p class="muted">Pick a vibe. Each one has its own 3-leg parlay (one per game, only from tonight's
-            lineups, no player in two vibes). Theo picks one player on pure feeling, and Chris takes the
-            model's single safest scorer. Picks are locked for the day; new ones arrive tomorrow.</p>
+            lineups, no player in two vibes). Theo picks one player on pure feeling, Chris takes the
+            model's single safest scorer, and the Scammer finds the 7 best-value prices at the sportsbook.
+            Picks are locked for the day; new ones arrive tomorrow.</p>
         </div>
       </div>
       <nav class="vibes" id="vibes" aria-label="Choose a vibe">
@@ -63,6 +65,7 @@
         <button class="vibe" data-vibe="favourites">📈 Statistical Favourites</button>
         <button class="vibe vibe-theo" data-vibe="theo">🔮 Theo's Evil Daily Pick</button>
         <button class="vibe vibe-chris" data-vibe="chris">🛌 Chris's Cozy Pick of the Night</button>
+        <button class="vibe vibe-scammer" data-vibe="scammer">💸 The Scammer's Best Value Picks</button>
       </nav>
       <div id="daily" class="daily" hidden>
         <h3 id="dailyTitle"></h3>
@@ -108,6 +111,6 @@
     </figure>
   </div>
 
-  <script src="/app.js?v=12"></script>
+  <script src="/app.js?v=13"></script>
 </body>
 </html>
