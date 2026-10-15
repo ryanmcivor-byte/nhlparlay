@@ -2555,5 +2555,165 @@
     "result": "W"
    }
   }
+ },
+ "2026-10-14": {
+  "rebuilt": false,
+  "vibes": {
+   "any": {
+    "legs": [
+     {
+      "fact": "One away from goal #350",
+      "goals": 0,
+      "home": false,
+      "id": 8475184,
+      "name": "Chris Kreider",
+      "opp": "WSH",
+      "result": "loss",
+      "team": "MTL"
+     },
+     {
+      "fact": "Number matches his age",
+      "goals": 1,
+      "home": false,
+      "id": 8484938,
+      "name": "Arttu Hyry",
+      "opp": "COL",
+      "result": "win",
+      "team": "DAL"
+     }
+    ],
+    "result": "L"
+   },
+   "chaos": {
+    "legs": [
+     {
+      "fact": "Just scored on DAL",
+      "goals": 0,
+      "home": true,
+      "id": 8477476,
+      "name": "Artturi Lehkonen",
+      "opp": "DAL",
+      "result": "loss",
+      "team": "COL"
+     },
+     {
+      "fact": "Love life in the news",
+      "goals": 0,
+      "home": true,
+      "id": 8471214,
+      "name": "Alex Ovechkin",
+      "opp": "MTL",
+      "result": "loss",
+      "team": "WSH"
+     }
+    ],
+    "result": "L"
+   },
+   "chris": {
+    "legs": [
+     {
+      "fact": "Chris's cozy pick",
+      "goals": 0,
+      "home": true,
+      "id": 8477492,
+      "name": "Nathan MacKinnon",
+      "opp": "DAL",
+      "result": "loss",
+      "team": "COL"
+     }
+    ],
+    "result": "L"
+   },
+   "favourites": {
+    "legs": [
+     {
+      "fact": "Statistical favourite \u00b7 1st line \u00b7 PP1",
+      "goals": 0,
+      "home": true,
+      "id": 8477492,
+      "name": "Nathan MacKinnon",
+      "opp": "DAL",
+      "result": "loss",
+      "team": "COL"
+     },
+     {
+      "fact": "Statistical favourite \u00b7 1st line \u00b7 PP1",
+      "goals": 0,
+      "home": false,
+      "id": 8481540,
+      "name": "Cole Caufield",
+      "opp": "WSH",
+      "result": "loss",
+      "team": "MTL"
+     }
+    ],
+    "result": "L"
+   },
+   "grudge": {
+    "legs": [
+     {
+      "fact": "Same name across the ice",
+      "goals": 0,
+      "home": true,
+      "id": 8484873,
+      "name": "Cole Hutson",
+      "opp": "MTL",
+      "result": "loss",
+      "team": "WSH"
+     },
+     {
+      "fact": "Birthday twin with Wyatt Johnston",
+      "goals": 0,
+      "home": true,
+      "id": 8480448,
+      "name": "Parker Kelly",
+      "opp": "DAL",
+      "result": "loss",
+      "team": "COL"
+     }
+    ],
+    "result": "L"
+   },
+   "hot": {
+    "legs": [
+     {
+      "fact": "4 goals in his last 5",
+      "goals": 0,
+      "home": true,
+      "id": 8480039,
+      "name": "Martin Necas",
+      "opp": "DAL",
+      "result": "loss",
+      "team": "COL"
+     },
+     {
+      "fact": "Goals in 3 straight",
+      "goals": 0,
+      "home": true,
+      "id": 8476432,
+      "name": "Boone Jenner",
+      "opp": "MTL",
+      "result": "loss",
+      "team": "WSH"
+     }
+    ],
+    "result": "L"
+   },
+   "theo": {
+    "legs": [
+     {
+      "fact": "Theo's gut feeling",
+      "goals": 0,
+      "home": false,
+      "id": 8476889,
+      "name": "Radek Faksa",
+      "opp": "COL",
+      "result": "loss",
+      "team": "DAL"
+     }
+    ],
+    "result": "L"
+   }
+  }
  }
 }
