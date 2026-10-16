@@ -2715,5 +2715,308 @@
     "result": "L"
    }
   }
+ },
+ "2026-10-15": {
+  "rebuilt": false,
+  "vibes": {
+   "any": {
+    "legs": [
+     {
+      "fact": "Birthday twin with Jamie Drysdale",
+      "goals": 0,
+      "home": true,
+      "id": 8478434,
+      "name": "Keegan Kolesar",
+      "opp": "PHI",
+      "result": "loss",
+      "team": "DET"
+     },
+     {
+      "fact": "13 shots in his last 3",
+      "goals": 0,
+      "home": true,
+      "id": 8474590,
+      "name": "John Carlson",
+      "opp": "SEA",
+      "result": "loss",
+      "team": "TBL"
+     },
+     {
+      "fact": "3 goals in his last 5",
+      "goals": 0,
+      "home": true,
+      "id": 8481535,
+      "name": "Nils Hoglander",
+      "opp": "SJS",
+      "result": "loss",
+      "team": "NSH"
+     }
+    ],
+    "result": "L"
+   },
+   "chaos": {
+    "legs": [
+     {
+      "fact": "Drama alert",
+      "goals": 0,
+      "home": true,
+      "id": 8486067,
+      "name": "Gavin McKenna",
+      "opp": "BUF",
+      "result": "loss",
+      "team": "TOR"
+     },
+     {
+      "fact": "4 goals in his last 5",
+      "goals": 0,
+      "home": true,
+      "id": 8477933,
+      "name": "Sam Reinhart",
+      "opp": "VAN",
+      "result": "loss",
+      "team": "FLA"
+     },
+     {
+      "fact": "Goals in 4 straight",
+      "goals": 0,
+      "home": false,
+      "id": 8482109,
+      "name": "Alexis Lafreni\u00e8re",
+      "opp": "NJD",
+      "result": "loss",
+      "team": "NYR"
+     }
+    ],
+    "result": "L"
+   },
+   "chris": {
+    "legs": [
+     {
+      "fact": "Chris's cozy pick",
+      "goals": 1,
+      "home": true,
+      "id": 8478864,
+      "name": "Kirill Kaprizov",
+      "opp": "STL",
+      "result": "win",
+      "team": "MIN"
+     }
+    ],
+    "result": "W"
+   },
+   "favourites": {
+    "legs": [
+     {
+      "fact": "Statistical favourite \u00b7 1st line \u00b7 PP1",
+      "goals": 1,
+      "home": true,
+      "id": 8478864,
+      "name": "Kirill Kaprizov",
+      "opp": "STL",
+      "result": "win",
+      "team": "MIN"
+     },
+     {
+      "fact": "Statistical favourite \u00b7 1st line \u00b7 PP1",
+      "goals": 1,
+      "home": true,
+      "id": 8477934,
+      "name": "Leon Draisaitl",
+      "opp": "UTA",
+      "result": "win",
+      "team": "EDM"
+     },
+     {
+      "fact": "Statistical favourite \u00b7 1st line \u00b7 PP1",
+      "goals": 1,
+      "home": false,
+      "id": 8478398,
+      "name": "Kyle Connor",
+      "opp": "CHI",
+      "result": "win",
+      "team": "WPG"
+     }
+    ],
+    "result": "W"
+   },
+   "grudge": {
+    "legs": [
+     {
+      "fact": "Birthday twin with Travis Konecny",
+      "goals": 0,
+      "home": true,
+      "id": 8484223,
+      "name": "Axel Sandin-Pellikka",
+      "opp": "PHI",
+      "result": "loss",
+      "team": "DET"
+     },
+     {
+      "fact": "VAN drafted him",
+      "goals": 0,
+      "home": true,
+      "id": 8478055,
+      "name": "Gustav Forsling",
+      "opp": "VAN",
+      "result": "loss",
+      "team": "FLA"
+     },
+     {
+      "fact": "Revenge game vs CGY",
+      "goals": 0,
+      "home": true,
+      "id": 8478397,
+      "name": "Rasmus Andersson",
+      "opp": "CGY",
+      "result": "loss",
+      "team": "VGK"
+     }
+    ],
+    "result": "L"
+   },
+   "hot": {
+    "legs": [
+     {
+      "fact": "5 goals in his last 5",
+      "goals": 0,
+      "home": true,
+      "id": 8481617,
+      "name": "Vasily Podkolzin",
+      "opp": "UTA",
+      "result": "loss",
+      "team": "EDM"
+     },
+     {
+      "fact": "3 goals in his last 5",
+      "goals": 0,
+      "home": true,
+      "id": 8482116,
+      "name": "Tim St\u00fctzle",
+      "opp": "NYI",
+      "result": "loss",
+      "team": "OTT"
+     },
+     {
+      "fact": "3 goals in his last 5",
+      "goals": 0,
+      "home": false,
+      "id": 8477919,
+      "name": "Frederick Gaudreau",
+      "opp": "TBL",
+      "result": "loss",
+      "team": "SEA"
+     }
+    ],
+    "result": "L"
+   },
+   "scammer": {
+    "L": 5,
+    "P": 0,
+    "W": 2,
+    "legs": [
+     {
+      "american": 110,
+      "fact": "Best short-price value: +110",
+      "goals": 1,
+      "home": true,
+      "id": 8477934,
+      "name": "Leon Draisaitl",
+      "opp": "UTA",
+      "result": "win",
+      "team": "EDM",
+      "units": 1.1
+     },
+     {
+      "american": 125,
+      "fact": "Best short-price value: +125",
+      "goals": 1,
+      "home": true,
+      "id": 8478864,
+      "name": "Kirill Kaprizov",
+      "opp": "STL",
+      "result": "win",
+      "team": "MIN",
+      "units": 1.25
+     },
+     {
+      "american": 370,
+      "fact": "Best mid-price value: +370",
+      "goals": 0,
+      "home": true,
+      "id": 8477511,
+      "name": "Anthony Mantha",
+      "opp": "NYR",
+      "result": "loss",
+      "team": "NJD",
+      "units": -1.0
+     },
+     {
+      "american": 475,
+      "fact": "Best mid-price value: +475",
+      "goals": 0,
+      "home": false,
+      "id": 8480748,
+      "name": "Kiefer Sherwood",
+      "opp": "NSH",
+      "result": "loss",
+      "team": "SJS",
+      "units": -1.0
+     },
+     {
+      "american": 500,
+      "fact": "Best mid-price value: +500",
+      "goals": 0,
+      "home": false,
+      "id": 8480459,
+      "name": "Pius Suter",
+      "opp": "MIN",
+      "result": "loss",
+      "team": "STL",
+      "units": -1.0
+     },
+     {
+      "american": 850,
+      "fact": "Best longshot value: +850",
+      "goals": 0,
+      "home": false,
+      "id": 8484136,
+      "name": "Max Sasson",
+      "opp": "FLA",
+      "result": "loss",
+      "team": "VAN",
+      "units": -1.0
+     },
+     {
+      "american": 1400,
+      "fact": "Best longshot value: +1400",
+      "goals": 0,
+      "home": false,
+      "id": 8484148,
+      "name": "Oliver Bonk",
+      "opp": "DET",
+      "result": "loss",
+      "team": "PHI",
+      "units": -1.0
+     }
+    ],
+    "result": "singles",
+    "units": -2.65
+   },
+   "theo": {
+    "legs": [
+     {
+      "fact": "Theo's gut feeling",
+      "goals": 0,
+      "home": false,
+      "id": 8482157,
+      "name": "Will Cuylle",
+      "opp": "NJD",
+      "result": "loss",
+      "team": "NYR"
+     }
+    ],
+    "result": "L"
+   }
+  }
  }
 }
