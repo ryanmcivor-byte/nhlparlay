@@ -3018,5 +3018,258 @@
     "result": "L"
    }
   }
+ },
+ "2026-10-16": {
+  "rebuilt": false,
+  "vibes": {
+   "any": {
+    "legs": [
+     {
+      "fact": "3-game point streak",
+      "goals": 1,
+      "home": false,
+      "id": 8477956,
+      "name": "David Pastrnak",
+      "opp": "ANA",
+      "result": "win",
+      "team": "BOS"
+     },
+     {
+      "fact": "Revenge game vs PIT",
+      "goals": 0,
+      "home": true,
+      "id": 8476967,
+      "name": "Brett Kulak",
+      "opp": "PIT",
+      "result": "loss",
+      "team": "COL"
+     }
+    ],
+    "result": "L"
+   },
+   "chaos": {
+    "legs": [
+     {
+      "fact": "3 goals in his last 5",
+      "goals": 1,
+      "home": true,
+      "id": 8484762,
+      "name": "Beckett Sennecke",
+      "opp": "BOS",
+      "result": "win",
+      "team": "ANA"
+     },
+     {
+      "fact": "Love life in the news",
+      "goals": 0,
+      "home": true,
+      "id": 8480069,
+      "name": "Cale Makar",
+      "opp": "PIT",
+      "result": "loss",
+      "team": "COL"
+     }
+    ],
+    "result": "L"
+   },
+   "chris": {
+    "legs": [
+     {
+      "fact": "Chris's cozy pick",
+      "goals": 1,
+      "home": true,
+      "id": 8477492,
+      "name": "Nathan MacKinnon",
+      "opp": "PIT",
+      "result": "win",
+      "team": "COL"
+     }
+    ],
+    "result": "W"
+   },
+   "favourites": {
+    "legs": [
+     {
+      "fact": "Statistical favourite \u00b7 2nd line \u00b7 PP1",
+      "goals": 0,
+      "home": true,
+      "id": 8480039,
+      "name": "Martin Necas",
+      "opp": "PIT",
+      "result": "loss",
+      "team": "COL"
+     },
+     {
+      "fact": "Statistical favourite \u00b7 1st line \u00b7 PP1",
+      "goals": 0,
+      "home": false,
+      "id": 8479987,
+      "name": "Morgan Geekie",
+      "opp": "ANA",
+      "result": "loss",
+      "team": "BOS"
+     }
+    ],
+    "result": "L"
+   },
+   "grudge": {
+    "legs": [
+     {
+      "fact": "Revenge game vs COL",
+      "goals": 0,
+      "home": false,
+      "id": 8479398,
+      "name": "Samuel Girard",
+      "opp": "COL",
+      "result": "loss",
+      "team": "PIT"
+     },
+     {
+      "fact": "Old team: BOS",
+      "goals": 0,
+      "home": true,
+      "id": 8478421,
+      "name": "A.J. Greer",
+      "opp": "BOS",
+      "result": "loss",
+      "team": "ANA"
+     }
+    ],
+    "result": "L"
+   },
+   "hot": {
+    "legs": [
+     {
+      "fact": "Goals in 2 straight",
+      "goals": 0,
+      "home": false,
+      "id": 8483489,
+      "name": "Fraser Minten",
+      "opp": "ANA",
+      "result": "loss",
+      "team": "BOS"
+     },
+     {
+      "fact": "3 goals in his last 5",
+      "goals": 1,
+      "home": true,
+      "id": 8477492,
+      "name": "Nathan MacKinnon",
+      "opp": "PIT",
+      "result": "win",
+      "team": "COL"
+     }
+    ],
+    "result": "L"
+   },
+   "scammer": {
+    "L": 5,
+    "P": 0,
+    "W": 2,
+    "legs": [
+     {
+      "american": -140,
+      "fact": "Best short-price value: -140",
+      "goals": 1,
+      "home": true,
+      "id": 8477492,
+      "name": "Nathan MacKinnon",
+      "opp": "PIT",
+      "result": "win",
+      "team": "COL",
+      "units": 0.71
+     },
+     {
+      "american": 195,
+      "fact": "Best short-price value: +195",
+      "goals": 0,
+      "home": false,
+      "id": 8479987,
+      "name": "Morgan Geekie",
+      "opp": "ANA",
+      "result": "loss",
+      "team": "BOS",
+      "units": -1.0
+     },
+     {
+      "american": 255,
+      "fact": "Best mid-price value: +255",
+      "goals": 0,
+      "home": false,
+      "id": 8471675,
+      "name": "Sidney Crosby",
+      "opp": "COL",
+      "result": "loss",
+      "team": "PIT",
+      "units": -1.0
+     },
+     {
+      "american": 270,
+      "fact": "Best mid-price value: +270",
+      "goals": 0,
+      "home": true,
+      "id": 8475754,
+      "name": "Brock Nelson",
+      "opp": "PIT",
+      "result": "loss",
+      "team": "COL",
+      "units": -1.0
+     },
+     {
+      "american": 275,
+      "fact": "Best mid-price value: +275",
+      "goals": 1,
+      "home": false,
+      "id": 8475810,
+      "name": "Bryan Rust",
+      "opp": "COL",
+      "result": "win",
+      "team": "PIT",
+      "units": 2.75
+     },
+     {
+      "american": 600,
+      "fact": "Best longshot value: +600",
+      "goals": 0,
+      "home": false,
+      "id": 8481582,
+      "name": "Nick Robertson",
+      "opp": "COL",
+      "result": "loss",
+      "team": "PIT",
+      "units": -1.0
+     },
+     {
+      "american": 800,
+      "fact": "Best longshot value: +800",
+      "goals": 0,
+      "home": true,
+      "id": 8480448,
+      "name": "Parker Kelly",
+      "opp": "PIT",
+      "result": "loss",
+      "team": "COL",
+      "units": -1.0
+     }
+    ],
+    "result": "singles",
+    "units": -1.54
+   },
+   "theo": {
+    "legs": [
+     {
+      "fact": "Theo's gut feeling",
+      "goals": 0,
+      "home": true,
+      "id": 8482731,
+      "name": "Tyson Hinds",
+      "opp": "BOS",
+      "result": "loss",
+      "team": "ANA"
+     }
+    ],
+    "result": "L"
+   }
+  }
  }
 }
