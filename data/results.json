@@ -3271,5 +3271,308 @@
     "result": "L"
    }
   }
+ },
+ "2026-10-17": {
+  "rebuilt": false,
+  "vibes": {
+   "any": {
+    "legs": [
+     {
+      "fact": "Still chasing goal #1",
+      "goals": 0,
+      "home": true,
+      "id": 8484220,
+      "name": "David Reinbacher",
+      "opp": "BUF",
+      "result": "loss",
+      "team": "MTL"
+     },
+     {
+      "fact": "3 goals in his last 5",
+      "goals": 1,
+      "home": true,
+      "id": 8479353,
+      "name": "Brett Howden",
+      "opp": "PIT",
+      "result": "win",
+      "team": "VGK"
+     },
+     {
+      "fact": "4-game point streak",
+      "goals": 0,
+      "home": false,
+      "id": 8476905,
+      "name": "Chandler Stephenson",
+      "opp": "FLA",
+      "result": "loss",
+      "team": "SEA"
+     }
+    ],
+    "result": "L"
+   },
+   "chaos": {
+    "legs": [
+     {
+      "fact": "One point from #500",
+      "goals": 0,
+      "home": true,
+      "id": 8475799,
+      "name": "Nino Niederreiter",
+      "opp": "CAR",
+      "result": "loss",
+      "team": "WPG"
+     },
+     {
+      "fact": "Number matches his age",
+      "goals": 0,
+      "home": false,
+      "id": 8478407,
+      "name": "Vince Dunn",
+      "opp": "FLA",
+      "result": "loss",
+      "team": "SEA"
+     },
+     {
+      "fact": "FIRST game vs his old team",
+      "goals": 0,
+      "home": false,
+      "id": 8481527,
+      "name": "Kaedan Korczak",
+      "opp": "VGK",
+      "result": "loss",
+      "team": "PIT"
+     }
+    ],
+    "result": "L"
+   },
+   "chris": {
+    "legs": [
+     {
+      "fact": "Chris's cozy pick",
+      "goals": 1,
+      "home": false,
+      "id": 8477934,
+      "name": "Leon Draisaitl",
+      "opp": "UTA",
+      "result": "win",
+      "team": "EDM"
+     }
+    ],
+    "result": "W"
+   },
+   "favourites": {
+    "legs": [
+     {
+      "fact": "Statistical favourite \u00b7 1st line \u00b7 PP1",
+      "goals": 1,
+      "home": false,
+      "id": 8477934,
+      "name": "Leon Draisaitl",
+      "opp": "UTA",
+      "result": "win",
+      "team": "EDM"
+     },
+     {
+      "fact": "Statistical favourite \u00b7 1st line \u00b7 PP1",
+      "goals": 2,
+      "home": true,
+      "id": 8481540,
+      "name": "Cole Caufield",
+      "opp": "BUF",
+      "result": "win",
+      "team": "MTL"
+     },
+     {
+      "fact": "Statistical favourite \u00b7 1st line \u00b7 PP1",
+      "goals": 0,
+      "home": true,
+      "id": 8478398,
+      "name": "Kyle Connor",
+      "opp": "CAR",
+      "result": "loss",
+      "team": "WPG"
+     }
+    ],
+    "result": "L"
+   },
+   "grudge": {
+    "legs": [
+     {
+      "fact": "Birthday twin with Tommy Novak",
+      "goals": 0,
+      "home": true,
+      "id": 8478468,
+      "name": "Jeremy Lauzon",
+      "opp": "PIT",
+      "result": "loss",
+      "team": "VGK"
+     },
+     {
+      "fact": "Revenge game vs FLA",
+      "goals": 0,
+      "home": false,
+      "id": 8479372,
+      "name": "Josh Mahura",
+      "opp": "FLA",
+      "result": "loss",
+      "team": "SEA"
+     },
+     {
+      "fact": "Revenge game vs WSH",
+      "goals": 0,
+      "home": false,
+      "id": 8477511,
+      "name": "Anthony Mantha",
+      "opp": "WSH",
+      "result": "loss",
+      "team": "NJD"
+     }
+    ],
+    "result": "L"
+   },
+   "hot": {
+    "legs": [
+     {
+      "fact": "4 goals in his last 5",
+      "goals": 1,
+      "home": true,
+      "id": 8475913,
+      "name": "Mark Stone",
+      "opp": "PIT",
+      "result": "win",
+      "team": "VGK"
+     },
+     {
+      "fact": "4 goals in his last 5",
+      "goals": 1,
+      "home": true,
+      "id": 8479337,
+      "name": "Alex DeBrincat",
+      "opp": "SJS",
+      "result": "win",
+      "team": "DET"
+     },
+     {
+      "fact": "3 goals in his last 5",
+      "goals": 0,
+      "home": true,
+      "id": 8476981,
+      "name": "Josh Anderson",
+      "opp": "BUF",
+      "result": "loss",
+      "team": "MTL"
+     }
+    ],
+    "result": "L"
+   },
+   "scammer": {
+    "L": 6,
+    "P": 0,
+    "W": 1,
+    "legs": [
+     {
+      "american": 130,
+      "fact": "Best short-price value: +130",
+      "goals": 1,
+      "home": false,
+      "id": 8477934,
+      "name": "Leon Draisaitl",
+      "opp": "UTA",
+      "result": "win",
+      "team": "EDM",
+      "units": 1.3
+     },
+     {
+      "american": 175,
+      "fact": "Best short-price value: +175",
+      "goals": 0,
+      "home": true,
+      "id": 8477939,
+      "name": "William Nylander",
+      "opp": "NYI",
+      "result": "loss",
+      "team": "TOR",
+      "units": -1.0
+     },
+     {
+      "american": 300,
+      "fact": "Best mid-price value: +300",
+      "goals": 0,
+      "home": false,
+      "id": 8475810,
+      "name": "Bryan Rust",
+      "opp": "VGK",
+      "result": "loss",
+      "team": "PIT",
+      "units": -1.0
+     },
+     {
+      "american": 400,
+      "fact": "Best mid-price value: +400",
+      "goals": 0,
+      "home": false,
+      "id": 8477511,
+      "name": "Anthony Mantha",
+      "opp": "WSH",
+      "result": "loss",
+      "team": "NJD",
+      "units": -1.0
+     },
+     {
+      "american": 425,
+      "fact": "Best mid-price value: +425",
+      "goals": 0,
+      "home": true,
+      "id": 8481656,
+      "name": "Aliaksei Protas",
+      "opp": "NJD",
+      "result": "loss",
+      "team": "WSH",
+      "units": -1.0
+     },
+     {
+      "american": 800,
+      "fact": "Best longshot value: +800",
+      "goals": 0,
+      "home": false,
+      "id": 8484911,
+      "name": "Collin Graf",
+      "opp": "DET",
+      "result": "loss",
+      "team": "SJS",
+      "units": -1.0
+     },
+     {
+      "american": 900,
+      "fact": "Best longshot value: +900",
+      "goals": 0,
+      "home": false,
+      "id": 8483505,
+      "name": "Matthew Poitras",
+      "opp": "LAK",
+      "result": "loss",
+      "team": "BOS",
+      "units": -1.0
+     }
+    ],
+    "result": "singles",
+    "units": -4.7
+   },
+   "theo": {
+    "legs": [
+     {
+      "fact": "Theo's gut feeling",
+      "goals": 1,
+      "home": false,
+      "id": 8477953,
+      "name": "Kasperi Kapanen",
+      "opp": "UTA",
+      "result": "win",
+      "team": "EDM"
+     }
+    ],
+    "result": "W"
+   }
+  }
  }
 }
