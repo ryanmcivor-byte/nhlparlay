@@ -3828,5 +3828,308 @@
     "result": "W"
    }
   }
+ },
+ "2026-10-19": {
+  "rebuilt": false,
+  "vibes": {
+   "any": {
+    "legs": [
+     {
+      "fact": "Goals in 2 straight",
+      "goals": 2,
+      "home": true,
+      "id": 8484387,
+      "name": "Matvei Michkov",
+      "opp": "COL",
+      "result": "win",
+      "team": "PHI"
+     },
+     {
+      "fact": "Jersey number = today's date",
+      "goals": 0,
+      "home": true,
+      "id": 8479772,
+      "name": "Zack MacEwen",
+      "opp": "SJS",
+      "result": "loss",
+      "team": "TOR"
+     },
+     {
+      "fact": "One assist from #100",
+      "goals": 0,
+      "home": true,
+      "id": 8480009,
+      "name": "Eeli Tolvanen",
+      "opp": "ANA",
+      "result": "loss",
+      "team": "NYR"
+     }
+    ],
+    "result": "L"
+   },
+   "chaos": {
+    "legs": [
+     {
+      "fact": "Two goals last game",
+      "goals": 0,
+      "home": false,
+      "id": 8477476,
+      "name": "Artturi Lehkonen",
+      "opp": "PHI",
+      "result": "loss",
+      "team": "COL"
+     },
+     {
+      "fact": "Career game #700",
+      "goals": 0,
+      "home": false,
+      "id": 8478366,
+      "name": "Frank Vatrano",
+      "opp": "NYR",
+      "result": "loss",
+      "team": "ANA"
+     },
+     {
+      "fact": "12 shots in his last 3",
+      "goals": 0,
+      "home": true,
+      "id": 8478458,
+      "name": "Jack Roslovic",
+      "opp": "SJS",
+      "result": "loss",
+      "team": "TOR"
+     }
+    ],
+    "result": "L"
+   },
+   "chris": {
+    "legs": [
+     {
+      "fact": "Chris's cozy pick",
+      "goals": 0,
+      "home": false,
+      "id": 8477492,
+      "name": "Nathan MacKinnon",
+      "opp": "PHI",
+      "result": "loss",
+      "team": "COL"
+     }
+    ],
+    "result": "L"
+   },
+   "favourites": {
+    "legs": [
+     {
+      "fact": "Statistical favourite \u00b7 1st line \u00b7 PP1",
+      "goals": 0,
+      "home": true,
+      "id": 8477939,
+      "name": "William Nylander",
+      "opp": "SJS",
+      "result": "loss",
+      "team": "TOR"
+     },
+     {
+      "fact": "Statistical favourite \u00b7 2nd line \u00b7 PP1",
+      "goals": 0,
+      "home": true,
+      "id": 8482699,
+      "name": "Dylan Guenther",
+      "opp": "PIT",
+      "result": "loss",
+      "team": "UTA"
+     },
+     {
+      "fact": "Statistical favourite \u00b7 1st line \u00b7 PP2",
+      "goals": 1,
+      "home": false,
+      "id": 8480039,
+      "name": "Martin Necas",
+      "opp": "PHI",
+      "result": "win",
+      "team": "COL"
+     }
+    ],
+    "result": "L"
+   },
+   "grudge": {
+    "legs": [
+     {
+      "fact": "Hometown game",
+      "goals": 0,
+      "home": false,
+      "id": 8484806,
+      "name": "Sam Dickinson",
+      "opp": "TOR",
+      "result": "loss",
+      "team": "SJS"
+     },
+     {
+      "fact": "Birthday twin with Nicolas Roy",
+      "goals": 0,
+      "home": true,
+      "id": 8480220,
+      "name": "Noah Cates",
+      "opp": "COL",
+      "result": "loss",
+      "team": "PHI"
+     },
+     {
+      "fact": "Birthday twin with Dmitri Simashev",
+      "goals": 0,
+      "home": false,
+      "id": 8483808,
+      "name": "Andrei Kuzmenko",
+      "opp": "UTA",
+      "result": "loss",
+      "team": "PIT"
+     }
+    ],
+    "result": "L"
+   },
+   "hot": {
+    "legs": [
+     {
+      "fact": "4 goals in his last 5",
+      "goals": 0,
+      "home": false,
+      "id": 8477492,
+      "name": "Nathan MacKinnon",
+      "opp": "PHI",
+      "result": "loss",
+      "team": "COL"
+     },
+     {
+      "fact": "Goals in 2 straight",
+      "goals": 0,
+      "home": false,
+      "id": 8471215,
+      "name": "Evgeni Malkin",
+      "opp": "UTA",
+      "result": "loss",
+      "team": "PIT"
+     },
+     {
+      "fact": "12 shots in his last 3",
+      "goals": 0,
+      "home": false,
+      "id": 8477498,
+      "name": "Darnell Nurse",
+      "opp": "TOR",
+      "result": "loss",
+      "team": "SJS"
+     }
+    ],
+    "result": "L"
+   },
+   "scammer": {
+    "L": 6,
+    "P": 0,
+    "W": 1,
+    "legs": [
+     {
+      "american": -105,
+      "fact": "Best short-price value: -105",
+      "goals": 0,
+      "home": false,
+      "id": 8477492,
+      "name": "Nathan MacKinnon",
+      "opp": "PHI",
+      "result": "loss",
+      "team": "COL",
+      "units": -1.0
+     },
+     {
+      "american": 150,
+      "fact": "Best short-price value: +150",
+      "goals": 0,
+      "home": true,
+      "id": 8477939,
+      "name": "William Nylander",
+      "opp": "SJS",
+      "result": "loss",
+      "team": "TOR",
+      "units": -1.0
+     },
+     {
+      "american": 205,
+      "fact": "Best mid-price value: +205",
+      "goals": 1,
+      "home": false,
+      "id": 8480039,
+      "name": "Martin Necas",
+      "opp": "PHI",
+      "result": "win",
+      "team": "COL",
+      "units": 2.05
+     },
+     {
+      "american": 220,
+      "fact": "Best mid-price value: +220",
+      "goals": 0,
+      "home": false,
+      "id": 8471675,
+      "name": "Sidney Crosby",
+      "opp": "UTA",
+      "result": "loss",
+      "team": "PIT",
+      "units": -1.0
+     },
+     {
+      "american": 270,
+      "fact": "Best mid-price value: +270",
+      "goals": 0,
+      "home": false,
+      "id": 8475754,
+      "name": "Brock Nelson",
+      "opp": "PHI",
+      "result": "loss",
+      "team": "COL",
+      "units": -1.0
+     },
+     {
+      "american": 650,
+      "fact": "Best longshot value: +650",
+      "goals": 0,
+      "home": false,
+      "id": 8483808,
+      "name": "Andrei Kuzmenko",
+      "opp": "UTA",
+      "result": "loss",
+      "team": "PIT",
+      "units": -1.0
+     },
+     {
+      "american": 700,
+      "fact": "Best longshot value: +700",
+      "goals": 0,
+      "home": false,
+      "id": 8480448,
+      "name": "Parker Kelly",
+      "opp": "PHI",
+      "result": "loss",
+      "team": "COL",
+      "units": -1.0
+     }
+    ],
+    "result": "singles",
+    "units": -3.95
+   },
+   "theo": {
+    "legs": [
+     {
+      "fact": "Theo's gut feeling",
+      "goals": 0,
+      "home": false,
+      "id": 8482731,
+      "name": "Tyson Hinds",
+      "opp": "NYR",
+      "result": "loss",
+      "team": "ANA"
+     }
+    ],
+    "result": "L"
+   }
+  }
  }
 }
