@@ -1,0 +1,541 @@
+{
+"date": "2026-10-21",
+"rows": [
+{
+"id": 8480801,
+"name": "Brady Tkachuk",
+"team": "FLA",
+"gameId": 2026020153,
+"pModel": 0.328,
+"american": 160
+},
+{
+"id": 8484387,
+"name": "Matvei Michkov",
+"team": "PHI",
+"gameId": 2026020152,
+"pModel": 0.258,
+"american": 240
+},
+{
+"id": 8477409,
+"name": "Carter Verhaeghe",
+"team": "FLA",
+"gameId": 2026020153,
+"pModel": 0.278,
+"american": 225
+},
+{
+"id": 8482097,
+"name": "Jack Quinn",
+"team": "BUF",
+"gameId": 2026020152,
+"pModel": 0.228,
+"american": 210
+},
+{
+"id": 8477933,
+"name": "Sam Reinhart",
+"team": "FLA",
+"gameId": 2026020153,
+"pModel": 0.366,
+"american": 215
+},
+{
+"id": 8477935,
+"name": "Sam Bennett",
+"team": "FLA",
+"gameId": 2026020153,
+"pModel": 0.279,
+"american": 220
+},
+{
+"id": 8479420,
+"name": "Tage Thompson",
+"team": "BUF",
+"gameId": 2026020152,
+"pModel": 0.394,
+"american": 130
+},
+{
+"id": 8476393,
+"name": "Nick Cousins",
+"team": "OTT",
+"gameId": 2026020153,
+"pModel": 0.112,
+"american": 850
+},
+{
+"id": 8480807,
+"name": "Mattias Samuelsson",
+"team": "BUF",
+"gameId": 2026020152,
+"pModel": 0.132,
+"american": 750
+},
+{
+"id": 8474189,
+"name": "Lars Eller",
+"team": "FLA",
+"gameId": 2026020153,
+"pModel": 0.087,
+"american": 750
+},
+{
+"id": 8478147,
+"name": "Bokondji Imama",
+"team": "FLA",
+"gameId": 2026020153,
+"pModel": 0.07,
+"american": 1200
+},
+{
+"id": 8477495,
+"name": "Seth Jones",
+"team": "FLA",
+"gameId": 2026020153,
+"pModel": 0.12,
+"american": 650
+},
+{
+"id": 8482245,
+"name": "Artem Zub",
+"team": "OTT",
+"gameId": 2026020153,
+"pModel": 0.054,
+"american": 1600
+},
+{
+"id": 8481848,
+"name": "Jacob Gaucher",
+"team": "PHI",
+"gameId": 2026020152,
+"pModel": 0.104,
+"american": 800
+},
+{
+"id": 8483787,
+"name": "Cole Knuble",
+"team": "PHI",
+"gameId": 2026020152,
+"pModel": 0.154,
+"american": 550
+},
+{
+"id": 8480220,
+"name": "Noah Cates",
+"team": "PHI",
+"gameId": 2026020152,
+"pModel": 0.172,
+"american": 500
+},
+{
+"id": 8484145,
+"name": "Zach Benson",
+"team": "BUF",
+"gameId": 2026020152,
+"pModel": 0.146,
+"american": 245
+},
+{
+"id": 8477903,
+"name": "Garnet Hathaway",
+"team": "FLA",
+"gameId": 2026020153,
+"pModel": 0.062,
+"american": 950
+},
+{
+"id": 8479314,
+"name": "Matthew Tkachuk",
+"team": "FLA",
+"gameId": 2026020153,
+"pModel": 0.315,
+"american": 230
+},
+{
+"id": 8482803,
+"name": "Olen Zellweger",
+"team": "BUF",
+"gameId": 2026020152,
+"pModel": 0.104,
+"american": 700
+},
+{
+"id": 8475179,
+"name": "Dmitry Kulikov",
+"team": "FLA",
+"gameId": 2026020153,
+"pModel": 0.034,
+"american": 1900
+},
+{
+"id": 8473512,
+"name": "Claude Giroux",
+"team": "OTT",
+"gameId": 2026020153,
+"pModel": 0.157,
+"american": 400
+},
+{
+"id": 8481122,
+"name": "Simon Benoit",
+"team": "PHI",
+"gameId": 2026020152,
+"pModel": 0.009,
+"american": 2200
+},
+{
+"id": 8484797,
+"name": "Konsta Helenius",
+"team": "BUF",
+"gameId": 2026020152,
+"pModel": 0.133,
+"american": 475
+},
+{
+"id": 8483500,
+"name": "Noah Ostlund",
+"team": "BUF",
+"gameId": 2026020152,
+"pModel": 0.166,
+"american": 320
+},
+{
+"id": 8482113,
+"name": "Anton Lundell",
+"team": "FLA",
+"gameId": 2026020153,
+"pModel": 0.21,
+"american": 380
+},
+{
+"id": 8478859,
+"name": "Niko Mikkola",
+"team": "FLA",
+"gameId": 2026020153,
+"pModel": 0.062,
+"american": 1900
+},
+{
+"id": 8480208,
+"name": "Drake Batherson",
+"team": "OTT",
+"gameId": 2026020153,
+"pModel": 0.313,
+"american": 215
+},
+{
+"id": 8478569,
+"name": "Noel Acciari",
+"team": "PHI",
+"gameId": 2026020152,
+"pModel": 0.133,
+"american": 700
+},
+{
+"id": 8484142,
+"name": "Denver Barkey",
+"team": "PHI",
+"gameId": 2026020152,
+"pModel": 0.101,
+"american": 400
+},
+{
+"id": 8483731,
+"name": "Alex Bump",
+"team": "PHI",
+"gameId": 2026020152,
+"pModel": 0.189,
+"american": 450
+},
+{
+"id": 8478047,
+"name": "Michael Bunting",
+"team": "PHI",
+"gameId": 2026020152,
+"pModel": 0.175,
+"american": 400
+},
+{
+"id": 8476461,
+"name": "Sean Couturier",
+"team": "PHI",
+"gameId": 2026020152,
+"pModel": 0.138,
+"american": 550
+},
+{
+"id": 8477989,
+"name": "Christian Dvorak",
+"team": "PHI",
+"gameId": 2026020152,
+"pModel": 0.178,
+"american": 290
+},
+{
+"id": 8485406,
+"name": "Porter Martone",
+"team": "PHI",
+"gameId": 2026020152,
+"pModel": 0.222,
+"american": 270
+},
+{
+"id": 8481533,
+"name": "Trevor Zegras",
+"team": "PHI",
+"gameId": 2026020152,
+"pModel": 0.238,
+"american": 255
+},
+{
+"id": 8484148,
+"name": "Oliver Bonk",
+"team": "PHI",
+"gameId": 2026020152,
+"pModel": 0.089,
+"american": 1100
+},
+{
+"id": 8482142,
+"name": "Jamie Drysdale",
+"team": "PHI",
+"gameId": 2026020152,
+"pModel": 0.084,
+"american": 800
+},
+{
+"id": 8483460,
+"name": "David Jiricek",
+"team": "PHI",
+"gameId": 2026020152,
+"pModel": 0.022,
+"american": 850
+},
+{
+"id": 8477948,
+"name": "Travis Sanheim",
+"team": "PHI",
+"gameId": 2026020152,
+"pModel": 0.109,
+"american": 1000
+},
+{
+"id": 8476372,
+"name": "Nick Seeler",
+"team": "PHI",
+"gameId": 2026020152,
+"pModel": 0.042,
+"american": 1600
+},
+{
+"id": 8482659,
+"name": "Josh Doan",
+"team": "BUF",
+"gameId": 2026020152,
+"pModel": 0.216,
+"american": 270
+},
+{
+"id": 8481522,
+"name": "Peyton Krebs",
+"team": "BUF",
+"gameId": 2026020152,
+"pModel": 0.122,
+"american": 475
+},
+{
+"id": 8483468,
+"name": "Jiri Kulich",
+"team": "BUF",
+"gameId": 2026020152,
+"pModel": 0.197,
+"american": 370
+},
+{
+"id": 8479359,
+"name": "Beck Malenstyn",
+"team": "BUF",
+"gameId": 2026020152,
+"pModel": 0.074,
+"american": 900
+},
+{
+"id": 8480802,
+"name": "Ryan McLeod",
+"team": "BUF",
+"gameId": 2026020152,
+"pModel": 0.173,
+"american": 350
+},
+{
+"id": 8480064,
+"name": "Josh Norris",
+"team": "BUF",
+"gameId": 2026020152,
+"pModel": 0.257,
+"american": 330
+},
+{
+"id": 8481806,
+"name": "Louis Crevier",
+"team": "BUF",
+"gameId": 2026020152,
+"pModel": 0.075,
+"american": 950
+},
+{
+"id": 8484305,
+"name": "Zach Metsa",
+"team": "BUF",
+"gameId": 2026020152,
+"pModel": 0.04,
+"american": 2000
+},
+{
+"id": 8482671,
+"name": "Owen Power",
+"team": "BUF",
+"gameId": 2026020152,
+"pModel": 0.1,
+"american": 650
+},
+{
+"id": 8480185,
+"name": "Eetu Luostarinen",
+"team": "FLA",
+"gameId": 2026020153,
+"pModel": 0.139,
+"american": 550
+},
+{
+"id": 8483771,
+"name": "Sandis Vilmanis",
+"team": "FLA",
+"gameId": 2026020153,
+"pModel": 0.109,
+"american": 600
+},
+{
+"id": 8477932,
+"name": "Aaron Ekblad",
+"team": "FLA",
+"gameId": 2026020153,
+"pModel": 0.05,
+"american": 1100
+},
+{
+"id": 8478055,
+"name": "Gustav Forsling",
+"team": "FLA",
+"gameId": 2026020153,
+"pModel": 0.066,
+"american": 1400
+},
+{
+"id": 8475462,
+"name": "Radko Gudas",
+"team": "FLA",
+"gameId": 2026020153,
+"pModel": 0.027,
+"american": 2000
+},
+{
+"id": 8478020,
+"name": "Michael Amadio",
+"team": "OTT",
+"gameId": 2026020153,
+"pModel": 0.166,
+"american": 450
+},
+{
+"id": 8477444,
+"name": "Andre Burakovsky",
+"team": "OTT",
+"gameId": 2026020153,
+"pModel": 0.127,
+"american": 475
+},
+{
+"id": 8481528,
+"name": "Dylan Cozens",
+"team": "OTT",
+"gameId": 2026020153,
+"pModel": 0.228,
+"american": 245
+},
+{
+"id": 8477998,
+"name": "Warren Foegele",
+"team": "OTT",
+"gameId": 2026020153,
+"pModel": 0.184,
+"american": 400
+},
+{
+"id": 8482092,
+"name": "Ridly Greig",
+"team": "OTT",
+"gameId": 2026020153,
+"pModel": 0.155,
+"american": 550
+},
+{
+"id": 8483676,
+"name": "Stephen Halliday",
+"team": "OTT",
+"gameId": 2026020153,
+"pModel": 0.154,
+"american": 425
+},
+{
+"id": 8481596,
+"name": "Shane Pinto",
+"team": "OTT",
+"gameId": 2026020153,
+"pModel": 0.246,
+"american": 310
+},
+{
+"id": 8482116,
+"name": "Tim St\u00fctzle",
+"team": "OTT",
+"gameId": 2026020153,
+"pModel": 0.319,
+"american": 195
+},
+{
+"id": 8480188,
+"name": "Fabian Zetterlund",
+"team": "OTT",
+"gameId": 2026020153,
+"pModel": 0.184,
+"american": 425
+},
+{
+"id": 8482095,
+"name": "Tyler Kleven",
+"team": "OTT",
+"gameId": 2026020153,
+"pModel": 0.053,
+"american": 1500
+},
+{
+"id": 8481606,
+"name": "Jordan Spence",
+"team": "OTT",
+"gameId": 2026020153,
+"pModel": 0.069,
+"american": 950
+},
+{
+"id": 8484759,
+"name": "Carter Yakemchuk",
+"team": "OTT",
+"gameId": 2026020153,
+"pModel": 0.11,
+"american": 750
+}
+]
+}

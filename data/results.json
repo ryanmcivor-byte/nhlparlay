@@ -4131,5 +4131,308 @@
     "result": "L"
    }
   }
+ },
+ "2026-10-20": {
+  "rebuilt": false,
+  "vibes": {
+   "any": {
+    "legs": [
+     {
+      "fact": "Still chasing goal #1",
+      "goals": 0,
+      "home": false,
+      "id": 8486025,
+      "name": "Viggo Bj\u00f6rck",
+      "opp": "STL",
+      "result": "loss",
+      "team": "WPG"
+     },
+     {
+      "fact": "3 goals in his last 5",
+      "goals": 0,
+      "home": true,
+      "id": 8484803,
+      "name": "Trevor Connelly",
+      "opp": "TBL",
+      "result": "loss",
+      "team": "VGK"
+     },
+     {
+      "fact": "Love life in the news",
+      "goals": 1,
+      "home": false,
+      "id": 8479318,
+      "name": "Auston Matthews",
+      "opp": "CBJ",
+      "result": "win",
+      "team": "TOR"
+     }
+    ],
+    "result": "L"
+   },
+   "chaos": {
+    "legs": [
+     {
+      "fact": "Goals in 3 straight",
+      "goals": 2,
+      "home": true,
+      "id": 8477934,
+      "name": "Leon Draisaitl",
+      "opp": "MIN",
+      "result": "win",
+      "team": "EDM"
+     },
+     {
+      "fact": "Goals in 2 straight",
+      "goals": 1,
+      "home": true,
+      "id": 8481721,
+      "name": "Arseny Gritsyuk",
+      "opp": "COL",
+      "result": "win",
+      "team": "NJD"
+     },
+     {
+      "fact": "Goals in 2 straight",
+      "goals": 0,
+      "home": true,
+      "id": 8484938,
+      "name": "Arttu Hyry",
+      "opp": "BOS",
+      "result": "loss",
+      "team": "DAL"
+     }
+    ],
+    "result": "L"
+   },
+   "chris": {
+    "legs": [
+     {
+      "fact": "Chris's cozy pick",
+      "goals": 1,
+      "home": false,
+      "id": 8478864,
+      "name": "Kirill Kaprizov",
+      "opp": "EDM",
+      "result": "win",
+      "team": "MIN"
+     }
+    ],
+    "result": "W"
+   },
+   "favourites": {
+    "legs": [
+     {
+      "fact": "Statistical favourite \u00b7 1st line \u00b7 PP1",
+      "goals": 1,
+      "home": false,
+      "id": 8478864,
+      "name": "Kirill Kaprizov",
+      "opp": "EDM",
+      "result": "win",
+      "team": "MIN"
+     },
+     {
+      "fact": "Statistical favourite \u00b7 1st line \u00b7 PP1",
+      "goals": 0,
+      "home": false,
+      "id": 8477492,
+      "name": "Nathan MacKinnon",
+      "opp": "NJD",
+      "result": "loss",
+      "team": "COL"
+     },
+     {
+      "fact": "Statistical favourite \u00b7 1st line \u00b7 PP1",
+      "goals": 1,
+      "home": true,
+      "id": 8481540,
+      "name": "Cole Caufield",
+      "opp": "SJS",
+      "result": "win",
+      "team": "MTL"
+     }
+    ],
+    "result": "L"
+   },
+   "grudge": {
+    "legs": [
+     {
+      "fact": "Hometown game",
+      "goals": 1,
+      "home": false,
+      "id": 8478458,
+      "name": "Jack Roslovic",
+      "opp": "CBJ",
+      "result": "win",
+      "team": "TOR"
+     },
+     {
+      "fact": "Revenge game vs WSH",
+      "goals": 0,
+      "home": false,
+      "id": 8476441,
+      "name": "Joel Edmundson",
+      "opp": "WSH",
+      "result": "loss",
+      "team": "LAK"
+     },
+     {
+      "fact": "Hometown game",
+      "goals": 0,
+      "home": false,
+      "id": 8476392,
+      "name": "Adam Lowry",
+      "opp": "STL",
+      "result": "loss",
+      "team": "WPG"
+     }
+    ],
+    "result": "L"
+   },
+   "hot": {
+    "legs": [
+     {
+      "fact": "4 goals in his last 5",
+      "goals": 0,
+      "home": true,
+      "id": 8478402,
+      "name": "Connor McDavid",
+      "opp": "MIN",
+      "result": "loss",
+      "team": "EDM"
+     },
+     {
+      "fact": "Goals in 2 straight",
+      "goals": 0,
+      "home": false,
+      "id": 8480829,
+      "name": "Jesperi Kotkaniemi",
+      "opp": "VAN",
+      "result": "loss",
+      "team": "CAR"
+     },
+     {
+      "fact": "4 goals in his last 5",
+      "goals": 1,
+      "home": true,
+      "id": 8475913,
+      "name": "Mark Stone",
+      "opp": "TBL",
+      "result": "win",
+      "team": "VGK"
+     }
+    ],
+    "result": "L"
+   },
+   "scammer": {
+    "L": 4,
+    "P": 0,
+    "W": 3,
+    "legs": [
+     {
+      "american": 100,
+      "fact": "Best short-price value: +100",
+      "goals": 2,
+      "home": true,
+      "id": 8477934,
+      "name": "Leon Draisaitl",
+      "opp": "MIN",
+      "result": "win",
+      "team": "EDM",
+      "units": 1.0
+     },
+     {
+      "american": 130,
+      "fact": "Best short-price value: +130",
+      "goals": 1,
+      "home": false,
+      "id": 8478864,
+      "name": "Kirill Kaprizov",
+      "opp": "EDM",
+      "result": "win",
+      "team": "MIN",
+      "units": 1.3
+     },
+     {
+      "american": 220,
+      "fact": "Best mid-price value: +220",
+      "goals": 1,
+      "home": false,
+      "id": 8477939,
+      "name": "William Nylander",
+      "opp": "CBJ",
+      "result": "win",
+      "team": "TOR",
+      "units": 2.2
+     },
+     {
+      "american": 295,
+      "fact": "Best mid-price value: +295",
+      "goals": 0,
+      "home": false,
+      "id": 8479987,
+      "name": "Morgan Geekie",
+      "opp": "DAL",
+      "result": "loss",
+      "team": "BOS",
+      "units": -1.0
+     },
+     {
+      "american": 450,
+      "fact": "Best mid-price value: +450",
+      "goals": 0,
+      "home": true,
+      "id": 8481656,
+      "name": "Aliaksei Protas",
+      "opp": "LAK",
+      "result": "loss",
+      "team": "WSH",
+      "units": -1.0
+     },
+     {
+      "american": 550,
+      "fact": "Best longshot value: +550",
+      "goals": 0,
+      "home": true,
+      "id": 8480459,
+      "name": "Pius Suter",
+      "opp": "WPG",
+      "result": "loss",
+      "team": "STL",
+      "units": -1.0
+     },
+     {
+      "american": 650,
+      "fact": "Best longshot value: +650",
+      "goals": 0,
+      "home": true,
+      "id": 8486161,
+      "name": "Owen Michaels",
+      "opp": "MIN",
+      "result": "loss",
+      "team": "EDM",
+      "units": -1.0
+     }
+    ],
+    "result": "singles",
+    "units": 0.5
+   },
+   "theo": {
+    "legs": [
+     {
+      "fact": "Theo's gut feeling",
+      "goals": 0,
+      "home": false,
+      "id": 8476927,
+      "name": "Teddy Blueger",
+      "opp": "CBJ",
+      "result": "loss",
+      "team": "TOR"
+     }
+    ],
+    "result": "L"
+   }
+  }
  }
 }
