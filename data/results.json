@@ -4434,5 +4434,258 @@
     "result": "L"
    }
   }
+ },
+ "2026-10-21": {
+  "rebuilt": false,
+  "vibes": {
+   "any": {
+    "legs": [
+     {
+      "fact": "Still chasing goal #1",
+      "goals": 2,
+      "home": false,
+      "id": 8483787,
+      "name": "Cole Knuble",
+      "opp": "BUF",
+      "result": "win",
+      "team": "PHI"
+     },
+     {
+      "fact": "Old team: FLA",
+      "goals": 1,
+      "home": true,
+      "id": 8473512,
+      "name": "Claude Giroux",
+      "opp": "FLA",
+      "result": "win",
+      "team": "OTT"
+     }
+    ],
+    "result": "W"
+   },
+   "chaos": {
+    "legs": [
+     {
+      "fact": "FIRST game vs his old team",
+      "goals": 0,
+      "home": false,
+      "id": 8474189,
+      "name": "Lars Eller",
+      "opp": "OTT",
+      "result": "loss",
+      "team": "FLA"
+     },
+     {
+      "fact": "Career game #300",
+      "goals": 0,
+      "home": true,
+      "id": 8480807,
+      "name": "Mattias Samuelsson",
+      "opp": "PHI",
+      "result": "loss",
+      "team": "BUF"
+     }
+    ],
+    "result": "L"
+   },
+   "chris": {
+    "legs": [
+     {
+      "fact": "Chris's cozy pick",
+      "goals": 0,
+      "home": true,
+      "id": 8479420,
+      "name": "Tage Thompson",
+      "opp": "PHI",
+      "result": "loss",
+      "team": "BUF"
+     }
+    ],
+    "result": "L"
+   },
+   "favourites": {
+    "legs": [
+     {
+      "fact": "Statistical favourite \u00b7 1st line \u00b7 PP1",
+      "goals": 1,
+      "home": false,
+      "id": 8480801,
+      "name": "Brady Tkachuk",
+      "opp": "OTT",
+      "result": "win",
+      "team": "FLA"
+     },
+     {
+      "fact": "Statistical favourite \u00b7 2nd line \u00b7 PP1",
+      "goals": 0,
+      "home": false,
+      "id": 8484387,
+      "name": "Matvei Michkov",
+      "opp": "BUF",
+      "result": "loss",
+      "team": "PHI"
+     }
+    ],
+    "result": "L"
+   },
+   "grudge": {
+    "legs": [
+     {
+      "fact": "Birthday twin with Artem Zub",
+      "goals": 0,
+      "home": false,
+      "id": 8482113,
+      "name": "Anton Lundell",
+      "opp": "OTT",
+      "result": "loss",
+      "team": "FLA"
+     },
+     {
+      "fact": "Birthday twin with Travis Konecny",
+      "goals": 0,
+      "home": true,
+      "id": 8483500,
+      "name": "Noah Ostlund",
+      "opp": "PHI",
+      "result": "loss",
+      "team": "BUF"
+     }
+    ],
+    "result": "L"
+   },
+   "hot": {
+    "legs": [
+     {
+      "fact": "3 goals in his last 5",
+      "goals": 0,
+      "home": true,
+      "id": 8479420,
+      "name": "Tage Thompson",
+      "opp": "PHI",
+      "result": "loss",
+      "team": "BUF"
+     },
+     {
+      "fact": "5 goals in his last 5",
+      "goals": 0,
+      "home": false,
+      "id": 8477933,
+      "name": "Sam Reinhart",
+      "opp": "OTT",
+      "result": "loss",
+      "team": "FLA"
+     }
+    ],
+    "result": "L"
+   },
+   "scammer": {
+    "L": 6,
+    "P": 0,
+    "W": 1,
+    "legs": [
+     {
+      "american": 130,
+      "fact": "Best short-price value: +130",
+      "goals": 0,
+      "home": true,
+      "id": 8479420,
+      "name": "Tage Thompson",
+      "opp": "PHI",
+      "result": "loss",
+      "team": "BUF",
+      "units": -1.0
+     },
+     {
+      "american": 195,
+      "fact": "Best short-price value: +195",
+      "goals": 1,
+      "home": true,
+      "id": 8482116,
+      "name": "Tim St\u00fctzle",
+      "opp": "FLA",
+      "result": "win",
+      "team": "OTT",
+      "units": 1.95
+     },
+     {
+      "american": 215,
+      "fact": "Best mid-price value: +215",
+      "goals": 0,
+      "home": false,
+      "id": 8477933,
+      "name": "Sam Reinhart",
+      "opp": "OTT",
+      "result": "loss",
+      "team": "FLA",
+      "units": -1.0
+     },
+     {
+      "american": 215,
+      "fact": "Best mid-price value: +215",
+      "goals": 0,
+      "home": true,
+      "id": 8480208,
+      "name": "Drake Batherson",
+      "opp": "FLA",
+      "result": "loss",
+      "team": "OTT",
+      "units": -1.0
+     },
+     {
+      "american": 230,
+      "fact": "Best mid-price value: +230",
+      "goals": 0,
+      "home": false,
+      "id": 8479314,
+      "name": "Matthew Tkachuk",
+      "opp": "OTT",
+      "result": "loss",
+      "team": "FLA",
+      "units": -1.0
+     },
+     {
+      "american": 550,
+      "fact": "Best longshot value: +550",
+      "goals": 0,
+      "home": true,
+      "id": 8482092,
+      "name": "Ridly Greig",
+      "opp": "FLA",
+      "result": "loss",
+      "team": "OTT",
+      "units": -1.0
+     },
+     {
+      "american": 750,
+      "fact": "Best longshot value: +750",
+      "goals": 0,
+      "home": true,
+      "id": 8480807,
+      "name": "Mattias Samuelsson",
+      "opp": "PHI",
+      "result": "loss",
+      "team": "BUF",
+      "units": -1.0
+     }
+    ],
+    "result": "singles",
+    "units": -4.05
+   },
+   "theo": {
+    "legs": [
+     {
+      "fact": "Theo's gut feeling",
+      "goals": 0,
+      "home": false,
+      "id": 8483731,
+      "name": "Alex Bump",
+      "opp": "BUF",
+      "result": "loss",
+      "team": "PHI"
+     }
+    ],
+    "result": "L"
+   }
+  }
  }
 }
