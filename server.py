@@ -6,6 +6,7 @@ Routes:
     /                 the page (public/)
     /api/slate?date=  chaos facts for every skater playing that day
     /api/record       the win-loss record of every day's locked parlays
+    /api/sims?date=   every game that day simulated 10 times (Game Simulations tab)
 """
 import json
 import os
@@ -17,6 +18,7 @@ import time
 
 import nhl
 import record
+import sim
 import slate
 
 ROOT = os.path.join(os.path.dirname(os.path.abspath(__file__)), "public")
@@ -48,6 +50,16 @@ class Handler(SimpleHTTPRequestHandler):
             if not re.fullmatch(r"\d{4}-\d{2}-\d{2}", date):
                 return self._json({"status": "error", "error": "date must be YYYY-MM-DD"}, 400)
             return self._json(slate.get_slate(date))
+        if url.path == "/api/sims":
+            q = parse_qs(url.query)
+            date = (q.get("date") or [""])[0] or nhl.today_et().isoformat()
+            if not re.fullmatch(r"\d{4}-\d{2}-\d{2}", date):
+                return self._json({"error": "date must be YYYY-MM-DD"}, 400)
+            sl = slate.get_slate(date)          # scorers weighted by the parlay page's goal chances
+            try:
+                return self._json(sim.get(date, sl.get("players")))
+            except Exception as e:
+                return self._json({"error": str(e)}, 500)
         if url.path == "/api/record":
             # grade any newly finished days in the background (at most every 30 min);
             # the daily job does the same and commits the results

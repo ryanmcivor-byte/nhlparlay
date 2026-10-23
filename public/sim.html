@@ -1,0 +1,77 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Game Simulations · Chayka's Evil Parlays</title>
+  <link rel="icon" type="image/png" href="/favicon.png">
+  <link rel="apple-touch-icon" href="/logo.png">
+  <link rel="stylesheet" href="/style.css?v=17">
+</head>
+<body>
+  <header class="hero">
+    <div class="hero-inner">
+      <div class="brand">
+        <img class="logo" src="/logo.png" alt="Chayka's Evil Parlays logo" width="84" height="84">
+        <div>
+          <h1>Chayka's Evil Parlays</h1>
+          <p class="tag">Every game tonight, played out 10 times by the computer.</p>
+        </div>
+      </div>
+      <label class="date">
+        <span>Slate</span>
+        <input type="date" id="date">
+      </label>
+    </div>
+  </header>
+
+  <nav class="tabs" aria-label="Pages">
+    <a class="tab" href="/">😈 Evil Parlays</a>
+    <a class="tab on" href="/sim.html" aria-current="page">🏒 Game Simulations</a>
+  </nav>
+
+  <main>
+    <section id="simStatus" class="status" aria-live="polite">Loading tonight's games…</section>
+    <section id="simGames" class="sim-games"></section>
+
+    <section id="simGame" class="card sim-game" hidden>
+      <div class="sim-head">
+        <button id="simBack" class="btn-ghost">← All games</button>
+        <h2 id="simTitle"></h2>
+      </div>
+
+      <div class="scoreboard" id="scoreboard" aria-live="off">
+        <div class="sb-team" id="sbAway"><span class="sb-abbr"></span><b class="sb-score">0</b><span class="sb-shots"></span></div>
+        <div class="sb-mid"><span id="sbPeriod">1st</span><b id="sbClock">20:00</b></div>
+        <div class="sb-team" id="sbHome"><span class="sb-abbr"></span><b class="sb-score">0</b><span class="sb-shots"></span></div>
+      </div>
+
+      <div class="rink-wrap">
+        <canvas id="rink" width="1000" height="440" aria-label="Animated simulation of the game"></canvas>
+        <div id="goalFlash" class="goal-flash" hidden></div>
+        <button id="playBtn" class="btn-evil play-btn">▶ Play it out</button>
+      </div>
+
+      <div class="sim-controls">
+        <button id="skipBtn" class="btn-ghost" hidden>Skip to the end</button>
+        <button id="replayBtn" class="btn-ghost" hidden>↻ Watch again</button>
+      </div>
+
+      <div id="simResult" class="sim-result" hidden></div>
+      <ol id="simFeed" class="sim-feed"></ol>
+      <div id="simInputs" class="sim-inputs"></div>
+    </section>
+
+    <p class="foot">
+      Each game is simulated 10 times from each team's scoring and defense this season (blended with
+      last season early on), their last 10 games, recent head-to-head games, tonight's starting
+      goalies and home ice. Goal scorers come from each player's chance to score. The replay is
+      the most common score for the team that won the most of the 10. On the rink the away team wears
+      white and the home team wears its colours. It's a computer's guess, not a
+      prediction you should bet the house on. 😈
+    </p>
+  </main>
+
+  <script src="/sim.js?v=5"></script>
+</body>
+</html>
