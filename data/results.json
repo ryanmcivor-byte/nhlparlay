@@ -4687,5 +4687,308 @@
     "result": "L"
    }
   }
+ },
+ "2026-10-22": {
+  "rebuilt": false,
+  "vibes": {
+   "any": {
+    "legs": [
+     {
+      "fact": "Still chasing goal #1",
+      "goals": 0,
+      "home": false,
+      "id": 8481534,
+      "name": "Raphael Lavoie",
+      "opp": "STL",
+      "result": "loss",
+      "team": "VGK"
+     },
+     {
+      "fact": "Birthday twin with Owen Michaels",
+      "goals": 0,
+      "home": false,
+      "id": 8476958,
+      "name": "Jaccob Slavin",
+      "opp": "EDM",
+      "result": "loss",
+      "team": "CAR"
+     },
+     {
+      "fact": "Love life in the news",
+      "goals": 0,
+      "home": false,
+      "id": 8481477,
+      "name": "Nico Sturm",
+      "opp": "CGY",
+      "result": "loss",
+      "team": "MIN"
+     }
+    ],
+    "result": "L"
+   },
+   "chaos": {
+    "legs": [
+     {
+      "fact": "5 goals in his last 5",
+      "goals": 0,
+      "home": false,
+      "id": 8477409,
+      "name": "Carter Verhaeghe",
+      "opp": "PIT",
+      "result": "loss",
+      "team": "FLA"
+     },
+     {
+      "fact": "First game with the Predators",
+      "goals": 0,
+      "home": false,
+      "id": 8480950,
+      "name": "Ilya Lyubushkin",
+      "opp": "BOS",
+      "result": "loss",
+      "team": "NSH"
+     },
+     {
+      "fact": "Same name across the ice",
+      "goals": 0,
+      "home": false,
+      "id": 8479390,
+      "name": "Taylor Raddysh",
+      "opp": "TOR",
+      "result": "loss",
+      "team": "NYR"
+     }
+    ],
+    "result": "L"
+   },
+   "chris": {
+    "legs": [
+     {
+      "fact": "Chris's cozy pick",
+      "goals": 0,
+      "home": false,
+      "id": 8478864,
+      "name": "Kirill Kaprizov",
+      "opp": "CGY",
+      "result": "loss",
+      "team": "MIN"
+     }
+    ],
+    "result": "L"
+   },
+   "favourites": {
+    "legs": [
+     {
+      "fact": "Statistical favourite \u00b7 1st line \u00b7 PP1",
+      "goals": 0,
+      "home": false,
+      "id": 8478864,
+      "name": "Kirill Kaprizov",
+      "opp": "CGY",
+      "result": "loss",
+      "team": "MIN"
+     },
+     {
+      "fact": "Statistical favourite \u00b7 1st line \u00b7 PP1",
+      "goals": 2,
+      "home": true,
+      "id": 8478402,
+      "name": "Connor McDavid",
+      "opp": "CAR",
+      "result": "win",
+      "team": "EDM"
+     },
+     {
+      "fact": "Statistical favourite \u00b7 1st line \u00b7 PP1",
+      "goals": 1,
+      "home": false,
+      "id": 8478398,
+      "name": "Kyle Connor",
+      "opp": "DAL",
+      "result": "win",
+      "team": "WPG"
+     }
+    ],
+    "result": "L"
+   },
+   "grudge": {
+    "legs": [
+     {
+      "fact": "Birthday twin with Adam Gaudette",
+      "goals": 0,
+      "home": true,
+      "id": 8482245,
+      "name": "Artem Zub",
+      "opp": "SJS",
+      "result": "loss",
+      "team": "OTT"
+     },
+     {
+      "fact": "Birthday twin with Connor Murphy",
+      "goals": 0,
+      "home": false,
+      "id": 8480830,
+      "name": "Andrei Svechnikov",
+      "opp": "EDM",
+      "result": "loss",
+      "team": "CAR"
+     },
+     {
+      "fact": "Hometown game",
+      "goals": 0,
+      "home": false,
+      "id": 8482157,
+      "name": "Will Cuylle",
+      "opp": "TOR",
+      "result": "loss",
+      "team": "NYR"
+     }
+    ],
+    "result": "L"
+   },
+   "hot": {
+    "legs": [
+     {
+      "fact": "4 goals in his last 5",
+      "goals": 0,
+      "home": false,
+      "id": 8484801,
+      "name": "Macklin Celebrini",
+      "opp": "OTT",
+      "result": "loss",
+      "team": "SJS"
+     },
+     {
+      "fact": "Goals in 4 straight",
+      "goals": 2,
+      "home": true,
+      "id": 8477934,
+      "name": "Leon Draisaitl",
+      "opp": "CAR",
+      "result": "win",
+      "team": "EDM"
+     },
+     {
+      "fact": "Hat trick last game",
+      "goals": 0,
+      "home": true,
+      "id": 8478420,
+      "name": "Mikko Rantanen",
+      "opp": "WPG",
+      "result": "loss",
+      "team": "DAL"
+     }
+    ],
+    "result": "L"
+   },
+   "scammer": {
+    "L": 5,
+    "P": 0,
+    "W": 2,
+    "legs": [
+     {
+      "american": 105,
+      "fact": "Best short-price value: +105",
+      "goals": 0,
+      "home": false,
+      "id": 8478864,
+      "name": "Kirill Kaprizov",
+      "opp": "CGY",
+      "result": "loss",
+      "team": "MIN",
+      "units": -1.0
+     },
+     {
+      "american": 120,
+      "fact": "Best short-price value: +120",
+      "goals": 2,
+      "home": true,
+      "id": 8477934,
+      "name": "Leon Draisaitl",
+      "opp": "CAR",
+      "result": "win",
+      "team": "EDM",
+      "units": 1.2
+     },
+     {
+      "american": 215,
+      "fact": "Best mid-price value: +215",
+      "goals": 0,
+      "home": true,
+      "id": 8479987,
+      "name": "Morgan Geekie",
+      "opp": "NSH",
+      "result": "loss",
+      "team": "BOS",
+      "units": -1.0
+     },
+     {
+      "american": 240,
+      "fact": "Best mid-price value: +240",
+      "goals": 0,
+      "home": false,
+      "id": 8476460,
+      "name": "Mark Scheifele",
+      "opp": "DAL",
+      "result": "loss",
+      "team": "WPG",
+      "units": -1.0
+     },
+     {
+      "american": 340,
+      "fact": "Best mid-price value: +340",
+      "goals": 1,
+      "home": true,
+      "id": 8477511,
+      "name": "Anthony Mantha",
+      "opp": "ANA",
+      "result": "win",
+      "team": "NJD",
+      "units": 3.4
+     },
+     {
+      "american": 550,
+      "fact": "Best longshot value: +550",
+      "goals": 0,
+      "home": true,
+      "id": 8480459,
+      "name": "Pius Suter",
+      "opp": "VGK",
+      "result": "loss",
+      "team": "STL",
+      "units": -1.0
+     },
+     {
+      "american": 750,
+      "fact": "Best longshot value: +750",
+      "goals": 0,
+      "home": false,
+      "id": 8482118,
+      "name": "Sam Colangelo",
+      "opp": "NJD",
+      "result": "loss",
+      "team": "ANA",
+      "units": -1.0
+     }
+    ],
+    "result": "singles",
+    "units": -0.4
+   },
+   "theo": {
+    "legs": [
+     {
+      "fact": "Theo's gut feeling",
+      "goals": 0,
+      "home": true,
+      "id": 8480078,
+      "name": "Filip Chytil",
+      "opp": "DET",
+      "result": "loss",
+      "team": "VAN"
+     }
+    ],
+    "result": "L"
+   }
+  }
  }
 }
