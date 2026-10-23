@@ -235,3 +235,5 @@ body.modal-open { overflow: hidden; }
 .price { color: var(--gold); font-weight: 700; }
 .rec-chip b.up { color: var(--toxic); }
 .rec-chip b.down { color: #ff8b99; }
+.vibe-deja { letter-spacing: 1px; border-color: rgba(159, 211, 255, 0.45); }
+.vibe-deja.on { background: linear-gradient(135deg, #3b5fa8, #7a1020); }

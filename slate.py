@@ -12,6 +12,7 @@ import traceback
 import unicodedata
 from concurrent.futures import ThreadPoolExecutor
 
+import deja
 import facts
 import nhl
 import picks
@@ -120,6 +121,9 @@ def build(date, state, as_of=False):
     state.update(progress=0.9, step="Checking the sportsbook")
     odds = _safe(scammer.attach_odds)(players, games, date, as_of) or {}
 
+    state.update(progress=0.91, step="Checking who's owned tonight's goalies")
+    deja_f = {} if as_of else (_safe(deja.facts_for)(players, games, date, season) or {})
+
     state.update(progress=0.92, step="Brewing chaos")
     slate_f = facts.slate_facts(players, day)
     out_players = []
@@ -127,6 +131,8 @@ def build(date, state, as_of=False):
         ctx = {"date": day, "season": season, "homeAbbr": p["homeAbbr"], "teamName": team_name,
                "revenge": ctx_rev, "news": news, "slateFacts": slate_f}
         fs = facts.player_facts(p, ctx)   # may be empty: favourites still need him
+        if p["id"] in deja_f:
+            fs.append(deja_f[p["id"]])
         fs.sort(key=lambda f: -f["chaos"])
         out_players.append({
             "id": p["id"], "name": p["name"], "team": p["team"], "opp": p["opp"], "home": p["home"],

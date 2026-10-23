@@ -8,12 +8,12 @@
   const state = { data: null, game: "all", slip: [], expanded: new Set(), lineupOnly: true };
   const PLAYING = new Set(["confirmed", "projected"]);     // certain (or projected) to dress
   const playing = (p) => PLAYING.has((p.lineup || {}).status);
-  const VIBE_LABEL = { chaos: "Maximum chaos", hot: "Hot Streaks", grudge: "Grudges & homecomings",
+  const VIBE_LABEL = { chaos: "Maximum chaos", hot: "Hot Streaks", dejavu: "DEJA VU", grudge: "Grudges & homecomings",
     any: "Anything goes", favourites: "Statistical Favourites", theo: "Theo's Evil Daily Pick",
     chris: "Chris's Cozy Pick of the Night", scammer: "The Scammer's Best Value Picks",
     gossip: "Gossip only (retired)" };
-  const VIBE_ICON = { chaos: "😈", hot: "🔥", grudge: "😤", any: "🎲", favourites: "📈", theo: "🔮", chris: "🛌", scammer: "💸", gossip: "💔" };
-  const VIBE_ORDER = ["chaos", "hot", "grudge", "any", "favourites", "theo", "chris", "scammer", "gossip"];
+  const VIBE_ICON = { chaos: "😈", hot: "🔥", dejavu: "🌀", grudge: "😤", any: "🎲", favourites: "📈", theo: "🔮", chris: "🛌", scammer: "💸", gossip: "💔" };
+  const VIBE_ORDER = ["chaos", "hot", "dejavu", "grudge", "any", "favourites", "theo", "chris", "scammer", "gossip"];
   const SINGLE = new Set(["theo", "chris", "scammer"]);   // not parlays (the Scammer's are 7 straight bets)
   const fmtAm = (a) => (a > 0 ? "+" : "") + a;
   // sections that pop up a photo when opened

@@ -252,3 +252,30 @@ def espn_roster(team_id):
             out.append({"espnId": str(a.get("id")), "name": a.get("fullName") or "",
                         "dob": (a.get("dateOfBirth") or "")[:10]})
     return out
+
+
+def goalies(abbr):
+    """Goalies on a team's current roster: [{id, name}]."""
+    d = _json(f"/roster/{abbr}/current", ttl=3600)
+    return [{"id": g["id"], "name": f"{(g.get('firstName') or {}).get('default', '')} "
+                                  f"{(g.get('lastName') or {}).get('default', '')}".strip()}
+            for g in d.get("goalies") or []]
+
+
+def espn_starters(date):
+    """ESPN's probable starting goalies: {NHL team abbr: {"name", "status"}} ("Expected"/"Confirmed")."""
+    d = _get(f"{ESPN_SITE}/scoreboard?dates={date.replace('-', '')}", NHL_UA, 300, json.loads)
+    out = {}
+    for e in d.get("events") or []:
+        for c in ((e.get("competitions") or [{}])[0].get("competitors") or []):
+            ab = str((c.get("team") or {}).get("abbreviation") or "").upper()
+            for pr in c.get("probables") or []:
+                ath = pr.get("athlete") or {}
+                if pr.get("name") == "probableStartingGoalie" and ath.get("fullName"):
+                    out[ESPN_ALIAS.get(ab, ab)] = {"name": ath["fullName"],
+                                                   "status": (pr.get("status") or {}).get("name") or ""}
+    return out
+
+
+def play_by_play(game_id):
+    return _json(f"/gamecenter/{game_id}/play-by-play", ttl=3600)
