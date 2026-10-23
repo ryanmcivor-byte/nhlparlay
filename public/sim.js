@@ -44,6 +44,7 @@
     }
     if ($("#date").value !== date) return;
     if (data.error) { $("#simStatus").textContent = "The simulator tripped: " + data.error; return; }
+    renderRecord(data.record);
     if (!data.games.length) { $("#simStatus").textContent = "No NHL games on this date. Try another day."; return; }
     $("#simStatus").textContent = `${data.games.length} game${data.games.length > 1 ? "s" : ""}. Pick one and play it out.`;
     $("#simGames").innerHTML = data.games.map((g) => {
@@ -55,6 +56,34 @@
         <span class="sim-cta">▶ Play it out</span>
       </button>`;
     }).join("");
+  }
+
+  // the simulator's own record: did the team that won most of the 10 sims win for real?
+  function renderRecord(r) {
+    if (!r || !(r.total.W + r.total.L)) return;
+    const pct = (o) => (o.W + o.L ? Math.round((o.W / (o.W + o.L)) * 100) : 0) + "%";
+    const fmtDay = (d) => new Date(d + "T12:00:00").toLocaleDateString([], { weekday: "short", month: "short", day: "numeric" });
+    $("#srTotal").textContent = `${r.total.W}-${r.total.L}`;
+    $("#srSub").textContent = `${pct(r.total)} of winners picked · since ${fmtDay(r.start)}`;
+    $("#srChips").innerHTML = `
+      <span class="rec-chip">💪 Confident (${r.confidentAt}+ of 10) <b>${r.confident.W}-${r.confident.L}</b> ${pct(r.confident)}</span>
+      <span class="rec-chip">🤏 Close calls <b>${r.close.W}-${r.close.L}</b> ${pct(r.close)}</span>
+      <span class="rec-chip">🎯 Exact final score <b>${r.exact}</b></span>`;
+    $("#srDays").innerHTML = r.days.map((d) => `
+      <div class="rec-day">
+        <div class="rec-date">${fmtDay(d.date)}${d.rebuilt ? '<span class="rebuilt" title="Rebuilt: see note below">*</span>' : ""}</div>
+        <div class="rec-parlays">${d.games.map((g) => {
+          const ot = (e) => (e && e !== "REG" ? ` ${e}` : "");
+          return `<div class="rec-parlay ${g.status === "W" ? "win" : "loss"}"><span class="rec-res">${g.status}</span>
+            <span class="rec-vibe">${esc(g.away)} @ ${esc(g.home)} · picked ${esc(g.pick)} (${Math.max(g.wins.home, g.wins.away)}/10)</span>
+            <span class="rec-legs">Sim ${g.shown[0]}-${g.shown[1]}${ot(g.shown[2])} · Real ${g.real[0]}-${g.real[1]}${ot(g.real[2])}${g.exact ? " 🎯" : ""}</span></div>`;
+        }).join("")}</div>
+      </div>`).join("");
+    const rebuilt = r.days.filter((d) => d.rebuilt).length;
+    $("#srRebuilt").textContent = rebuilt
+      ? `* The simulator launched Oct 23, so the ${rebuilt} days before it were rebuilt from what was known that morning: standings through the day before, earlier head-to-head games, and last season's goalie save %. They did know which goalie actually started, a small head start the live picks don't get.`
+      : "";
+    $("#simRecord").hidden = false;
   }
 
   function showList() {

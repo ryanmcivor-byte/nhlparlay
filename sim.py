@@ -16,11 +16,14 @@ The 10 simulations are seeded by the game, so the "10 times" are the same for
 everyone all day. The replay shown is the most common final score for the team
 that won the most of the 10.
 """
+import json
+import os
 import random
 import threading
 import time
 from collections import Counter
 from concurrent.futures import ThreadPoolExecutor
+from datetime import date as Date, timedelta
 
 import deja
 import facts
@@ -88,8 +91,9 @@ def _h2h(home, away, season, date):
     return out[:H2H_GAMES]
 
 
-def _goalie(starter, season):
-    """{name, svPct, status} for a starter, using this season blended with last season."""
+def _goalie(starter, season, as_of=False):
+    """{name, svPct, status} for a starter, using this season blended with last season
+    (only last season when rebuilding a past day, so later games can't leak in)."""
     if not starter:
         return None
     try:
@@ -99,7 +103,7 @@ def _goalie(starter, season):
         rows = []
     shots = saves = 0.0
     for r in rows:
-        if r.get("season") not in (season, season - 10001):
+        if r.get("season") not in ((season - 10001,) if as_of else (season, season - 10001)):
             continue
         sa = r.get("shotsAgainst") or 0
         sv = r.get("savePctg") if r.get("savePctg") is not None else r.get("savePercentage")
@@ -192,8 +196,8 @@ def simulate_game(game, ctx):
             got = sum(g["hs"] if g["home"] == team else g["as"] for g in h2h) / len(h2h)
             k = 0.15 * len(h2h) / H2H_GAMES
             lam[side] = (1 - k) * lam[side] + k * got
-    goalies = {"home": _goalie(ctx["starters"].get(home), ctx["season"]),
-               "away": _goalie(ctx["starters"].get(away), ctx["season"])}
+    goalies = {"home": _goalie(ctx["starters"].get(home), ctx["season"], ctx.get("asOf")),
+               "away": _goalie(ctx["starters"].get(away), ctx["season"], ctx.get("asOf"))}
     for side, opp in (("home", "away"), ("away", "home")):
         g = goalies[opp]
         if g:   # a hot goalie suppresses goals; a leaky one gives them up
@@ -216,8 +220,10 @@ def simulate_game(game, ctx):
             "shown": shown}
 
 
-def build(date, slate_players):
-    """Simulations for every game on `date`."""
+def build(date, slate_players, as_of=False):
+    """Simulations for every game on `date`. as_of=True rebuilds a past day from what was
+    known that morning: standings through the day before, head-to-head games before it,
+    the goalies who actually started, and their save % from last season only."""
     games_raw = [g for g in nhl.schedule(date) if g.get("gameType") in (1, 2, 3)]
     if not games_raw:
         return {"date": date, "games": []}
@@ -231,17 +237,34 @@ def build(date, slate_players):
     except Exception:
         last = {}
     try:
-        now = _standings()
+        now = _standings((Date.fromisoformat(date) - timedelta(days=1)).isoformat() if as_of else None)
     except Exception:
         now = {}
     teams = {g[s] for g in games for s in ("home", "away")}
-    starters = deja.starters(date, teams)
+    starters = _actual_starters(games) if as_of else deja.starters(date, teams)
     if not slate_players:   # no parlay slate yet: weight scorers by their recent goals per game
         slate_players = _fallback_players(teams, season)
-    ctx = {"date": date, "season": season, "now": now, "last": last, "starters": starters, "players": slate_players}
+    ctx = {"date": date, "season": season, "now": now, "last": last, "starters": starters,
+           "players": slate_players, "asOf": as_of}
     with ThreadPoolExecutor(6) as ex:
         sims = list(ex.map(lambda g: simulate_game(g, ctx), games))
     return {"date": date, "games": sims, "builtAt": int(time.time())}
+
+
+def _actual_starters(games):
+    """The goalies who really started a finished game: {abbr: {id, name, status}}."""
+    out = {}
+    for g in games:
+        try:
+            b = nhl.boxscore(g["id"])
+        except Exception:
+            continue
+        for side in ("awayTeam", "homeTeam"):
+            for gl in ((b.get("playerByGameStats") or {}).get(side) or {}).get("goalies") or []:
+                if gl.get("starter"):
+                    out[(b.get(side) or {}).get("abbrev")] = {"id": gl["playerId"], "status": "Confirmed",
+                                                              "name": facts._d(gl.get("name"))}
+    return out
 
 
 def _fallback_players(teams, season):
@@ -258,12 +281,118 @@ def _fallback_players(teams, season):
 
 
 def get(date, slate_players):
+    """The day's simulations: the locked ones when the day has them (so the replay is the
+    prediction the record grades), otherwise built now, and today's get locked."""
+    locked = load_locked(date)
+    if locked:
+        return dict(locked, record=summary())
     key = (date, bool(slate_players))    # rebuild once the parlay slate (real scorer odds) is ready
     with _lock:
         hit = _cache.get(key)
         if hit and time.time() - hit[0] < TTL:
-            return hit[1]
+            return dict(hit[1], record=summary())
     res = build(date, slate_players)
+    if date == nhl.today_et().isoformat() and res.get("games") and slate_players:
+        lock(date, res)
     with _lock:
         _cache[key] = (time.time(), res)
-    return res
+    return dict(res, record=summary())
+
+
+# ---------------------------------------------------------------------------
+# the simulator's own record: did the team that won most of the 10 sims win?
+# ---------------------------------------------------------------------------
+DIR = os.path.join(os.path.dirname(os.path.abspath(__file__)), "data", "sims")
+START = "2026-09-30"
+CONFIDENT = 7      # "confident" picks: the winner won at least 7 of the 10 sims
+
+
+def _path(date):
+    return os.path.join(DIR, f"{date}.json")
+
+
+def load_locked(date):
+    try:
+        with open(_path(date)) as fh:
+            return json.load(fh)
+    except (OSError, ValueError):
+        return None
+
+
+def lock(date, res, rebuilt=False):
+    """Save a day's simulations (the morning prediction) unless they're already locked."""
+    if os.path.exists(_path(date)):
+        return
+    os.makedirs(DIR, exist_ok=True)
+    out = dict(res, rebuilt=rebuilt)
+    for g in out["games"]:
+        g["pick"] = g["home"] if g["wins"]["home"] >= g["wins"]["away"] else g["away"]
+    tmp = _path(date) + ".tmp"
+    with open(tmp, "w") as fh:
+        json.dump(out, fh, separators=(",", ":"))
+    os.replace(tmp, _path(date))
+
+
+def grade(today=None):
+    """Fill in the real result for every locked game that has finished."""
+    today = (today or nhl.today_et()).isoformat()
+    for name in sorted(os.listdir(DIR)) if os.path.isdir(DIR) else []:
+        date = name[:-5]
+        if not name.endswith(".json") or date >= today:
+            continue
+        day = load_locked(date)
+        if not day or all("result" in g for g in day["games"]):
+            continue
+        changed = False
+        for g in day["games"]:
+            if "result" in g:
+                continue
+            try:
+                b = nhl.boxscore(g["id"])
+            except Exception:
+                continue
+            if b.get("gameScheduleState") in ("PPD", "CNCL"):
+                g["result"] = {"status": "void"}
+            elif b.get("gameState") in ("OFF", "FINAL"):
+                hs, as_ = (b.get("homeTeam") or {}).get("score"), (b.get("awayTeam") or {}).get("score")
+                won = g["home"] if hs > as_ else g["away"]
+                end = (b.get("gameOutcome") or {}).get("lastPeriodType") or "REG"
+                g["result"] = {"status": "W" if won == g["pick"] else "L", "home": hs, "away": as_, "end": end,
+                               "exact": hs == g["shown"]["score"]["home"] and as_ == g["shown"]["score"]["away"]}
+            else:
+                continue
+            changed = True
+        if changed:
+            with open(_path(date), "w") as fh:
+                json.dump(day, fh, separators=(",", ":"))
+
+
+def summary():
+    """Overall W-L for picking winners, confident picks, exact scores, and each day."""
+    tot = {"W": 0, "L": 0}
+    conf = {"W": 0, "L": 0}
+    close = {"W": 0, "L": 0}
+    exact = 0
+    days = []
+    if os.path.isdir(DIR):
+        for name in sorted(os.listdir(DIR), reverse=True):
+            if not name.endswith(".json"):
+                continue
+            day = load_locked(name[:-5])
+            if not day:
+                continue
+            games = []
+            for g in day["games"]:
+                r = g.get("result")
+                if not r or r["status"] not in ("W", "L"):
+                    continue
+                tot[r["status"]] += 1
+                (conf if max(g["wins"].values()) >= CONFIDENT else close)[r["status"]] += 1
+                exact += bool(r.get("exact"))
+                games.append({"away": g["away"], "home": g["home"], "pick": g["pick"], "wins": g["wins"],
+                              "shown": [g["shown"]["score"]["away"], g["shown"]["score"]["home"], g["shown"]["end"]],
+                              "real": [r["away"], r["home"], r["end"]], "status": r["status"], "exact": r.get("exact")})
+            if games:
+                days.append({"date": day["date"], "rebuilt": day.get("rebuilt", False), "games": games})
+    return {"start": START, "total": tot, "confident": conf, "close": close, "exact": exact,
+            "confidentAt": CONFIDENT, "days": days}

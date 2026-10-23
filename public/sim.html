@@ -6,7 +6,7 @@
   <title>Game Simulations · Chayka's Evil Parlays</title>
   <link rel="icon" type="image/png" href="/favicon.png">
   <link rel="apple-touch-icon" href="/logo.png">
-  <link rel="stylesheet" href="/style.css?v=17">
+  <link rel="stylesheet" href="/style.css?v=18">
 </head>
 <body>
   <header class="hero">
@@ -31,6 +31,24 @@
   </nav>
 
   <main>
+    <section class="record card" id="simRecord" hidden>
+      <div class="rec-top">
+        <div class="rec-main">
+          <span class="rec-label">Simulator record</span>
+          <b id="srTotal">0-0</b>
+          <span id="srSub" class="muted"></span>
+        </div>
+        <div id="srChips" class="rec-vibes"></div>
+      </div>
+      <details class="rec-history">
+        <summary>Game by game</summary>
+        <div id="srDays"></div>
+        <p class="rec-note">A win means the team that won the most of the 10 simulations won the real game.
+          Each morning's simulations are locked before the games, then graded the next morning.
+          <span id="srRebuilt"></span></p>
+      </details>
+    </section>
+
     <section id="simStatus" class="status" aria-live="polite">Loading tonight's games…</section>
     <section id="simGames" class="sim-games"></section>
 
@@ -72,6 +90,6 @@
     </p>
   </main>
 
-  <script src="/sim.js?v=5"></script>
+  <script src="/sim.js?v=6"></script>
 </body>
 </html>
