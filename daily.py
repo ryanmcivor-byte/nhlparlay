@@ -6,8 +6,8 @@
 3. The Scammer's value model fills in who scored on past mornings' prices
    (data/odds/) and refits itself (data/scammer_model.json).
 4. Today's picks are locked into data/picks/<today>.json.
-5. The Game Simulations record: past days' simulations are rebuilt if missing,
-   finished games are graded, and today's simulations are locked (data/sims/).
+5. The Game Simulations record: finished games are graded and today's
+   simulations are locked (data/sims/). It counts real predictions only.
 
 The workflow commits data/ back to the repo, which redeploys the live site.
 
@@ -70,12 +70,7 @@ def main(lock_today=True):
         else:
             print(f"no picks locked for {today} (no games, or no lineups known yet)", flush=True)
 
-    # the simulator's record
-    for d in record._dates(sim.START, yesterday):
-        if not sim.load_locked(d):
-            res = sim.build(d, None, as_of=True)
-            if res.get("games"):
-                sim.lock(d, res, rebuilt=True)
+    # the simulator's record: only real morning predictions count (no rebuilt days)
     sim.grade(today)
     if lock_today and not sim.load_locked(today.isoformat()):
         res = sim.build(today.isoformat(), slate_today().get("players"))

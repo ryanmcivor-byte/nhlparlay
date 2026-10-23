@@ -303,7 +303,7 @@ def get(date, slate_players):
 # the simulator's own record: did the team that won most of the 10 sims win?
 # ---------------------------------------------------------------------------
 DIR = os.path.join(os.path.dirname(os.path.abspath(__file__)), "data", "sims")
-START = "2026-09-30"
+START = "2026-10-23"      # the simulator's record starts with its first real (locked) predictions
 CONFIDENT = 7      # "confident" picks: the winner won at least 7 of the 10 sims
 
 
