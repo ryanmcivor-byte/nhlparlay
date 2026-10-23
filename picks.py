@@ -19,10 +19,10 @@ from facts import HOT_KINDS
 LEGS = 3
 PLAYING = ("confirmed", "projected")
 GRUDGE = {"revenge", "hometown", "draft", "newteam", "names", "twins"}
-VIBES = ("chaos", "hot", "dejavu", "grudge", "any", "favourites", "theo", "chris", "scammer")
+VIBES = ("chaos", "hot", "dejavu", "due", "grudge", "any", "favourites", "theo", "chris", "scammer")
 # pick order: the pickiest vibes go first so each gets its best legs; no player
 # appears in two vibes' parlays on the same day
-ORDER = ("dejavu", "hot", "grudge", "favourites", "chaos", "any", "theo", "chris", "scammer")
+ORDER = ("dejavu", "due", "hot", "grudge", "favourites", "chaos", "any", "theo", "chris", "scammer")
 LEGS_FOR = {"theo": 1, "chris": 1}   # single-leg picks
 # Chris's Cozy Pick is the slate's single likeliest scorer, so it may repeat a
 # player another vibe already has (the safe pick shouldn't settle for #2)
@@ -83,6 +83,13 @@ def choose(slate, vibe, taken=()):
                 continue
             fact = fs[0]
             key = fact["goals"] + fact["goals"] / max(1, fact["shots"])
+        elif vibe == "due":
+            # goals "owed": drought length x his normal scoring rate, plus a bonus for extra shooting
+            fs = [f for f in p["facts"] if f["kind"] == "due"]
+            if not fs:
+                continue
+            fact = fs[0]
+            key = fact["score"]
         elif vibe == "theo":
             key, fact = _u(date, "theo", p["id"]), THEO_FACT   # pure feeling: any dressed skater
         elif vibe == "chris":

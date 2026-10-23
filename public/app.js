@@ -8,13 +8,18 @@
   const state = { data: null, game: "all", slip: [], expanded: new Set(), lineupOnly: true };
   const PLAYING = new Set(["confirmed", "projected"]);     // certain (or projected) to dress
   const playing = (p) => PLAYING.has((p.lineup || {}).status);
-  const VIBE_LABEL = { chaos: "Maximum chaos", hot: "Hot Streaks", dejavu: "DEJA VU", grudge: "Grudges & homecomings",
+  const VIBE_LABEL = { chaos: "Maximum chaos", hot: "Hot Streaks", dejavu: "DEJA VU", due: "Due for One", grudge: "Grudges & homecomings",
     any: "Anything goes", favourites: "Statistical Favourites", theo: "Theo's Evil Daily Pick",
     chris: "Chris's Cozy Pick of the Night", scammer: "The Scammer's Best Value Picks",
     gossip: "Gossip only (retired)" };
-  const VIBE_ICON = { chaos: "😈", hot: "🔥", dejavu: "🌀", grudge: "😤", any: "🎲", favourites: "📈", theo: "🔮", chris: "🛌", scammer: "💸", gossip: "💔" };
-  const VIBE_ORDER = ["chaos", "hot", "dejavu", "grudge", "any", "favourites", "theo", "chris", "scammer", "gossip"];
+  const VIBE_ICON = { chaos: "😈", hot: "🔥", dejavu: "🌀", due: "🧊", grudge: "😤", any: "🎲", favourites: "📈", theo: "🔮", chris: "🛌", scammer: "💸", gossip: "💔" };
+  const VIBE_ORDER = ["chaos", "hot", "dejavu", "due", "grudge", "any", "favourites", "theo", "chris", "scammer", "gossip"];
   const SINGLE = new Set(["theo", "chris", "scammer"]);   // not parlays (the Scammer's are 7 straight bets)
+  // when a section can honestly come up empty on a small slate
+  const EMPTY_NOTE = {
+    due: "Nobody's due tonight: no proven scorer is in a long enough drought while still shooting.",
+    dejavu: "Nobody playing tonight has 2+ goals on the goalie he's facing.",
+  };
   const fmtAm = (a) => (a > 0 ? "+" : "") + a;
   // sections that pop up a photo when opened
   const POPUPS = {
@@ -204,17 +209,19 @@
     document.querySelectorAll(".vibe").forEach((b) => b.classList.toggle("on", b.dataset.vibe === vibe));
     const legs = (state.data.picks || {})[vibe] || [];
     $("#daily").hidden = false;
-    $("#dailyTitle").textContent = SINGLE.has(vibe) ? VIBE_LABEL[vibe] : `Today's ${VIBE_LABEL[vibe]} parlay`;
+    $("#dailyTitle").textContent = SINGLE.has(vibe) ? VIBE_LABEL[vibe]
+      : `Today's ${VIBE_LABEL[vibe]} ${legs.length === 1 ? "pick" : "parlay"}`;
     if (!legs.length) {
       $("#dailyLegs").innerHTML = "";
       $("#dailyFoot").innerHTML = "";
-      $("#dailyNote").textContent = state.data.picksNote || "No skaters in tonight's lineups fit this vibe yet. Check back closer to puck drop.";
+      $("#dailyNote").textContent = state.data.picksNote || EMPTY_NOTE[vibe] || "No skaters in tonight's lineups fit this vibe yet. Check back closer to puck drop.";
       return;
     }
     $("#dailyLegs").innerHTML = legs.map((l) => legHtml(l, l.fact, false)).join("");
     $("#dailyFoot").innerHTML = vibe === "scammer" ? scammerFoot(legs) : oddsHtml(legs);
-    const fewer = !SINGLE.has(vibe) && legs.length < 3
-      ? ` Only ${legs.length} game${legs.length > 1 ? "s" : ""} qualify, so it has ${legs.length} leg${legs.length > 1 ? "s" : ""} (one per game).` : "";
+    const fewer = SINGLE.has(vibe) || legs.length >= 3 ? ""
+      : legs.length === 1 ? " Only 1 game has a player who fits, so it's a single pick tonight."
+      : ` Only ${legs.length} games have a player who fits, so it has ${legs.length} legs (one per game).`;
     $("#dailyNote").textContent = `🔒 Locked for ${state.data.date}. Everyone gets these same picks; new ones tomorrow.${fewer}`
       + (vibe === "scammer" ? " " + scammerModelNote() : "");
   }
