@@ -7,7 +7,8 @@
 "team": "MIN",
 "gameId": 2026020184,
 "pModel": 0.361,
-"american": 115
+"american": 115,
+"scored": 0
 },
 {
 "id": 8480801,
@@ -15,7 +16,8 @@
 "team": "FLA",
 "gameId": 2026020180,
 "pModel": 0.329,
-"american": 150
+"american": 150,
+"scored": 0
 },
 {
 "id": 8478449,
@@ -23,7 +25,8 @@
 "team": "DAL",
 "gameId": 2026020181,
 "pModel": 0.282,
-"american": 215
+"american": 215,
+"scored": 0
 },
 {
 "id": 8477476,
@@ -31,7 +34,8 @@
 "team": "COL",
 "gameId": 2026020183,
 "pModel": 0.317,
-"american": 215
+"american": 215,
+"scored": 1
 },
 {
 "id": 8477409,
@@ -39,7 +43,8 @@
 "team": "FLA",
 "gameId": 2026020180,
 "pModel": 0.273,
-"american": 190
+"american": 190,
+"scored": 0
 },
 {
 "id": 8484938,
@@ -47,7 +52,8 @@
 "team": "DAL",
 "gameId": 2026020181,
 "pModel": 0.18,
-"american": 500
+"american": 500,
+"scored": 0
 },
 {
 "id": 8480027,
@@ -55,7 +61,8 @@
 "team": "DAL",
 "gameId": 2026020181,
 "pModel": 0.372,
-"american": 145
+"american": 145,
+"scored": 1
 },
 {
 "id": 8481540,
@@ -63,7 +70,8 @@
 "team": "MTL",
 "gameId": 2026020182,
 "pModel": 0.421,
-"american": 120
+"american": 120,
+"scored": 0
 },
 {
 "id": 8475158,
@@ -71,7 +79,8 @@
 "team": "NSH",
 "gameId": 2026020183,
 "pModel": 0.258,
-"american": 255
+"american": 255,
+"scored": 1
 },
 {
 "id": 8482768,
@@ -79,7 +88,8 @@
 "team": "COL",
 "gameId": 2026020183,
 "pModel": 0.1,
-"american": 600
+"american": 600,
+"scored": 0
 },
 {
 "id": 8480800,
@@ -87,7 +97,8 @@
 "team": "MIN",
 "gameId": 2026020184,
 "pModel": 0.129,
-"american": 425
+"american": 425,
+"scored": 1
 },
 {
 "id": 8478420,
@@ -95,7 +106,8 @@
 "team": "DAL",
 "gameId": 2026020181,
 "pModel": 0.306,
-"american": 180
+"american": 180,
+"scored": 1
 },
 {
 "id": 8476981,
@@ -103,7 +115,8 @@
 "team": "MTL",
 "gameId": 2026020182,
 "pModel": 0.193,
-"american": 425
+"american": 425,
+"scored": 0
 },
 {
 "id": 8483476,
@@ -111,7 +124,8 @@
 "team": "VAN",
 "gameId": 2026020184,
 "pModel": 0.194,
-"american": 340
+"american": 340,
+"scored": 0
 },
 {
 "id": 8485366,
@@ -119,7 +133,8 @@
 "team": "NYI",
 "gameId": 2026020181,
 "pModel": 0.21,
-"american": 285
+"american": 285,
+"scored": 1
 },
 {
 "id": 8475151,
@@ -127,7 +142,8 @@
 "team": "NYI",
 "gameId": 2026020181,
 "pModel": 0.223,
-"american": 310
+"american": 310,
+"scored": 1
 },
 {
 "id": 8479525,
@@ -135,7 +151,8 @@
 "team": "NSH",
 "gameId": 2026020183,
 "pModel": 0.147,
-"american": 650
+"american": 650,
+"scored": 0
 },
 {
 "id": 8480835,
@@ -143,7 +160,8 @@
 "team": "NSH",
 "gameId": 2026020183,
 "pModel": 0.115,
-"american": 900
+"american": 900,
+"scored": 1
 },
 {
 "id": 8475184,
@@ -151,7 +169,8 @@
 "team": "MTL",
 "gameId": 2026020182,
 "pModel": 0.238,
-"american": 310
+"american": 310,
+"scored": 0
 },
 {
 "id": 8480074,
@@ -159,7 +178,8 @@
 "team": "MTL",
 "gameId": 2026020182,
 "pModel": 0.146,
-"american": 475
+"american": 475,
+"scored": 0
 },
 {
 "id": 8480069,
@@ -167,7 +187,8 @@
 "team": "COL",
 "gameId": 2026020183,
 "pModel": 0.25,
-"american": 285
+"american": 285,
+"scored": 0
 },
 {
 "id": 8478864,
@@ -175,7 +196,8 @@
 "team": "MIN",
 "gameId": 2026020184,
 "pModel": 0.458,
-"american": -110
+"american": -110,
+"scored": 1
 },
 {
 "id": 8481477,
@@ -183,7 +205,8 @@
 "team": "MIN",
 "gameId": 2026020184,
 "pModel": 0.1,
-"american": 700
+"american": 700,
+"scored": 0
 },
 {
 "id": 8477935,
@@ -191,7 +214,8 @@
 "team": "FLA",
 "gameId": 2026020180,
 "pModel": 0.274,
-"american": 180
+"american": 180,
+"scored": 0
 },
 {
 "id": 8477933,
@@ -199,7 +223,8 @@
 "team": "FLA",
 "gameId": 2026020180,
 "pModel": 0.36,
-"american": 165
+"american": 165,
+"scored": 0
 },
 {
 "id": 8479314,
@@ -207,7 +232,8 @@
 "team": "FLA",
 "gameId": 2026020180,
 "pModel": 0.305,
-"american": 195
+"american": 195,
+"scored": 1
 },
 {
 "id": 8484390,
@@ -215,7 +241,8 @@
 "team": "CHI",
 "gameId": 2026020180,
 "pModel": 0.226,
-"american": 260
+"american": 260,
+"scored": 1
 },
 {
 "id": 8483493,
@@ -223,7 +250,8 @@
 "team": "CHI",
 "gameId": 2026020180,
 "pModel": 0.213,
-"american": 350
+"american": 350,
+"scored": 0
 },
 {
 "id": 8485388,
@@ -231,7 +259,8 @@
 "team": "NYI",
 "gameId": 2026020181,
 "pModel": 0.219,
-"american": 550
+"american": 550,
+"scored": 0
 },
 {
 "id": 8481601,
@@ -239,7 +268,8 @@
 "team": "NYI",
 "gameId": 2026020181,
 "pModel": 0.23,
-"american": 340
+"american": 340,
+"scored": 0
 },
 {
 "id": 8476479,
@@ -247,7 +277,8 @@
 "team": "MTL",
 "gameId": 2026020182,
 "pModel": 0.082,
-"american": 700
+"american": 700,
+"scored": 0
 },
 {
 "id": 8478133,
@@ -255,7 +286,8 @@
 "team": "MTL",
 "gameId": 2026020182,
 "pModel": 0.16,
-"american": 550
+"american": 550,
+"scored": 0
 },
 {
 "id": 8478398,
@@ -263,7 +295,8 @@
 "team": "WPG",
 "gameId": 2026020182,
 "pModel": 0.397,
-"american": 130
+"american": 130,
+"scored": 0
 },
 {
 "id": 8482110,
@@ -271,7 +304,8 @@
 "team": "WPG",
 "gameId": 2026020182,
 "pModel": 0.191,
-"american": 360
+"american": 360,
+"scored": 0
 },
 {
 "id": 8482149,
@@ -279,7 +313,8 @@
 "team": "WPG",
 "gameId": 2026020182,
 "pModel": 0.212,
-"american": 245
+"american": 245,
+"scored": 0
 },
 {
 "id": 8476455,
@@ -287,7 +322,8 @@
 "team": "COL",
 "gameId": 2026020183,
 "pModel": 0.224,
-"american": 295
+"american": 295,
+"scored": 0
 },
 {
 "id": 8479980,
@@ -295,7 +331,8 @@
 "team": "NSH",
 "gameId": 2026020183,
 "pModel": 0.05,
-"american": 1800
+"american": 1800,
+"scored": 0
 },
 {
 "id": 8476399,
@@ -303,7 +340,8 @@
 "team": "MIN",
 "gameId": 2026020184,
 "pModel": 0.226,
-"american": 265
+"american": 265,
+"scored": 0
 },
 {
 "id": 8477495,
@@ -311,7 +349,8 @@
 "team": "FLA",
 "gameId": 2026020180,
 "pModel": 0.117,
-"american": 550
+"american": 550,
+"scored": 0
 },
 {
 "id": 8477479,
@@ -319,7 +358,8 @@
 "team": "CHI",
 "gameId": 2026020180,
 "pModel": 0.284,
-"american": 240
+"american": 240,
+"scored": 0
 },
 {
 "id": 8477407,
@@ -327,7 +367,8 @@
 "team": "NYI",
 "gameId": 2026020181,
 "pModel": 0.171,
-"american": 500
+"american": 500,
+"scored": 0
 },
 {
 "id": 8486025,
@@ -335,7 +376,8 @@
 "team": "WPG",
 "gameId": 2026020182,
 "pModel": 0.074,
-"american": 550
+"american": 550,
+"scored": 0
 },
 {
 "id": 8482953,
@@ -343,7 +385,8 @@
 "team": "COL",
 "gameId": 2026020183,
 "pModel": 0.078,
-"american": 700
+"american": 700,
+"scored": 0
 },
 {
 "id": 8478444,
@@ -351,7 +394,8 @@
 "team": "VAN",
 "gameId": 2026020184,
 "pModel": 0.245,
-"american": 225
+"american": 225,
+"scored": 1
 },
 {
 "id": 8483499,
@@ -359,7 +403,8 @@
 "team": "VAN",
 "gameId": 2026020184,
 "pModel": 0.121,
-"american": 500
+"american": 500,
+"scored": 0
 },
 {
 "id": 8482079,
@@ -367,7 +412,8 @@
 "team": "VAN",
 "gameId": 2026020184,
 "pModel": 0.231,
-"american": 340
+"american": 340,
+"scored": 0
 },
 {
 "id": 8484798,
@@ -375,7 +421,8 @@
 "team": "VAN",
 "gameId": 2026020184,
 "pModel": 0.063,
-"american": 900
+"american": 900,
+"scored": 0
 },
 {
 "id": 8477500,
@@ -383,7 +430,8 @@
 "team": "NYI",
 "gameId": 2026020181,
 "pModel": 0.335,
-"american": 215
+"american": 215,
+"scored": 0
 },
 {
 "id": 8475170,
@@ -391,7 +439,8 @@
 "team": "NYI",
 "gameId": 2026020181,
 "pModel": 0.196,
-"american": 425
+"american": 425,
+"scored": 1
 },
 {
 "id": 8481186,
@@ -399,7 +448,8 @@
 "team": "COL",
 "gameId": 2026020183,
 "pModel": 0.102,
-"american": 800
+"american": 800,
+"scored": 0
 },
 {
 "id": 8476887,
@@ -407,7 +457,8 @@
 "team": "NSH",
 "gameId": 2026020183,
 "pModel": 0.328,
-"american": 195
+"american": 195,
+"scored": 1
 },
 {
 "id": 8474564,
@@ -415,7 +466,8 @@
 "team": "NSH",
 "gameId": 2026020183,
 "pModel": 0.355,
-"american": 200
+"american": 200,
+"scored": 1
 },
 {
 "id": 8483525,
@@ -423,7 +475,8 @@
 "team": "MIN",
 "gameId": 2026020184,
 "pModel": 0.179,
-"american": 280
+"american": 280,
+"scored": 0
 },
 {
 "id": 8476463,
@@ -431,7 +484,8 @@
 "team": "MIN",
 "gameId": 2026020184,
 "pModel": 0.057,
-"american": 1200
+"american": 1200,
+"scored": 0
 },
 {
 "id": 8483678,
@@ -439,7 +493,8 @@
 "team": "VAN",
 "gameId": 2026020184,
 "pModel": 0.075,
-"american": 1600
+"american": 1600,
+"scored": 0
 },
 {
 "id": 8475179,
@@ -447,7 +502,8 @@
 "team": "FLA",
 "gameId": 2026020180,
 "pModel": 0.033,
-"american": 1700
+"american": 1700,
+"scored": 0
 },
 {
 "id": 8482740,
@@ -455,7 +511,8 @@
 "team": "DAL",
 "gameId": 2026020181,
 "pModel": 0.361,
-"american": 160
+"american": 160,
+"scored": 1
 },
 {
 "id": 8477021,
@@ -463,7 +520,8 @@
 "team": "NSH",
 "gameId": 2026020183,
 "pModel": 0.148,
-"american": 600
+"american": 600,
+"scored": 0
 },
 {
 "id": 8478493,
@@ -471,7 +529,8 @@
 "team": "MIN",
 "gameId": 2026020184,
 "pModel": 0.235,
-"american": 180
+"american": 180,
+"scored": 0
 },
 {
 "id": 8481568,
@@ -479,7 +538,8 @@
 "team": "CHI",
 "gameId": 2026020180,
 "pModel": 0.032,
-"american": 1300
+"american": 1300,
+"scored": 0
 },
 {
 "id": 8476292,
@@ -487,7 +547,8 @@
 "team": "NYI",
 "gameId": 2026020181,
 "pModel": 0.114,
-"american": 800
+"american": 800,
+"scored": 0
 },
 {
 "id": 8476278,
@@ -495,7 +556,8 @@
 "team": "DAL",
 "gameId": 2026020181,
 "pModel": 0.07,
-"american": 850
+"american": 850,
+"scored": 0
 },
 {
 "id": 8474574,
@@ -503,7 +565,8 @@
 "team": "DAL",
 "gameId": 2026020181,
 "pModel": 0.035,
-"american": 2000
+"american": 2000,
+"scored": 0
 },
 {
 "id": 8482775,
@@ -511,7 +574,8 @@
 "team": "MTL",
 "gameId": 2026020182,
 "pModel": 0.203,
-"american": 270
+"american": 270,
+"scored": 0
 },
 {
 "id": 8480145,
@@ -519,7 +583,8 @@
 "team": "WPG",
 "gameId": 2026020182,
 "pModel": 0.088,
-"american": 600
+"american": 600,
+"scored": 0
 },
 {
 "id": 8474189,
@@ -527,7 +592,8 @@
 "team": "FLA",
 "gameId": 2026020180,
 "pModel": 0.085,
-"american": 550
+"american": 550,
+"scored": 1
 },
 {
 "id": 8477903,
@@ -535,7 +601,8 @@
 "team": "FLA",
 "gameId": 2026020180,
 "pModel": 0.061,
-"american": 750
+"american": 750,
+"scored": 0
 },
 {
 "id": 8478147,
@@ -543,7 +610,8 @@
 "team": "FLA",
 "gameId": 2026020180,
 "pModel": 0.064,
-"american": 900
+"american": 900,
+"scored": 0
 },
 {
 "id": 8482113,
@@ -551,7 +619,8 @@
 "team": "FLA",
 "gameId": 2026020180,
 "pModel": 0.206,
-"american": 280
+"american": 280,
+"scored": 0
 },
 {
 "id": 8480185,
@@ -559,7 +628,8 @@
 "team": "FLA",
 "gameId": 2026020180,
 "pModel": 0.136,
-"american": 425
+"american": 425,
+"scored": 0
 },
 {
 "id": 8481655,
@@ -567,7 +637,8 @@
 "team": "FLA",
 "gameId": 2026020180,
 "pModel": 0.111,
-"american": 850
+"american": 850,
+"scored": 0
 },
 {
 "id": 8483771,
@@ -575,7 +646,8 @@
 "team": "FLA",
 "gameId": 2026020180,
 "pModel": 0.106,
-"american": 650
+"american": 650,
+"scored": 1
 },
 {
 "id": 8477932,
@@ -583,7 +655,8 @@
 "team": "FLA",
 "gameId": 2026020180,
 "pModel": 0.049,
-"american": 850
+"american": 850,
+"scored": 0
 },
 {
 "id": 8478859,
@@ -591,7 +664,8 @@
 "team": "FLA",
 "gameId": 2026020180,
 "pModel": 0.06,
-"american": 1200
+"american": 1200,
+"scored": 0
 },
 {
 "id": 8484144,
@@ -599,7 +673,8 @@
 "team": "CHI",
 "gameId": 2026020180,
 "pModel": 0.308,
-"american": 180
+"american": 180,
+"scored": 0
 },
 {
 "id": 8477987,
@@ -607,7 +682,8 @@
 "team": "CHI",
 "gameId": 2026020180,
 "pModel": 0.214,
-"american": 500
+"american": 500,
+"scored": 0
 },
 {
 "id": 8485391,
@@ -615,7 +691,8 @@
 "team": "CHI",
 "gameId": 2026020180,
 "pModel": 0.159,
-"american": 350
+"american": 350,
+"scored": 0
 },
 {
 "id": 8483450,
@@ -623,7 +700,8 @@
 "team": "CHI",
 "gameId": 2026020180,
 "pModel": 0.122,
-"american": 750
+"american": 750,
+"scored": 1
 },
 {
 "id": 8478413,
@@ -631,7 +709,8 @@
 "team": "CHI",
 "gameId": 2026020180,
 "pModel": 0.07,
-"american": 850
+"american": 850,
+"scored": 0
 },
 {
 "id": 8474141,
@@ -639,7 +718,8 @@
 "team": "CHI",
 "gameId": 2026020180,
 "pModel": 0.208,
-"american": 255
+"american": 255,
+"scored": 0
 },
 {
 "id": 8478233,
@@ -647,7 +727,8 @@
 "team": "CHI",
 "gameId": 2026020180,
 "pModel": 0.138,
-"american": 600
+"american": 600,
+"scored": 0
 },
 {
 "id": 8482062,
@@ -655,7 +736,8 @@
 "team": "CHI",
 "gameId": 2026020180,
 "pModel": 0.103,
-"american": 900
+"american": 900,
+"scored": 0
 },
 {
 "id": 8476882,
@@ -663,7 +745,8 @@
 "team": "CHI",
 "gameId": 2026020180,
 "pModel": 0.174,
-"american": 400
+"american": 400,
+"scored": 0
 },
 {
 "id": 8474013,
@@ -671,7 +754,8 @@
 "team": "CHI",
 "gameId": 2026020180,
 "pModel": 0.028,
-"american": 2200
+"american": 2200,
+"scored": 0
 },
 {
 "id": 8482176,
@@ -679,7 +763,8 @@
 "team": "CHI",
 "gameId": 2026020180,
 "pModel": 0.065,
-"american": 1200
+"american": 1200,
+"scored": 0
 },
 {
 "id": 8483466,
@@ -687,7 +772,8 @@
 "team": "CHI",
 "gameId": 2026020180,
 "pModel": 0.037,
-"american": 1600
+"american": 1600,
+"scored": 0
 },
 {
 "id": 8484783,
@@ -695,7 +781,8 @@
 "team": "CHI",
 "gameId": 2026020180,
 "pModel": 0.041,
-"american": 1200
+"american": 1200,
+"scored": 0
 },
 {
 "id": 8483506,
@@ -703,7 +790,8 @@
 "team": "CHI",
 "gameId": 2026020180,
 "pModel": 0.073,
-"american": 850
+"american": 850,
+"scored": 0
 },
 {
 "id": 8482070,
@@ -711,7 +799,8 @@
 "team": "NYI",
 "gameId": 2026020181,
 "pModel": 0.13,
-"american": 850
+"american": 850,
+"scored": 0
 },
 {
 "id": 8475231,
@@ -719,7 +808,8 @@
 "team": "NYI",
 "gameId": 2026020181,
 "pModel": 0.109,
-"american": 900
+"american": 900,
+"scored": 0
 },
 {
 "id": 8482476,
@@ -727,7 +817,8 @@
 "team": "NYI",
 "gameId": 2026020181,
 "pModel": 0.207,
-"american": 380
+"american": 380,
+"scored": 0
 },
 {
 "id": 8481237,
@@ -735,7 +826,8 @@
 "team": "NYI",
 "gameId": 2026020181,
 "pModel": 0.051,
-"american": 1200
+"american": 1200,
+"scored": 0
 },
 {
 "id": 8476419,
@@ -743,7 +835,8 @@
 "team": "NYI",
 "gameId": 2026020181,
 "pModel": 0.18,
-"american": 550
+"american": 550,
+"scored": 0
 },
 {
 "id": 8477950,
@@ -751,7 +844,8 @@
 "team": "NYI",
 "gameId": 2026020181,
 "pModel": 0.075,
-"american": 650
+"american": 650,
+"scored": 0
 },
 {
 "id": 8482516,
@@ -759,7 +853,8 @@
 "team": "NYI",
 "gameId": 2026020181,
 "pModel": 0.044,
-"american": 1900
+"american": 1900,
+"scored": 0
 },
 {
 "id": 8476917,
@@ -767,7 +862,8 @@
 "team": "NYI",
 "gameId": 2026020181,
 "pModel": 0.034,
-"american": 2000
+"american": 2000,
+"scored": 0
 },
 {
 "id": 8477506,
@@ -775,7 +871,8 @@
 "team": "NYI",
 "gameId": 2026020181,
 "pModel": 0.044,
-"american": 1700
+"american": 1700,
+"scored": 0
 },
 {
 "id": 8479378,
@@ -783,7 +880,8 @@
 "team": "NYI",
 "gameId": 2026020181,
 "pModel": 0.074,
-"american": 2500
+"american": 2500,
+"scored": 0
 },
 {
 "id": 8473994,
@@ -791,7 +889,8 @@
 "team": "DAL",
 "gameId": 2026020181,
 "pModel": 0.191,
-"american": 475
+"american": 475,
+"scored": 0
 },
 {
 "id": 8484829,
@@ -799,7 +898,8 @@
 "team": "DAL",
 "gameId": 2026020181,
 "pModel": 0.136,
-"american": 500
+"american": 500,
+"scored": 1
 },
 {
 "id": 8481641,
@@ -807,7 +907,8 @@
 "team": "DAL",
 "gameId": 2026020181,
 "pModel": 0.123,
-"american": 550
+"american": 550,
+"scored": 0
 },
 {
 "id": 8475794,
@@ -815,7 +916,8 @@
 "team": "DAL",
 "gameId": 2026020181,
 "pModel": 0.233,
-"american": 295
+"american": 295,
+"scored": 1
 },
 {
 "id": 8483425,
@@ -823,7 +925,8 @@
 "team": "DAL",
 "gameId": 2026020181,
 "pModel": 0.069,
-"american": 1700
+"american": 1700,
+"scored": 0
 },
 {
 "id": 8478476,
@@ -831,7 +934,8 @@
 "team": "DAL",
 "gameId": 2026020181,
 "pModel": 0.055,
-"american": 1700
+"american": 1700,
+"scored": 0
 },
 {
 "id": 8481581,
@@ -839,7 +943,8 @@
 "team": "DAL",
 "gameId": 2026020181,
 "pModel": 0.104,
-"american": 600
+"american": 600,
+"scored": 0
 },
 {
 "id": 8480036,
@@ -847,7 +952,8 @@
 "team": "DAL",
 "gameId": 2026020181,
 "pModel": 0.123,
-"american": 500
+"american": 500,
+"scored": 0
 },
 {
 "id": 8480878,
@@ -855,7 +961,8 @@
 "team": "DAL",
 "gameId": 2026020181,
 "pModel": 0.038,
-"american": 2000
+"american": 2000,
+"scored": 0
 },
 {
 "id": 8483424,
@@ -863,7 +970,8 @@
 "team": "MTL",
 "gameId": 2026020182,
 "pModel": 0.079,
-"american": 850
+"american": 850,
+"scored": null
 },
 {
 "id": 8482737,
@@ -871,7 +979,8 @@
 "team": "MTL",
 "gameId": 2026020182,
 "pModel": 0.191,
-"american": 400
+"american": 400,
+"scored": 0
 },
 {
 "id": 8481523,
@@ -879,7 +988,8 @@
 "team": "MTL",
 "gameId": 2026020182,
 "pModel": 0.152,
-"american": 650
+"american": 650,
+"scored": 0
 },
 {
 "id": 8481618,
@@ -887,7 +997,8 @@
 "team": "MTL",
 "gameId": 2026020182,
 "pModel": 0.199,
-"american": 370
+"american": 370,
+"scored": 0
 },
 {
 "id": 8483515,
@@ -895,7 +1006,8 @@
 "team": "MTL",
 "gameId": 2026020182,
 "pModel": 0.259,
-"american": 230
+"american": 230,
+"scored": 0
 },
 {
 "id": 8478851,
@@ -903,7 +1015,8 @@
 "team": "MTL",
 "gameId": 2026020182,
 "pModel": 0.075,
-"american": 2200
+"american": 2200,
+"scored": 0
 },
 {
 "id": 8480865,
@@ -911,7 +1024,8 @@
 "team": "MTL",
 "gameId": 2026020182,
 "pModel": 0.118,
-"american": 550
+"american": 550,
+"scored": 0
 },
 {
 "id": 8482087,
@@ -919,7 +1033,8 @@
 "team": "MTL",
 "gameId": 2026020182,
 "pModel": 0.081,
-"american": 1700
+"american": 1700,
+"scored": 1
 },
 {
 "id": 8483457,
@@ -927,7 +1042,8 @@
 "team": "MTL",
 "gameId": 2026020182,
 "pModel": 0.119,
-"american": 500
+"american": 500,
+"scored": 1
 },
 {
 "id": 8476875,
@@ -935,7 +1051,8 @@
 "team": "MTL",
 "gameId": 2026020182,
 "pModel": 0.085,
-"american": 1000
+"american": 1000,
+"scored": 0
 },
 {
 "id": 8482964,
@@ -943,7 +1060,8 @@
 "team": "MTL",
 "gameId": 2026020182,
 "pModel": 0.018,
-"american": 2000
+"american": 2000,
+"scored": 0
 },
 {
 "id": 8480289,
@@ -951,7 +1069,8 @@
 "team": "WPG",
 "gameId": 2026020182,
 "pModel": 0.125,
-"american": 650
+"american": 650,
+"scored": 0
 },
 {
 "id": 8480113,
@@ -959,7 +1078,8 @@
 "team": "WPG",
 "gameId": 2026020182,
 "pModel": 0.169,
-"american": 550
+"american": 550,
+"scored": 0
 },
 {
 "id": 8481043,
@@ -967,7 +1087,8 @@
 "team": "WPG",
 "gameId": 2026020182,
 "pModel": 0.125,
-"american": 600
+"american": 600,
+"scored": 0
 },
 {
 "id": 8476392,
@@ -975,7 +1096,8 @@
 "team": "WPG",
 "gameId": 2026020182,
 "pModel": 0.117,
-"american": 650
+"american": 650,
+"scored": 0
 },
 {
 "id": 8482765,
@@ -983,7 +1105,8 @@
 "team": "WPG",
 "gameId": 2026020182,
 "pModel": 0.113,
-"american": 650
+"american": 650,
+"scored": 1
 },
 {
 "id": 8476460,
@@ -991,7 +1114,8 @@
 "team": "WPG",
 "gameId": 2026020182,
 "pModel": 0.335,
-"american": 210
+"american": 210,
+"scored": 0
 },
 {
 "id": 8480014,
@@ -999,7 +1123,8 @@
 "team": "WPG",
 "gameId": 2026020182,
 "pModel": 0.281,
-"american": 230
+"american": 230,
+"scored": 0
 },
 {
 "id": 8476331,
@@ -1007,7 +1132,8 @@
 "team": "WPG",
 "gameId": 2026020182,
 "pModel": 0.044,
-"american": 1800
+"american": 1800,
+"scored": 0
 },
 {
 "id": 8479983,
@@ -1015,7 +1141,8 @@
 "team": "WPG",
 "gameId": 2026020182,
 "pModel": 0.077,
-"american": 1500
+"american": 1500,
+"scored": 0
 },
 {
 "id": 8477938,
@@ -1023,7 +1150,8 @@
 "team": "WPG",
 "gameId": 2026020182,
 "pModel": 0.035,
-"american": 1300
+"american": 1300,
+"scored": 0
 },
 {
 "id": 8480049,
@@ -1031,7 +1159,8 @@
 "team": "WPG",
 "gameId": 2026020182,
 "pModel": 0.038,
-"american": 2200
+"american": 2200,
+"scored": 0
 },
 {
 "id": 8486171,
@@ -1039,7 +1168,8 @@
 "team": "COL",
 "gameId": 2026020183,
 "pModel": 0.169,
-"american": 340
+"american": 340,
+"scored": 0
 },
 {
 "id": 8475172,
@@ -1047,7 +1177,8 @@
 "team": "COL",
 "gameId": 2026020183,
 "pModel": 0.225,
-"american": 210
+"american": 210,
+"scored": 0
 },
 {
 "id": 8480448,
@@ -1055,7 +1186,8 @@
 "team": "COL",
 "gameId": 2026020183,
 "pModel": 0.174,
-"american": 650
+"american": 650,
+"scored": 0
 },
 {
 "id": 8477492,
@@ -1063,7 +1195,8 @@
 "team": "COL",
 "gameId": 2026020183,
 "pModel": 0.427,
-"american": -105
+"american": -105,
+"scored": 0
 },
 {
 "id": 8480039,
@@ -1071,7 +1204,8 @@
 "team": "COL",
 "gameId": 2026020183,
 "pModel": 0.352,
-"american": 175
+"american": 175,
+"scored": 0
 },
 {
 "id": 8475754,
@@ -1079,7 +1213,8 @@
 "team": "COL",
 "gameId": 2026020183,
 "pModel": 0.299,
-"american": 230
+"american": 230,
+"scored": 0
 },
 {
 "id": 8475768,
@@ -1087,7 +1222,8 @@
 "team": "COL",
 "gameId": 2026020183,
 "pModel": 0.229,
-"american": 300
+"american": 300,
+"scored": 0
 },
 {
 "id": 8470613,
@@ -1095,7 +1231,8 @@
 "team": "COL",
 "gameId": 2026020183,
 "pModel": 0.1,
-"american": 1400
+"american": 1400,
+"scored": 0
 },
 {
 "id": 8476967,
@@ -1103,7 +1240,8 @@
 "team": "COL",
 "gameId": 2026020183,
 "pModel": 0.034,
-"american": 1800
+"american": 1800,
+"scored": 0
 },
 {
 "id": 8484258,
@@ -1111,7 +1249,8 @@
 "team": "COL",
 "gameId": 2026020183,
 "pModel": 0.074,
-"american": 850
+"american": 850,
+"scored": 0
 },
 {
 "id": 8476312,
@@ -1119,7 +1258,8 @@
 "team": "COL",
 "gameId": 2026020183,
 "pModel": 0.058,
-"american": 1800
+"american": 1800,
+"scored": 0
 },
 {
 "id": 8478038,
@@ -1127,7 +1267,8 @@
 "team": "COL",
 "gameId": 2026020183,
 "pModel": 0.095,
-"american": 950
+"american": 950,
+"scored": 1
 },
 {
 "id": 8482145,
@@ -1135,7 +1276,8 @@
 "team": "NSH",
 "gameId": 2026020183,
 "pModel": 0.181,
-"american": 475
+"american": 475,
+"scored": 0
 },
 {
 "id": 8481726,
@@ -1143,7 +1285,8 @@
 "team": "NSH",
 "gameId": 2026020183,
 "pModel": 0.145,
-"american": 700
+"american": 700,
+"scored": 0
 },
 {
 "id": 8481535,
@@ -1151,7 +1294,8 @@
 "team": "NSH",
 "gameId": 2026020183,
 "pModel": 0.118,
-"american": 700
+"american": 700,
+"scored": 0
 },
 {
 "id": 8476539,
@@ -1159,7 +1303,8 @@
 "team": "NSH",
 "gameId": 2026020183,
 "pModel": 0.196,
-"american": 380
+"american": 380,
+"scored": 0
 },
 {
 "id": 8484241,
@@ -1167,7 +1312,8 @@
 "team": "NSH",
 "gameId": 2026020183,
 "pModel": 0.186,
-"american": 450
+"american": 450,
+"scored": 0
 },
 {
 "id": 8474600,
@@ -1175,7 +1321,8 @@
 "team": "NSH",
 "gameId": 2026020183,
 "pModel": 0.152,
-"american": 550
+"american": 550,
+"scored": 0
 },
 {
 "id": 8480246,
@@ -1183,7 +1330,8 @@
 "team": "NSH",
 "gameId": 2026020183,
 "pModel": 0.047,
-"american": 2200
+"american": 2200,
+"scored": 0
 },
 {
 "id": 8476869,
@@ -1191,7 +1339,8 @@
 "team": "NSH",
 "gameId": 2026020183,
 "pModel": 0.057,
-"american": 1000
+"american": 1000,
+"scored": 0
 },
 {
 "id": 8481593,
@@ -1199,7 +1348,8 @@
 "team": "NSH",
 "gameId": 2026020183,
 "pModel": 0.046,
-"american": 2500
+"american": 2500,
+"scored": 0
 },
 {
 "id": 8482482,
@@ -1207,7 +1357,8 @@
 "team": "NSH",
 "gameId": 2026020183,
 "pModel": 0.023,
-"american": 1100
+"american": 1100,
+"scored": 0
 },
 {
 "id": 8481553,
@@ -1215,7 +1366,8 @@
 "team": "MIN",
 "gameId": 2026020184,
 "pModel": 0.156,
-"american": 450
+"american": 450,
+"scored": 1
 },
 {
 "id": 8477451,
@@ -1223,7 +1375,8 @@
 "team": "MIN",
 "gameId": 2026020184,
 "pModel": 0.206,
-"american": 340
+"american": 340,
+"scored": 0
 },
 {
 "id": 8477446,
@@ -1231,7 +1384,8 @@
 "team": "MIN",
 "gameId": 2026020184,
 "pModel": 0.092,
-"american": 600
+"american": 600,
+"scored": 0
 },
 {
 "id": 8475752,
@@ -1239,7 +1393,8 @@
 "team": "MIN",
 "gameId": 2026020184,
 "pModel": 0.074,
-"american": 950
+"american": 950,
+"scored": 0
 },
 {
 "id": 8478508,
@@ -1247,7 +1402,8 @@
 "team": "MIN",
 "gameId": 2026020184,
 "pModel": 0.074,
-"american": 600
+"american": 600,
+"scored": 0
 },
 {
 "id": 8474567,
@@ -1255,7 +1411,8 @@
 "team": "MIN",
 "gameId": 2026020184,
 "pModel": 0.043,
-"american": 2200
+"american": 2200,
+"scored": 0
 },
 {
 "id": 8482641,
@@ -1263,7 +1420,8 @@
 "team": "MIN",
 "gameId": 2026020184,
 "pModel": 0.031,
-"american": 1700
+"american": 1700,
+"scored": 0
 },
 {
 "id": 8476874,
@@ -1271,7 +1429,8 @@
 "team": "MIN",
 "gameId": 2026020184,
 "pModel": 0.049,
-"american": 1700
+"american": 1700,
+"scored": 0
 },
 {
 "id": 8474716,
@@ -1279,7 +1438,8 @@
 "team": "MIN",
 "gameId": 2026020184,
 "pModel": 0.084,
-"american": 850
+"american": 850,
+"scored": 0
 },
 {
 "id": 8480078,
@@ -1287,7 +1447,8 @@
 "team": "VAN",
 "gameId": 2026020184,
 "pModel": 0.184,
-"american": 360
+"american": 360,
+"scored": 0
 },
 {
 "id": 8481032,
@@ -1295,7 +1456,8 @@
 "team": "VAN",
 "gameId": 2026020184,
 "pModel": 0.156,
-"american": 475
+"american": 475,
+"scored": null
 },
 {
 "id": 8478498,
@@ -1303,7 +1465,8 @@
 "team": "VAN",
 "gameId": 2026020184,
 "pModel": 0.256,
-"american": 210
+"american": 210,
+"scored": 0
 },
 {
 "id": 8475848,
@@ -1311,7 +1474,8 @@
 "team": "VAN",
 "gameId": 2026020184,
 "pModel": 0.126,
-"american": 900
+"american": 900,
+"scored": 0
 },
 {
 "id": 8481024,
@@ -1319,7 +1483,8 @@
 "team": "VAN",
 "gameId": 2026020184,
 "pModel": 0.176,
-"american": 400
+"american": 400,
+"scored": 0
 },
 {
 "id": 8482055,
@@ -1327,7 +1492,8 @@
 "team": "VAN",
 "gameId": 2026020184,
 "pModel": 0.154,
-"american": 500
+"american": 500,
+"scored": 0
 },
 {
 "id": 8484136,
@@ -1335,7 +1501,8 @@
 "team": "VAN",
 "gameId": 2026020184,
 "pModel": 0.164,
-"american": 700
+"american": 700,
+"scored": 1
 },
 {
 "id": 8478465,
@@ -1343,7 +1510,8 @@
 "team": "VAN",
 "gameId": 2026020184,
 "pModel": 0.054,
-"american": 1800
+"american": 1800,
+"scored": 0
 },
 {
 "id": 8479425,
@@ -1351,7 +1519,8 @@
 "team": "VAN",
 "gameId": 2026020184,
 "pModel": 0.077,
-"american": 600
+"american": 600,
+"scored": 0
 },
 {
 "id": 8474568,
@@ -1359,7 +1528,8 @@
 "team": "VAN",
 "gameId": 2026020184,
 "pModel": 0.02,
-"american": 2800
+"american": 2800,
+"scored": 0
 },
 {
 "id": 8484240,
@@ -1367,7 +1537,8 @@
 "team": "VAN",
 "gameId": 2026020184,
 "pModel": 0.057,
-"american": 1600
+"american": 1600,
+"scored": 0
 }
 ]
 }

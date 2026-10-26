@@ -5656,5 +5656,358 @@
     "result": "W"
    }
   }
+ },
+ "2026-10-25": {
+  "rebuilt": false,
+  "vibes": {
+   "any": {
+    "legs": [
+     {
+      "fact": "3 goals in his last 5",
+      "goals": 0,
+      "home": true,
+      "id": 8483493,
+      "name": "Frank Nazar",
+      "opp": "FLA",
+      "result": "loss",
+      "team": "CHI"
+     },
+     {
+      "fact": "4 goals in his last 5",
+      "goals": 0,
+      "home": true,
+      "id": 8478449,
+      "name": "Roope Hintz",
+      "opp": "NYI",
+      "result": "loss",
+      "team": "DAL"
+     },
+     {
+      "fact": "Owns Blackwood: 2 goals",
+      "goals": 1,
+      "home": true,
+      "id": 8476887,
+      "name": "Filip Forsberg",
+      "opp": "COL",
+      "result": "win",
+      "team": "NSH"
+     }
+    ],
+    "result": "L"
+   },
+   "chaos": {
+    "legs": [
+     {
+      "fact": "3 goals in his last 5",
+      "goals": 0,
+      "home": false,
+      "id": 8476981,
+      "name": "Josh Anderson",
+      "opp": "WPG",
+      "result": "loss",
+      "team": "MTL"
+     },
+     {
+      "fact": "3 goals in his last 5",
+      "goals": 0,
+      "home": false,
+      "id": 8476455,
+      "name": "Gabriel Landeskog",
+      "opp": "NSH",
+      "result": "loss",
+      "team": "COL"
+     },
+     {
+      "fact": "3 goals in his last 5",
+      "goals": 1,
+      "home": true,
+      "id": 8478420,
+      "name": "Mikko Rantanen",
+      "opp": "NYI",
+      "result": "win",
+      "team": "DAL"
+     }
+    ],
+    "result": "L"
+   },
+   "chris": {
+    "legs": [
+     {
+      "fact": "Chris's cozy pick",
+      "goals": 1,
+      "home": false,
+      "id": 8478864,
+      "name": "Kirill Kaprizov",
+      "opp": "VAN",
+      "result": "win",
+      "team": "MIN"
+     }
+    ],
+    "result": "W"
+   },
+   "dejavu": {
+    "legs": [
+     {
+      "fact": "Owns Sorokin: 5 goals",
+      "goals": 2,
+      "home": true,
+      "id": 8480027,
+      "name": "Jason Robertson",
+      "opp": "NYI",
+      "result": "win",
+      "team": "DAL"
+     },
+     {
+      "fact": "Owns Skinner: 4 goals",
+      "goals": 0,
+      "home": false,
+      "id": 8476479,
+      "name": "Phillip Danault",
+      "opp": "WPG",
+      "result": "loss",
+      "team": "MTL"
+     },
+     {
+      "fact": "Owns Schmid: 3 goals",
+      "goals": 0,
+      "home": true,
+      "id": 8477479,
+      "name": "Tyler Bertuzzi",
+      "opp": "FLA",
+      "result": "loss",
+      "team": "CHI"
+     }
+    ],
+    "result": "L"
+   },
+   "due": {
+    "legs": [
+     {
+      "fact": "Due: 4 games without a goal",
+      "goals": 0,
+      "home": false,
+      "id": 8481557,
+      "name": "Matt Boldy",
+      "opp": "VAN",
+      "result": "loss",
+      "team": "MIN"
+     }
+    ],
+    "result": "L"
+   },
+   "favourites": {
+    "legs": [
+     {
+      "fact": "Statistical favourite \u00b7 1st line \u00b7 PP1",
+      "goals": 1,
+      "home": false,
+      "id": 8478864,
+      "name": "Kirill Kaprizov",
+      "opp": "VAN",
+      "result": "win",
+      "team": "MIN"
+     },
+     {
+      "fact": "Statistical favourite \u00b7 1st line \u00b7 PP1",
+      "goals": 0,
+      "home": false,
+      "id": 8477492,
+      "name": "Nathan MacKinnon",
+      "opp": "NSH",
+      "result": "loss",
+      "team": "COL"
+     },
+     {
+      "fact": "Statistical favourite \u00b7 1st line \u00b7 PP1",
+      "goals": 0,
+      "home": false,
+      "id": 8481540,
+      "name": "Cole Caufield",
+      "opp": "WPG",
+      "result": "loss",
+      "team": "MTL"
+     }
+    ],
+    "result": "L"
+   },
+   "grudge": {
+    "legs": [
+     {
+      "fact": "Revenge game vs MIN",
+      "goals": 0,
+      "home": true,
+      "id": 8482079,
+      "name": "Marco Rossi",
+      "opp": "MIN",
+      "result": "loss",
+      "team": "VAN"
+     },
+     {
+      "fact": "Birthday twin with Colin Blackwell",
+      "goals": 0,
+      "home": false,
+      "id": 8476292,
+      "name": "Ondrej Palat",
+      "opp": "DAL",
+      "result": "loss",
+      "team": "NYI"
+     },
+     {
+      "fact": "Birthday twin with Radko Gudas",
+      "goals": 0,
+      "home": true,
+      "id": 8481568,
+      "name": "Alex Vlasic",
+      "opp": "FLA",
+      "result": "loss",
+      "team": "CHI"
+     }
+    ],
+    "result": "L"
+   },
+   "hot": {
+    "legs": [
+     {
+      "fact": "3 goals in his last 5",
+      "goals": 0,
+      "home": false,
+      "id": 8477935,
+      "name": "Sam Bennett",
+      "opp": "CHI",
+      "result": "loss",
+      "team": "FLA"
+     },
+     {
+      "fact": "3 goals in his last 5",
+      "goals": 0,
+      "home": false,
+      "id": 8481601,
+      "name": "Simon Holmstrom",
+      "opp": "DAL",
+      "result": "loss",
+      "team": "NYI"
+     },
+     {
+      "fact": "3 goals in his last 5",
+      "goals": 2,
+      "home": true,
+      "id": 8475158,
+      "name": "Ryan O'Reilly",
+      "opp": "COL",
+      "result": "win",
+      "team": "NSH"
+     }
+    ],
+    "result": "L"
+   },
+   "scammer": {
+    "L": 5,
+    "P": 0,
+    "W": 2,
+    "legs": [
+     {
+      "american": -110,
+      "fact": "Best short-price value: -110",
+      "goals": 1,
+      "home": false,
+      "id": 8478864,
+      "name": "Kirill Kaprizov",
+      "opp": "VAN",
+      "result": "win",
+      "team": "MIN",
+      "units": 0.91
+     },
+     {
+      "american": 120,
+      "fact": "Best short-price value: +120",
+      "goals": 0,
+      "home": false,
+      "id": 8481540,
+      "name": "Cole Caufield",
+      "opp": "WPG",
+      "result": "loss",
+      "team": "MTL",
+      "units": -1.0
+     },
+     {
+      "american": 210,
+      "fact": "Best mid-price value: +210",
+      "goals": 0,
+      "home": true,
+      "id": 8476460,
+      "name": "Mark Scheifele",
+      "opp": "MTL",
+      "result": "loss",
+      "team": "WPG",
+      "units": -1.0
+     },
+     {
+      "american": 215,
+      "fact": "Best mid-price value: +215",
+      "goals": 0,
+      "home": false,
+      "id": 8477500,
+      "name": "Bo Horvat",
+      "opp": "DAL",
+      "result": "loss",
+      "team": "NYI",
+      "units": -1.0
+     },
+     {
+      "american": 215,
+      "fact": "Best mid-price value: +215",
+      "goals": 1,
+      "home": false,
+      "id": 8477476,
+      "name": "Artturi Lehkonen",
+      "opp": "NSH",
+      "result": "win",
+      "team": "COL",
+      "units": 2.15
+     },
+     {
+      "american": 550,
+      "fact": "Best longshot value: +550",
+      "goals": 0,
+      "home": false,
+      "id": 8485388,
+      "name": "Victor Eklund",
+      "opp": "DAL",
+      "result": "loss",
+      "team": "NYI",
+      "units": -1.0
+     },
+     {
+      "american": 650,
+      "fact": "Best longshot value: +650",
+      "goals": 0,
+      "home": false,
+      "id": 8480448,
+      "name": "Parker Kelly",
+      "opp": "NSH",
+      "result": "loss",
+      "team": "COL",
+      "units": -1.0
+     }
+    ],
+    "result": "singles",
+    "units": -1.94
+   },
+   "theo": {
+    "legs": [
+     {
+      "fact": "Theo's gut feeling",
+      "goals": 0,
+      "home": false,
+      "id": 8477500,
+      "name": "Bo Horvat",
+      "opp": "DAL",
+      "result": "loss",
+      "team": "NYI"
+     }
+    ],
+    "result": "L"
+   }
+  }
  }
 }
