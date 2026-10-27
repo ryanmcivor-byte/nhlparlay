@@ -6009,5 +6009,370 @@
     "result": "L"
    }
   }
+ },
+ "2026-10-26": {
+  "rebuilt": false,
+  "vibes": {
+   "any": {
+    "legs": [
+     {
+      "fact": "Still chasing goal #1",
+      "goals": null,
+      "home": false,
+      "id": 8483756,
+      "name": "Jared Wright",
+      "opp": "NYR",
+      "result": "void",
+      "team": "LAK",
+      "why": "Didn't dress"
+     },
+     {
+      "fact": "3-game point streak",
+      "goals": 0,
+      "home": false,
+      "id": 8476853,
+      "name": "Morgan Rielly",
+      "opp": "CGY",
+      "result": "loss",
+      "team": "TOR"
+     },
+     {
+      "fact": "12 shots in his last 3",
+      "goals": 0,
+      "home": false,
+      "id": 8479337,
+      "name": "Alex DeBrincat",
+      "opp": "EDM",
+      "result": "loss",
+      "team": "DET"
+     }
+    ],
+    "result": "L"
+   },
+   "chaos": {
+    "legs": [
+     {
+      "fact": "It's his birthday",
+      "goals": 0,
+      "home": true,
+      "id": 8481604,
+      "name": "Pavel Dorofeyev",
+      "opp": "LAK",
+      "result": "loss",
+      "team": "NYR"
+     },
+     {
+      "fact": "Revenge game vs EDM",
+      "goals": 1,
+      "home": false,
+      "id": 8478042,
+      "name": "Viktor Arvidsson",
+      "opp": "EDM",
+      "result": "win",
+      "team": "DET"
+     },
+     {
+      "fact": "3-game point streak",
+      "goals": 0,
+      "home": false,
+      "id": 8478458,
+      "name": "Jack Roslovic",
+      "opp": "CGY",
+      "result": "loss",
+      "team": "TOR"
+     }
+    ],
+    "result": "L"
+   },
+   "chris": {
+    "legs": [
+     {
+      "fact": "Chris's cozy pick",
+      "goals": 0,
+      "home": true,
+      "id": 8477934,
+      "name": "Leon Draisaitl",
+      "opp": "DET",
+      "result": "loss",
+      "team": "EDM"
+     }
+    ],
+    "result": "L"
+   },
+   "dejavu": {
+    "legs": [
+     {
+      "fact": "Owns Gibson: 6 goals",
+      "goals": 0,
+      "home": true,
+      "id": 8477934,
+      "name": "Leon Draisaitl",
+      "opp": "DET",
+      "result": "loss",
+      "team": "EDM"
+     },
+     {
+      "fact": "Owns Wolf: 4 goals",
+      "goals": 1,
+      "home": false,
+      "id": 8477939,
+      "name": "William Nylander",
+      "opp": "CGY",
+      "result": "win",
+      "team": "TOR"
+     },
+     {
+      "fact": "Owns Kuemper: 4 goals",
+      "goals": 1,
+      "home": true,
+      "id": 8476468,
+      "name": "J.T. Miller",
+      "opp": "LAK",
+      "result": "win",
+      "team": "NYR"
+     }
+    ],
+    "result": "L"
+   },
+   "due": {
+    "legs": [
+     {
+      "fact": "Due: 8 games without a goal",
+      "goals": 1,
+      "home": false,
+      "id": 8477946,
+      "name": "Dylan Larkin",
+      "opp": "EDM",
+      "result": "win",
+      "team": "DET"
+     },
+     {
+      "fact": "Due: 14 games without a goal",
+      "goals": 0,
+      "home": false,
+      "id": 8478178,
+      "name": "Darren Raddysh",
+      "opp": "CGY",
+      "result": "loss",
+      "team": "TOR"
+     }
+    ],
+    "result": "L"
+   },
+   "favourites": {
+    "legs": [
+     {
+      "fact": "Statistical favourite \u00b7 1st line \u00b7 PP1",
+      "goals": 0,
+      "home": true,
+      "id": 8478402,
+      "name": "Connor McDavid",
+      "opp": "DET",
+      "result": "loss",
+      "team": "EDM"
+     },
+     {
+      "fact": "Statistical favourite \u00b7 1st line \u00b7 PP1",
+      "goals": 0,
+      "home": false,
+      "id": 8479318,
+      "name": "Auston Matthews",
+      "opp": "CGY",
+      "result": "loss",
+      "team": "TOR"
+     },
+     {
+      "fact": "Statistical favourite \u00b7 1st line \u00b7 PP1",
+      "goals": 0,
+      "home": false,
+      "id": 8477960,
+      "name": "Adrian Kempe",
+      "opp": "NYR",
+      "result": "loss",
+      "team": "LAK"
+     }
+    ],
+    "result": "L"
+   },
+   "grudge": {
+    "legs": [
+     {
+      "fact": "Revenge game vs DET",
+      "goals": 0,
+      "home": true,
+      "id": 8478013,
+      "name": "Jake Walman",
+      "opp": "DET",
+      "result": "loss",
+      "team": "EDM"
+     },
+     {
+      "fact": "Old team: NYR",
+      "goals": null,
+      "home": false,
+      "id": 8475692,
+      "name": "Mats Zuccarello",
+      "opp": "NYR",
+      "result": "void",
+      "team": "LAK",
+      "why": "Didn't dress"
+     },
+     {
+      "fact": "Birthday twin with Dakota Mermis",
+      "goals": 0,
+      "home": true,
+      "id": 8482747,
+      "name": "Brennan Othmann",
+      "opp": "TOR",
+      "result": "loss",
+      "team": "CGY"
+     }
+    ],
+    "result": "L"
+   },
+   "hot": {
+    "legs": [
+     {
+      "fact": "5-game point streak",
+      "goals": 0,
+      "home": true,
+      "id": 8480803,
+      "name": "Evan Bouchard",
+      "opp": "DET",
+      "result": "loss",
+      "team": "EDM"
+     },
+     {
+      "fact": "3 goals in his last 5",
+      "goals": 0,
+      "home": true,
+      "id": 8477416,
+      "name": "Oliver Bjorkstrand",
+      "opp": "LAK",
+      "result": "loss",
+      "team": "NYR"
+     },
+     {
+      "fact": "Goals in 2 straight",
+      "goals": 1,
+      "home": true,
+      "id": 8480797,
+      "name": "Joel Farabee",
+      "opp": "TOR",
+      "result": "win",
+      "team": "CGY"
+     }
+    ],
+    "result": "L"
+   },
+   "scammer": {
+    "L": 5,
+    "P": 0,
+    "W": 2,
+    "legs": [
+     {
+      "american": 100,
+      "fact": "Best short-price value: +100",
+      "goals": 0,
+      "home": true,
+      "id": 8477934,
+      "name": "Leon Draisaitl",
+      "opp": "DET",
+      "result": "loss",
+      "team": "EDM",
+      "units": -1.0
+     },
+     {
+      "american": 170,
+      "fact": "Best short-price value: +170",
+      "goals": 0,
+      "home": false,
+      "id": 8479337,
+      "name": "Alex DeBrincat",
+      "opp": "EDM",
+      "result": "loss",
+      "team": "DET",
+      "units": -1.0
+     },
+     {
+      "american": 235,
+      "fact": "Best mid-price value: +235",
+      "goals": 1,
+      "home": false,
+      "id": 8477946,
+      "name": "Dylan Larkin",
+      "opp": "EDM",
+      "result": "win",
+      "team": "DET",
+      "units": 2.35
+     },
+     {
+      "american": 245,
+      "fact": "Best mid-price value: +245",
+      "goals": 0,
+      "home": false,
+      "id": 8482078,
+      "name": "Lucas Raymond",
+      "opp": "EDM",
+      "result": "loss",
+      "team": "DET",
+      "units": -1.0
+     },
+     {
+      "american": 265,
+      "fact": "Best mid-price value: +265",
+      "goals": 1,
+      "home": false,
+      "id": 8478042,
+      "name": "Viktor Arvidsson",
+      "opp": "EDM",
+      "result": "win",
+      "team": "DET",
+      "units": 2.65
+     },
+     {
+      "american": 750,
+      "fact": "Best longshot value: +750",
+      "goals": 0,
+      "home": true,
+      "id": 8486161,
+      "name": "Owen Michaels",
+      "opp": "DET",
+      "result": "loss",
+      "team": "EDM",
+      "units": -1.0
+     },
+     {
+      "american": 1500,
+      "fact": "Best longshot value: +1500",
+      "goals": 0,
+      "home": true,
+      "id": 8478013,
+      "name": "Jake Walman",
+      "opp": "DET",
+      "result": "loss",
+      "team": "EDM",
+      "units": -1.0
+     }
+    ],
+    "result": "singles",
+    "units": 0.0
+   },
+   "theo": {
+    "legs": [
+     {
+      "fact": "Theo's gut feeling",
+      "goals": 0,
+      "home": false,
+      "id": 8477456,
+      "name": "J.T. Compher",
+      "opp": "EDM",
+      "result": "loss",
+      "team": "DET"
+     }
+    ],
+    "result": "L"
+   }
+  }
  }
 }
