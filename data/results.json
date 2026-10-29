@@ -6747,5 +6747,368 @@
     "result": "L"
    }
   }
+ },
+ "2026-10-28": {
+  "rebuilt": false,
+  "vibes": {
+   "any": {
+    "legs": [
+     {
+      "fact": "Same name across the ice",
+      "goals": 0,
+      "home": false,
+      "id": 8481559,
+      "name": "Jack Hughes",
+      "opp": "COL",
+      "result": "loss",
+      "team": "NJD"
+     },
+     {
+      "fact": "4-game point streak",
+      "goals": 1,
+      "home": true,
+      "id": 8484800,
+      "name": "Berkly Catton",
+      "opp": "TOR",
+      "result": "win",
+      "team": "SEA"
+     },
+     {
+      "fact": "Old team: EDM",
+      "goals": 0,
+      "home": false,
+      "id": 8476458,
+      "name": "Ryan Strome",
+      "opp": "EDM",
+      "result": "loss",
+      "team": "CGY"
+     }
+    ],
+    "result": "L"
+   },
+   "chaos": {
+    "legs": [
+     {
+      "fact": "Just scored on COL",
+      "goals": 0,
+      "home": false,
+      "id": 8482146,
+      "name": "Luke Evangelista",
+      "opp": "COL",
+      "result": "loss",
+      "team": "NJD"
+     },
+     {
+      "fact": "3-game point streak",
+      "goals": 0,
+      "home": false,
+      "id": 8482142,
+      "name": "Jamie Drysdale",
+      "opp": "WSH",
+      "result": "loss",
+      "team": "PHI"
+     },
+     {
+      "fact": "4 goals in his last 5",
+      "goals": 0,
+      "home": true,
+      "id": 8478402,
+      "name": "Connor McDavid",
+      "opp": "CGY",
+      "result": "loss",
+      "team": "EDM"
+     }
+    ],
+    "result": "L"
+   },
+   "chris": {
+    "legs": [
+     {
+      "fact": "Chris's cozy pick",
+      "goals": 0,
+      "home": true,
+      "id": 8477934,
+      "name": "Leon Draisaitl",
+      "opp": "CGY",
+      "result": "loss",
+      "team": "EDM"
+     }
+    ],
+    "result": "L"
+   },
+   "dejavu": {
+    "legs": [
+     {
+      "fact": "Owns Allen: 7 goals",
+      "goals": 0,
+      "home": true,
+      "id": 8477476,
+      "name": "Artturi Lehkonen",
+      "opp": "NJD",
+      "result": "loss",
+      "team": "COL"
+     },
+     {
+      "fact": "Owns Thompson: 3 goals",
+      "goals": 0,
+      "home": false,
+      "id": 8477989,
+      "name": "Christian Dvorak",
+      "opp": "WSH",
+      "result": "loss",
+      "team": "PHI"
+     },
+     {
+      "fact": "Owns Bobrovsky: 3 goals",
+      "goals": 1,
+      "home": true,
+      "id": 8476905,
+      "name": "Chandler Stephenson",
+      "opp": "TOR",
+      "result": "win",
+      "team": "SEA"
+     }
+    ],
+    "result": "L"
+   },
+   "due": {
+    "legs": [
+     {
+      "fact": "Due: 15 games without a goal",
+      "goals": 0,
+      "home": false,
+      "id": 8478178,
+      "name": "Darren Raddysh",
+      "opp": "SEA",
+      "result": "loss",
+      "team": "TOR"
+     },
+     {
+      "fact": "Due: 9 games without a goal",
+      "goals": 0,
+      "home": true,
+      "id": 8479345,
+      "name": "Jakob Chychrun",
+      "opp": "PHI",
+      "result": "loss",
+      "team": "WSH"
+     }
+    ],
+    "result": "L"
+   },
+   "favourites": {
+    "legs": [
+     {
+      "fact": "Statistical favourite \u00b7 1st line \u00b7 PP1",
+      "goals": 0,
+      "home": true,
+      "id": 8477934,
+      "name": "Leon Draisaitl",
+      "opp": "CGY",
+      "result": "loss",
+      "team": "EDM"
+     },
+     {
+      "fact": "Statistical favourite \u00b7 1st line \u00b7 PP1",
+      "goals": 1,
+      "home": true,
+      "id": 8477492,
+      "name": "Nathan MacKinnon",
+      "opp": "NJD",
+      "result": "win",
+      "team": "COL"
+     },
+     {
+      "fact": "Statistical favourite \u00b7 2nd line \u00b7 PP1",
+      "goals": 0,
+      "home": false,
+      "id": 8477939,
+      "name": "William Nylander",
+      "opp": "SEA",
+      "result": "loss",
+      "team": "TOR"
+     }
+    ],
+    "result": "L"
+   },
+   "grudge": {
+    "legs": [
+     {
+      "fact": "Same name across the ice",
+      "goals": 0,
+      "home": false,
+      "id": 8482684,
+      "name": "Luke Hughes",
+      "opp": "COL",
+      "result": "loss",
+      "team": "NJD"
+     },
+     {
+      "fact": "First game with the Capitals",
+      "goals": 0,
+      "home": true,
+      "id": 8481030,
+      "name": "Jack St. Ivany",
+      "opp": "PHI",
+      "result": "loss",
+      "team": "WSH"
+     },
+     {
+      "fact": "FIRST game vs his old team",
+      "goals": 0,
+      "home": true,
+      "id": 8482259,
+      "name": "Bobby McMann",
+      "opp": "TOR",
+      "result": "loss",
+      "team": "SEA"
+     }
+    ],
+    "result": "L"
+   },
+   "hot": {
+    "legs": [
+     {
+      "fact": "4 goals in his last 5",
+      "goals": 2,
+      "home": true,
+      "id": 8477949,
+      "name": "Alex Tuch",
+      "opp": "PHI",
+      "result": "win",
+      "team": "WSH"
+     },
+     {
+      "fact": "Goals in 3 straight",
+      "goals": 0,
+      "home": false,
+      "id": 8480797,
+      "name": "Joel Farabee",
+      "opp": "EDM",
+      "result": "loss",
+      "team": "CGY"
+     },
+     {
+      "fact": "4 goals in his last 5",
+      "goals": 0,
+      "home": false,
+      "id": 8481721,
+      "name": "Arseny Gritsyuk",
+      "opp": "COL",
+      "result": "loss",
+      "team": "NJD"
+     }
+    ],
+    "result": "L"
+   },
+   "scammer": {
+    "L": 4,
+    "P": 0,
+    "W": 3,
+    "legs": [
+     {
+      "american": -120,
+      "fact": "Best short-price value: -120",
+      "goals": 0,
+      "home": true,
+      "id": 8477934,
+      "name": "Leon Draisaitl",
+      "opp": "CGY",
+      "result": "loss",
+      "team": "EDM",
+      "units": -1.0
+     },
+     {
+      "american": 125,
+      "fact": "Best short-price value: +125",
+      "goals": 1,
+      "home": true,
+      "id": 8477492,
+      "name": "Nathan MacKinnon",
+      "opp": "NJD",
+      "result": "win",
+      "team": "COL",
+      "units": 1.25
+     },
+     {
+      "american": 205,
+      "fact": "Best mid-price value: +205",
+      "goals": 2,
+      "home": true,
+      "id": 8477949,
+      "name": "Alex Tuch",
+      "opp": "PHI",
+      "result": "win",
+      "team": "WSH",
+      "units": 2.05
+     },
+     {
+      "american": 500,
+      "fact": "Best mid-price value: +500",
+      "goals": 0,
+      "home": false,
+      "id": 8477511,
+      "name": "Anthony Mantha",
+      "opp": "COL",
+      "result": "loss",
+      "team": "NJD",
+      "units": -1.0
+     },
+     {
+      "american": 500,
+      "fact": "Best mid-price value: +500",
+      "goals": 0,
+      "home": false,
+      "id": 8483787,
+      "name": "Cole Knuble",
+      "opp": "WSH",
+      "result": "loss",
+      "team": "PHI",
+      "units": -1.0
+     },
+     {
+      "american": 700,
+      "fact": "Best longshot value: +700",
+      "goals": 2,
+      "home": false,
+      "id": 8477015,
+      "name": "Connor Brown",
+      "opp": "COL",
+      "result": "win",
+      "team": "NJD",
+      "units": 7.0
+     },
+     {
+      "american": 700,
+      "fact": "Best longshot value: +700",
+      "goals": 0,
+      "home": false,
+      "id": 8479996,
+      "name": "Cody Glass",
+      "opp": "COL",
+      "result": "loss",
+      "team": "NJD",
+      "units": -1.0
+     }
+    ],
+    "result": "singles",
+    "units": 6.3
+   },
+   "theo": {
+    "legs": [
+     {
+      "fact": "Theo's gut feeling",
+      "goals": 0,
+      "home": false,
+      "id": 8482747,
+      "name": "Brennan Othmann",
+      "opp": "EDM",
+      "result": "loss",
+      "team": "CGY"
+     }
+    ],
+    "result": "L"
+   }
+  }
  }
 }
