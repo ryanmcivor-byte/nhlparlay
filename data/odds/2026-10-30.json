@@ -1,0 +1,853 @@
+{
+"date": "2026-10-30",
+"rows": [
+{
+"id": 8478483,
+"name": "Mitch Marner",
+"team": "VGK",
+"gameId": 2026020214,
+"pModel": 0.247,
+"american": 250
+},
+{
+"id": 8477409,
+"name": "Carter Verhaeghe",
+"team": "FLA",
+"gameId": 2026020215,
+"pModel": 0.283,
+"american": 170
+},
+{
+"id": 8482858,
+"name": "Ryker Evans",
+"team": "SEA",
+"gameId": 2026020216,
+"pModel": 0.111,
+"american": 950
+},
+{
+"id": 8477015,
+"name": "Connor Brown",
+"team": "NJD",
+"gameId": 2026020214,
+"pModel": 0.198,
+"american": 650
+},
+{
+"id": 8476392,
+"name": "Adam Lowry",
+"team": "WPG",
+"gameId": 2026020215,
+"pModel": 0.123,
+"american": 750
+},
+{
+"id": 8484800,
+"name": "Berkly Catton",
+"team": "SEA",
+"gameId": 2026020216,
+"pModel": 0.145,
+"american": 425
+},
+{
+"id": 8477986,
+"name": "Brandon Montour",
+"team": "SEA",
+"gameId": 2026020216,
+"pModel": 0.173,
+"american": 475
+},
+{
+"id": 8483524,
+"name": "Shane Wright",
+"team": "SEA",
+"gameId": 2026020216,
+"pModel": 0.177,
+"american": 340
+},
+{
+"id": 8480003,
+"name": "Jesper Boqvist",
+"team": "NJD",
+"gameId": 2026020214,
+"pModel": 0.121,
+"american": 475
+},
+{
+"id": 8475913,
+"name": "Mark Stone",
+"team": "VGK",
+"gameId": 2026020214,
+"pModel": 0.339,
+"american": 190
+},
+{
+"id": 8475179,
+"name": "Dmitry Kulikov",
+"team": "FLA",
+"gameId": 2026020215,
+"pModel": 0.032,
+"american": 2000
+},
+{
+"id": 8477964,
+"name": "Ivan Barbashev",
+"team": "VGK",
+"gameId": 2026020214,
+"pModel": 0.226,
+"american": 350
+},
+{
+"id": 8478403,
+"name": "Jack Eichel",
+"team": "VGK",
+"gameId": 2026020214,
+"pModel": 0.311,
+"american": 180
+},
+{
+"id": 8476448,
+"name": "William Karlsson",
+"team": "VGK",
+"gameId": 2026020214,
+"pModel": 0.188,
+"american": 390
+},
+{
+"id": 8484860,
+"name": "Matvei Gridin",
+"team": "CGY",
+"gameId": 2026020216,
+"pModel": 0.193,
+"american": 215
+},
+{
+"id": 8481721,
+"name": "Arseny Gritsyuk",
+"team": "NJD",
+"gameId": 2026020214,
+"pModel": 0.222,
+"american": 295
+},
+{
+"id": 8480002,
+"name": "Nico Hischier",
+"team": "NJD",
+"gameId": 2026020214,
+"pModel": 0.322,
+"american": 195
+},
+{
+"id": 8478397,
+"name": "Rasmus Andersson",
+"team": "VGK",
+"gameId": 2026020214,
+"pModel": 0.158,
+"american": 900
+},
+{
+"id": 8480145,
+"name": "Neal Pionk",
+"team": "WPG",
+"gameId": 2026020215,
+"pModel": 0.109,
+"american": 800
+},
+{
+"id": 8477935,
+"name": "Sam Bennett",
+"team": "FLA",
+"gameId": 2026020215,
+"pModel": 0.269,
+"american": 205
+},
+{
+"id": 8479314,
+"name": "Matthew Tkachuk",
+"team": "FLA",
+"gameId": 2026020215,
+"pModel": 0.309,
+"american": 170
+},
+{
+"id": 8480797,
+"name": "Joel Farabee",
+"team": "CGY",
+"gameId": 2026020216,
+"pModel": 0.191,
+"american": 195
+},
+{
+"id": 8481559,
+"name": "Jack Hughes",
+"team": "NJD",
+"gameId": 2026020214,
+"pModel": 0.329,
+"american": 165
+},
+{
+"id": 8483695,
+"name": "Amadeus Lombardi",
+"team": "NJD",
+"gameId": 2026020214,
+"pModel": 0.07,
+"american": 800
+},
+{
+"id": 8477511,
+"name": "Anthony Mantha",
+"team": "NJD",
+"gameId": 2026020214,
+"pModel": 0.298,
+"american": 400
+},
+{
+"id": 8478414,
+"name": "Timo Meier",
+"team": "NJD",
+"gameId": 2026020214,
+"pModel": 0.241,
+"american": 255
+},
+{
+"id": 8486025,
+"name": "Viggo Bj\u00f6rck",
+"team": "WPG",
+"gameId": 2026020215,
+"pModel": 0.063,
+"american": 550
+},
+{
+"id": 8476460,
+"name": "Mark Scheifele",
+"team": "WPG",
+"gameId": 2026020215,
+"pModel": 0.327,
+"american": 250
+},
+{
+"id": 8482665,
+"name": "Matty Beniers",
+"team": "SEA",
+"gameId": 2026020216,
+"pModel": 0.212,
+"american": 265
+},
+{
+"id": 8474586,
+"name": "Jordan Eberle",
+"team": "SEA",
+"gameId": 2026020216,
+"pModel": 0.255,
+"american": 225
+},
+{
+"id": 8476905,
+"name": "Chandler Stephenson",
+"team": "SEA",
+"gameId": 2026020216,
+"pModel": 0.169,
+"american": 350
+},
+{
+"id": 8484154,
+"name": "Jonathan Castagna",
+"team": "CGY",
+"gameId": 2026020216,
+"pModel": 0.078,
+"american": 650
+},
+{
+"id": 8479353,
+"name": "Brett Howden",
+"team": "VGK",
+"gameId": 2026020214,
+"pModel": 0.225,
+"american": 350
+},
+{
+"id": 8475188,
+"name": "Brayden McNabb",
+"team": "VGK",
+"gameId": 2026020214,
+"pModel": 0.059,
+"american": 1600
+},
+{
+"id": 8478398,
+"name": "Kyle Connor",
+"team": "WPG",
+"gameId": 2026020215,
+"pModel": 0.394,
+"american": 170
+},
+{
+"id": 8477933,
+"name": "Sam Reinhart",
+"team": "FLA",
+"gameId": 2026020215,
+"pModel": 0.36,
+"american": 160
+},
+{
+"id": 8480801,
+"name": "Brady Tkachuk",
+"team": "FLA",
+"gameId": 2026020215,
+"pModel": 0.331,
+"american": 125
+},
+{
+"id": 8478859,
+"name": "Niko Mikkola",
+"team": "FLA",
+"gameId": 2026020215,
+"pModel": 0.069,
+"american": 1200
+},
+{
+"id": 8477919,
+"name": "Frederick Gaudreau",
+"team": "SEA",
+"gameId": 2026020216,
+"pModel": 0.177,
+"american": 425
+},
+{
+"id": 8481554,
+"name": "Kaapo Kakko",
+"team": "SEA",
+"gameId": 2026020216,
+"pModel": 0.17,
+"american": 285
+},
+{
+"id": 8482259,
+"name": "Bobby McMann",
+"team": "SEA",
+"gameId": 2026020216,
+"pModel": 0.27,
+"american": 175
+},
+{
+"id": 8482713,
+"name": "Mackie Samoskevich",
+"team": "SEA",
+"gameId": 2026020216,
+"pModel": 0.185,
+"american": 310
+},
+{
+"id": 8478407,
+"name": "Vince Dunn",
+"team": "SEA",
+"gameId": 2026020216,
+"pModel": 0.133,
+"american": 500
+},
+{
+"id": 8479372,
+"name": "Josh Mahura",
+"team": "SEA",
+"gameId": 2026020216,
+"pModel": 0.039,
+"american": 1800
+},
+{
+"id": 8479996,
+"name": "Cody Glass",
+"team": "NJD",
+"gameId": 2026020214,
+"pModel": 0.175,
+"american": 650
+},
+{
+"id": 8476458,
+"name": "Ryan Strome",
+"team": "CGY",
+"gameId": 2026020216,
+"pModel": 0.138,
+"american": 400
+},
+{
+"id": 8479985,
+"name": "Cale Fleury",
+"team": "SEA",
+"gameId": 2026020216,
+"pModel": 0.036,
+"american": 1700
+},
+{
+"id": 8476457,
+"name": "Adam Larsson",
+"team": "SEA",
+"gameId": 2026020216,
+"pModel": 0.071,
+"american": 1300
+},
+{
+"id": 8481028,
+"name": "Martin Pospisil",
+"team": "CGY",
+"gameId": 2026020216,
+"pModel": 0.084,
+"american": 550
+},
+{
+"id": 8479407,
+"name": "Jesper Bratt",
+"team": "NJD",
+"gameId": 2026020214,
+"pModel": 0.218,
+"american": 265
+},
+{
+"id": 8482146,
+"name": "Luke Evangelista",
+"team": "NJD",
+"gameId": 2026020214,
+"pModel": 0.154,
+"american": 285
+},
+{
+"id": 8478542,
+"name": "Evan Rodrigues",
+"team": "NJD",
+"gameId": 2026020214,
+"pModel": 0.155,
+"american": 475
+},
+{
+"id": 8480990,
+"name": "Declan Chisholm",
+"team": "NJD",
+"gameId": 2026020214,
+"pModel": 0.048,
+"american": 1600
+},
+{
+"id": 8475455,
+"name": "Brenden Dillon",
+"team": "NJD",
+"gameId": 2026020214,
+"pModel": 0.032,
+"american": 1600
+},
+{
+"id": 8476462,
+"name": "Dougie Hamilton",
+"team": "NJD",
+"gameId": 2026020214,
+"pModel": 0.126,
+"american": 700
+},
+{
+"id": 8482684,
+"name": "Luke Hughes",
+"team": "NJD",
+"gameId": 2026020214,
+"pModel": 0.115,
+"american": 425
+},
+{
+"id": 8477488,
+"name": "Brett Pesce",
+"team": "NJD",
+"gameId": 2026020214,
+"pModel": 0.045,
+"american": 1600
+},
+{
+"id": 8478399,
+"name": "Jonas Siegenthaler",
+"team": "NJD",
+"gameId": 2026020214,
+"pModel": 0.012,
+"american": 1800
+},
+{
+"id": 8483890,
+"name": "Braeden Bowman",
+"team": "VGK",
+"gameId": 2026020214,
+"pModel": 0.156,
+"american": 475
+},
+{
+"id": 8484803,
+"name": "Trevor Connelly",
+"team": "VGK",
+"gameId": 2026020214,
+"pModel": 0.225,
+"american": 300
+},
+{
+"id": 8475343,
+"name": "Nic Dowd",
+"team": "VGK",
+"gameId": 2026020214,
+"pModel": 0.09,
+"american": 1000
+},
+{
+"id": 8483553,
+"name": "Marc Gatcomb",
+"team": "VGK",
+"gameId": 2026020214,
+"pModel": 0.099,
+"american": 900
+},
+{
+"id": 8476881,
+"name": "Tomas Hertl",
+"team": "VGK",
+"gameId": 2026020214,
+"pModel": 0.281,
+"american": 250
+},
+{
+"id": 8481534,
+"name": "Raphael Lavoie",
+"team": "VGK",
+"gameId": 2026020214,
+"pModel": 0.106,
+"american": 1000
+},
+{
+"id": 8478396,
+"name": "Noah Hanifin",
+"team": "VGK",
+"gameId": 2026020214,
+"pModel": 0.079,
+"american": 1200
+},
+{
+"id": 8481572,
+"name": "Ville Heinola",
+"team": "VGK",
+"gameId": 2026020214,
+"pModel": 0.028,
+"american": 1600
+},
+{
+"id": 8478468,
+"name": "Jeremy Lauzon",
+"team": "VGK",
+"gameId": 2026020214,
+"pModel": 0.015,
+"american": 1900
+},
+{
+"id": 8477447,
+"name": "Shea Theodore",
+"team": "VGK",
+"gameId": 2026020214,
+"pModel": 0.12,
+"american": 550
+},
+{
+"id": 8480289,
+"name": "Morgan Barron",
+"team": "WPG",
+"gameId": 2026020215,
+"pModel": 0.121,
+"american": 850
+},
+{
+"id": 8480113,
+"name": "Alex Iafallo",
+"team": "WPG",
+"gameId": 2026020215,
+"pModel": 0.165,
+"american": 600
+},
+{
+"id": 8481043,
+"name": "Cole Koepke",
+"team": "WPG",
+"gameId": 2026020215,
+"pModel": 0.121,
+"american": 850
+},
+{
+"id": 8483471,
+"name": "Brad Lambert",
+"team": "WPG",
+"gameId": 2026020215,
+"pModel": 0.087,
+"american": 800
+},
+{
+"id": 8482110,
+"name": "Dawson Mercer",
+"team": "WPG",
+"gameId": 2026020215,
+"pModel": 0.186,
+"american": 425
+},
+{
+"id": 8482149,
+"name": "Cole Perfetti",
+"team": "WPG",
+"gameId": 2026020215,
+"pModel": 0.206,
+"american": 280
+},
+{
+"id": 8482765,
+"name": "Isak Rosen",
+"team": "WPG",
+"gameId": 2026020215,
+"pModel": 0.125,
+"american": 550
+},
+{
+"id": 8480014,
+"name": "Gabriel Vilardi",
+"team": "WPG",
+"gameId": 2026020215,
+"pModel": 0.273,
+"american": 285
+},
+{
+"id": 8476331,
+"name": "Dylan DeMelo",
+"team": "WPG",
+"gameId": 2026020215,
+"pModel": 0.043,
+"american": 2000
+},
+{
+"id": 8479983,
+"name": "Mario Ferraro",
+"team": "WPG",
+"gameId": 2026020215,
+"pModel": 0.075,
+"american": 1600
+},
+{
+"id": 8477938,
+"name": "Haydn Fleury",
+"team": "WPG",
+"gameId": 2026020215,
+"pModel": 0.034,
+"american": 1700
+},
+{
+"id": 8483510,
+"name": "Elias Salomonsson",
+"team": "WPG",
+"gameId": 2026020215,
+"pModel": 0.036,
+"american": 800
+},
+{
+"id": 8480049,
+"name": "Dylan Samberg",
+"team": "WPG",
+"gameId": 2026020215,
+"pModel": 0.048,
+"american": 1600
+},
+{
+"id": 8474189,
+"name": "Lars Eller",
+"team": "FLA",
+"gameId": 2026020215,
+"pModel": 0.093,
+"american": 475
+},
+{
+"id": 8477903,
+"name": "Garnet Hathaway",
+"team": "FLA",
+"gameId": 2026020215,
+"pModel": 0.06,
+"american": 850
+},
+{
+"id": 8478147,
+"name": "Bokondji Imama",
+"team": "FLA",
+"gameId": 2026020215,
+"pModel": 0.059,
+"american": 950
+},
+{
+"id": 8482113,
+"name": "Anton Lundell",
+"team": "FLA",
+"gameId": 2026020215,
+"pModel": 0.201,
+"american": 260
+},
+{
+"id": 8480185,
+"name": "Eetu Luostarinen",
+"team": "FLA",
+"gameId": 2026020215,
+"pModel": 0.134,
+"american": 350
+},
+{
+"id": 8481655,
+"name": "Cole Schwindt",
+"team": "FLA",
+"gameId": 2026020215,
+"pModel": 0.106,
+"american": 750
+},
+{
+"id": 8483771,
+"name": "Sandis Vilmanis",
+"team": "FLA",
+"gameId": 2026020215,
+"pModel": 0.128,
+"american": 500
+},
+{
+"id": 8477932,
+"name": "Aaron Ekblad",
+"team": "FLA",
+"gameId": 2026020215,
+"pModel": 0.048,
+"american": 800
+},
+{
+"id": 8478055,
+"name": "Gustav Forsling",
+"team": "FLA",
+"gameId": 2026020215,
+"pModel": 0.064,
+"american": 950
+},
+{
+"id": 8475462,
+"name": "Radko Gudas",
+"team": "FLA",
+"gameId": 2026020215,
+"pModel": 0.026,
+"american": 2000
+},
+{
+"id": 8477495,
+"name": "Seth Jones",
+"team": "FLA",
+"gameId": 2026020215,
+"pModel": 0.114,
+"american": 450
+},
+{
+"id": 8483570,
+"name": "Ben Meyers",
+"team": "SEA",
+"gameId": 2026020216,
+"pModel": 0.119,
+"american": 750
+},
+{
+"id": 8483497,
+"name": "Jani Nyman",
+"team": "SEA",
+"gameId": 2026020216,
+"pModel": 0.15,
+"american": 425
+},
+{
+"id": 8482751,
+"name": "Ryan Winterton",
+"team": "SEA",
+"gameId": 2026020216,
+"pModel": 0.083,
+"american": 750
+},
+{
+"id": 8474150,
+"name": "Mikael Backlund",
+"team": "CGY",
+"gameId": 2026020216,
+"pModel": 0.184,
+"american": 390
+},
+{
+"id": 8482679,
+"name": "Matt Coronato",
+"team": "CGY",
+"gameId": 2026020216,
+"pModel": 0.212,
+"american": 200
+},
+{
+"id": 8480028,
+"name": "Morgan Frost",
+"team": "CGY",
+"gameId": 2026020216,
+"pModel": 0.21,
+"american": 220
+},
+{
+"id": 8483609,
+"name": "Adam Klapka",
+"team": "CGY",
+"gameId": 2026020216,
+"pModel": 0.107,
+"american": 425
+},
+{
+"id": 8481068,
+"name": "Yegor Sharangovich",
+"team": "CGY",
+"gameId": 2026020216,
+"pModel": 0.181,
+"american": 280
+},
+{
+"id": 8484234,
+"name": "Aydar Suniev",
+"team": "CGY",
+"gameId": 2026020216,
+"pModel": 0.193,
+"american": 360
+},
+{
+"id": 8480860,
+"name": "Kevin Bahl",
+"team": "CGY",
+"gameId": 2026020216,
+"pModel": 0.053,
+"american": 1100
+},
+{
+"id": 8482165,
+"name": "Yan Kuznetsov",
+"team": "CGY",
+"gameId": 2026020216,
+"pModel": 0.055,
+"american": 1200
+},
+{
+"id": 8483495,
+"name": "Simon Nemec",
+"team": "CGY",
+"gameId": 2026020216,
+"pModel": 0.11,
+"american": 1000
+},
+{
+"id": 8484768,
+"name": "Zayne Parekh",
+"team": "CGY",
+"gameId": 2026020216,
+"pModel": 0.098,
+"american": 500
+},
+{
+"id": 8480727,
+"name": "Zach Whitecloud",
+"team": "CGY",
+"gameId": 2026020216,
+"pModel": 0.032,
+"american": 1900
+}
+]
+}
