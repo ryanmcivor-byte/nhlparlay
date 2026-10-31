@@ -7484,5 +7484,368 @@
     "result": "L"
    }
   }
+ },
+ "2026-10-30": {
+  "rebuilt": false,
+  "vibes": {
+   "any": {
+    "legs": [
+     {
+      "fact": "Owns Wolf: 3 goals",
+      "goals": 0,
+      "home": false,
+      "id": 8476905,
+      "name": "Chandler Stephenson",
+      "opp": "CGY",
+      "result": "loss",
+      "team": "SEA"
+     },
+     {
+      "fact": "Career game #900",
+      "goals": 0,
+      "home": true,
+      "id": 8475188,
+      "name": "Brayden McNabb",
+      "opp": "NJD",
+      "result": "loss",
+      "team": "VGK"
+     },
+     {
+      "fact": "Drama alert",
+      "goals": 0,
+      "home": true,
+      "id": 8479314,
+      "name": "Matthew Tkachuk",
+      "opp": "WPG",
+      "result": "loss",
+      "team": "FLA"
+     }
+    ],
+    "result": "L"
+   },
+   "chaos": {
+    "legs": [
+     {
+      "fact": "3 goals in his last 5",
+      "goals": 0,
+      "home": false,
+      "id": 8477986,
+      "name": "Brandon Montour",
+      "opp": "CGY",
+      "result": "loss",
+      "team": "SEA"
+     },
+     {
+      "fact": "Owns Hellebuyck: 5 goals",
+      "goals": 0,
+      "home": true,
+      "id": 8476448,
+      "name": "William Karlsson",
+      "opp": "NJD",
+      "result": "loss",
+      "team": "VGK"
+     },
+     {
+      "fact": "Just scored on WPG",
+      "goals": 0,
+      "home": true,
+      "id": 8478859,
+      "name": "Niko Mikkola",
+      "opp": "WPG",
+      "result": "loss",
+      "team": "FLA"
+     }
+    ],
+    "result": "L"
+   },
+   "chris": {
+    "legs": [
+     {
+      "fact": "Chris's cozy pick",
+      "goals": 1,
+      "home": false,
+      "id": 8478398,
+      "name": "Kyle Connor",
+      "opp": "FLA",
+      "result": "win",
+      "team": "WPG"
+     }
+    ],
+    "result": "W"
+   },
+   "dejavu": {
+    "legs": [
+     {
+      "fact": "Owns Hellebuyck: 8 goals",
+      "goals": 1,
+      "home": true,
+      "id": 8475913,
+      "name": "Mark Stone",
+      "opp": "NJD",
+      "result": "win",
+      "team": "VGK"
+     },
+     {
+      "fact": "Owns Wolf: 3 goals",
+      "goals": 0,
+      "home": false,
+      "id": 8483524,
+      "name": "Shane Wright",
+      "opp": "CGY",
+      "result": "loss",
+      "team": "SEA"
+     },
+     {
+      "fact": "Owns Schmid: 2 goals",
+      "goals": 1,
+      "home": false,
+      "id": 8478398,
+      "name": "Kyle Connor",
+      "opp": "FLA",
+      "result": "win",
+      "team": "WPG"
+     }
+    ],
+    "result": "L"
+   },
+   "due": {
+    "legs": [
+     {
+      "fact": "Due: 5 games without a goal",
+      "goals": 0,
+      "home": false,
+      "id": 8476460,
+      "name": "Mark Scheifele",
+      "opp": "FLA",
+      "result": "loss",
+      "team": "WPG"
+     },
+     {
+      "fact": "Due: 5 games without a goal",
+      "goals": 0,
+      "home": false,
+      "id": 8478414,
+      "name": "Timo Meier",
+      "opp": "VGK",
+      "result": "loss",
+      "team": "NJD"
+     }
+    ],
+    "result": "L"
+   },
+   "favourites": {
+    "legs": [
+     {
+      "fact": "Statistical favourite \u00b7 2nd line \u00b7 PP1",
+      "goals": 1,
+      "home": true,
+      "id": 8477933,
+      "name": "Sam Reinhart",
+      "opp": "WPG",
+      "result": "win",
+      "team": "FLA"
+     },
+     {
+      "fact": "Statistical favourite \u00b7 2nd line \u00b7 PP1",
+      "goals": 2,
+      "home": false,
+      "id": 8481559,
+      "name": "Jack Hughes",
+      "opp": "VGK",
+      "result": "win",
+      "team": "NJD"
+     },
+     {
+      "fact": "Statistical favourite \u00b7 1st line \u00b7 PP1",
+      "goals": 0,
+      "home": false,
+      "id": 8482259,
+      "name": "Bobby McMann",
+      "opp": "CGY",
+      "result": "loss",
+      "team": "SEA"
+     }
+    ],
+    "result": "L"
+   },
+   "grudge": {
+    "legs": [
+     {
+      "fact": "Birthday twin with Samuel Honzek",
+      "goals": 0,
+      "home": false,
+      "id": 8476457,
+      "name": "Adam Larsson",
+      "opp": "CGY",
+      "result": "loss",
+      "team": "SEA"
+     },
+     {
+      "fact": "Revenge game vs VGK",
+      "goals": 0,
+      "home": false,
+      "id": 8477511,
+      "name": "Anthony Mantha",
+      "opp": "VGK",
+      "result": "loss",
+      "team": "NJD"
+     },
+     {
+      "fact": "Old team: WPG",
+      "goals": 0,
+      "home": true,
+      "id": 8475179,
+      "name": "Dmitry Kulikov",
+      "opp": "WPG",
+      "result": "loss",
+      "team": "FLA"
+     }
+    ],
+    "result": "L"
+   },
+   "hot": {
+    "legs": [
+     {
+      "fact": "5 goals in his last 5",
+      "goals": 0,
+      "home": true,
+      "id": 8477409,
+      "name": "Carter Verhaeghe",
+      "opp": "WPG",
+      "result": "loss",
+      "team": "FLA"
+     },
+     {
+      "fact": "Two goals last game",
+      "goals": 0,
+      "home": false,
+      "id": 8477015,
+      "name": "Connor Brown",
+      "opp": "VGK",
+      "result": "loss",
+      "team": "NJD"
+     },
+     {
+      "fact": "Goals in 2 straight",
+      "goals": 0,
+      "home": false,
+      "id": 8484800,
+      "name": "Berkly Catton",
+      "opp": "CGY",
+      "result": "loss",
+      "team": "SEA"
+     }
+    ],
+    "result": "L"
+   },
+   "scammer": {
+    "L": 5,
+    "P": 0,
+    "W": 2,
+    "legs": [
+     {
+      "american": 160,
+      "fact": "Best short-price value: +160",
+      "goals": 1,
+      "home": true,
+      "id": 8477933,
+      "name": "Sam Reinhart",
+      "opp": "WPG",
+      "result": "win",
+      "team": "FLA",
+      "units": 1.6
+     },
+     {
+      "american": 170,
+      "fact": "Best short-price value: +170",
+      "goals": 1,
+      "home": false,
+      "id": 8478398,
+      "name": "Kyle Connor",
+      "opp": "FLA",
+      "result": "win",
+      "team": "WPG",
+      "units": 1.7
+     },
+     {
+      "american": 250,
+      "fact": "Best mid-price value: +250",
+      "goals": 0,
+      "home": false,
+      "id": 8476460,
+      "name": "Mark Scheifele",
+      "opp": "FLA",
+      "result": "loss",
+      "team": "WPG",
+      "units": -1.0
+     },
+     {
+      "american": 285,
+      "fact": "Best mid-price value: +285",
+      "goals": 0,
+      "home": false,
+      "id": 8480014,
+      "name": "Gabriel Vilardi",
+      "opp": "FLA",
+      "result": "loss",
+      "team": "WPG",
+      "units": -1.0
+     },
+     {
+      "american": 400,
+      "fact": "Best mid-price value: +400",
+      "goals": 0,
+      "home": false,
+      "id": 8477511,
+      "name": "Anthony Mantha",
+      "opp": "VGK",
+      "result": "loss",
+      "team": "NJD",
+      "units": -1.0
+     },
+     {
+      "american": 650,
+      "fact": "Best longshot value: +650",
+      "goals": 0,
+      "home": false,
+      "id": 8477015,
+      "name": "Connor Brown",
+      "opp": "VGK",
+      "result": "loss",
+      "team": "NJD",
+      "units": -1.0
+     },
+     {
+      "american": 900,
+      "fact": "Best longshot value: +900",
+      "goals": 0,
+      "home": true,
+      "id": 8478397,
+      "name": "Rasmus Andersson",
+      "opp": "NJD",
+      "result": "loss",
+      "team": "VGK",
+      "units": -1.0
+     }
+    ],
+    "result": "singles",
+    "units": -1.7
+   },
+   "theo": {
+    "legs": [
+     {
+      "fact": "Theo's gut feeling",
+      "goals": 0,
+      "home": false,
+      "id": 8480049,
+      "name": "Dylan Samberg",
+      "opp": "FLA",
+      "result": "loss",
+      "team": "WPG"
+     }
+    ],
+    "result": "L"
+   }
+  }
  }
 }
