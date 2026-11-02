@@ -8221,5 +8221,368 @@
     "result": "W"
    }
   }
+ },
+ "2026-11-01": {
+  "rebuilt": false,
+  "vibes": {
+   "any": {
+    "legs": [
+     {
+      "fact": "5-game point streak",
+      "goals": 0,
+      "home": true,
+      "id": 8479385,
+      "name": "Jordan Kyrou",
+      "opp": "MIN",
+      "result": "loss",
+      "team": "WSH"
+     },
+     {
+      "fact": "4-game point streak",
+      "goals": 0,
+      "home": true,
+      "id": 8479323,
+      "name": "Adam Fox",
+      "opp": "EDM",
+      "result": "loss",
+      "team": "NYR"
+     },
+     {
+      "fact": "Due: 7 games without a goal",
+      "goals": 0,
+      "home": true,
+      "id": 8480830,
+      "name": "Andrei Svechnikov",
+      "opp": "WPG",
+      "result": "loss",
+      "team": "CAR"
+     }
+    ],
+    "result": "L"
+   },
+   "chaos": {
+    "legs": [
+     {
+      "fact": "4 goals in his last 5",
+      "goals": 1,
+      "home": true,
+      "id": 8476873,
+      "name": "Mark Jankowski",
+      "opp": "WPG",
+      "result": "win",
+      "team": "CAR"
+     },
+     {
+      "fact": "5 goals in his last 5",
+      "goals": 0,
+      "home": false,
+      "id": 8480208,
+      "name": "Drake Batherson",
+      "opp": "ANA",
+      "result": "loss",
+      "team": "OTT"
+     },
+     {
+      "fact": "Hat trick last game",
+      "goals": 1,
+      "home": false,
+      "id": 8483431,
+      "name": "Logan Cooley",
+      "opp": "PHI",
+      "result": "win",
+      "team": "UTA"
+     }
+    ],
+    "result": "L"
+   },
+   "chris": {
+    "legs": [
+     {
+      "fact": "Chris's cozy pick",
+      "goals": 0,
+      "home": false,
+      "id": 8477934,
+      "name": "Leon Draisaitl",
+      "opp": "NYR",
+      "result": "loss",
+      "team": "EDM"
+     }
+    ],
+    "result": "L"
+   },
+   "dejavu": {
+    "legs": [
+     {
+      "fact": "Owns Kochetkov: 4 goals",
+      "goals": 0,
+      "home": false,
+      "id": 8482110,
+      "name": "Dawson Mercer",
+      "opp": "CAR",
+      "result": "loss",
+      "team": "WPG"
+     },
+     {
+      "fact": "Owns Vladar: 3 goals",
+      "goals": 0,
+      "home": false,
+      "id": 8479343,
+      "name": "Clayton Keller",
+      "opp": "PHI",
+      "result": "loss",
+      "team": "UTA"
+     },
+     {
+      "fact": "Owns Thompson: 3 goals",
+      "goals": 1,
+      "home": false,
+      "id": 8480800,
+      "name": "Quinn Hughes",
+      "opp": "WSH",
+      "result": "win",
+      "team": "MIN"
+     }
+    ],
+    "result": "L"
+   },
+   "due": {
+    "legs": [
+     {
+      "fact": "Due: 11 games without a goal",
+      "goals": 0,
+      "home": true,
+      "id": 8479345,
+      "name": "Jakob Chychrun",
+      "opp": "MIN",
+      "result": "loss",
+      "team": "WSH"
+     },
+     {
+      "fact": "Due: 6 games without a goal",
+      "goals": 0,
+      "home": false,
+      "id": 8476460,
+      "name": "Mark Scheifele",
+      "opp": "CAR",
+      "result": "loss",
+      "team": "WPG"
+     }
+    ],
+    "result": "L"
+   },
+   "favourites": {
+    "legs": [
+     {
+      "fact": "Statistical favourite \u00b7 1st line \u00b7 PP1",
+      "goals": 0,
+      "home": false,
+      "id": 8477934,
+      "name": "Leon Draisaitl",
+      "opp": "NYR",
+      "result": "loss",
+      "team": "EDM"
+     },
+     {
+      "fact": "Statistical favourite \u00b7 1st line \u00b7 PP1",
+      "goals": 1,
+      "home": false,
+      "id": 8478864,
+      "name": "Kirill Kaprizov",
+      "opp": "WSH",
+      "result": "win",
+      "team": "MIN"
+     },
+     {
+      "fact": "Statistical favourite \u00b7 In tonight's lineup",
+      "goals": 0,
+      "home": false,
+      "id": 8478398,
+      "name": "Kyle Connor",
+      "opp": "CAR",
+      "result": "loss",
+      "team": "WPG"
+     }
+    ],
+    "result": "L"
+   },
+   "grudge": {
+    "legs": [
+     {
+      "fact": "Birthday twin with Joseph Veleno",
+      "goals": 1,
+      "home": false,
+      "id": 8478402,
+      "name": "Connor McDavid",
+      "opp": "NYR",
+      "result": "win",
+      "team": "EDM"
+     },
+     {
+      "fact": "Old team: MIN",
+      "goals": 0,
+      "home": true,
+      "id": 8477949,
+      "name": "Alex Tuch",
+      "opp": "MIN",
+      "result": "loss",
+      "team": "WSH"
+     },
+     {
+      "fact": "Birthday twin with Dylan DeMelo",
+      "goals": 0,
+      "home": true,
+      "id": 8476958,
+      "name": "Jaccob Slavin",
+      "opp": "WPG",
+      "result": "loss",
+      "team": "CAR"
+     }
+    ],
+    "result": "L"
+   },
+   "hot": {
+    "legs": [
+     {
+      "fact": "3 goals in his last 5",
+      "goals": 0,
+      "home": true,
+      "id": 8477940,
+      "name": "Nikolaj Ehlers",
+      "opp": "WPG",
+      "result": "loss",
+      "team": "CAR"
+     },
+     {
+      "fact": "Two goals last game",
+      "goals": 0,
+      "home": false,
+      "id": 8476454,
+      "name": "Ryan Nugent-Hopkins",
+      "opp": "NYR",
+      "result": "loss",
+      "team": "EDM"
+     },
+     {
+      "fact": "Goals in 3 straight",
+      "goals": 0,
+      "home": true,
+      "id": 8484762,
+      "name": "Beckett Sennecke",
+      "opp": "OTT",
+      "result": "loss",
+      "team": "ANA"
+     }
+    ],
+    "result": "L"
+   },
+   "scammer": {
+    "L": 6,
+    "P": 0,
+    "W": 1,
+    "legs": [
+     {
+      "american": 105,
+      "fact": "Best short-price value: +105",
+      "goals": 0,
+      "home": false,
+      "id": 8477934,
+      "name": "Leon Draisaitl",
+      "opp": "NYR",
+      "result": "loss",
+      "team": "EDM",
+      "units": -1.0
+     },
+     {
+      "american": 195,
+      "fact": "Best short-price value: +195",
+      "goals": 0,
+      "home": false,
+      "id": 8478398,
+      "name": "Kyle Connor",
+      "opp": "CAR",
+      "result": "loss",
+      "team": "WPG",
+      "units": -1.0
+     },
+     {
+      "american": 210,
+      "fact": "Best mid-price value: +210",
+      "goals": 0,
+      "home": true,
+      "id": 8477949,
+      "name": "Alex Tuch",
+      "opp": "MIN",
+      "result": "loss",
+      "team": "WSH",
+      "units": -1.0
+     },
+     {
+      "american": 320,
+      "fact": "Best mid-price value: +320",
+      "goals": 0,
+      "home": true,
+      "id": 8471214,
+      "name": "Alex Ovechkin",
+      "opp": "MIN",
+      "result": "loss",
+      "team": "WSH",
+      "units": -1.0
+     },
+     {
+      "american": 400,
+      "fact": "Best mid-price value: +400",
+      "goals": 0,
+      "home": true,
+      "id": 8481656,
+      "name": "Aliaksei Protas",
+      "opp": "MIN",
+      "result": "loss",
+      "team": "WSH",
+      "units": -1.0
+     },
+     {
+      "american": 550,
+      "fact": "Best longshot value: +550",
+      "goals": 0,
+      "home": true,
+      "id": 8484873,
+      "name": "Cole Hutson",
+      "opp": "MIN",
+      "result": "loss",
+      "team": "WSH",
+      "units": -1.0
+     },
+     {
+      "american": 700,
+      "fact": "Best longshot value: +700",
+      "goals": 1,
+      "home": true,
+      "id": 8480220,
+      "name": "Noah Cates",
+      "opp": "UTA",
+      "result": "win",
+      "team": "PHI",
+      "units": 7.0
+     }
+    ],
+    "result": "singles",
+    "units": 1.0
+   },
+   "theo": {
+    "legs": [
+     {
+      "fact": "Theo's gut feeling",
+      "goals": 1,
+      "home": false,
+      "id": 8483525,
+      "name": "Danila Yurov",
+      "opp": "WSH",
+      "result": "win",
+      "team": "MIN"
+     }
+    ],
+    "result": "W"
+   }
+  }
  }
 }
