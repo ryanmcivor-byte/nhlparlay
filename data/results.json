@@ -8584,5 +8584,368 @@
     "result": "W"
    }
   }
+ },
+ "2026-11-02": {
+  "rebuilt": false,
+  "vibes": {
+   "any": {
+    "legs": [
+     {
+      "fact": "6 goals in his last 5",
+      "goals": 0,
+      "home": false,
+      "id": 8477476,
+      "name": "Artturi Lehkonen",
+      "opp": "CHI",
+      "result": "loss",
+      "team": "COL"
+     },
+     {
+      "fact": "One assist from #200",
+      "goals": 0,
+      "home": true,
+      "id": 8475179,
+      "name": "Dmitry Kulikov",
+      "opp": "DET",
+      "result": "loss",
+      "team": "FLA"
+     },
+     {
+      "fact": "Still chasing goal #1",
+      "goals": 0,
+      "home": true,
+      "id": 8483428,
+      "name": "Filip Bystedt",
+      "opp": "CGY",
+      "result": "loss",
+      "team": "SJS"
+     }
+    ],
+    "result": "L"
+   },
+   "chaos": {
+    "legs": [
+     {
+      "fact": "4 goals in his last 5",
+      "goals": 0,
+      "home": false,
+      "id": 8478042,
+      "name": "Viktor Arvidsson",
+      "opp": "FLA",
+      "result": "loss",
+      "team": "DET"
+     },
+     {
+      "fact": "4-game point streak",
+      "goals": 1,
+      "home": false,
+      "id": 8478038,
+      "name": "Devon Toews",
+      "opp": "CHI",
+      "result": "win",
+      "team": "COL"
+     },
+     {
+      "fact": "3 goals in his last 5",
+      "goals": 0,
+      "home": true,
+      "id": 8479999,
+      "name": "Casey Mittelstadt",
+      "opp": "VGK",
+      "result": "loss",
+      "team": "BOS"
+     }
+    ],
+    "result": "L"
+   },
+   "chris": {
+    "legs": [
+     {
+      "fact": "Chris's cozy pick",
+      "goals": 0,
+      "home": false,
+      "id": 8477492,
+      "name": "Nathan MacKinnon",
+      "opp": "CHI",
+      "result": "loss",
+      "team": "COL"
+     }
+    ],
+    "result": "L"
+   },
+   "dejavu": {
+    "legs": [
+     {
+      "fact": "Owns Swayman: 5 goals",
+      "goals": 0,
+      "home": false,
+      "id": 8478483,
+      "name": "Mitch Marner",
+      "opp": "BOS",
+      "result": "loss",
+      "team": "VGK"
+     },
+     {
+      "fact": "Owns Wolf: 5 goals",
+      "goals": 0,
+      "home": true,
+      "id": 8475726,
+      "name": "Tyler Toffoli",
+      "opp": "CGY",
+      "result": "loss",
+      "team": "SJS"
+     },
+     {
+      "fact": "Owns Knight: 3 goals",
+      "goals": 0,
+      "home": false,
+      "id": 8480069,
+      "name": "Cale Makar",
+      "opp": "CHI",
+      "result": "loss",
+      "team": "COL"
+     }
+    ],
+    "result": "L"
+   },
+   "due": {
+    "legs": [
+     {
+      "fact": "Due: 5 games without a goal",
+      "goals": 0,
+      "home": true,
+      "id": 8484801,
+      "name": "Macklin Celebrini",
+      "opp": "CGY",
+      "result": "loss",
+      "team": "SJS"
+     },
+     {
+      "fact": "Due: 5 games without a goal",
+      "goals": 1,
+      "home": false,
+      "id": 8479337,
+      "name": "Alex DeBrincat",
+      "opp": "FLA",
+      "result": "win",
+      "team": "DET"
+     }
+    ],
+    "result": "L"
+   },
+   "favourites": {
+    "legs": [
+     {
+      "fact": "Statistical favourite \u00b7 1st line \u00b7 PP1",
+      "goals": 0,
+      "home": false,
+      "id": 8477492,
+      "name": "Nathan MacKinnon",
+      "opp": "CHI",
+      "result": "loss",
+      "team": "COL"
+     },
+     {
+      "fact": "Statistical favourite \u00b7 2nd line \u00b7 PP1",
+      "goals": 1,
+      "home": true,
+      "id": 8477933,
+      "name": "Sam Reinhart",
+      "opp": "DET",
+      "result": "win",
+      "team": "FLA"
+     },
+     {
+      "fact": "Statistical favourite \u00b7 1st line \u00b7 PP1",
+      "goals": 0,
+      "home": true,
+      "id": 8477956,
+      "name": "David Pastrnak",
+      "opp": "VGK",
+      "result": "loss",
+      "team": "BOS"
+     }
+    ],
+    "result": "L"
+   },
+   "grudge": {
+    "legs": [
+     {
+      "fact": "Old team: BOS",
+      "goals": 0,
+      "home": false,
+      "id": 8478468,
+      "name": "Jeremy Lauzon",
+      "opp": "BOS",
+      "result": "loss",
+      "team": "VGK"
+     },
+     {
+      "fact": "Birthday twin with Dominic Toninato",
+      "goals": 0,
+      "home": false,
+      "id": 8470613,
+      "name": "Brent Burns",
+      "opp": "CHI",
+      "result": "loss",
+      "team": "COL"
+     },
+     {
+      "fact": "Birthday twin with William Stromgren",
+      "goals": 1,
+      "home": true,
+      "id": 8484806,
+      "name": "Sam Dickinson",
+      "opp": "CGY",
+      "result": "win",
+      "team": "SJS"
+     }
+    ],
+    "result": "L"
+   },
+   "hot": {
+    "legs": [
+     {
+      "fact": "4 goals in his last 5",
+      "goals": 0,
+      "home": false,
+      "id": 8482078,
+      "name": "Lucas Raymond",
+      "opp": "FLA",
+      "result": "loss",
+      "team": "DET"
+     },
+     {
+      "fact": "3 goals in his last 5",
+      "goals": 0,
+      "home": true,
+      "id": 8484144,
+      "name": "Connor Bedard",
+      "opp": "COL",
+      "result": "loss",
+      "team": "CHI"
+     },
+     {
+      "fact": "4 goals in his last 5",
+      "goals": 0,
+      "home": false,
+      "id": 8480797,
+      "name": "Joel Farabee",
+      "opp": "SJS",
+      "result": "loss",
+      "team": "CGY"
+     }
+    ],
+    "result": "L"
+   },
+   "scammer": {
+    "L": 5,
+    "P": 0,
+    "W": 2,
+    "legs": [
+     {
+      "american": 115,
+      "fact": "Best short-price value: +115",
+      "goals": 0,
+      "home": false,
+      "id": 8477492,
+      "name": "Nathan MacKinnon",
+      "opp": "CHI",
+      "result": "loss",
+      "team": "COL",
+      "units": -1.0
+     },
+     {
+      "american": 160,
+      "fact": "Best short-price value: +160",
+      "goals": 1,
+      "home": false,
+      "id": 8479337,
+      "name": "Alex DeBrincat",
+      "opp": "FLA",
+      "result": "win",
+      "team": "DET",
+      "units": 1.6
+     },
+     {
+      "american": 225,
+      "fact": "Best mid-price value: +225",
+      "goals": 1,
+      "home": true,
+      "id": 8479987,
+      "name": "Morgan Geekie",
+      "opp": "VGK",
+      "result": "win",
+      "team": "BOS",
+      "units": 2.25
+     },
+     {
+      "american": 255,
+      "fact": "Best mid-price value: +255",
+      "goals": 0,
+      "home": false,
+      "id": 8475754,
+      "name": "Brock Nelson",
+      "opp": "CHI",
+      "result": "loss",
+      "team": "COL",
+      "units": -1.0
+     },
+     {
+      "american": 300,
+      "fact": "Best mid-price value: +300",
+      "goals": 0,
+      "home": true,
+      "id": 8477479,
+      "name": "Tyler Bertuzzi",
+      "opp": "COL",
+      "result": "loss",
+      "team": "CHI",
+      "units": -1.0
+     },
+     {
+      "american": 550,
+      "fact": "Best longshot value: +550",
+      "goals": 0,
+      "home": true,
+      "id": 8479999,
+      "name": "Casey Mittelstadt",
+      "opp": "VGK",
+      "result": "loss",
+      "team": "BOS",
+      "units": -1.0
+     },
+     {
+      "american": 650,
+      "fact": "Best longshot value: +650",
+      "goals": 0,
+      "home": true,
+      "id": 8483505,
+      "name": "Matthew Poitras",
+      "opp": "VGK",
+      "result": "loss",
+      "team": "BOS",
+      "units": -1.0
+     }
+    ],
+    "result": "singles",
+    "units": -1.15
+   },
+   "theo": {
+    "legs": [
+     {
+      "fact": "Theo's gut feeling",
+      "goals": 0,
+      "home": true,
+      "id": 8479661,
+      "name": "Tanner Jeannot",
+      "opp": "VGK",
+      "result": "loss",
+      "team": "BOS"
+     }
+    ],
+    "result": "L"
+   }
+  }
  }
 }
