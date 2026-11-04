@@ -8947,5 +8947,378 @@
     "result": "L"
    }
   }
+ },
+ "2026-11-03": {
+  "rebuilt": false,
+  "vibes": {
+   "any": {
+    "legs": [
+     {
+      "fact": "One assist from #100",
+      "goals": 1,
+      "home": true,
+      "id": 8480009,
+      "name": "Eeli Tolvanen",
+      "opp": "STL",
+      "result": "win",
+      "team": "NYR"
+     },
+     {
+      "fact": "One point from #800",
+      "goals": 1,
+      "home": false,
+      "id": 8478420,
+      "name": "Mikko Rantanen",
+      "opp": "WSH",
+      "result": "win",
+      "team": "DAL"
+     },
+     {
+      "fact": "Owns Jarry: 2 goals",
+      "goals": 0,
+      "home": true,
+      "id": 8477511,
+      "name": "Anthony Mantha",
+      "opp": "EDM",
+      "result": "loss",
+      "team": "NJD"
+     }
+    ],
+    "result": "L"
+   },
+   "chaos": {
+    "legs": [
+     {
+      "fact": "FIRST game vs his old team",
+      "goals": 0,
+      "home": false,
+      "id": 8481553,
+      "name": "Bobby Brink",
+      "opp": "PHI",
+      "result": "loss",
+      "team": "MIN"
+     },
+     {
+      "fact": "Revenge game vs CAR",
+      "goals": 0,
+      "home": true,
+      "id": 8480835,
+      "name": "Jack Drury",
+      "opp": "CAR",
+      "result": "loss",
+      "team": "NSH"
+     },
+     {
+      "fact": "3 goals in his last 5",
+      "goals": 0,
+      "home": false,
+      "id": 8482703,
+      "name": "Colton Dach",
+      "opp": "NJD",
+      "result": "loss",
+      "team": "EDM"
+     }
+    ],
+    "result": "L"
+   },
+   "chris": {
+    "legs": [
+     {
+      "fact": "Chris's cozy pick",
+      "goals": 0,
+      "home": false,
+      "id": 8478864,
+      "name": "Kirill Kaprizov",
+      "opp": "PHI",
+      "result": "loss",
+      "team": "MIN"
+     }
+    ],
+    "result": "L"
+   },
+   "dejavu": {
+    "legs": [
+     {
+      "fact": "Owns Hellebuyck: 6 goals",
+      "goals": 1,
+      "home": false,
+      "id": 8477934,
+      "name": "Leon Draisaitl",
+      "opp": "NJD",
+      "result": "win",
+      "team": "EDM"
+     },
+     {
+      "fact": "Owns Gibson: 5 goals",
+      "goals": 0,
+      "home": true,
+      "id": 8477404,
+      "name": "Jake Guentzel",
+      "opp": "DET",
+      "result": "loss",
+      "team": "TBL"
+     },
+     {
+      "fact": "Owns Lankinen: 4 goals",
+      "goals": 1,
+      "home": false,
+      "id": 8475798,
+      "name": "Mikael Granlund",
+      "opp": "VAN",
+      "result": "win",
+      "team": "ANA"
+     }
+    ],
+    "result": "L"
+   },
+   "due": {
+    "legs": [
+     {
+      "fact": "Due: 12 games without a goal",
+      "goals": 1,
+      "home": true,
+      "id": 8479345,
+      "name": "Jakob Chychrun",
+      "opp": "DAL",
+      "result": "win",
+      "team": "WSH"
+     },
+     {
+      "fact": "Due: 17 games without a goal",
+      "goals": 0,
+      "home": true,
+      "id": 8478178,
+      "name": "Darren Raddysh",
+      "opp": "UTA",
+      "result": "loss",
+      "team": "TOR"
+     },
+     {
+      "fact": "Due: 7 games without a goal",
+      "goals": 0,
+      "home": false,
+      "id": 8476460,
+      "name": "Mark Scheifele",
+      "opp": "MTL",
+      "result": "loss",
+      "team": "WPG"
+     }
+    ],
+    "result": "L"
+   },
+   "favourites": {
+    "legs": [
+     {
+      "fact": "Statistical favourite \u00b7 1st line \u00b7 PP1",
+      "goals": 0,
+      "home": false,
+      "id": 8478864,
+      "name": "Kirill Kaprizov",
+      "opp": "PHI",
+      "result": "loss",
+      "team": "MIN"
+     },
+     {
+      "fact": "Statistical favourite \u00b7 1st line \u00b7 PP1",
+      "goals": 0,
+      "home": false,
+      "id": 8477492,
+      "name": "Nathan MacKinnon",
+      "opp": "CBJ",
+      "result": "loss",
+      "team": "COL"
+     },
+     {
+      "fact": "Statistical favourite \u00b7 1st line \u00b7 PP1",
+      "goals": 2,
+      "home": true,
+      "id": 8481540,
+      "name": "Cole Caufield",
+      "opp": "WPG",
+      "result": "win",
+      "team": "MTL"
+     }
+    ],
+    "result": "L"
+   },
+   "grudge": {
+    "legs": [
+     {
+      "fact": "Birthday twin with Ilya Protas",
+      "goals": 0,
+      "home": false,
+      "id": 8473994,
+      "name": "Jamie Benn",
+      "opp": "WSH",
+      "result": "loss",
+      "team": "DAL"
+     },
+     {
+      "fact": "Birthday twin with David Jiricek",
+      "goals": 0,
+      "home": false,
+      "id": 8476399,
+      "name": "Blake Coleman",
+      "opp": "PHI",
+      "result": "loss",
+      "team": "MIN"
+     },
+     {
+      "fact": "Birthday twin with Connor Dewar",
+      "goals": 0,
+      "home": false,
+      "id": 8483890,
+      "name": "Braeden Bowman",
+      "opp": "PIT",
+      "result": "loss",
+      "team": "VGK"
+     }
+    ],
+    "result": "L"
+   },
+   "hot": {
+    "legs": [
+     {
+      "fact": "3 goals in his last 5",
+      "goals": 0,
+      "home": false,
+      "id": 8483516,
+      "name": "Jimmy Snuggerud",
+      "opp": "NYR",
+      "result": "loss",
+      "team": "STL"
+     },
+     {
+      "fact": "Two goals last game",
+      "goals": 0,
+      "home": false,
+      "id": 8481538,
+      "name": "Judd Caulfield",
+      "opp": "VAN",
+      "result": "loss",
+      "team": "ANA"
+     },
+     {
+      "fact": "4 goals in his last 5",
+      "goals": 0,
+      "home": true,
+      "id": 8481721,
+      "name": "Arseny Gritsyuk",
+      "opp": "EDM",
+      "result": "loss",
+      "team": "NJD"
+     }
+    ],
+    "result": "L"
+   },
+   "scammer": {
+    "L": 6,
+    "P": 0,
+    "W": 1,
+    "legs": [
+     {
+      "american": -105,
+      "fact": "Best short-price value: -105",
+      "goals": 0,
+      "home": false,
+      "id": 8478864,
+      "name": "Kirill Kaprizov",
+      "opp": "PHI",
+      "result": "loss",
+      "team": "MIN",
+      "units": -1.0
+     },
+     {
+      "american": 130,
+      "fact": "Best short-price value: +130",
+      "goals": 1,
+      "home": false,
+      "id": 8477934,
+      "name": "Leon Draisaitl",
+      "opp": "NJD",
+      "result": "win",
+      "team": "EDM",
+      "units": 1.3
+     },
+     {
+      "american": 340,
+      "fact": "Best mid-price value: +340",
+      "goals": 0,
+      "home": true,
+      "id": 8471214,
+      "name": "Alex Ovechkin",
+      "opp": "DAL",
+      "result": "loss",
+      "team": "WSH",
+      "units": -1.0
+     },
+     {
+      "american": 340,
+      "fact": "Best mid-price value: +340",
+      "goals": 0,
+      "home": true,
+      "id": 8477511,
+      "name": "Anthony Mantha",
+      "opp": "EDM",
+      "result": "loss",
+      "team": "NJD",
+      "units": -1.0
+     },
+     {
+      "american": 425,
+      "fact": "Best mid-price value: +425",
+      "goals": 0,
+      "home": true,
+      "id": 8481656,
+      "name": "Aliaksei Protas",
+      "opp": "DAL",
+      "result": "loss",
+      "team": "WSH",
+      "units": -1.0
+     },
+     {
+      "american": 650,
+      "fact": "Best longshot value: +650",
+      "goals": 0,
+      "home": true,
+      "id": 8483787,
+      "name": "Cole Knuble",
+      "opp": "MIN",
+      "result": "loss",
+      "team": "PHI",
+      "units": -1.0
+     },
+     {
+      "american": 1200,
+      "fact": "Best longshot value: +1200",
+      "goals": 0,
+      "home": false,
+      "id": 8475753,
+      "name": "Justin Faulk",
+      "opp": "TBL",
+      "result": "loss",
+      "team": "DET",
+      "units": -1.0
+     }
+    ],
+    "result": "singles",
+    "units": -4.7
+   },
+   "theo": {
+    "legs": [
+     {
+      "fact": "Theo's gut feeling",
+      "goals": 0,
+      "home": true,
+      "id": 8484136,
+      "name": "Max Sasson",
+      "opp": "ANA",
+      "result": "loss",
+      "team": "VAN"
+     }
+    ],
+    "result": "L"
+   }
+  }
  }
 }
