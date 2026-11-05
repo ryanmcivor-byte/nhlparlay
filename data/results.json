@@ -9320,5 +9320,358 @@
     "result": "L"
    }
   }
+ },
+ "2026-11-04": {
+  "rebuilt": false,
+  "vibes": {
+   "any": {
+    "legs": [
+     {
+      "fact": "Birthday twin with Trevor Moore",
+      "goals": 0,
+      "home": false,
+      "id": 8480748,
+      "name": "Kiefer Sherwood",
+      "opp": "LAK",
+      "result": "loss",
+      "team": "SJS"
+     },
+     {
+      "fact": "Just scored on SEA",
+      "goals": 0,
+      "home": false,
+      "id": 8482679,
+      "name": "Matt Coronato",
+      "opp": "SEA",
+      "result": "loss",
+      "team": "CGY"
+     },
+     {
+      "fact": "Just scored on FLA",
+      "goals": 0,
+      "home": false,
+      "id": 8483450,
+      "name": "Ryan Greene",
+      "opp": "FLA",
+      "result": "loss",
+      "team": "CHI"
+     }
+    ],
+    "result": "L"
+   },
+   "chaos": {
+    "legs": [
+     {
+      "fact": "Owns Wolf: 3 goals",
+      "goals": 0,
+      "home": true,
+      "id": 8477919,
+      "name": "Frederick Gaudreau",
+      "opp": "CGY",
+      "result": "loss",
+      "team": "SEA"
+     },
+     {
+      "fact": "3 goals in his last 5",
+      "goals": 1,
+      "home": false,
+      "id": 8484390,
+      "name": "Roman Kantserov",
+      "opp": "FLA",
+      "result": "win",
+      "team": "CHI"
+     },
+     {
+      "fact": "Still chasing goal #1",
+      "goals": 0,
+      "home": true,
+      "id": 8482160,
+      "name": "Martin Chromiak",
+      "opp": "SJS",
+      "result": "loss",
+      "team": "LAK"
+     }
+    ],
+    "result": "L"
+   },
+   "chris": {
+    "legs": [
+     {
+      "fact": "Chris's cozy pick",
+      "goals": 0,
+      "home": true,
+      "id": 8479420,
+      "name": "Tage Thompson",
+      "opp": "OTT",
+      "result": "loss",
+      "team": "BUF"
+     }
+    ],
+    "result": "L"
+   },
+   "dejavu": {
+    "legs": [
+     {
+      "fact": "Owns Ersson: 4 goals",
+      "goals": 0,
+      "home": true,
+      "id": 8482097,
+      "name": "Jack Quinn",
+      "opp": "OTT",
+      "result": "loss",
+      "team": "BUF"
+     },
+     {
+      "fact": "Owns Wolf: 3 goals",
+      "goals": 0,
+      "home": true,
+      "id": 8482713,
+      "name": "Mackie Samoskevich",
+      "opp": "CGY",
+      "result": "loss",
+      "team": "SEA"
+     },
+     {
+      "fact": "Owns Knight: 2 goals",
+      "goals": 0,
+      "home": true,
+      "id": 8474189,
+      "name": "Lars Eller",
+      "opp": "CHI",
+      "result": "loss",
+      "team": "FLA"
+     }
+    ],
+    "result": "L"
+   },
+   "due": {
+    "legs": [
+     {
+      "fact": "Due: 6 games without a goal",
+      "goals": 1,
+      "home": false,
+      "id": 8484801,
+      "name": "Macklin Celebrini",
+      "opp": "LAK",
+      "result": "win",
+      "team": "SJS"
+     }
+    ],
+    "result": "W"
+   },
+   "favourites": {
+    "legs": [
+     {
+      "fact": "Statistical favourite \u00b7 1st line \u00b7 PP1",
+      "goals": 0,
+      "home": true,
+      "id": 8479420,
+      "name": "Tage Thompson",
+      "opp": "OTT",
+      "result": "loss",
+      "team": "BUF"
+     },
+     {
+      "fact": "Statistical favourite \u00b7 2nd line \u00b7 PP1",
+      "goals": 1,
+      "home": true,
+      "id": 8477933,
+      "name": "Sam Reinhart",
+      "opp": "CHI",
+      "result": "win",
+      "team": "FLA"
+     },
+     {
+      "fact": "Statistical favourite \u00b7 1st line \u00b7 PP1",
+      "goals": 0,
+      "home": true,
+      "id": 8478550,
+      "name": "Artemi Panarin",
+      "opp": "SJS",
+      "result": "loss",
+      "team": "LAK"
+     }
+    ],
+    "result": "L"
+   },
+   "grudge": {
+    "legs": [
+     {
+      "fact": "Revenge game vs OTT",
+      "goals": 0,
+      "home": true,
+      "id": 8480064,
+      "name": "Josh Norris",
+      "opp": "OTT",
+      "result": "loss",
+      "team": "BUF"
+     },
+     {
+      "fact": "Birthday twin with Cale Fleury",
+      "goals": 0,
+      "home": false,
+      "id": 8481028,
+      "name": "Martin Pospisil",
+      "opp": "SEA",
+      "result": "loss",
+      "team": "CGY"
+     },
+     {
+      "fact": "Birthday twin with Erik Haula",
+      "goals": 0,
+      "home": false,
+      "id": 8484421,
+      "name": "Eric Pohlkamp",
+      "opp": "LAK",
+      "result": "loss",
+      "team": "SJS"
+     }
+    ],
+    "result": "L"
+   },
+   "hot": {
+    "legs": [
+     {
+      "fact": "Just scored on SEA",
+      "goals": 0,
+      "home": false,
+      "id": 8484234,
+      "name": "Aydar Suniev",
+      "opp": "SEA",
+      "result": "loss",
+      "team": "CGY"
+     },
+     {
+      "fact": "3-game point streak",
+      "goals": 0,
+      "home": false,
+      "id": 8482105,
+      "name": "Jake Sanderson",
+      "opp": "BUF",
+      "result": "loss",
+      "team": "OTT"
+     },
+     {
+      "fact": "3 goals in his last 5",
+      "goals": 0,
+      "home": false,
+      "id": 8484227,
+      "name": "Will Smith",
+      "opp": "LAK",
+      "result": "loss",
+      "team": "SJS"
+     }
+    ],
+    "result": "L"
+   },
+   "scammer": {
+    "L": 6,
+    "P": 0,
+    "W": 1,
+    "legs": [
+     {
+      "american": 130,
+      "fact": "Best short-price value: +130",
+      "goals": 0,
+      "home": true,
+      "id": 8479420,
+      "name": "Tage Thompson",
+      "opp": "OTT",
+      "result": "loss",
+      "team": "BUF",
+      "units": -1.0
+     },
+     {
+      "american": 160,
+      "fact": "Best short-price value: +160",
+      "goals": 1,
+      "home": false,
+      "id": 8484801,
+      "name": "Macklin Celebrini",
+      "opp": "LAK",
+      "result": "win",
+      "team": "SJS",
+      "units": 1.6
+     },
+     {
+      "american": 340,
+      "fact": "Best mid-price value: +340",
+      "goals": 0,
+      "home": true,
+      "id": 8475722,
+      "name": "Jason Zucker",
+      "opp": "OTT",
+      "result": "loss",
+      "team": "BUF",
+      "units": -1.0
+     },
+     {
+      "american": 350,
+      "fact": "Best mid-price value: +350",
+      "goals": 0,
+      "home": false,
+      "id": 8478975,
+      "name": "Mason Marchment",
+      "opp": "LAK",
+      "result": "loss",
+      "team": "SJS",
+      "units": -1.0
+     },
+     {
+      "american": 400,
+      "fact": "Best mid-price value: +400",
+      "goals": 0,
+      "home": false,
+      "id": 8477479,
+      "name": "Tyler Bertuzzi",
+      "opp": "FLA",
+      "result": "loss",
+      "team": "CHI",
+      "units": -1.0
+     },
+     {
+      "american": 750,
+      "fact": "Best longshot value: +750",
+      "goals": 0,
+      "home": false,
+      "id": 8482766,
+      "name": "William Stromgren",
+      "opp": "SEA",
+      "result": "loss",
+      "team": "CGY",
+      "units": -1.0
+     },
+     {
+      "american": 850,
+      "fact": "Best longshot value: +850",
+      "goals": 0,
+      "home": false,
+      "id": 8485554,
+      "name": "Dillon Boucher",
+      "opp": "FLA",
+      "result": "loss",
+      "team": "CHI",
+      "units": -1.0
+     }
+    ],
+    "result": "singles",
+    "units": -4.4
+   },
+   "theo": {
+    "legs": [
+     {
+      "fact": "Theo's gut feeling",
+      "goals": 0,
+      "home": true,
+      "id": 8481655,
+      "name": "Cole Schwindt",
+      "opp": "CHI",
+      "result": "loss",
+      "team": "FLA"
+     }
+    ],
+    "result": "L"
+   }
+  }
  }
 }
