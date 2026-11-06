@@ -9673,5 +9673,378 @@
     "result": "L"
    }
   }
+ },
+ "2026-11-05": {
+  "rebuilt": false,
+  "vibes": {
+   "any": {
+    "legs": [
+     {
+      "fact": "3-game point streak",
+      "goals": 0,
+      "home": false,
+      "id": 8475798,
+      "name": "Mikael Granlund",
+      "opp": "EDM",
+      "result": "loss",
+      "team": "ANA"
+     },
+     {
+      "fact": "Due: 5 games without a goal",
+      "goals": 0,
+      "home": false,
+      "id": 8482175,
+      "name": "JJ Peterka",
+      "opp": "PIT",
+      "result": "loss",
+      "team": "BOS"
+     },
+     {
+      "fact": "Owns Skinner: 3 goals",
+      "goals": 0,
+      "home": false,
+      "id": 8480012,
+      "name": "Elias Pettersson",
+      "opp": "WPG",
+      "result": "loss",
+      "team": "VAN"
+     }
+    ],
+    "result": "L"
+   },
+   "chaos": {
+    "legs": [
+     {
+      "fact": "Love life in the news",
+      "goals": 1,
+      "home": true,
+      "id": 8478402,
+      "name": "Connor McDavid",
+      "opp": "ANA",
+      "result": "win",
+      "team": "EDM"
+     },
+     {
+      "fact": "Number matches his age",
+      "goals": 0,
+      "home": false,
+      "id": 8482093,
+      "name": "Seth Jarvis",
+      "opp": "NYI",
+      "result": "loss",
+      "team": "CAR"
+     },
+     {
+      "fact": "Revenge game vs COL",
+      "goals": 0,
+      "home": false,
+      "id": 8480835,
+      "name": "Jack Drury",
+      "opp": "COL",
+      "result": "loss",
+      "team": "NSH"
+     }
+    ],
+    "result": "L"
+   },
+   "chris": {
+    "legs": [
+     {
+      "fact": "Chris's cozy pick",
+      "goals": 1,
+      "home": true,
+      "id": 8477934,
+      "name": "Leon Draisaitl",
+      "opp": "ANA",
+      "result": "win",
+      "team": "EDM"
+     }
+    ],
+    "result": "W"
+   },
+   "dejavu": {
+    "legs": [
+     {
+      "fact": "Owns Brossoit: 7 goals",
+      "goals": 1,
+      "home": true,
+      "id": 8477934,
+      "name": "Leon Draisaitl",
+      "opp": "ANA",
+      "result": "win",
+      "team": "EDM"
+     },
+     {
+      "fact": "Owns Skinner: 6 goals",
+      "goals": 1,
+      "home": false,
+      "id": 8478444,
+      "name": "Brock Boeser",
+      "opp": "WPG",
+      "result": "win",
+      "team": "VAN"
+     },
+     {
+      "fact": "Owns Binnington: 6 goals",
+      "goals": 0,
+      "home": true,
+      "id": 8478414,
+      "name": "Timo Meier",
+      "opp": "STL",
+      "result": "loss",
+      "team": "NJD"
+     }
+    ],
+    "result": "L"
+   },
+   "due": {
+    "legs": [
+     {
+      "fact": "Due: 8 games without a goal",
+      "goals": 1,
+      "home": true,
+      "id": 8476460,
+      "name": "Mark Scheifele",
+      "opp": "VAN",
+      "result": "win",
+      "team": "WPG"
+     },
+     {
+      "fact": "Due: 5 games without a goal",
+      "goals": 0,
+      "home": true,
+      "id": 8476453,
+      "name": "Nikita Kucherov",
+      "opp": "CHI",
+      "result": "loss",
+      "team": "TBL"
+     },
+     {
+      "fact": "Due: 6 games without a goal",
+      "goals": 0,
+      "home": false,
+      "id": 8479343,
+      "name": "Clayton Keller",
+      "opp": "MTL",
+      "result": "loss",
+      "team": "UTA"
+     }
+    ],
+    "result": "L"
+   },
+   "favourites": {
+    "legs": [
+     {
+      "fact": "Statistical favourite \u00b7 1st line \u00b7 PP1",
+      "goals": 1,
+      "home": true,
+      "id": 8481540,
+      "name": "Cole Caufield",
+      "opp": "UTA",
+      "result": "win",
+      "team": "MTL"
+     },
+     {
+      "fact": "Statistical favourite \u00b7 1st line \u00b7 PP1",
+      "goals": 0,
+      "home": true,
+      "id": 8477492,
+      "name": "Nathan MacKinnon",
+      "opp": "NSH",
+      "result": "loss",
+      "team": "COL"
+     },
+     {
+      "fact": "Statistical favourite \u00b7 1st line \u00b7 PP1",
+      "goals": 0,
+      "home": true,
+      "id": 8478398,
+      "name": "Kyle Connor",
+      "opp": "VAN",
+      "result": "loss",
+      "team": "WPG"
+     }
+    ],
+    "result": "L"
+   },
+   "grudge": {
+    "legs": [
+     {
+      "fact": "Old team: COL",
+      "goals": 0,
+      "home": false,
+      "id": 8477021,
+      "name": "Alexander Kerfoot",
+      "opp": "COL",
+      "result": "loss",
+      "team": "NSH"
+     },
+     {
+      "fact": "Birthday twin with Porter Martone",
+      "goals": 1,
+      "home": true,
+      "id": 8481604,
+      "name": "Pavel Dorofeyev",
+      "opp": "PHI",
+      "result": "win",
+      "team": "NYR"
+     },
+     {
+      "fact": "Old team: CHI",
+      "goals": 0,
+      "home": true,
+      "id": 8479542,
+      "name": "Brandon Hagel",
+      "opp": "CHI",
+      "result": "loss",
+      "team": "TBL"
+     }
+    ],
+    "result": "L"
+   },
+   "hot": {
+    "legs": [
+     {
+      "fact": "3 goals in his last 5",
+      "goals": 0,
+      "home": true,
+      "id": 8482660,
+      "name": "Kent Johnson",
+      "opp": "DAL",
+      "result": "loss",
+      "team": "CBJ"
+     },
+     {
+      "fact": "4 goals in his last 5",
+      "goals": 0,
+      "home": false,
+      "id": 8476887,
+      "name": "Filip Forsberg",
+      "opp": "COL",
+      "result": "loss",
+      "team": "NSH"
+     },
+     {
+      "fact": "3 goals in his last 5",
+      "goals": 0,
+      "home": false,
+      "id": 8484153,
+      "name": "Leo Carlsson",
+      "opp": "EDM",
+      "result": "loss",
+      "team": "ANA"
+     }
+    ],
+    "result": "L"
+   },
+   "scammer": {
+    "L": 3,
+    "P": 0,
+    "W": 4,
+    "legs": [
+     {
+      "american": -110,
+      "fact": "Best short-price value: -110",
+      "goals": 1,
+      "home": true,
+      "id": 8477934,
+      "name": "Leon Draisaitl",
+      "opp": "ANA",
+      "result": "win",
+      "team": "EDM",
+      "units": 0.91
+     },
+     {
+      "american": 125,
+      "fact": "Best short-price value: +125",
+      "goals": 1,
+      "home": true,
+      "id": 8481540,
+      "name": "Cole Caufield",
+      "opp": "UTA",
+      "result": "win",
+      "team": "MTL",
+      "units": 1.25
+     },
+     {
+      "american": 245,
+      "fact": "Best mid-price value: +245",
+      "goals": 0,
+      "home": false,
+      "id": 8482093,
+      "name": "Seth Jarvis",
+      "opp": "NYI",
+      "result": "loss",
+      "team": "CAR",
+      "units": -1.0
+     },
+     {
+      "american": 300,
+      "fact": "Best mid-price value: +300",
+      "goals": 1,
+      "home": false,
+      "id": 8484390,
+      "name": "Roman Kantserov",
+      "opp": "TBL",
+      "result": "win",
+      "team": "CHI",
+      "units": 3.0
+     },
+     {
+      "american": 350,
+      "fact": "Best mid-price value: +350",
+      "goals": 2,
+      "home": true,
+      "id": 8477511,
+      "name": "Anthony Mantha",
+      "opp": "STL",
+      "result": "win",
+      "team": "NJD",
+      "units": 3.5
+     },
+     {
+      "american": 600,
+      "fact": "Best longshot value: +600",
+      "goals": 0,
+      "home": false,
+      "id": 8483787,
+      "name": "Cole Knuble",
+      "opp": "NYR",
+      "result": "loss",
+      "team": "PHI",
+      "units": -1.0
+     },
+     {
+      "american": 650,
+      "fact": "Best longshot value: +650",
+      "goals": 0,
+      "home": false,
+      "id": 8480459,
+      "name": "Pius Suter",
+      "opp": "NJD",
+      "result": "loss",
+      "team": "STL",
+      "units": -1.0
+     }
+    ],
+    "result": "singles",
+    "units": 5.66
+   },
+   "theo": {
+    "legs": [
+     {
+      "fact": "Theo's gut feeling",
+      "goals": 1,
+      "home": false,
+      "id": 8477951,
+      "name": "Nick Schmaltz",
+      "opp": "MTL",
+      "result": "win",
+      "team": "UTA"
+     }
+    ],
+    "result": "W"
+   }
+  }
  }
 }
