@@ -10757,5 +10757,379 @@
     "result": "L"
    }
   }
+ },
+ "2026-11-08": {
+  "rebuilt": false,
+  "vibes": {
+   "any": {
+    "legs": [
+     {
+      "fact": "3 goals in his last 5",
+      "goals": 0,
+      "home": true,
+      "id": 8478401,
+      "name": "Pavel Zacha",
+      "opp": "FLA",
+      "result": "loss",
+      "team": "BOS"
+     },
+     {
+      "fact": "Owns Skinner: 3 goals",
+      "goals": 0,
+      "home": false,
+      "id": 8478519,
+      "name": "Anthony Cirelli",
+      "opp": "WPG",
+      "result": "loss",
+      "team": "TBL"
+     },
+     {
+      "fact": "Still chasing goal #1",
+      "goals": 0,
+      "home": true,
+      "id": 8484154,
+      "name": "Jonathan Castagna",
+      "opp": "PHI",
+      "result": "loss",
+      "team": "CGY"
+     }
+    ],
+    "result": "L"
+   },
+   "chaos": {
+    "legs": [
+     {
+      "fact": "Drama alert",
+      "goals": 0,
+      "home": true,
+      "id": 8486067,
+      "name": "Gavin McKenna",
+      "opp": "NJD",
+      "result": "loss",
+      "team": "TOR"
+     },
+     {
+      "fact": "Goals in 3 straight",
+      "goals": 0,
+      "home": false,
+      "id": 8484803,
+      "name": "Trevor Connelly",
+      "opp": "BUF",
+      "result": "loss",
+      "team": "VGK"
+     },
+     {
+      "fact": "Owns Vladar: 2 goals",
+      "goals": 1,
+      "home": true,
+      "id": 8480727,
+      "name": "Zach Whitecloud",
+      "opp": "PHI",
+      "result": "win",
+      "team": "CGY"
+     }
+    ],
+    "result": "L"
+   },
+   "chris": {
+    "legs": [
+     {
+      "fact": "Chris's cozy pick",
+      "goals": 0,
+      "home": true,
+      "id": 8479420,
+      "name": "Tage Thompson",
+      "opp": "VGK",
+      "result": "loss",
+      "team": "BUF"
+     }
+    ],
+    "result": "L"
+   },
+   "dejavu": {
+    "legs": [
+     {
+      "fact": "Owns Swayman: 9 goals",
+      "goals": 0,
+      "home": false,
+      "id": 8477933,
+      "name": "Sam Reinhart",
+      "opp": "BOS",
+      "result": "loss",
+      "team": "FLA"
+     },
+     {
+      "fact": "Owns Hellebuyck: 7 goals",
+      "goals": 0,
+      "home": true,
+      "id": 8475166,
+      "name": "John Tavares",
+      "opp": "NJD",
+      "result": "loss",
+      "team": "TOR"
+     },
+     {
+      "fact": "Owns Skinner: 4 goals",
+      "goals": 0,
+      "home": false,
+      "id": 8476453,
+      "name": "Nikita Kucherov",
+      "opp": "WPG",
+      "result": "loss",
+      "team": "TBL"
+     }
+    ],
+    "result": "L"
+   },
+   "due": {
+    "legs": [
+     {
+      "fact": "Due: 19 games without a goal",
+      "goals": 0,
+      "home": true,
+      "id": 8478178,
+      "name": "Darren Raddysh",
+      "opp": "NJD",
+      "result": "loss",
+      "team": "TOR"
+     },
+     {
+      "fact": "Due: 9 games without a goal",
+      "goals": 1,
+      "home": false,
+      "id": 8480015,
+      "name": "Owen Tippett",
+      "opp": "CGY",
+      "result": "win",
+      "team": "PHI"
+     },
+     {
+      "fact": "Due: 6 games without a goal",
+      "goals": 1,
+      "home": true,
+      "id": 8482175,
+      "name": "JJ Peterka",
+      "opp": "FLA",
+      "result": "win",
+      "team": "BOS"
+     }
+    ],
+    "result": "L"
+   },
+   "favourites": {
+    "legs": [
+     {
+      "fact": "Statistical favourite \u00b7 1st line \u00b7 PP1",
+      "goals": 0,
+      "home": true,
+      "id": 8479420,
+      "name": "Tage Thompson",
+      "opp": "VGK",
+      "result": "loss",
+      "team": "BUF"
+     },
+     {
+      "fact": "Statistical favourite \u00b7 1st line \u00b7 PP1",
+      "goals": 0,
+      "home": true,
+      "id": 8478398,
+      "name": "Kyle Connor",
+      "opp": "TBL",
+      "result": "loss",
+      "team": "WPG"
+     },
+     {
+      "fact": "Statistical favourite \u00b7 2nd line \u00b7 PP1",
+      "goals": 0,
+      "home": true,
+      "id": 8477939,
+      "name": "William Nylander",
+      "opp": "NJD",
+      "result": "loss",
+      "team": "TOR"
+     }
+    ],
+    "result": "L"
+   },
+   "grudge": {
+    "legs": [
+     {
+      "fact": "Hometown game",
+      "goals": 0,
+      "home": false,
+      "id": 8476462,
+      "name": "Dougie Hamilton",
+      "opp": "TOR",
+      "result": "loss",
+      "team": "NJD"
+     },
+     {
+      "fact": "Birthday twin with Mitch Marner",
+      "goals": 0,
+      "home": true,
+      "id": 8480064,
+      "name": "Josh Norris",
+      "opp": "VGK",
+      "result": "loss",
+      "team": "BUF"
+     },
+     {
+      "fact": "Old team: ANA",
+      "goals": 1,
+      "home": false,
+      "id": 8476483,
+      "name": "Rickard Rakell",
+      "opp": "ANA",
+      "result": "win",
+      "team": "PIT"
+     }
+    ],
+    "result": "L"
+   },
+   "hot": {
+    "legs": [
+     {
+      "fact": "3 goals in his last 5",
+      "goals": 0,
+      "home": true,
+      "id": 8482097,
+      "name": "Jack Quinn",
+      "opp": "VGK",
+      "result": "loss",
+      "team": "BUF"
+     },
+     {
+      "fact": "Two goals last game",
+      "goals": 0,
+      "home": false,
+      "id": 8480801,
+      "name": "Brady Tkachuk",
+      "opp": "BOS",
+      "result": "loss",
+      "team": "FLA"
+     },
+     {
+      "fact": "3 goals in his last 5",
+      "goals": 0,
+      "home": true,
+      "id": 8484762,
+      "name": "Beckett Sennecke",
+      "opp": "PIT",
+      "result": "loss",
+      "team": "ANA"
+     }
+    ],
+    "result": "L"
+   },
+   "scammer": {
+    "L": 6,
+    "P": 1,
+    "W": 0,
+    "legs": [
+     {
+      "american": 145,
+      "fact": "Best short-price value: +145",
+      "goals": 0,
+      "home": true,
+      "id": 8479420,
+      "name": "Tage Thompson",
+      "opp": "VGK",
+      "result": "loss",
+      "team": "BUF",
+      "units": -1.0
+     },
+     {
+      "american": 170,
+      "fact": "Best short-price value: +170",
+      "goals": 0,
+      "home": true,
+      "id": 8477939,
+      "name": "William Nylander",
+      "opp": "NJD",
+      "result": "loss",
+      "team": "TOR",
+      "units": -1.0
+     },
+     {
+      "american": 215,
+      "fact": "Best mid-price value: +215",
+      "goals": 0,
+      "home": false,
+      "id": 8477933,
+      "name": "Sam Reinhart",
+      "opp": "BOS",
+      "result": "loss",
+      "team": "FLA",
+      "units": -1.0
+     },
+     {
+      "american": 285,
+      "fact": "Best mid-price value: +285",
+      "goals": null,
+      "home": false,
+      "id": 8477511,
+      "name": "Anthony Mantha",
+      "opp": "TOR",
+      "result": "void",
+      "team": "NJD",
+      "units": 0.0,
+      "why": "Didn't dress"
+     },
+     {
+      "american": 380,
+      "fact": "Best mid-price value: +380",
+      "goals": 0,
+      "home": true,
+      "id": 8475722,
+      "name": "Jason Zucker",
+      "opp": "VGK",
+      "result": "loss",
+      "team": "BUF",
+      "units": -1.0
+     },
+     {
+      "american": 650,
+      "fact": "Best longshot value: +650",
+      "goals": 0,
+      "home": false,
+      "id": 8483787,
+      "name": "Cole Knuble",
+      "opp": "CGY",
+      "result": "loss",
+      "team": "PHI",
+      "units": -1.0
+     },
+     {
+      "american": 750,
+      "fact": "Best longshot value: +750",
+      "goals": 0,
+      "home": true,
+      "id": 8482766,
+      "name": "William Stromgren",
+      "opp": "PHI",
+      "result": "loss",
+      "team": "CGY",
+      "units": -1.0
+     }
+    ],
+    "result": "singles",
+    "units": -6.0
+   },
+   "theo": {
+    "legs": [
+     {
+      "fact": "Theo's gut feeling",
+      "goals": 0,
+      "home": false,
+      "id": 8477488,
+      "name": "Brett Pesce",
+      "opp": "TOR",
+      "result": "loss",
+      "team": "NJD"
+     }
+    ],
+    "result": "L"
+   }
+  }
  }
 }
