@@ -11131,5 +11131,349 @@
     "result": "L"
    }
   }
+ },
+ "2026-11-09": {
+  "rebuilt": false,
+  "vibes": {
+   "any": {
+    "legs": [
+     {
+      "fact": "Drama alert",
+      "goals": 0,
+      "home": false,
+      "id": 8482476,
+      "name": "Emil Heineman",
+      "opp": "SJS",
+      "result": "loss",
+      "team": "NYI"
+     },
+     {
+      "fact": "One assist from #100",
+      "goals": 0,
+      "home": true,
+      "id": 8477450,
+      "name": "Jason Dickinson",
+      "opp": "NYR",
+      "result": "loss",
+      "team": "EDM"
+     },
+     {
+      "fact": "Birthday twin with Oliver Bonk",
+      "goals": 0,
+      "home": true,
+      "id": 8483395,
+      "name": "Arshdeep Bains",
+      "opp": "PHI",
+      "result": "loss",
+      "team": "VAN"
+     }
+    ],
+    "result": "L"
+   },
+   "chaos": {
+    "legs": [
+     {
+      "fact": "Playing with a heavy heart",
+      "goals": 0,
+      "home": false,
+      "id": 8485366,
+      "name": "Matthew Schaefer",
+      "opp": "SJS",
+      "result": "loss",
+      "team": "NYI"
+     },
+     {
+      "fact": "Drama alert",
+      "goals": 1,
+      "home": true,
+      "id": 8478402,
+      "name": "Connor McDavid",
+      "opp": "NYR",
+      "result": "win",
+      "team": "EDM"
+     },
+     {
+      "fact": "3 goals in his last 5",
+      "goals": 0,
+      "home": true,
+      "id": 8483499,
+      "name": "Liam Ohgren",
+      "opp": "PHI",
+      "result": "loss",
+      "team": "VAN"
+     }
+    ],
+    "result": "L"
+   },
+   "chris": {
+    "legs": [
+     {
+      "fact": "Chris's cozy pick",
+      "goals": 2,
+      "home": true,
+      "id": 8477934,
+      "name": "Leon Draisaitl",
+      "opp": "NYR",
+      "result": "win",
+      "team": "EDM"
+     }
+    ],
+    "result": "W"
+   },
+   "dejavu": {
+    "legs": [
+     {
+      "fact": "Owns Sorokin: 3 goals",
+      "goals": 0,
+      "home": true,
+      "id": 8480748,
+      "name": "Kiefer Sherwood",
+      "opp": "NYI",
+      "result": "loss",
+      "team": "SJS"
+     }
+    ],
+    "result": "L"
+   },
+   "due": {
+    "legs": [
+     {
+      "fact": "Due: 6 games without a goal",
+      "goals": 0,
+      "home": false,
+      "id": 8476459,
+      "name": "Mika Zibanejad",
+      "opp": "EDM",
+      "result": "loss",
+      "team": "NYR"
+     },
+     {
+      "fact": "Due: 5 games without a goal",
+      "goals": 0,
+      "home": false,
+      "id": 8481533,
+      "name": "Trevor Zegras",
+      "opp": "VAN",
+      "result": "loss",
+      "team": "PHI"
+     }
+    ],
+    "result": "L"
+   },
+   "favourites": {
+    "legs": [
+     {
+      "fact": "Statistical favourite \u00b7 1st line \u00b7 PP1",
+      "goals": 2,
+      "home": true,
+      "id": 8477934,
+      "name": "Leon Draisaitl",
+      "opp": "NYR",
+      "result": "win",
+      "team": "EDM"
+     },
+     {
+      "fact": "Statistical favourite \u00b7 1st line \u00b7 PP1",
+      "goals": 0,
+      "home": true,
+      "id": 8484801,
+      "name": "Macklin Celebrini",
+      "opp": "NYI",
+      "result": "loss",
+      "team": "SJS"
+     },
+     {
+      "fact": "Statistical favourite \u00b7 2nd line \u00b7 PP1",
+      "goals": 0,
+      "home": false,
+      "id": 8484387,
+      "name": "Matvei Michkov",
+      "opp": "VAN",
+      "result": "loss",
+      "team": "PHI"
+     }
+    ],
+    "result": "L"
+   },
+   "grudge": {
+    "legs": [
+     {
+      "fact": "Old team: PHI",
+      "goals": 0,
+      "home": true,
+      "id": 8474568,
+      "name": "Luke Schenn",
+      "opp": "PHI",
+      "result": "loss",
+      "team": "VAN"
+     },
+     {
+      "fact": "Birthday twin with Max Jones",
+      "goals": 0,
+      "home": false,
+      "id": 8479323,
+      "name": "Adam Fox",
+      "opp": "EDM",
+      "result": "loss",
+      "team": "NYR"
+     },
+     {
+      "fact": "Revenge game vs SJS",
+      "goals": 0,
+      "home": false,
+      "id": 8477407,
+      "name": "Anthony Duclair",
+      "opp": "SJS",
+      "result": "loss",
+      "team": "NYI"
+     }
+    ],
+    "result": "L"
+   },
+   "hot": {
+    "legs": [
+     {
+      "fact": "3 goals in his last 5",
+      "goals": 0,
+      "home": false,
+      "id": 8481789,
+      "name": "Tye Kartye",
+      "opp": "EDM",
+      "result": "loss",
+      "team": "NYR"
+     },
+     {
+      "fact": "4-game point streak",
+      "goals": 0,
+      "home": false,
+      "id": 8482142,
+      "name": "Jamie Drysdale",
+      "opp": "VAN",
+      "result": "loss",
+      "team": "PHI"
+     },
+     {
+      "fact": "Goals in 2 straight",
+      "goals": 1,
+      "home": false,
+      "id": 8485388,
+      "name": "Victor Eklund",
+      "opp": "SJS",
+      "result": "win",
+      "team": "NYI"
+     }
+    ],
+    "result": "L"
+   },
+   "scammer": {
+    "L": 3,
+    "P": 1,
+    "W": 3,
+    "legs": [
+     {
+      "american": 105,
+      "fact": "Best short-price value: +105",
+      "goals": 2,
+      "home": true,
+      "id": 8477934,
+      "name": "Leon Draisaitl",
+      "opp": "NYR",
+      "result": "win",
+      "team": "EDM",
+      "units": 1.05
+     },
+     {
+      "american": 110,
+      "fact": "Best short-price value: +110",
+      "goals": 1,
+      "home": true,
+      "id": 8478402,
+      "name": "Connor McDavid",
+      "opp": "NYR",
+      "result": "win",
+      "team": "EDM",
+      "units": 1.1
+     },
+     {
+      "american": 205,
+      "fact": "Best mid-price value: +205",
+      "goals": 0,
+      "home": true,
+      "id": 8475786,
+      "name": "Zach Hyman",
+      "opp": "NYR",
+      "result": "loss",
+      "team": "EDM",
+      "units": -1.0
+     },
+     {
+      "american": 360,
+      "fact": "Best mid-price value: +360",
+      "goals": 1,
+      "home": true,
+      "id": 8475726,
+      "name": "Tyler Toffoli",
+      "opp": "NYI",
+      "result": "win",
+      "team": "SJS",
+      "units": 3.6
+     },
+     {
+      "american": 450,
+      "fact": "Best mid-price value: +450",
+      "goals": 0,
+      "home": true,
+      "id": 8480748,
+      "name": "Kiefer Sherwood",
+      "opp": "NYI",
+      "result": "loss",
+      "team": "SJS",
+      "units": -1.0
+     },
+     {
+      "american": 550,
+      "fact": "Best longshot value: +550",
+      "goals": null,
+      "home": false,
+      "id": 8483787,
+      "name": "Cole Knuble",
+      "opp": "VAN",
+      "result": "void",
+      "team": "PHI",
+      "units": 0.0,
+      "why": "Didn't dress"
+     },
+     {
+      "american": 600,
+      "fact": "Best longshot value: +600",
+      "goals": 0,
+      "home": false,
+      "id": 8480009,
+      "name": "Eeli Tolvanen",
+      "opp": "EDM",
+      "result": "loss",
+      "team": "NYR",
+      "units": -1.0
+     }
+    ],
+    "result": "singles",
+    "units": 2.75
+   },
+   "theo": {
+    "legs": [
+     {
+      "fact": "Theo's gut feeling",
+      "goals": 0,
+      "home": false,
+      "id": 8477950,
+      "name": "Tony DeAngelo",
+      "opp": "SJS",
+      "result": "loss",
+      "team": "NYI"
+     }
+    ],
+    "result": "L"
+   }
+  }
  }
 }
