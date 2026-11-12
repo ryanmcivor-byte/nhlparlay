@@ -11848,5 +11848,358 @@
     "result": "W"
    }
   }
+ },
+ "2026-11-11": {
+  "rebuilt": false,
+  "vibes": {
+   "any": {
+    "legs": [
+     {
+      "fact": "Old team: SJS",
+      "goals": 0,
+      "home": false,
+      "id": 8474578,
+      "name": "Erik Karlsson",
+      "opp": "SJS",
+      "result": "loss",
+      "team": "PIT"
+     },
+     {
+      "fact": "One away from goal #50",
+      "goals": 0,
+      "home": true,
+      "id": 8482679,
+      "name": "Matt Coronato",
+      "opp": "NYR",
+      "result": "loss",
+      "team": "CGY"
+     },
+     {
+      "fact": "5-game point streak",
+      "goals": 0,
+      "home": true,
+      "id": 8481605,
+      "name": "Jackson LaCombe",
+      "opp": "NSH",
+      "result": "loss",
+      "team": "ANA"
+     }
+    ],
+    "result": "L"
+   },
+   "chaos": {
+    "legs": [
+     {
+      "fact": "Owns Vladar: 3 goals",
+      "goals": 2,
+      "home": true,
+      "id": 8475786,
+      "name": "Zach Hyman",
+      "opp": "PHI",
+      "result": "win",
+      "team": "EDM"
+     },
+     {
+      "fact": "4 goals in his last 5",
+      "goals": 0,
+      "home": true,
+      "id": 8476881,
+      "name": "Tomas Hertl",
+      "opp": "UTA",
+      "result": "loss",
+      "team": "VGK"
+     },
+     {
+      "fact": "Revenge game vs BUF",
+      "goals": 0,
+      "home": false,
+      "id": 8476878,
+      "name": "Zemgus Girgensons",
+      "opp": "BUF",
+      "result": "loss",
+      "team": "TBL"
+     }
+    ],
+    "result": "L"
+   },
+   "chris": {
+    "legs": [
+     {
+      "fact": "Chris's cozy pick",
+      "goals": 0,
+      "home": true,
+      "id": 8477934,
+      "name": "Leon Draisaitl",
+      "opp": "PHI",
+      "result": "loss",
+      "team": "EDM"
+     }
+    ],
+    "result": "L"
+   },
+   "dejavu": {
+    "legs": [
+     {
+      "fact": "Owns Vasilevskiy: 6 goals",
+      "goals": 1,
+      "home": true,
+      "id": 8479420,
+      "name": "Tage Thompson",
+      "opp": "TBL",
+      "result": "win",
+      "team": "BUF"
+     },
+     {
+      "fact": "Owns Jarry: 4 goals",
+      "goals": 1,
+      "home": false,
+      "id": 8482159,
+      "name": "Tyson Foerster",
+      "opp": "EDM",
+      "result": "win",
+      "team": "PHI"
+     },
+     {
+      "fact": "Owns Hart: 4 goals",
+      "goals": 1,
+      "home": false,
+      "id": 8478474,
+      "name": "Lawson Crouse",
+      "opp": "VGK",
+      "result": "win",
+      "team": "UTA"
+     }
+    ],
+    "result": "W"
+   },
+   "due": {
+    "legs": [
+     {
+      "fact": "Due: 5 games without a goal",
+      "goals": 0,
+      "home": false,
+      "id": 8471215,
+      "name": "Evgeni Malkin",
+      "opp": "SJS",
+      "result": "loss",
+      "team": "PIT"
+     }
+    ],
+    "result": "L"
+   },
+   "favourites": {
+    "legs": [
+     {
+      "fact": "Statistical favourite \u00b7 1st line \u00b7 PP1",
+      "goals": 0,
+      "home": true,
+      "id": 8478402,
+      "name": "Connor McDavid",
+      "opp": "PHI",
+      "result": "loss",
+      "team": "EDM"
+     },
+     {
+      "fact": "Statistical favourite \u00b7 2nd line \u00b7 PP1",
+      "goals": 1,
+      "home": true,
+      "id": 8483445,
+      "name": "Cutter Gauthier",
+      "opp": "NSH",
+      "result": "win",
+      "team": "ANA"
+     },
+     {
+      "fact": "Statistical favourite \u00b7 1st line \u00b7 PP1",
+      "goals": 0,
+      "home": false,
+      "id": 8477404,
+      "name": "Jake Guentzel",
+      "opp": "BUF",
+      "result": "loss",
+      "team": "TBL"
+     }
+    ],
+    "result": "L"
+   },
+   "grudge": {
+    "legs": [
+     {
+      "fact": "Old team: NSH",
+      "goals": 1,
+      "home": true,
+      "id": 8475798,
+      "name": "Mikael Granlund",
+      "opp": "NSH",
+      "result": "win",
+      "team": "ANA"
+     },
+     {
+      "fact": "Birthday twin with Yan Kuznetsov",
+      "goals": 0,
+      "home": false,
+      "id": 8481525,
+      "name": "Matthew Robertson",
+      "opp": "CGY",
+      "result": "loss",
+      "team": "NYR"
+     },
+     {
+      "fact": "Birthday twin with Andrei Kuzmenko",
+      "goals": 0,
+      "home": true,
+      "id": 8477498,
+      "name": "Darnell Nurse",
+      "opp": "PIT",
+      "result": "loss",
+      "team": "SJS"
+     }
+    ],
+    "result": "L"
+   },
+   "hot": {
+    "legs": [
+     {
+      "fact": "Goals in 4 straight",
+      "goals": 0,
+      "home": true,
+      "id": 8477934,
+      "name": "Leon Draisaitl",
+      "opp": "PHI",
+      "result": "loss",
+      "team": "EDM"
+     },
+     {
+      "fact": "Goals in 2 straight",
+      "goals": 0,
+      "home": true,
+      "id": 8480797,
+      "name": "Joel Farabee",
+      "opp": "NYR",
+      "result": "loss",
+      "team": "CGY"
+     },
+     {
+      "fact": "Goals in 2 straight",
+      "goals": 0,
+      "home": true,
+      "id": 8483482,
+      "name": "Tristan Luneau",
+      "opp": "NSH",
+      "result": "loss",
+      "team": "ANA"
+     }
+    ],
+    "result": "L"
+   },
+   "scammer": {
+    "L": 4,
+    "P": 0,
+    "W": 3,
+    "legs": [
+     {
+      "american": 105,
+      "fact": "Best short-price value: +105",
+      "goals": 0,
+      "home": true,
+      "id": 8477934,
+      "name": "Leon Draisaitl",
+      "opp": "PHI",
+      "result": "loss",
+      "team": "EDM",
+      "units": -1.0
+     },
+     {
+      "american": 140,
+      "fact": "Best short-price value: +140",
+      "goals": 1,
+      "home": true,
+      "id": 8479420,
+      "name": "Tage Thompson",
+      "opp": "TBL",
+      "result": "win",
+      "team": "BUF",
+      "units": 1.4
+     },
+     {
+      "american": 230,
+      "fact": "Best mid-price value: +230",
+      "goals": 2,
+      "home": true,
+      "id": 8475786,
+      "name": "Zach Hyman",
+      "opp": "PHI",
+      "result": "win",
+      "team": "EDM",
+      "units": 2.3
+     },
+     {
+      "american": 320,
+      "fact": "Best mid-price value: +320",
+      "goals": 0,
+      "home": true,
+      "id": 8484803,
+      "name": "Trevor Connelly",
+      "opp": "UTA",
+      "result": "loss",
+      "team": "VGK",
+      "units": -1.0
+     },
+     {
+      "american": 370,
+      "fact": "Best mid-price value: +370",
+      "goals": 1,
+      "home": true,
+      "id": 8475722,
+      "name": "Jason Zucker",
+      "opp": "TBL",
+      "result": "win",
+      "team": "BUF",
+      "units": 3.7
+     },
+     {
+      "american": 650,
+      "fact": "Best longshot value: +650",
+      "goals": 0,
+      "home": false,
+      "id": 8480009,
+      "name": "Eeli Tolvanen",
+      "opp": "CGY",
+      "result": "loss",
+      "team": "NYR",
+      "units": -1.0
+     },
+     {
+      "american": 1300,
+      "fact": "Best longshot value: +1300",
+      "goals": 0,
+      "home": false,
+      "id": 8478446,
+      "name": "Glenn Gawdin",
+      "opp": "CGY",
+      "result": "loss",
+      "team": "NYR",
+      "units": -1.0
+     }
+    ],
+    "result": "singles",
+    "units": 3.4
+   },
+   "theo": {
+    "legs": [
+     {
+      "fact": "Theo's gut feeling",
+      "goals": 0,
+      "home": true,
+      "id": 8475188,
+      "name": "Brayden McNabb",
+      "opp": "UTA",
+      "result": "loss",
+      "team": "VGK"
+     }
+    ],
+    "result": "L"
+   }
+  }
  }
 }
