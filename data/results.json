@@ -12574,5 +12574,283 @@
     "result": "W"
    }
   }
+ },
+ "2026-11-13": {
+  "rebuilt": false,
+  "vibes": {
+   "any": {
+    "legs": [
+     {
+      "fact": "First game with the Canucks",
+      "goals": 0,
+      "home": true,
+      "id": 8480075,
+      "name": "Cameron Crotty",
+      "opp": "NYR",
+      "result": "loss",
+      "team": "VAN"
+     },
+     {
+      "fact": "Still chasing goal #1",
+      "goals": 0,
+      "home": false,
+      "id": 8482094,
+      "name": "Daemon Hunt",
+      "opp": "VGK",
+      "result": "loss",
+      "team": "NSH"
+     }
+    ],
+    "result": "L"
+   },
+   "chaos": {
+    "legs": [
+     {
+      "fact": "4 goals in his last 5",
+      "goals": 0,
+      "home": true,
+      "id": 8476881,
+      "name": "Tomas Hertl",
+      "opp": "NSH",
+      "result": "loss",
+      "team": "VGK"
+     },
+     {
+      "fact": "Same name across the ice",
+      "goals": 0,
+      "home": true,
+      "id": 8483678,
+      "name": "Elias Pettersson",
+      "opp": "NYR",
+      "result": "loss",
+      "team": "VAN"
+     }
+    ],
+    "result": "L"
+   },
+   "chris": {
+    "legs": [
+     {
+      "fact": "Chris's cozy pick",
+      "goals": 0,
+      "home": false,
+      "id": 8474564,
+      "name": "Steven Stamkos",
+      "opp": "VGK",
+      "result": "loss",
+      "team": "NSH"
+     }
+    ],
+    "result": "L"
+   },
+   "dejavu": {
+    "legs": [
+     {
+      "fact": "Owns Hill: 4 goals",
+      "goals": 0,
+      "home": false,
+      "id": 8482145,
+      "name": "Mavrik Bourque",
+      "opp": "VGK",
+      "result": "loss",
+      "team": "NSH"
+     },
+     {
+      "fact": "Owns Meril\u00e4inen: 2 goals",
+      "goals": 1,
+      "home": false,
+      "id": 8484210,
+      "name": "Gabe Perreault",
+      "opp": "VAN",
+      "result": "win",
+      "team": "NYR"
+     }
+    ],
+    "result": "L"
+   },
+   "favourites": {
+    "legs": [
+     {
+      "fact": "Statistical favourite \u00b7 1st line \u00b7 PP1",
+      "goals": 0,
+      "home": false,
+      "id": 8474564,
+      "name": "Steven Stamkos",
+      "opp": "VGK",
+      "result": "loss",
+      "team": "NSH"
+     },
+     {
+      "fact": "Statistical favourite \u00b7 2nd line \u00b7 PP1",
+      "goals": 0,
+      "home": false,
+      "id": 8481604,
+      "name": "Pavel Dorofeyev",
+      "opp": "VAN",
+      "result": "loss",
+      "team": "NYR"
+     }
+    ],
+    "result": "L"
+   },
+   "grudge": {
+    "legs": [
+     {
+      "fact": "Revenge game vs VAN",
+      "goals": 0,
+      "home": false,
+      "id": 8476468,
+      "name": "J.T. Miller",
+      "opp": "VAN",
+      "result": "loss",
+      "team": "NYR"
+     },
+     {
+      "fact": "Birthday twin with Mavrik Bourque",
+      "goals": 0,
+      "home": true,
+      "id": 8476448,
+      "name": "William Karlsson",
+      "opp": "NSH",
+      "result": "loss",
+      "team": "VGK"
+     }
+    ],
+    "result": "L"
+   },
+   "hot": {
+    "legs": [
+     {
+      "fact": "3 goals in his last 5",
+      "goals": 0,
+      "home": true,
+      "id": 8478444,
+      "name": "Brock Boeser",
+      "opp": "NYR",
+      "result": "loss",
+      "team": "VAN"
+     },
+     {
+      "fact": "Goals in 2 straight",
+      "goals": 0,
+      "home": true,
+      "id": 8478403,
+      "name": "Jack Eichel",
+      "opp": "NSH",
+      "result": "loss",
+      "team": "VGK"
+     }
+    ],
+    "result": "L"
+   },
+   "scammer": {
+    "L": 7,
+    "P": 0,
+    "W": 0,
+    "legs": [
+     {
+      "american": 175,
+      "fact": "Best short-price value: +175",
+      "goals": 0,
+      "home": false,
+      "id": 8474564,
+      "name": "Steven Stamkos",
+      "opp": "VGK",
+      "result": "loss",
+      "team": "NSH",
+      "units": -1.0
+     },
+     {
+      "american": 180,
+      "fact": "Best short-price value: +180",
+      "goals": 0,
+      "home": false,
+      "id": 8476887,
+      "name": "Filip Forsberg",
+      "opp": "VGK",
+      "result": "loss",
+      "team": "NSH",
+      "units": -1.0
+     },
+     {
+      "american": 220,
+      "fact": "Best mid-price value: +220",
+      "goals": 0,
+      "home": true,
+      "id": 8476881,
+      "name": "Tomas Hertl",
+      "opp": "NSH",
+      "result": "loss",
+      "team": "VGK",
+      "units": -1.0
+     },
+     {
+      "american": 270,
+      "fact": "Best mid-price value: +270",
+      "goals": 0,
+      "home": true,
+      "id": 8484803,
+      "name": "Trevor Connelly",
+      "opp": "NSH",
+      "result": "loss",
+      "team": "VGK",
+      "units": -1.0
+     },
+     {
+      "american": 500,
+      "fact": "Best mid-price value: +500",
+      "goals": 0,
+      "home": true,
+      "id": 8482079,
+      "name": "Marco Rossi",
+      "opp": "NYR",
+      "result": "loss",
+      "team": "VAN",
+      "units": -1.0
+     },
+     {
+      "american": 650,
+      "fact": "Best longshot value: +650",
+      "goals": 0,
+      "home": false,
+      "id": 8480009,
+      "name": "Eeli Tolvanen",
+      "opp": "VAN",
+      "result": "loss",
+      "team": "NYR",
+      "units": -1.0
+     },
+     {
+      "american": 700,
+      "fact": "Best longshot value: +700",
+      "goals": 0,
+      "home": true,
+      "id": 8484136,
+      "name": "Max Sasson",
+      "opp": "NYR",
+      "result": "loss",
+      "team": "VAN",
+      "units": -1.0
+     }
+    ],
+    "result": "singles",
+    "units": -7.0
+   },
+   "theo": {
+    "legs": [
+     {
+      "fact": "Theo's gut feeling",
+      "goals": 0,
+      "home": true,
+      "id": 8475343,
+      "name": "Nic Dowd",
+      "opp": "NSH",
+      "result": "loss",
+      "team": "VGK"
+     }
+    ],
+    "result": "L"
+   }
+  }
  }
 }
