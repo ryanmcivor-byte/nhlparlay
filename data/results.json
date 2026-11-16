@@ -13225,5 +13225,344 @@
     "result": "L"
    }
   }
+ },
+ "2026-11-15": {
+  "rebuilt": false,
+  "vibes": {
+   "any": {
+    "legs": [
+     {
+      "fact": "One assist from #100",
+      "goals": 0,
+      "home": false,
+      "id": 8477450,
+      "name": "Jason Dickinson",
+      "opp": "PHI",
+      "result": "loss",
+      "team": "EDM"
+     },
+     {
+      "fact": "3 goals in his last 5",
+      "goals": 0,
+      "home": true,
+      "id": 8478449,
+      "name": "Roope Hintz",
+      "opp": "FLA",
+      "result": "loss",
+      "team": "DAL"
+     },
+     {
+      "fact": "Just scored on ANA",
+      "goals": 0,
+      "home": false,
+      "id": 8477810,
+      "name": "Joel Hanley",
+      "opp": "ANA",
+      "result": "loss",
+      "team": "CGY"
+     }
+    ],
+    "result": "L"
+   },
+   "chaos": {
+    "legs": [
+     {
+      "fact": "3 goals in his last 5",
+      "goals": 0,
+      "home": false,
+      "id": 8480801,
+      "name": "Brady Tkachuk",
+      "opp": "DAL",
+      "result": "loss",
+      "team": "FLA"
+     },
+     {
+      "fact": "3-game point streak",
+      "goals": 1,
+      "home": false,
+      "id": 8480012,
+      "name": "Elias Pettersson",
+      "opp": "VGK",
+      "result": "win",
+      "team": "VAN"
+     },
+     {
+      "fact": "One away from goal #50",
+      "goals": 1,
+      "home": true,
+      "id": 8484227,
+      "name": "Will Smith",
+      "opp": "NSH",
+      "result": "win",
+      "team": "SJS"
+     }
+    ],
+    "result": "L"
+   },
+   "chris": {
+    "legs": [
+     {
+      "fact": "Chris's cozy pick",
+      "goals": 2,
+      "home": false,
+      "id": 8477934,
+      "name": "Leon Draisaitl",
+      "opp": "PHI",
+      "result": "win",
+      "team": "EDM"
+     }
+    ],
+    "result": "W"
+   },
+   "dejavu": {
+    "legs": [
+     {
+      "fact": "Owns Jarry: 5 goals",
+      "goals": 0,
+      "home": true,
+      "id": 8482159,
+      "name": "Tyson Foerster",
+      "opp": "EDM",
+      "result": "loss",
+      "team": "PHI"
+     },
+     {
+      "fact": "Owns Saros: 4 goals",
+      "goals": 0,
+      "home": true,
+      "id": 8478975,
+      "name": "Mason Marchment",
+      "opp": "NSH",
+      "result": "loss",
+      "team": "SJS"
+     },
+     {
+      "fact": "Owns DeSmith: 4 goals",
+      "goals": 0,
+      "home": false,
+      "id": 8477933,
+      "name": "Sam Reinhart",
+      "opp": "DAL",
+      "result": "loss",
+      "team": "FLA"
+     }
+    ],
+    "result": "L"
+   },
+   "favourites": {
+    "legs": [
+     {
+      "fact": "Statistical favourite \u00b7 1st line \u00b7 PP1",
+      "goals": 2,
+      "home": false,
+      "id": 8477934,
+      "name": "Leon Draisaitl",
+      "opp": "PHI",
+      "result": "win",
+      "team": "EDM"
+     },
+     {
+      "fact": "Statistical favourite \u00b7 1st line \u00b7 PP1",
+      "goals": 1,
+      "home": true,
+      "id": 8483445,
+      "name": "Cutter Gauthier",
+      "opp": "CGY",
+      "result": "win",
+      "team": "ANA"
+     },
+     {
+      "fact": "Statistical favourite \u00b7 1st line \u00b7 PP1",
+      "goals": 1,
+      "home": true,
+      "id": 8480027,
+      "name": "Jason Robertson",
+      "opp": "FLA",
+      "result": "win",
+      "team": "DAL"
+     }
+    ],
+    "result": "W"
+   },
+   "grudge": {
+    "legs": [
+     {
+      "fact": "Birthday twin with Mikko Rantanen",
+      "goals": 0,
+      "home": false,
+      "id": 8475179,
+      "name": "Dmitry Kulikov",
+      "opp": "DAL",
+      "result": "loss",
+      "team": "FLA"
+     },
+     {
+      "fact": "Same name across the ice",
+      "goals": 0,
+      "home": true,
+      "id": 8476448,
+      "name": "William Karlsson",
+      "opp": "VAN",
+      "result": "loss",
+      "team": "VGK"
+     },
+     {
+      "fact": "Birthday twin with Alex Killorn",
+      "goals": 0,
+      "home": false,
+      "id": 8483609,
+      "name": "Adam Klapka",
+      "opp": "ANA",
+      "result": "loss",
+      "team": "CGY"
+     }
+    ],
+    "result": "L"
+   },
+   "hot": {
+    "legs": [
+     {
+      "fact": "Goals in 2 straight",
+      "goals": 0,
+      "home": false,
+      "id": 8482113,
+      "name": "Anton Lundell",
+      "opp": "DAL",
+      "result": "loss",
+      "team": "FLA"
+     },
+     {
+      "fact": "Two goals last game",
+      "goals": null,
+      "home": true,
+      "id": 8484142,
+      "name": "Denver Barkey",
+      "opp": "EDM",
+      "result": "void",
+      "team": "PHI",
+      "why": "Didn't dress"
+     },
+     {
+      "fact": "3 goals in his last 5",
+      "goals": 1,
+      "home": false,
+      "id": 8474564,
+      "name": "Steven Stamkos",
+      "opp": "SJS",
+      "result": "win",
+      "team": "NSH"
+     }
+    ],
+    "result": "L"
+   },
+   "scammer": {
+    "L": 5,
+    "P": 0,
+    "W": 2,
+    "legs": [
+     {
+      "american": 115,
+      "fact": "Best short-price value: +115",
+      "goals": 2,
+      "home": false,
+      "id": 8477934,
+      "name": "Leon Draisaitl",
+      "opp": "PHI",
+      "result": "win",
+      "team": "EDM",
+      "units": 1.15
+     },
+     {
+      "american": 165,
+      "fact": "Best short-price value: +165",
+      "goals": 0,
+      "home": false,
+      "id": 8477933,
+      "name": "Sam Reinhart",
+      "opp": "DAL",
+      "result": "loss",
+      "team": "FLA",
+      "units": -1.0
+     },
+     {
+      "american": 225,
+      "fact": "Best mid-price value: +225",
+      "goals": 1,
+      "home": false,
+      "id": 8475786,
+      "name": "Zach Hyman",
+      "opp": "PHI",
+      "result": "win",
+      "team": "EDM",
+      "units": 2.25
+     },
+     {
+      "american": 330,
+      "fact": "Best mid-price value: +330",
+      "goals": 0,
+      "home": false,
+      "id": 8477935,
+      "name": "Sam Bennett",
+      "opp": "DAL",
+      "result": "loss",
+      "team": "FLA",
+      "units": -1.0
+     },
+     {
+      "american": 390,
+      "fact": "Best mid-price value: +390",
+      "goals": 0,
+      "home": true,
+      "id": 8475726,
+      "name": "Tyler Toffoli",
+      "opp": "NSH",
+      "result": "loss",
+      "team": "SJS",
+      "units": -1.0
+     },
+     {
+      "american": 550,
+      "fact": "Best longshot value: +550",
+      "goals": 0,
+      "home": false,
+      "id": 8482766,
+      "name": "William Stromgren",
+      "opp": "ANA",
+      "result": "loss",
+      "team": "CGY",
+      "units": -1.0
+     },
+     {
+      "american": 850,
+      "fact": "Best longshot value: +850",
+      "goals": 0,
+      "home": false,
+      "id": 8484136,
+      "name": "Max Sasson",
+      "opp": "VGK",
+      "result": "loss",
+      "team": "VAN",
+      "units": -1.0
+     }
+    ],
+    "result": "singles",
+    "units": -1.6
+   },
+   "theo": {
+    "legs": [
+     {
+      "fact": "Theo's gut feeling",
+      "goals": 0,
+      "home": true,
+      "id": 8476881,
+      "name": "Tomas Hertl",
+      "opp": "VAN",
+      "result": "loss",
+      "team": "VGK"
+     }
+    ],
+    "result": "L"
+   }
+  }
  }
 }
