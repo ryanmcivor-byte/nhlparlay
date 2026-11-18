@@ -1,24 +1,24 @@
 {
  "weights": [
-  -0.11265,
-  0.1351,
-  0.89901
+  -0.1205,
+  0.12028,
+  0.90564
  ],
- "n": 11197,
- "days": 48,
- "trainedThrough": "2026-11-16",
- "scoringRate": 0.1543,
+ "n": 11572,
+ "days": 49,
+ "trainedThrough": "2026-11-17",
+ "scoringRate": 0.1549,
  "backtest": {
-  "wins": 70,
-  "losses": 266,
-  "units": -71.1,
-  "roi": -0.2116,
-  "marketRoi": -0.1534
+  "wins": 72,
+  "losses": 271,
+  "units": -69.55,
+  "roi": -0.2028,
+  "marketRoi": -0.148
  },
  "walkForward": {
-  "bets": 11197,
-  "modelLogLoss": 0.39665,
-  "bookLogLoss": 0.39662
+  "bets": 11572,
+  "modelLogLoss": 0.39801,
+  "bookLogLoss": 0.39796
  },
  "history": [
   {
@@ -452,6 +452,15 @@
     0.893
    ],
    "bets": 68
+  },
+  {
+   "date": "2026-11-17",
+   "weights": [
+    -0.1126,
+    0.1351,
+    0.899
+   ],
+   "bets": 375
   }
  ]
 }
