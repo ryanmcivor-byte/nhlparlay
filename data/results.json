@@ -14222,5 +14222,378 @@
     "result": "L"
    }
   }
+ },
+ "2026-11-18": {
+  "rebuilt": false,
+  "vibes": {
+   "any": {
+    "legs": [
+     {
+      "fact": "5-game point streak",
+      "goals": 0,
+      "home": true,
+      "id": 8479407,
+      "name": "Jesper Bratt",
+      "opp": "MTL",
+      "result": "loss",
+      "team": "NJD"
+     },
+     {
+      "fact": "4-game point streak",
+      "goals": 0,
+      "home": false,
+      "id": 8486171,
+      "name": "T.J. Hughes",
+      "opp": "UTA",
+      "result": "loss",
+      "team": "COL"
+     },
+     {
+      "fact": "Jersey number = today's date",
+      "goals": 0,
+      "home": true,
+      "id": 8477429,
+      "name": "Andrew Copp",
+      "opp": "BOS",
+      "result": "loss",
+      "team": "DET"
+     }
+    ],
+    "result": "L"
+   },
+   "chaos": {
+    "legs": [
+     {
+      "fact": "Owns Blackwood: 2 goals",
+      "goals": 1,
+      "home": true,
+      "id": 8476389,
+      "name": "Vincent Trocheck",
+      "opp": "COL",
+      "result": "win",
+      "team": "UTA"
+     },
+     {
+      "fact": "Drama alert",
+      "goals": 0,
+      "home": true,
+      "id": 8479996,
+      "name": "Cody Glass",
+      "opp": "MTL",
+      "result": "loss",
+      "team": "NJD"
+     },
+     {
+      "fact": "Owns Swayman: 2 goals",
+      "goals": 0,
+      "home": true,
+      "id": 8475279,
+      "name": "Ben Chiarot",
+      "opp": "BOS",
+      "result": "loss",
+      "team": "DET"
+     }
+    ],
+    "result": "L"
+   },
+   "chris": {
+    "legs": [
+     {
+      "fact": "Chris's cozy pick",
+      "goals": 0,
+      "home": false,
+      "id": 8481540,
+      "name": "Cole Caufield",
+      "opp": "NJD",
+      "result": "loss",
+      "team": "MTL"
+     }
+    ],
+    "result": "L"
+   },
+   "dejavu": {
+    "legs": [
+     {
+      "fact": "Owns Swayman: 5 goals",
+      "goals": 1,
+      "home": true,
+      "id": 8482078,
+      "name": "Lucas Raymond",
+      "opp": "BOS",
+      "result": "win",
+      "team": "DET"
+     },
+     {
+      "fact": "Owns Blackwood: 3 goals",
+      "goals": 0,
+      "home": true,
+      "id": 8475314,
+      "name": "Anders Lee",
+      "opp": "COL",
+      "result": "loss",
+      "team": "UTA"
+     },
+     {
+      "fact": "Owns Hellebuyck: 2 goals",
+      "goals": 0,
+      "home": false,
+      "id": 8483457,
+      "name": "Lane Hutson",
+      "opp": "NJD",
+      "result": "loss",
+      "team": "MTL"
+     }
+    ],
+    "result": "L"
+   },
+   "due": {
+    "legs": [
+     {
+      "fact": "Due: 12 games without a goal",
+      "goals": 0,
+      "home": false,
+      "id": 8483515,
+      "name": "Juraj Slafkovsk\u00fd",
+      "opp": "NJD",
+      "result": "loss",
+      "team": "MTL"
+     },
+     {
+      "fact": "Due: 8 games without a goal",
+      "goals": 0,
+      "home": true,
+      "id": 8478042,
+      "name": "Viktor Arvidsson",
+      "opp": "BOS",
+      "result": "loss",
+      "team": "DET"
+     },
+     {
+      "fact": "Due: 5 games without a goal",
+      "goals": 0,
+      "home": false,
+      "id": 8475172,
+      "name": "Nazem Kadri",
+      "opp": "UTA",
+      "result": "loss",
+      "team": "COL"
+     }
+    ],
+    "result": "L"
+   },
+   "favourites": {
+    "legs": [
+     {
+      "fact": "Statistical favourite \u00b7 1st line \u00b7 PP1",
+      "goals": 0,
+      "home": false,
+      "id": 8481540,
+      "name": "Cole Caufield",
+      "opp": "NJD",
+      "result": "loss",
+      "team": "MTL"
+     },
+     {
+      "fact": "Statistical favourite \u00b7 1st line \u00b7 PP1",
+      "goals": 0,
+      "home": true,
+      "id": 8479337,
+      "name": "Alex DeBrincat",
+      "opp": "BOS",
+      "result": "loss",
+      "team": "DET"
+     },
+     {
+      "fact": "Statistical favourite \u00b7 1st line \u00b7 PP1",
+      "goals": 0,
+      "home": true,
+      "id": 8483431,
+      "name": "Logan Cooley",
+      "opp": "COL",
+      "result": "loss",
+      "team": "UTA"
+     }
+    ],
+    "result": "L"
+   },
+   "grudge": {
+    "legs": [
+     {
+      "fact": "Birthday twin with Mikhail Sergachev",
+      "goals": 0,
+      "home": false,
+      "id": 8475768,
+      "name": "Jaden Schwartz",
+      "opp": "UTA",
+      "result": "loss",
+      "team": "COL"
+     },
+     {
+      "fact": "Birthday twin with Moritz Seider",
+      "goals": 1,
+      "home": false,
+      "id": 8478401,
+      "name": "Pavel Zacha",
+      "opp": "DET",
+      "result": "win",
+      "team": "BOS"
+     },
+     {
+      "fact": "Birthday twin with Timo Meier",
+      "goals": 0,
+      "home": false,
+      "id": 8478851,
+      "name": "Alexandre Carrier",
+      "opp": "NJD",
+      "result": "loss",
+      "team": "MTL"
+     }
+    ],
+    "result": "L"
+   },
+   "hot": {
+    "legs": [
+     {
+      "fact": "3 goals in his last 5",
+      "goals": 0,
+      "home": false,
+      "id": 8480039,
+      "name": "Martin Necas",
+      "opp": "UTA",
+      "result": "loss",
+      "team": "COL"
+     },
+     {
+      "fact": "4 goals in his last 5",
+      "goals": 0,
+      "home": true,
+      "id": 8478542,
+      "name": "Evan Rodrigues",
+      "opp": "MTL",
+      "result": "loss",
+      "team": "NJD"
+     },
+     {
+      "fact": "13 shots in his last 3",
+      "goals": 1,
+      "home": false,
+      "id": 8477956,
+      "name": "David Pastrnak",
+      "opp": "DET",
+      "result": "win",
+      "team": "BOS"
+     }
+    ],
+    "result": "L"
+   },
+   "scammer": {
+    "L": 5,
+    "P": 0,
+    "W": 2,
+    "legs": [
+     {
+      "american": 135,
+      "fact": "Best short-price value: +135",
+      "goals": 0,
+      "home": false,
+      "id": 8481540,
+      "name": "Cole Caufield",
+      "opp": "NJD",
+      "result": "loss",
+      "team": "MTL",
+      "units": -1.0
+     },
+     {
+      "american": 160,
+      "fact": "Best short-price value: +160",
+      "goals": 0,
+      "home": true,
+      "id": 8479337,
+      "name": "Alex DeBrincat",
+      "opp": "BOS",
+      "result": "loss",
+      "team": "DET",
+      "units": -1.0
+     },
+     {
+      "american": 220,
+      "fact": "Best mid-price value: +220",
+      "goals": 0,
+      "home": false,
+      "id": 8479987,
+      "name": "Morgan Geekie",
+      "opp": "DET",
+      "result": "loss",
+      "team": "BOS",
+      "units": -1.0
+     },
+     {
+      "american": 225,
+      "fact": "Best mid-price value: +225",
+      "goals": 1,
+      "home": false,
+      "id": 8480018,
+      "name": "Nick Suzuki",
+      "opp": "NJD",
+      "result": "win",
+      "team": "MTL",
+      "units": 2.25
+     },
+     {
+      "american": 255,
+      "fact": "Best mid-price value: +255",
+      "goals": 0,
+      "home": false,
+      "id": 8475754,
+      "name": "Brock Nelson",
+      "opp": "UTA",
+      "result": "loss",
+      "team": "COL",
+      "units": -1.0
+     },
+     {
+      "american": 550,
+      "fact": "Best longshot value: +550",
+      "goals": 0,
+      "home": false,
+      "id": 8482775,
+      "name": "Oliver Kapanen",
+      "opp": "NJD",
+      "result": "loss",
+      "team": "MTL",
+      "units": -1.0
+     },
+     {
+      "american": 750,
+      "fact": "Best longshot value: +750",
+      "goals": 1,
+      "home": false,
+      "id": 8480448,
+      "name": "Parker Kelly",
+      "opp": "UTA",
+      "result": "win",
+      "team": "COL",
+      "units": 7.5
+     }
+    ],
+    "result": "singles",
+    "units": 4.75
+   },
+   "theo": {
+    "legs": [
+     {
+      "fact": "Theo's gut feeling",
+      "goals": 0,
+      "home": false,
+      "id": 8477496,
+      "name": "Elias Lindholm",
+      "opp": "DET",
+      "result": "loss",
+      "team": "BOS"
+     }
+    ],
+    "result": "L"
+   }
+  }
  }
 }
