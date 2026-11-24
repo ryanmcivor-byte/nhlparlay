@@ -15342,5 +15342,359 @@
     "result": "L"
    }
   }
+ },
+ "2026-11-22": {
+  "rebuilt": false,
+  "vibes": {
+   "any": {
+    "legs": [
+     {
+      "fact": "3 goals in his last 5",
+      "goals": 1,
+      "home": false,
+      "id": 8482097,
+      "name": "Jack Quinn",
+      "opp": "TBL",
+      "result": "win",
+      "team": "BUF"
+     },
+     {
+      "fact": "Career game #500",
+      "goals": 1,
+      "home": false,
+      "id": 8480336,
+      "name": "Sean Walker",
+      "opp": "NYR",
+      "result": "win",
+      "team": "CAR"
+     },
+     {
+      "fact": "Love life in the news",
+      "goals": 0,
+      "home": false,
+      "id": 8478402,
+      "name": "Connor McDavid",
+      "opp": "STL",
+      "result": "loss",
+      "team": "EDM"
+     }
+    ],
+    "result": "L"
+   },
+   "chaos": {
+    "legs": [
+     {
+      "fact": "6 goals in his last 5",
+      "goals": 1,
+      "home": false,
+      "id": 8483493,
+      "name": "Frank Nazar",
+      "opp": "VAN",
+      "result": "win",
+      "team": "CHI"
+     },
+     {
+      "fact": "6 goals in his last 5",
+      "goals": 0,
+      "home": false,
+      "id": 8480830,
+      "name": "Andrei Svechnikov",
+      "opp": "NYR",
+      "result": "loss",
+      "team": "CAR"
+     },
+     {
+      "fact": "3 goals in his last 5",
+      "goals": 0,
+      "home": true,
+      "id": 8482077,
+      "name": "Dylan Holloway",
+      "opp": "EDM",
+      "result": "loss",
+      "team": "STL"
+     }
+    ],
+    "result": "L"
+   },
+   "chris": {
+    "legs": [
+     {
+      "fact": "Chris's cozy pick",
+      "goals": 1,
+      "home": false,
+      "id": 8477934,
+      "name": "Leon Draisaitl",
+      "opp": "STL",
+      "result": "win",
+      "team": "EDM"
+     }
+    ],
+    "result": "W"
+   },
+   "dejavu": {
+    "legs": [
+     {
+      "fact": "Owns Vasilevskiy: 7 goals",
+      "goals": 2,
+      "home": false,
+      "id": 8479420,
+      "name": "Tage Thompson",
+      "opp": "TBL",
+      "result": "win",
+      "team": "BUF"
+     },
+     {
+      "fact": "Owns Oettinger: 5 goals",
+      "goals": 0,
+      "home": false,
+      "id": 8478438,
+      "name": "Tommy Novak",
+      "opp": "DAL",
+      "result": "loss",
+      "team": "PIT"
+     },
+     {
+      "fact": "Owns Jarry: 3 goals",
+      "goals": 0,
+      "home": true,
+      "id": 8482089,
+      "name": "Jake Neighbours",
+      "opp": "EDM",
+      "result": "loss",
+      "team": "STL"
+     }
+    ],
+    "result": "L"
+   },
+   "due": {
+    "legs": [
+     {
+      "fact": "Due: 5 games without a goal",
+      "goals": 0,
+      "home": false,
+      "id": 8482475,
+      "name": "Egor Chinakhov",
+      "opp": "DAL",
+      "result": "loss",
+      "team": "PIT"
+     }
+    ],
+    "result": "L"
+   },
+   "favourites": {
+    "legs": [
+     {
+      "fact": "Statistical favourite \u00b7 1st line \u00b7 PP1",
+      "goals": 1,
+      "home": false,
+      "id": 8477934,
+      "name": "Leon Draisaitl",
+      "opp": "STL",
+      "result": "win",
+      "team": "EDM"
+     },
+     {
+      "fact": "Statistical favourite \u00b7 1st line \u00b7 PP1",
+      "goals": 1,
+      "home": true,
+      "id": 8476453,
+      "name": "Nikita Kucherov",
+      "opp": "BUF",
+      "result": "win",
+      "team": "TBL"
+     },
+     {
+      "fact": "Statistical favourite \u00b7 1st line \u00b7 PP1",
+      "goals": 0,
+      "home": true,
+      "id": 8482740,
+      "name": "Wyatt Johnston",
+      "opp": "PIT",
+      "result": "loss",
+      "team": "DAL"
+     }
+    ],
+    "result": "L"
+   },
+   "grudge": {
+    "legs": [
+     {
+      "fact": "Birthday twin with Lian Bichsel",
+      "goals": null,
+      "home": false,
+      "id": 8483398,
+      "name": "Declan Carlile",
+      "opp": "DAL",
+      "result": "void",
+      "team": "PIT",
+      "why": "Didn't dress"
+     },
+     {
+      "fact": "Hometown game",
+      "goals": 0,
+      "home": false,
+      "id": 8479365,
+      "name": "Trent Frederic",
+      "opp": "STL",
+      "result": "loss",
+      "team": "EDM"
+     },
+     {
+      "fact": "Same name across the ice",
+      "goals": 0,
+      "home": false,
+      "id": 8480817,
+      "name": "K'Andre Miller",
+      "opp": "NYR",
+      "result": "loss",
+      "team": "CAR"
+     }
+    ],
+    "result": "L"
+   },
+   "hot": {
+    "legs": [
+     {
+      "fact": "3-game point streak",
+      "goals": 0,
+      "home": true,
+      "id": 8480027,
+      "name": "Jason Robertson",
+      "opp": "PIT",
+      "result": "loss",
+      "team": "DAL"
+     },
+     {
+      "fact": "3-game point streak",
+      "goals": 1,
+      "home": true,
+      "id": 8476468,
+      "name": "J.T. Miller",
+      "opp": "CAR",
+      "result": "win",
+      "team": "NYR"
+     },
+     {
+      "fact": "Goals in 2 straight",
+      "goals": 1,
+      "home": true,
+      "id": 8483516,
+      "name": "Jimmy Snuggerud",
+      "opp": "EDM",
+      "result": "win",
+      "team": "STL"
+     }
+    ],
+    "result": "L"
+   },
+   "scammer": {
+    "L": 4,
+    "P": 0,
+    "W": 3,
+    "legs": [
+     {
+      "american": 110,
+      "fact": "Best short-price value: +110",
+      "goals": 1,
+      "home": false,
+      "id": 8477934,
+      "name": "Leon Draisaitl",
+      "opp": "STL",
+      "result": "win",
+      "team": "EDM",
+      "units": 1.1
+     },
+     {
+      "american": 155,
+      "fact": "Best short-price value: +155",
+      "goals": 2,
+      "home": false,
+      "id": 8479420,
+      "name": "Tage Thompson",
+      "opp": "TBL",
+      "result": "win",
+      "team": "BUF",
+      "units": 1.55
+     },
+     {
+      "american": 215,
+      "fact": "Best mid-price value: +215",
+      "goals": 0,
+      "home": false,
+      "id": 8476483,
+      "name": "Rickard Rakell",
+      "opp": "DAL",
+      "result": "loss",
+      "team": "PIT",
+      "units": -1.0
+     },
+     {
+      "american": 220,
+      "fact": "Best mid-price value: +220",
+      "goals": 3,
+      "home": false,
+      "id": 8484390,
+      "name": "Roman Kantserov",
+      "opp": "VAN",
+      "result": "win",
+      "team": "CHI",
+      "units": 2.2
+     },
+     {
+      "american": 450,
+      "fact": "Best mid-price value: +450",
+      "goals": 0,
+      "home": false,
+      "id": 8475722,
+      "name": "Jason Zucker",
+      "opp": "TBL",
+      "result": "loss",
+      "team": "BUF",
+      "units": -1.0
+     },
+     {
+      "american": 950,
+      "fact": "Best longshot value: +950",
+      "goals": 0,
+      "home": true,
+      "id": 8478446,
+      "name": "Glenn Gawdin",
+      "opp": "CAR",
+      "result": "loss",
+      "team": "NYR",
+      "units": -1.0
+     },
+     {
+      "american": 1100,
+      "fact": "Best longshot value: +1100",
+      "goals": 0,
+      "home": false,
+      "id": 8480807,
+      "name": "Mattias Samuelsson",
+      "opp": "TBL",
+      "result": "loss",
+      "team": "BUF",
+      "units": -1.0
+     }
+    ],
+    "result": "singles",
+    "units": 0.85
+   },
+   "theo": {
+    "legs": [
+     {
+      "fact": "Theo's gut feeling",
+      "goals": 0,
+      "home": true,
+      "id": 8481581,
+      "name": "Thomas Harley",
+      "opp": "PIT",
+      "result": "loss",
+      "team": "DAL"
+     }
+    ],
+    "result": "L"
+   }
+  }
  }
 }
