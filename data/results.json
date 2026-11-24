@@ -15696,5 +15696,378 @@
     "result": "L"
    }
   }
+ },
+ "2026-11-23": {
+  "rebuilt": false,
+  "vibes": {
+   "any": {
+    "legs": [
+     {
+      "fact": "Jersey number = today's date",
+      "goals": 0,
+      "home": true,
+      "id": 8476624,
+      "name": "Barclay Goodrow",
+      "opp": "MIN",
+      "result": "loss",
+      "team": "SJS"
+     },
+     {
+      "fact": "Drama alert",
+      "goals": 0,
+      "home": true,
+      "id": 8479996,
+      "name": "Cody Glass",
+      "opp": "CBJ",
+      "result": "loss",
+      "team": "NJD"
+     },
+     {
+      "fact": "Owns Kuemper: 2 goals",
+      "goals": 1,
+      "home": true,
+      "id": 8481618,
+      "name": "Alex Newhook",
+      "opp": "LAK",
+      "result": "win",
+      "team": "MTL"
+     }
+    ],
+    "result": "L"
+   },
+   "chaos": {
+    "legs": [
+     {
+      "fact": "3 goals in his last 5",
+      "goals": 0,
+      "home": true,
+      "id": 8484800,
+      "name": "Berkly Catton",
+      "opp": "ANA",
+      "result": "loss",
+      "team": "SEA"
+     },
+     {
+      "fact": "Drama alert",
+      "goals": 0,
+      "home": false,
+      "id": 8477960,
+      "name": "Adrian Kempe",
+      "opp": "MTL",
+      "result": "loss",
+      "team": "LAK"
+     },
+     {
+      "fact": "Goals in 3 straight",
+      "goals": 1,
+      "home": true,
+      "id": 8478414,
+      "name": "Timo Meier",
+      "opp": "CBJ",
+      "result": "win",
+      "team": "NJD"
+     }
+    ],
+    "result": "L"
+   },
+   "chris": {
+    "legs": [
+     {
+      "fact": "Chris's cozy pick",
+      "goals": 1,
+      "home": false,
+      "id": 8478864,
+      "name": "Kirill Kaprizov",
+      "opp": "SJS",
+      "result": "win",
+      "team": "MIN"
+     }
+    ],
+    "result": "W"
+   },
+   "dejavu": {
+    "legs": [
+     {
+      "fact": "Owns Hellebuyck: 6 goals",
+      "goals": 0,
+      "home": false,
+      "id": 8477501,
+      "name": "Valeri Nichushkin",
+      "opp": "NJD",
+      "result": "loss",
+      "team": "CBJ"
+     },
+     {
+      "fact": "Owns Sorokin: 5 goals",
+      "goals": 0,
+      "home": false,
+      "id": 8479318,
+      "name": "Auston Matthews",
+      "opp": "NYI",
+      "result": "loss",
+      "team": "TOR"
+     },
+     {
+      "fact": "Owns Gustavsson: 4 goals",
+      "goals": 0,
+      "home": true,
+      "id": 8478975,
+      "name": "Mason Marchment",
+      "opp": "MIN",
+      "result": "loss",
+      "team": "SJS"
+     }
+    ],
+    "result": "L"
+   },
+   "due": {
+    "legs": [
+     {
+      "fact": "Due: 15 games without a goal",
+      "goals": 0,
+      "home": true,
+      "id": 8483515,
+      "name": "Juraj Slafkovsk\u00fd",
+      "opp": "LAK",
+      "result": "loss",
+      "team": "MTL"
+     },
+     {
+      "fact": "Due: 13 games without a goal",
+      "goals": 0,
+      "home": true,
+      "id": 8482259,
+      "name": "Bobby McMann",
+      "opp": "ANA",
+      "result": "loss",
+      "team": "SEA"
+     },
+     {
+      "fact": "Due: 5 games without a goal",
+      "goals": 0,
+      "home": false,
+      "id": 8478178,
+      "name": "Darren Raddysh",
+      "opp": "NYI",
+      "result": "loss",
+      "team": "TOR"
+     }
+    ],
+    "result": "L"
+   },
+   "favourites": {
+    "legs": [
+     {
+      "fact": "Statistical favourite \u00b7 1st line \u00b7 PP1",
+      "goals": 1,
+      "home": false,
+      "id": 8478864,
+      "name": "Kirill Kaprizov",
+      "opp": "SJS",
+      "result": "win",
+      "team": "MIN"
+     },
+     {
+      "fact": "Statistical favourite \u00b7 1st line \u00b7 PP1",
+      "goals": 0,
+      "home": true,
+      "id": 8478398,
+      "name": "Kyle Connor",
+      "opp": "UTA",
+      "result": "loss",
+      "team": "WPG"
+     },
+     {
+      "fact": "Statistical favourite \u00b7 1st line \u00b7 PP1",
+      "goals": 0,
+      "home": true,
+      "id": 8481540,
+      "name": "Cole Caufield",
+      "opp": "LAK",
+      "result": "loss",
+      "team": "MTL"
+     }
+    ],
+    "result": "L"
+   },
+   "grudge": {
+    "legs": [
+     {
+      "fact": "First game with the Canadiens",
+      "goals": 0,
+      "home": true,
+      "id": 8477946,
+      "name": "Dylan Larkin",
+      "opp": "LAK",
+      "result": "loss",
+      "team": "MTL"
+     },
+     {
+      "fact": "Old team: ANA",
+      "goals": 0,
+      "home": true,
+      "id": 8479372,
+      "name": "Josh Mahura",
+      "opp": "ANA",
+      "result": "loss",
+      "team": "SEA"
+     },
+     {
+      "fact": "Birthday twin with Johnathan Kovacevic",
+      "goals": 0,
+      "home": false,
+      "id": 8483485,
+      "name": "Denton Mateychuk",
+      "opp": "NJD",
+      "result": "loss",
+      "team": "CBJ"
+     }
+    ],
+    "result": "L"
+   },
+   "hot": {
+    "legs": [
+     {
+      "fact": "Goals in 3 straight",
+      "goals": 0,
+      "home": false,
+      "id": 8481557,
+      "name": "Matt Boldy",
+      "opp": "SJS",
+      "result": "loss",
+      "team": "MIN"
+     },
+     {
+      "fact": "5 goals in his last 5",
+      "goals": 0,
+      "home": true,
+      "id": 8481601,
+      "name": "Simon Holmstrom",
+      "opp": "TOR",
+      "result": "loss",
+      "team": "NYI"
+     },
+     {
+      "fact": "4 goals in his last 5",
+      "goals": 0,
+      "home": false,
+      "id": 8483431,
+      "name": "Logan Cooley",
+      "opp": "WPG",
+      "result": "loss",
+      "team": "UTA"
+     }
+    ],
+    "result": "L"
+   },
+   "scammer": {
+    "L": 6,
+    "P": 0,
+    "W": 1,
+    "legs": [
+     {
+      "american": 105,
+      "fact": "Best short-price value: +105",
+      "goals": 1,
+      "home": false,
+      "id": 8478864,
+      "name": "Kirill Kaprizov",
+      "opp": "SJS",
+      "result": "win",
+      "team": "MIN",
+      "units": 1.05
+     },
+     {
+      "american": 120,
+      "fact": "Best short-price value: +120",
+      "goals": 0,
+      "home": true,
+      "id": 8481540,
+      "name": "Cole Caufield",
+      "opp": "LAK",
+      "result": "loss",
+      "team": "MTL",
+      "units": -1.0
+     },
+     {
+      "american": 215,
+      "fact": "Best mid-price value: +215",
+      "goals": 0,
+      "home": false,
+      "id": 8477960,
+      "name": "Adrian Kempe",
+      "opp": "MTL",
+      "result": "loss",
+      "team": "LAK",
+      "units": -1.0
+     },
+     {
+      "american": 295,
+      "fact": "Best mid-price value: +295",
+      "goals": 0,
+      "home": false,
+      "id": 8477942,
+      "name": "Kevin Fiala",
+      "opp": "MTL",
+      "result": "loss",
+      "team": "LAK",
+      "units": -1.0
+     },
+     {
+      "american": 500,
+      "fact": "Best mid-price value: +500",
+      "goals": 0,
+      "home": false,
+      "id": 8477501,
+      "name": "Valeri Nichushkin",
+      "opp": "NJD",
+      "result": "loss",
+      "team": "CBJ",
+      "units": -1.0
+     },
+     {
+      "american": 600,
+      "fact": "Best longshot value: +600",
+      "goals": 0,
+      "home": true,
+      "id": 8482775,
+      "name": "Oliver Kapanen",
+      "opp": "LAK",
+      "result": "loss",
+      "team": "MTL",
+      "units": -1.0
+     },
+     {
+      "american": 1000,
+      "fact": "Best longshot value: +1000",
+      "goals": 0,
+      "home": false,
+      "id": 8484821,
+      "name": "Sam Morton",
+      "opp": "OTT",
+      "result": "loss",
+      "team": "CGY",
+      "units": -1.0
+     }
+    ],
+    "result": "singles",
+    "units": -4.95
+   },
+   "theo": {
+    "legs": [
+     {
+      "fact": "Theo's gut feeling",
+      "goals": 0,
+      "home": false,
+      "id": 8475798,
+      "name": "Mikael Granlund",
+      "opp": "SEA",
+      "result": "loss",
+      "team": "ANA"
+     }
+    ],
+    "result": "L"
+   }
+  }
  }
 }
