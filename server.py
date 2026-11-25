@@ -5,6 +5,7 @@
 Routes:
     /                 the page (public/)
     /api/slate?date=  chaos facts for every skater playing that day
+    /api/picks?date=  that day's locked picks, instantly (no slate build needed)
     /api/record       the win-loss record of every day's locked parlays
     /api/sims?date=   every game that day simulated 10 times (Game Simulations tab)
 """
@@ -17,6 +18,7 @@ from urllib.parse import parse_qs, urlparse
 import time
 
 import nhl
+import picks
 import record
 import sim
 import slate
@@ -60,6 +62,14 @@ class Handler(SimpleHTTPRequestHandler):
                 return self._json(sim.get(date, sl.get("players")))
             except Exception as e:
                 return self._json({"error": str(e)}, 500)
+        if url.path == "/api/picks":
+            # the day's locked picks straight from disk: instant, even while the slate builds
+            q = parse_qs(url.query)
+            date = (q.get("date") or [""])[0] or nhl.today_et().isoformat()
+            if not re.fullmatch(r"\d{4}-\d{2}-\d{2}", date):
+                return self._json({"error": "date must be YYYY-MM-DD"}, 400)
+            slate.get_slate(date)          # make sure the full slate is building in the background
+            return self._json(picks.locked_view(date))
         if url.path == "/api/record":
             # grade any newly finished days in the background (at most every 30 min);
             # the daily job does the same and commits the results

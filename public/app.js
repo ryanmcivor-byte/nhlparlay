@@ -89,6 +89,27 @@
 
   // ---------------------------------------------------------------- data
   let pollTimer = null;
+
+  // the day's locked picks come straight from the saved file, so the pick sections open
+  // right away even while the full slate (player cards, lineups) is still building
+  async function fetchPicks(date) {
+    let res;
+    try {
+      res = await (await fetch("/api/picks?date=" + date)).json();
+    } catch (e) { return; }
+    if ($("#date").value !== date || res.error) return;
+    state.early = res;
+    if (!state.data) $("#summon").hidden = false;
+    if (state.revealed && !state.data) renderDaily();
+  }
+
+  // what the pick sections read: the full slate once it's ready, the saved picks before that
+  function picksSource() {
+    if (state.data) return { date: state.data.date, picks: state.data.picks || {}, note: state.data.picksNote };
+    if (state.early) return { date: state.early.date, picks: state.early.picks || {}, note: state.early.note };
+    return null;
+  }
+
   async function fetchSlate(date) {
     clearTimeout(pollTimer);
     let res;
@@ -207,14 +228,18 @@
   function renderDaily() {
     const vibe = state.vibe;
     document.querySelectorAll(".vibe").forEach((b) => b.classList.toggle("on", b.dataset.vibe === vibe));
-    const legs = (state.data.picks || {})[vibe] || [];
+    const src = picksSource();
+    if (!src) return;
+    const legs = src.picks[vibe] || [];
     $("#daily").hidden = false;
     $("#dailyTitle").textContent = SINGLE.has(vibe) ? VIBE_LABEL[vibe]
       : `Today's ${VIBE_LABEL[vibe]} ${legs.length === 1 ? "pick" : "parlay"}`;
     if (!legs.length) {
       $("#dailyLegs").innerHTML = "";
       $("#dailyFoot").innerHTML = "";
-      $("#dailyNote").textContent = state.data.picksNote || EMPTY_NOTE[vibe] || "No skaters in tonight's lineups fit this vibe yet. Check back closer to puck drop.";
+      $("#dailyNote").textContent = src.note || (state.data ? EMPTY_NOTE[vibe] : "")
+        || (state.data ? "No skaters in tonight's lineups fit this vibe yet. Check back closer to puck drop."
+                       : "Loading tonight's picks…");
       return;
     }
     $("#dailyLegs").innerHTML = legs.map((l) => legHtml(l, l.fact, false)).join("");
@@ -222,7 +247,7 @@
     const fewer = SINGLE.has(vibe) || legs.length >= 3 ? ""
       : legs.length === 1 ? " Only 1 game has a player who fits, so it's a single pick tonight."
       : ` Only ${legs.length} games have a player who fits, so it has ${legs.length} legs (one per game).`;
-    $("#dailyNote").textContent = `🔒 Locked for ${state.data.date}. Everyone gets these same picks; new ones tomorrow.${fewer}`
+    $("#dailyNote").textContent = `🔒 Locked for ${src.date}. Everyone gets these same picks; new ones tomorrow.${fewer}`
       + (vibe === "scammer" ? " " + scammerModelNote() : "");
   }
 
@@ -291,7 +316,7 @@
   });
   on("#vibes", "click", (e) => {
     const b = e.target.closest("[data-vibe]");
-    if (!b || !state.data) return;
+    if (!b || !picksSource()) return;
     state.vibe = b.dataset.vibe;
     state.revealed = true;
     renderDaily();
@@ -302,15 +327,16 @@
   let popReturn = null;
   function openPopup(vibe) {
     const pop = POPUPS[vibe];
-    const leg = ((state.data.picks || {})[vibe] || [])[0];
+    const src = picksSource();
+    const leg = (src.picks[vibe] || [])[0];
     $("#popImg").src = pop.img;
     $("#popImg").alt = pop.alt;
     $("#popTitle").textContent = pop.title;
-    const all = (state.data.picks || {})[vibe] || [];
+    const all = src.picks[vibe] || [];
     $("#popPick").textContent = all.length > 1
       ? `${all.length} value bets tonight: ${all.map((l) => `${l.name} ${fmtAm(l.american)}`).join(", ")}.`
       : leg ? `${leg.name} (${leg.team} ${leg.home ? "vs" : "@"} ${leg.opp}) to score tonight.`
-      : (state.data.picksNote || "No pick yet today.");
+      : (src.note || "No pick yet today.");
     popReturn = document.activeElement;
     $("#popModal").hidden = false;
     document.body.classList.add("modal-open");
@@ -329,11 +355,14 @@
   on("#date", "change", (e) => {
     state.game = "all";
     showStatus("Loading…");
+    state.data = state.early = null;
+    fetchPicks(e.target.value);
     fetchSlate(e.target.value);
   });
 
   fetchRecord();
   $("#date").value = todayET();
   showStatus("Waking the goblins…");
+  fetchPicks($("#date").value);
   fetchSlate($("#date").value);
 })();

@@ -4,7 +4,11 @@ name: Daily picks and record
 
 on:
   schedule:
-    - cron: "0 13 * * *"     # 13:00 UTC = 9 AM EDT / 8 AM EST
+    # GitHub delays scheduled jobs a lot (often hours), worst at the top of the hour, so run
+    # at three off-hour times: the first run locks the day's picks, later ones just grade.
+    - cron: "17 13 * * *"    # ~9 AM EDT / 8 AM EST
+    - cron: "41 14 * * *"
+    - cron: "23 16 * * *"
   workflow_dispatch: {}      # "Run workflow" button for a manual run
 
 permissions:

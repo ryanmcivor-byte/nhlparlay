@@ -163,6 +163,25 @@ def lock(date, day):
         _locks[date] = day
 
 
+def _empty_note(date, today, building=False):
+    if date > today:
+        return f"Picks for this slate drop on game day around {DROP_TIME}."
+    if date == today:
+        if building or nhl.now_et().hour >= FALLBACK_HOUR:
+            return "Today's picks are being summoned. Busy nights take about a minute."
+        return f"Today's picks drop around {DROP_TIME}. Check back soon."
+    return "No picks were made for this day."
+
+
+def locked_view(date):
+    """The locked picks for a date straight from the saved file, no slate needed, so the
+    page can open them instantly: {"date", "picks", "note"}."""
+    with _lock:
+        day = _locks.get(date) or _load(date)
+    today = nhl.today_et().isoformat()
+    return {"date": date, "picks": day, "note": "" if day else _empty_note(date, today, building=True)}
+
+
 def get_picks(slate):
     """({vibe: [legs]}, note) for the slate's date. Legs carry each player's current
     lineup status. The note explains an empty result (picks not dropped yet)."""
@@ -178,14 +197,7 @@ def get_picks(slate):
                 day = _locks[date] = filled
                 _save(date, day)
         snapshot = {v: [dict(leg) for leg in legs] for v, legs in day.items()}
-    note = ""
-    if not snapshot:
-        if date > today:
-            note = f"Picks for this slate drop on game day around {DROP_TIME}."
-        elif date == today:
-            note = f"Today's picks drop around {DROP_TIME}. Check back soon."
-        else:
-            note = "No picks were made for this day."
+    note = "" if snapshot else _empty_note(date, today)
     lineup = {p["id"]: p.get("lineup") for p in slate["players"]}
     for legs in snapshot.values():
         for leg in legs:

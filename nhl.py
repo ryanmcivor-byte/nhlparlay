@@ -279,3 +279,14 @@ def espn_starters(date):
 
 def play_by_play(game_id):
     return _json(f"/gamecenter/{game_id}/play-by-play", ttl=3600)
+
+
+def last_dressed(abbr, before):
+    """Skater ids who dressed in a team's most recent finished game before `before`
+    (a backup lineup when no projected lineup can be loaded), or an empty set."""
+    games = _json(f"/club-schedule-season/{abbr}/now", ttl=3600).get("games") or []
+    done = [g for g in games if g.get("gameState") in ("OFF", "FINAL") and g.get("gameDate", "") < before]
+    if not done:
+        return set()
+    last = max(done, key=lambda g: g["gameDate"])
+    return dressed(last["id"]).get(abbr, set())

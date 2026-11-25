@@ -321,6 +321,10 @@ def _lineups(games, players):
         scr = dict(zip([g["id"] for g in games], ex.map(lambda g: safe_scr(g["id"]) or set(), games)))
         dfo = dict(zip(teams, ex.map(_safe(nhl.dfo_lineup), teams)))
     inj = {_norm(n): st.lower() for n, st in (_safe(nhl.espn_injuries)() or [])}
+    missing = [t for t in teams if not dfo.get(t)]
+    date = (games[0].get("start") or "")[:10] if games else ""
+    with ThreadPoolExecutor(8) as ex:
+        backup = dict(zip(missing, ex.map(lambda t: _safe(nhl.last_dressed)(t, date or "9999") or set(), missing)))
 
     out = {}
     for p in players:
@@ -335,7 +339,18 @@ def _lineups(games, players):
             continue
         lu = dfo.get(p["team"])
         if not lu:
-            out[p["id"]] = {"status": "unknown", "label": "Lineup unknown", "detail": "No projected lineup found"}
+            # no projected lineup (the site didn't answer): use who dressed last game
+            last = backup.get(p["team"])
+            if not last:
+                out[p["id"]] = {"status": "unknown", "label": "Lineup unknown", "detail": "No projected lineup found"}
+            elif inj.get(_norm(p["name"]), "") in OUT_STATUSES:
+                out[p["id"]] = {"status": "out", "label": "Injured / out", "detail": "Listed as out"}
+            elif p["id"] in last:
+                out[p["id"]] = {"status": "projected", "label": "Played last game",
+                                "detail": "No projected lineup found, so going by who dressed last game"}
+            else:
+                out[p["id"]] = {"status": "out", "label": "Didn't play last game",
+                                "detail": "No projected lineup found, and he didn't dress last game"}
             continue
         full, last = _norm(p["name"]), _norm(p["last"])
         mine = [x for x in lu["players"] if _norm(x["name"]) == full
