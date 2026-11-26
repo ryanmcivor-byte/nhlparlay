@@ -1,0 +1,329 @@
+{
+"date": "2026-11-24",
+"rows": [
+{
+"id": 8477934,
+"name": "Leon Draisaitl",
+"team": "EDM",
+"gameId": 2026020385,
+"pModel": 0.479,
+"american": 100,
+"scored": 0
+},
+{
+"id": 8484803,
+"name": "Trevor Connelly",
+"team": "VGK",
+"gameId": 2026020385,
+"pModel": 0.23,
+"american": 360,
+"scored": 1
+},
+{
+"id": 8481617,
+"name": "Vasily Podkolzin",
+"team": "EDM",
+"gameId": 2026020385,
+"pModel": 0.228,
+"american": 255,
+"scored": 1
+},
+{
+"id": 8478483,
+"name": "Mitch Marner",
+"team": "VGK",
+"gameId": 2026020385,
+"pModel": 0.239,
+"american": 280,
+"scored": 0
+},
+{
+"id": 8478402,
+"name": "Connor McDavid",
+"team": "EDM",
+"gameId": 2026020385,
+"pModel": 0.394,
+"american": 130,
+"scored": 1
+},
+{
+"id": 8476448,
+"name": "William Karlsson",
+"team": "VGK",
+"gameId": 2026020385,
+"pModel": 0.198,
+"american": 340,
+"scored": 0
+},
+{
+"id": 8478109,
+"name": "Victor Olofsson",
+"team": "VGK",
+"gameId": 2026020385,
+"pModel": 0.227,
+"american": 235,
+"scored": 0
+},
+{
+"id": 8478403,
+"name": "Jack Eichel",
+"team": "VGK",
+"gameId": 2026020385,
+"pModel": 0.297,
+"american": 180,
+"scored": 1
+},
+{
+"id": 8478450,
+"name": "Parker Wotherspoon",
+"team": "VGK",
+"gameId": 2026020385,
+"pModel": 0.031,
+"american": 2500,
+"scored": 0
+},
+{
+"id": 8478397,
+"name": "Rasmus Andersson",
+"team": "VGK",
+"gameId": 2026020385,
+"pModel": 0.151,
+"american": 900,
+"scored": 0
+},
+{
+"id": 8483553,
+"name": "Marc Gatcomb",
+"team": "VGK",
+"gameId": 2026020385,
+"pModel": 0.088,
+"american": 1000,
+"scored": 0
+},
+{
+"id": 8479353,
+"name": "Brett Howden",
+"team": "VGK",
+"gameId": 2026020385,
+"pModel": 0.227,
+"american": 330,
+"scored": 0
+},
+{
+"id": 8475343,
+"name": "Nic Dowd",
+"team": "VGK",
+"gameId": 2026020385,
+"pModel": 0.082,
+"american": 1100,
+"scored": 1
+},
+{
+"id": 8483890,
+"name": "Braeden Bowman",
+"team": "VGK",
+"gameId": 2026020385,
+"pModel": 0.158,
+"american": 600,
+"scored": 0
+},
+{
+"id": 8476881,
+"name": "Tomas Hertl",
+"team": "VGK",
+"gameId": 2026020385,
+"pModel": 0.29,
+"american": 245,
+"scored": 0
+},
+{
+"id": 8477964,
+"name": "Ivan Barbashev",
+"team": "VGK",
+"gameId": 2026020385,
+"pModel": 0.234,
+"american": 475,
+"scored": 0
+},
+{
+"id": 8475913,
+"name": "Mark Stone",
+"team": "VGK",
+"gameId": 2026020385,
+"pModel": 0.328,
+"american": 165,
+"scored": 0
+},
+{
+"id": 8475188,
+"name": "Brayden McNabb",
+"team": "VGK",
+"gameId": 2026020385,
+"pModel": 0.053,
+"american": 1900,
+"scored": 0
+},
+{
+"id": 8478468,
+"name": "Jeremy Lauzon",
+"team": "VGK",
+"gameId": 2026020385,
+"pModel": 0.025,
+"american": 2200,
+"scored": 0
+},
+{
+"id": 8477447,
+"name": "Shea Theodore",
+"team": "VGK",
+"gameId": 2026020385,
+"pModel": 0.108,
+"american": 750,
+"scored": 0
+},
+{
+"id": 8479639,
+"name": "Dylan Coghlan",
+"team": "VGK",
+"gameId": 2026020385,
+"pModel": 0.017,
+"american": 2000,
+"scored": 0
+},
+{
+"id": 8479365,
+"name": "Trent Frederic",
+"team": "EDM",
+"gameId": 2026020385,
+"pModel": 0.075,
+"american": 850,
+"scored": 0
+},
+{
+"id": 8477450,
+"name": "Jason Dickinson",
+"team": "EDM",
+"gameId": 2026020385,
+"pModel": 0.113,
+"american": 950,
+"scored": 0
+},
+{
+"id": 8480842,
+"name": "Filip Hallander",
+"team": "EDM",
+"gameId": 2026020385,
+"pModel": 0.118,
+"american": 550,
+"scored": 0
+},
+{
+"id": 8478472,
+"name": "Mathieu Joseph",
+"team": "EDM",
+"gameId": 2026020385,
+"pModel": 0.088,
+"american": 700,
+"scored": 0
+},
+{
+"id": 8480029,
+"name": "Alex Formenton",
+"team": "EDM",
+"gameId": 2026020385,
+"pModel": 0.096,
+"american": 900,
+"scored": 0
+},
+{
+"id": 8482703,
+"name": "Colton Dach",
+"team": "EDM",
+"gameId": 2026020385,
+"pModel": 0.127,
+"american": 650,
+"scored": 1
+},
+{
+"id": 8477953,
+"name": "Kasperi Kapanen",
+"team": "EDM",
+"gameId": 2026020385,
+"pModel": 0.173,
+"american": 380,
+"scored": 0
+},
+{
+"id": 8486161,
+"name": "Owen Michaels",
+"team": "EDM",
+"gameId": 2026020385,
+"pModel": 0.123,
+"american": 1000,
+"scored": 0
+},
+{
+"id": 8476454,
+"name": "Ryan Nugent-Hopkins",
+"team": "EDM",
+"gameId": 2026020385,
+"pModel": 0.239,
+"american": 330,
+"scored": 0
+},
+{
+"id": 8480803,
+"name": "Evan Bouchard",
+"team": "EDM",
+"gameId": 2026020385,
+"pModel": 0.238,
+"american": 275,
+"scored": 0
+},
+{
+"id": 8476473,
+"name": "Connor Murphy",
+"team": "EDM",
+"gameId": 2026020385,
+"pModel": 0.04,
+"american": 2000,
+"scored": 0
+},
+{
+"id": 8478854,
+"name": "Ryan Shea",
+"team": "EDM",
+"gameId": 2026020385,
+"pModel": 0.06,
+"american": 1400,
+"scored": 0
+},
+{
+"id": 8475218,
+"name": "Mattias Ekholm",
+"team": "EDM",
+"gameId": 2026020385,
+"pModel": 0.093,
+"american": 1000,
+"scored": 0
+},
+{
+"id": 8482166,
+"name": "Shakir Mukhamadullin",
+"team": "EDM",
+"gameId": 2026020385,
+"pModel": 0.074,
+"american": 1900,
+"scored": 0
+},
+{
+"id": 8478013,
+"name": "Jake Walman",
+"team": "EDM",
+"gameId": 2026020385,
+"pModel": 0.102,
+"american": 1600,
+"scored": 0
+}
+]
+}
