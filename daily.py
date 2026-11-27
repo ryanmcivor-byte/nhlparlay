@@ -14,8 +14,11 @@ The workflow commits data/ back to the repo, which redeploys the live site.
     python3 daily.py            # normal run
     python3 daily.py --no-today # backfill and grade only
 """
+import json
+import os
 import sys
 import time
+import urllib.request
 from datetime import timedelta
 
 import nhl
@@ -24,6 +27,33 @@ import record
 import scammer
 import sim
 import slate
+
+LIVE_URL = os.environ.get("LIVE_URL", "https://chaykas-evil-parlays.onrender.com")
+
+
+def live_picks(date, wait=300):
+    """The picks the live site has already shown for `date` ({vibe: legs}, or {}).
+
+    After picks.FALLBACK_HOUR the site locks the day's picks itself (this job often
+    runs hours late), so the record must keep those rather than build new ones mid-day.
+    A sleeping free-tier site wakes on the first request and locks once its slate is
+    built, so keep asking for up to `wait` seconds."""
+    if nhl.now_et().hour < picks.FALLBACK_HOUR:
+        return {}
+    deadline = time.time() + wait
+    while True:
+        try:
+            req = urllib.request.Request(f"{LIVE_URL}/api/picks?date={date}",
+                                         headers={"User-Agent": "evil-parlays-daily"})
+            with urllib.request.urlopen(req, timeout=90) as resp:
+                day = json.loads(resp.read()).get("picks") or {}
+            if isinstance(day, dict) and all(isinstance(v, list) for v in day.values()) and day:
+                return day
+        except Exception as e:
+            print(f"live site not answering yet ({e})", flush=True)
+        if time.time() > deadline:
+            return {}
+        time.sleep(20)
 
 
 def main(lock_today=True):
@@ -62,6 +92,13 @@ def main(lock_today=True):
 
     existing = picks.saved(today.isoformat())
     if lock_today and any(v not in existing for v in picks.VIBES):   # new day, or a newly added section
+        # keep what people have already seen on the site (it locks at FALLBACK_HOUR)
+        shown = dict(live_picks(today.isoformat()), **existing)
+        if shown != existing:
+            existing = shown
+            picks.lock(today.isoformat(), existing)
+            print(f"adopted the live site's picks for {today}: {', '.join(sorted(existing))}", flush=True)
+    if lock_today and any(v not in existing for v in picks.VIBES):
         s = slate_today()
         day = picks.make_all(s, existing) if s.get("players") else {}
         if day and day != existing:

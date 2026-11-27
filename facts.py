@@ -27,13 +27,17 @@ CITY_ALIASES = {"Montréal": "Montreal", "St Louis": "St. Louis", "Saint Louis":
                 "Québec": "Quebec"}
 
 # news keyword buckets: (kind, emoji, label, chaos, regex)
+_KIN = (r"(wife|husband|mother|father|mom|dad|mum|son|daughter|brother|sister|grandfather|"
+        r"grandmother|grandpa|grandma|grandparents?|parents?|family|fianc\w*|uncle|aunt|cousin)")
 NEWS_BUCKETS = [
+    # A loss or illness in HIS family. Bare "died", "tribute to", "in honor/memory of" are
+    # left out: they also match "trade died", "pays tribute to a teammate", a fan's
+    # memorial night or a listicle, none of which mean he's playing with a heavy heart.
     ("family", "🕯️", "Playing with a heavy heart", 10,
-     r"\b(passed away|passes away|died|dies|death of|funeral|in memory of|in honou?r of|mourn\w*|"
-     r"tribute to|bereavement|late (father|mother|dad|mom|grandfather|grandmother|brother|sister)|"
-     r"grandfather|grandmother|grandpa|grandma|"
-     r"(wife|mother|father|dad|mom|son|daughter|brother|sister|family|fianc\w*)('s)? (\w+ ){0,2}"
-     r"(cancer|diagnos\w*|illness|hospitali[sz]ed))\b"),
+     r"\b(passed away|passes away|funeral|bereavement|mourn\w*|late " + _KIN + r"|"
+     r"(death|loss|passing) of (his|her|their) (\w+ ){0,2}" + _KIN + r"|"
+     + _KIN + r"('s)? (\w+ ){0,2}(death|passing|died|dies|funeral|cancer|diagnos\w*|illness|"
+     r"hospitali[sz]ed))\b"),
     ("love", "💔", "Love life in the news", 9,
      r"\b(divorc\w*|split(s)? from|breakup|broke up|wedding|married|marries|engaged|engagement|"
      r"fianc\w*|girlfriend|wife|honeymoon)\b"),
@@ -308,17 +312,31 @@ def news_facts(items, players):
     bucket them by keyword. Only headlines with a bucket hit become facts."""
     by = {}
     lasts = Counter(p["last"].lower() for p in players)
+    # Compile each player's name patterns once. Building them inside the headline loop
+    # (~5,000 headlines x ~700 skaters on a busy night) thrashed re's small pattern
+    # cache and made this step take minutes on the live server.
+    names = []
+    for p in players:
+        last = p["last"].lower()
+        unique = len(last) >= 5 and lasts[last] == 1
+        names.append((p, p["name"].lower(), last if unique else None,
+                      re.compile(r"\b" + re.escape(last) + r"\b") if unique else None,
+                      re.compile(r"\b" + re.escape(p["last"]) + r"\s+[A-Z]") if unique else None))
     seen = set()
+    titles = set()
     for it in items:
         title = it["title"]
+        if title in titles:         # the same story turns up in several team searches
+            continue
+        titles.add(title)
         low = title.lower()
-        for p in players:
-            full = p["name"].lower()
-            last = p["last"].lower()
-            hit = full in low or (len(last) >= 5 and lasts[last] == 1
-                                  and re.search(r"\b" + re.escape(last) + r"\b", low)
-                                  and not re.search(r"\b" + re.escape(p["last"]) + r"\s+[A-Z]", title)
-                                  and p["teamWords"] & set(re.findall(r"[a-z]+", low)))
+        words = None
+        for p, full, last, last_rx, first_rx in names:
+            hit = full in low
+            if not hit and last and last in low and last_rx.search(low) and not first_rx.search(title):
+                if words is None:
+                    words = set(re.findall(r"[a-z]+", low))
+                hit = bool(p["teamWords"] & words)
             if not hit or (p["id"], title) in seen:
                 continue
             for kind, emoji, label, chaos, rx in _NEWS_RX:

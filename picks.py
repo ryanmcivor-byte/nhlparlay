@@ -32,8 +32,11 @@ SINGLES = {"scammer"}     # graded as separate straight bets, not as one parlay
 THEO_FACT = {"kind": "theo", "emoji": "🔮", "title": "Theo's gut feeling",
              "text": "No stats. No storyline. No streak. Theo just has a feeling about this one."}
 DIR = os.path.join(os.path.dirname(os.path.abspath(__file__)), "data", "picks")
-DROP_TIME = "9 AM ET"     # when the daily job runs (see .github/workflows/daily.yml)
-FALLBACK_HOUR = 11        # ET hour after which the server locks today's picks itself
+DROP_TIME = "9 AM ET"     # when picks appear (the daily job is scheduled before this)
+# ET hour after which the server locks today's picks itself. GitHub often runs the daily
+# job hours late, so the site can't wait for it: picks drop at DROP_TIME either way, and
+# the job adopts whatever the site already locked (daily.py live_picks).
+FALLBACK_HOUR = 9
 
 _locks = {}
 _lock = threading.Lock()
